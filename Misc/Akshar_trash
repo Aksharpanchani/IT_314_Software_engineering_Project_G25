@@ -1,0 +1,24 @@
+User story
+
+front card
+1. As a doctor I want to login on the webpage so that I can use the features of website.
+
+back of card
+Acceptance criteria
+Success login 
+- Remember me or automatic login next time.
+- Forced login next time.
+Failure login
+-Wrong format
+- wrong email/contact/Password
+- Network error
+- session time expired.
+
+front card
+2. As a doctor I want to create account so that i can get register myself on website.
+
+back of card
+Acceptance criteria
+- On successful verification create my account 
+- ask for profile update
+-On not getting verified show the error which maybe , network error, service unavailable or wrong credential.
