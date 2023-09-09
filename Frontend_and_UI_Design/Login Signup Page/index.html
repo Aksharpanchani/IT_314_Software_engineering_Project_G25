@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./css//index.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=MUDKTY+WTVolkolakGrotesque-Light:wght@300&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat Alternates:wght@400;500;600&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=MADE Evolve Sans EVO:wght@500&display=swap" />
@@ -31,31 +31,39 @@
                             <img src="./public/img3.svg" alt="" class="image">
                         </div>
                         <form onsubmit="" action="" method="POST" name="form">
-                            <div class="username">
+                            <div class="username" id="username" onclick="convertDivtoInput('username','user','Username')">
+                                <!-- Username for defualt name when user hasnt given any input to input container-->
                                 <img src="./public/img4.png" alt="" class="image">
-                                <div class="user">Username</div>
+                                <div class="user" id="user">Username</div>
+                                <!-- <div class="usename2">dnjs</div> -->
                                 <!-- <input type="email" id="username" placeholder="Username" name="username"> -->
                             </div>
-                            <div class="password">
+                            <div class="password" id="password" onclick="convertDivtoInput('password','passw','Password')">
                                 <img src="./public/img5.svg" alt="" class="image">
-                                <div class="passw">Password</div>
+                                <div class="passw" id="passw">Password</div>
                                 <!-- <input type="email" id="username" placeholder="Username" name="username"> -->
                             </div>
                             <div class="submitbutton">
                                 <input type="submit" value="Submit"></input>
                             </div>
-                            <div class="rememberpassword">
-                                <input type="checkbox"  name="remember" value="coding" />
-                                <label for="coding">Remember me</label>
-                            </div>
-                            <div class="forgotpassword">
-                                <input type="checkbox" id="coding" name="interest" value="coding" />
-                                <label for="coding">Forgot password</label>
+                            <div class="checkboxes">
+                                <div class="checkbox1">
+                                    <input type="checkbox"  name="remember" value="coding" />
+                                    <span class="geekmark"></span>
+                                    <label>Remember me</label>
+                                </div>
+                                <div class="checkbox2">
+                                    <input type="checkbox" name="interest" value="coding" />
+                                    <span class="geekmark"></span>
+                                    <label>Forgot password</label>
+                                </div>
+                                
                             </div>
                         </form>
                         
                     </div>
                 </div>
     </div>
+    <script src="./js/index.js"></script>
 </body>
 </html>
