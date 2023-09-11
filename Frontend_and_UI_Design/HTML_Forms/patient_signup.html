@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+        
+        <h2 class="title">Patient Registration</h2>
+        <form  name="form1" onsubmit="return validateForm()" method="POST" action="#">
+            <div class="one_line">
+                <div class="input-group" id="name">
+                    <input class="input--style-1" type="text" placeholder="Full Name" name="name" >
+                    <b><span class="formerror"><br></span></b>
+                </div>
+                <div class="input-group-col2" id="email">
+                    <input class="input--style-1" type="email" placeholder="Email" name="email">
+                    <b><span class="formerror"><br></span></b>
+                </div>
+            </div>
+            
+            
+            <div id="gender"><b><span class="formerror" style="position: relative; left: 300px;"><br></span></b></div>
+            <div class="input-group radio" id="gender">
+                Gender:
+                <input class="input--style-1 radio1" type="radio" name="gender" value="male" style="margin-left: 30px;">Male
+                <input class="input--style-1 radio1" type="radio" name="gender" value="female">Female
+            </div>
+
+            <div class="one_line">
+                <div class="input-group" id="name">
+                    <input class="input--style-1" type="number" placeholder="Height (in cm)" name="name" step="0.1" >
+                    <b><span class="formerror"><br></span></b>
+                </div>
+                <div class="input-group" id="name">
+                    <input class="input--style-1" type="number" placeholder="Weight (in Kg)" name="name" step="0.1" >
+                    <b><span class="formerror"><br></span></b>
+                </div>
+                
+            </div>
+
+            <div class="one_line">
+                
+                <div class="input-group" id="name">
+                    <label for="">Choose a car:</label>
+
+                        <select name="cars" id="cars">
+                            <option value="volvo">AB+</option>
+                            <option value="saab">B</option>
+                            <option value="mercedes">O+</option>
+                            <option value="audi">AB-</option>
+                        </select>
+                </div>
+                
+            </div>
+            
+            <div class="one_line">
+                <div class="input-group" id="password">
+                    <input class="input--style-1" type="password" placeholder="Password" name="password">
+                    <b><span class="formerror"><br></span></b>
+                </div>
+                <div class="input-group-col2" id="confirmpassword">
+                    <input class="input--style-1" type="password" placeholder="Confirm Password" name="confirmpassword">
+                    <b><span class="formerror"><br></span></b>
+                </div>
+            </div>
+            <div class="p-t-20">
+                <button class="btn btn--radius btn--green" type="submit">Submit</button>
+            </div>
+        </form>
+
+    
+    </form>
+</body>
+</html>
