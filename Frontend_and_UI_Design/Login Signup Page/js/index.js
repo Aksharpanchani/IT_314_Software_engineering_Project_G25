@@ -16,6 +16,9 @@ function convertDivtoInput(divid,divuserid,defaultName) {
             divuser.innerText = defaultName;
         }else{
             divuser.innerText = inputElement.value;
+            if(divid=="password"){
+                divuser.textContent = divuser.textContent.replace(/./g, '*');
+            }
         }
         divContainer.className = divid;
         divContainer.style.display = 'flex';// for making non-none in display for username
