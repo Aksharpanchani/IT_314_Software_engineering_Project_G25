@@ -1,3 +1,7 @@
+@font-face {
+    font-family: volko;
+    src: url(/public/mudkty-wtvolkolakgrotesque-light.ttf);
+}
 *{
     font-family: 'Montserrat Alternates';
     margin: 0;
@@ -42,9 +46,12 @@
     top: 216px;
     width: 958.791px;
     height: 290.748px;
-    font-size: 128px;
-    font-weight: 200;
     color: #141111;
+    font-family: volko;
+    font-size: 128px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 100%;
 }
 .shapefuture{
     position: absolute;
@@ -80,6 +87,11 @@
     z-index: 2;
 }
 .rectangle6 .text{
+    font-family: volko;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 100%;
     padding-left: 95px;
 }
 .heart{
