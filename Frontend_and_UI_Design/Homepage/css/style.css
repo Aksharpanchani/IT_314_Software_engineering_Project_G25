@@ -9,16 +9,16 @@
   line-height: normal;
 }
 .rectangle-5{
-    position: relative;
-    display: flex;
-    width: 1310px;
-    height: 666px;
-    border-radius: 75px;
-    margin: auto;
-    /* margin-left: 93px; */
-    /* margin-right: 104px;  */
-    margin-top: 43px;
-    background-color:#eaeaea;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 87.5vw;
+  height: 666px;
+  border-radius: 75px;
+  margin:auto;
+  margin-top: 43px;
+  background-color:#eaeaea;
+  z-index: 0;
 }
 .logoname{
   width:63px;
@@ -36,14 +36,14 @@
   justify-content: center;
 }
 .navbar{
-    position: absolute;
-    display: flex;
-    height: 97px;
-    width: 1110px;
-    top: 52px;  
-    margin-left: 95px;
-    margin-right: 105px; 
-    align-items: center;
+  position: relative;
+  margin-top: 52px;
+  display: flex;
+  height: 97px;
+  width: 74vw; 
+  margin-left: 95px;
+  margin-right: 105px; 
+  align-items: center;
 }
 .nav{
   display: flex;
@@ -58,16 +58,16 @@
   color: #170808;
 }
 .diagnostic{
-    position: absolute;
-    left: 85px;
-    top: 216px;
-    width: 958.791px;
-    height: 290.748px;
-    color: #141111;
-    font-family: volko;
-    font-size: 128px;
-    font-weight: 200;
-    line-height: 100%;
+  display: flex;
+  margin-left: 85px;
+  margin-top: 70px;
+  width: 64vw;
+  height: 291px;
+  color: #141111;
+  font-family: volko;
+  font-size: 128px;
+  font-weight: 200;
+  line-height: 100%;
 }
 .shapefuture{
     position: absolute;
@@ -88,19 +88,18 @@
   font-weight: 400;
 }
 .rectangle6{
-    position: relative;
-    margin: auto;
-    margin-top: 12px;
-    display: flex;
-    align-items: center;
-    width: 1310px;
-    height: 100px;
-    border-radius: 20px;
-    background-color: #0067FF;
-    color: #FFF;
-    font-size: 40px;
-    font-weight: 200;
-    z-index: 2;
+  position: relative;
+  margin: auto;
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  width: 87.5vw;
+  height: 100px;
+  border-radius: 20px;
+  background-color: #0067FF;
+  color: #FFF;
+  font-size: 40px;
+  font-weight: 200;
 }
 .rectangle6 .text{
     font-family: volko;
@@ -111,26 +110,23 @@
     padding-left: 95px;
 }
 .heart{
-    display: flex;
-    position: absolute;
-    top: 584px;
-    left: 748px;
-    width: 331px;
-    height: 340px;
-    border-radius: 45px;
-    z-index: 3;
+  display: flex;
+  position: absolute;
+  margin-left: 30px;
+  right: 26%;
+  width: 22vw;
+  height: 23vw;
+  border-radius: 45px;
 }
 .background{
-    display: flex;
-    position: absolute;
-    top: 584px;
-    left: 735px;
-    width: 395px;
-    height: 314px;
-    border-radius: 395px;
-    background: #C75050;
-    z-index: 1;
-    filter: blur(100px);
+  display: flex;
+  position: absolute;
+  right: 26%;
+  width: 24vw;
+  height: 24vw;
+  border-radius: 395px;
+  background: #C75050;
+  filter: blur(100px);
 }
 
 .hr1{
@@ -550,61 +546,35 @@ margin:auto;
 
   /* footer */
 
-.rectangle-38{
-  /* width: 1496px; */
-  height: 61px;
-  /* flex-shrink: 0; */
-  background: #0067FF;
-  margin-top: 24px;
-  text-align: center;
+.footer{
+  position: absolute;
+  top: 3367px;
   display: flex;
-  gap: 300px;
+  width: 100%;
+  height: 65px;
+  background: #0067FF;
+  align-items: center;
+  margin: auto;
+  margin-top: 200px;
 }
 
-.Copyright{
-  width: 588.818px;
-  height: 56.393px;
-  flex-shrink: 0;
-  display: -webkit-inline-box;
-  margin-left: 239px;
-    /* margin-top: 50px; */
-  line-height: 51px;
-}
-.Copyright>p{
+.copyright{
   margin-top: 10px;
-  width: 572.658px;
-  height: 33px;
-  flex-shrink: 0;
-  color: #FFF;
-  font-family: Montserrat Alternates;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
   font-size: 24px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: -1 rem; /* 24px */
+  margin-left: 143px;
+  line-height: 100%;
 }
-
+.atr-icon{
+  margin-bottom: 10px;
+  margin-right: 2px;
+}
 .icons{
-  display: inline flex;
-  gap: 34.33px;
+  margin-left: 450px;
+  display: flex;
+  gap: 34px;
   justify-content: center;
   align-items: center;
 }
-
-.twitter{
-  width: 64.667px;
-  height: 58.704px;
-  flex-shrink: 0;
-}
-
-.insta{
-  width: 64px;
-  height: 52px;
-  flex-shrink: 0;
-}
-
-.facebook{
-  width: 58px;
-  height: 49px;
-  flex-shrink: 0;
-  fill: #FFF;
-} 
