@@ -1,68 +1,68 @@
 @font-face {
-    font-family: volko;
-    src: url(/Frontend_and_UI_Design/Homepage/public/mudkty-wtvolkolakgrotesque-light.ttf);
+  font-family: volko;
+  src: url(/Frontend_and_UI_Design/Homepage/public/mudkty-wtvolkolakgrotesque-light.ttf);
 }
 *{
-    font-family: 'Montserrat Alternates';
-    margin: 0;
-    box-sizing: border-box;
-    line-height: normal;
+  font-family: 'Montserrat Alternates';
+  margin: 0;
+  box-sizing: border-box;
+  line-height: normal;
 }
 .rectangle-5{
-  position: relative;
+    position: relative;
     display: flex;
-    flex-direction: column;
-    width: 87.5vw;
+    width: 1310px;
     height: 666px;
     border-radius: 75px;
-    margin:auto;
+    margin: auto;
+    /* margin-left: 93px; */
+    /* margin-right: 104px;  */
     margin-top: 43px;
     background-color:#eaeaea;
-    z-index: 0;
 }
 .logoname{
-    width:63px;
-    height:23px;
-    color: #000;
-    font-weight: 600;
-    font-size: 20px;
-    margin-left: 5px;
-    margin-top: 5px;
-    font-family: "MADEEvolveSansEVO";
+  width:63px;
+  height:23px;
+  color: #000;
+  font-weight: 600;
+  font-size: 20px;
+  margin-left: 5px;
+  margin-top: 5px;
+  font-family: "MADEEvolveSansEVO";
 }
 .logoandname{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .navbar{
-  position: relative;
-    margin-top: 52px;
+    position: absolute;
     display: flex;
     height: 97px;
-    width: 74vw; 
+    width: 1110px;
+    top: 52px;  
     margin-left: 95px;
     margin-right: 105px; 
     align-items: center;
 }
 .nav{
-    display: flex;
-    position: absolute;
-    right: 0px;
+  display: flex;
+  position: absolute;
+  right: 0px;
 }
 .nav a{
-    text-decoration: none;
-    font-size: 16px;
-    padding-left: 103px;
-    font-weight: 600;
-    color: #170808;
+  text-decoration: none;
+  font-size: 16px;
+  padding-left: 103px;
+  font-weight: 600;
+  color: #170808;
 }
 .diagnostic{
-    display: flex;
-    margin-left: 85px;
-    margin-top: 70px;
-    width: 64vw;
-    height: 291px;
+    position: absolute;
+    left: 85px;
+    top: 216px;
+    width: 958.791px;
+    height: 290.748px;
     color: #141111;
     font-family: volko;
     font-size: 128px;
@@ -70,21 +70,22 @@
     line-height: 100%;
 }
 .shapefuture{
-    margin-top: 35px;
-    margin-left: 95px;
+    position: absolute;
+    left: 95.41px;
+    top: 546px;
     width: 419.658px;
     height: 101px;
     font-size: 16px;
     font-weight: 400;
 }
 .est{
-    position: absolute;
-    color: #000;
-    right: 187px;
-    top: 546px;
-    width: 68.728px;
-    font-size: 16px;
-    font-weight: 400;
+  position: absolute;
+  color: #000;
+  right: 187px;
+  top: 546px;
+  width: 68.728px;
+  font-size: 16px;
+  font-weight: 400;
 }
 .rectangle6{
     position: relative;
@@ -92,171 +93,165 @@
     margin-top: 12px;
     display: flex;
     align-items: center;
-    width: 87.5vw;
+    width: 1310px;
     height: 100px;
     border-radius: 20px;
     background-color: #0067FF;
     color: #FFF;
     font-size: 40px;
     font-weight: 200;
-  }
-  .rectangle6 .text{
+    z-index: 2;
+}
+.rectangle6 .text{
     font-family: volko;
     font-size: 40px;
+    font-style: normal;
     font-weight: 200;
     line-height: 100%;
     padding-left: 95px;
-  }
-  .heart{
+}
+.heart{
     display: flex;
     position: absolute;
-    margin-left: 30px;
-    right: 26%;
-    width: 22vw;
-    height: 23vw;
+    top: 584px;
+    left: 748px;
+    width: 331px;
+    height: 340px;
     border-radius: 45px;
-  }
+    z-index: 3;
+}
 .background{
     display: flex;
     position: absolute;
-    right: 26%;
-    width: 24vw;
-    height: 24vw;
+    top: 584px;
+    left: 735px;
+    width: 395px;
+    height: 314px;
     border-radius: 395px;
     background: #C75050;
+    z-index: 1;
     filter: blur(100px);
 }
 
-/* line1 */
+.hr1{
+  margin-top: 146px;
+}
 
-.line1{
-  margin-top: 151px;
-  width: 1496px;
-  height: 1px;
-  background: #000;
-} 
 
 /* Our Expertise */
 
 .ourexpertise{
+  position: relative;
+  display: flex;
   width: 534px;
   height:85px;
-  position: absolute;
-  top:1079px;
-  left:537px;
-  align-items: center;
+  margin-top:106.88px;
+  margin-left:auto;
+  margin-right:auto;
 }
 
 .ourexpertise>p{
   color: #000;
-  font-family: 'Montserrat Alternates';
+  font-family: Montserrat Alternates;
   font-size: 70px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
 }
 .rect20and21{
-  position:relative;
-  right:347px;
-  top:74px;
   display:flex;
-  flex-direction: row;
   gap:20px;
+  justify-content: center;
+  margin-top: 96px;
 }
 .rectangle20{
-  position:relative;
   width: 550px;
   height: 170px;
-  flex-shrink: 0;
   border-radius: 16px;
   background: #0067FF;
+  display: flex;
 }
 .rectangle21{
-  position:relative;
   width: 550px;
   height: 170px;
-  flex-shrink: 0;
   border-radius: 16px;
   background: #0067FF;
+  display: flex;
 }
 
 .genomics{
-  position: relative;
   color: #FFF;
+  width: 210.754px;
+  height:auto;
   font-family: 'Montserrat Alternates';
   font-size: 40px;
   font-style: normal;
   font-weight: 400;
-  line-height: 100%; /* 40px */
-  top: 65px;
-  left: 155px;
+  line-height: 100%;
+  margin: auto;
 }
 
 .chemistry{
-  position: relative;
+  display: flex;
+  width: 210.754px;
+  height:auto;
   color: #FFF;
   font-family: 'Montserrat Alternates';
   font-size: 40px;
   font-style: normal;
   font-weight: 400;
   line-height: 100%; /* 40px */
-  top: 65px;
-  left: 155px;
+  margin:auto;
 }
 
 .rectangle22and23{
-  position:relative;
-  right:347px;
-  top:111px;
   display:flex;
-  flex-direction: row;
   gap:20px;
+  justify-content: center;
+  margin-top:37px;
 }
 .rectangle22{
-  position:relative;
   width: 550px;
   height: 170px;
-  flex-shrink: 0;
   border-radius: 16px;
   background: #0067FF;
+  display: flex;
+  padding:1px;
 }
 .rectangle23{
-  position:relative;
   width: 550px;
   height: 170px;
-  flex-shrink: 0;
   border-radius: 16px;
   background: #0067FF;
+  display: flex;
 }
 
 .bionics{
-  position: relative;
   color: #FFF;
+  width: 210.754px;
+  height:auto;
   font-family: 'Montserrat Alternates';
   font-size: 40px;
   font-style: normal;
   font-weight: 400;
-  line-height: 100%; /* 40px */
-  top: 65px;
-  left: 155px;
+  line-height: 100%;
+  margin: auto;
 }
 
 .genetic{
-  position: relative;
   color: #FFF;
+  width: 210.754px;
+  height:auto;
   font-family: 'Montserrat Alternates';
   font-size: 40px;
   font-style: normal;
   font-weight: 400;
-  line-height: 100%; /* 40px */
-  top: 65px;
-  left: 155px;
+  line-height: 100%;
+  margin: auto;
 }
 
-/* line2 */
-
 .line2{
-  /* margin-top: 762px; */
+  margin-top: 762px;
   width: 1440.009px;
   height: 1px;
   background: #000;
@@ -265,81 +260,66 @@
 /* Special features */
 
 .specialfeatures{
-  position:absolute;
-  top:1818px;
-  left:0px;
+  position: relative;
+  display: flex;
+  margin-top:95.88px;
 }
 
-.specialfeatures>.header{
+.specialfeatures>p{
   color: #000;
 font-family: 'Montserrat Alternates';
 font-size: 70px;
 font-style: normal;
 font-weight: 500;
 line-height: normal;
-width:595px;
-height:85px;
-position: relative;
-left:380px;
+width: auto;
+height:auto;
+margin:auto;
 }
 
+.frame15{
+  width:1120px;
+  height:388px;
+  display: flex;
+  margin:auto;
+  margin-top: 71px;
+} 
+
 .ellipse12{
+  display: flex;
   width: 206px;
   height: 199px;
-  flex-shrink: 0;
   border-radius: 50%;
   background-color:#0067FF;
-  position: absolute;
-  top:0px;
-  left:27.42px;
+  position: relative;
+  margin:auto;
 }
 
 .frame14{
   width: 257.527px;
-height: 388px;
-flex-shrink: 0;
-position: relative;
+  height: 388px;
+  margin:auto;
 }
-#frame14{
-  margin-left:91.24px;
-  position: relative;
-}
+
 
 .frame13{
   width: 263px;
-height: 388px;
-flex-shrink: 0;
-position: relative;
+  height: 388px;
+  margin: auto;
 }
 
 .frame12{
-width: 263px;
-height: 388px;
-flex-shrink: 0;
-position: relative;
+  width: 263px;
+  height: 388px;
+  margin:auto;
 }
 
 .Rectangle40{
   width: 257.527px;
   height: 331px;
-  flex-shrink: 0;
   border-radius: 32px;
   background: #D9D9D9;
-  position: absolute;
-  top:57px;
-}
-/* #rect40{
-  margin-left:91.24px;
-  position: relative;
-} */
-
-.frame15{
-  margin-left: 207px;
-  display: flex;
-  flex-direction: row;
-  gap:77px;
-  margin-top: 71px;  
-  position: relative;
+  margin-top:-142px;
 }
 
 .ellipse12>p{
@@ -348,22 +328,20 @@ position: relative;
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
-  line-height: 10rem;
+  line-height: normal;
+  width:auto;
+  height:auto;
   display: flex;
   justify-content: center;
-  align-items: center;
-  text-align: center;
+  margin:auto;
 }
 
 .content40{
-  padding: 0px;
-  position: absolute;
   width: 205px;
   height: 136px;
-  flex-shrink: 0;
   color: #000;
   font-family: 'Montserrat Alternates';
-  font-size: auto;
+  font-size:24px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -572,33 +550,27 @@ position: relative;
 
   /* footer */
 
-
-.footer{
-  position: absolute;
-  top: 3367px;
-  display: flex;
-  width: 100%;
-  height: 65px;
+.rectangle-38{
+  /* width: 1496px; */
+  height: 61px;
+  /* flex-shrink: 0; */
   background: #0067FF;
-  align-items: center;
-  margin: auto;
-  margin-top: 200px;
+  margin-top: 24px;
+  text-align: center;
+  display: flex;
+  gap: 300px;
 }
 
-.copyright{
-  margin-top: 10px;
-  color: #FFFFFF;
-  display: flex;
-  align-items: center;
-  font-size: 24px;
-  margin-left: 143px;
-  line-height: 100%;
+.Copyright{
+  width: 588.818px;
+  height: 56.393px;
+  flex-shrink: 0;
+  display: -webkit-inline-box;
+  margin-left: 239px;
+    /* margin-top: 50px; */
+  line-height: 51px;
 }
-.atr-icon{
-  margin-bottom: 10px;
-  margin-right: 2px;
-}
-/* .Copyright>p{
+.Copyright>p{
   margin-top: 10px;
   width: 572.658px;
   height: 33px;
@@ -608,13 +580,31 @@ position: relative;
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
-  line-height: -1 rem; /* 24px 
-} */
+  line-height: -1 rem; /* 24px */
+}
 
 .icons{
-  margin-left: 450px;
-  display: flex;
-  gap: 34px;
+  display: inline flex;
+  gap: 34.33px;
   justify-content: center;
   align-items: center;
 }
+
+.twitter{
+  width: 64.667px;
+  height: 58.704px;
+  flex-shrink: 0;
+}
+
+.insta{
+  width: 64px;
+  height: 52px;
+  flex-shrink: 0;
+}
+
+.facebook{
+  width: 58px;
+  height: 49px;
+  flex-shrink: 0;
+  fill: #FFF;
+} 
