@@ -88,10 +88,10 @@
   font-weight: 400;
 }
 .rectangle6{
+  display: flex;
   position: relative;
   margin: auto;
   margin-top: 12px;
-  display: flex;
   align-items: center;
   width: 87.5vw;
   height: 100px;
@@ -117,8 +117,9 @@
   width: 22vw;
   height: 23vw;
   border-radius: 45px;
+  z-index: 1;
 }
-.background{
+.rectangle6 .background{
   display: flex;
   position: absolute;
   right: 26%;
@@ -126,421 +127,126 @@
   height: 24vw;
   border-radius: 395px;
   background: #C75050;
-  filter: blur(100px);
+  filter: blur(94px);
+  z-index: 0;
 }
 
-.hr1{
+
+/* Our Models */
+
+.line{
   margin-top: 146px;
+  background-color: black;
+  height: 1px;
+  width: 100vw;
 }
-
-
-/* Our Expertise */
-
-.ourexpertise{
-  position: relative;
+.ourmodels{
   display: flex;
-  width: 534px;
-  height:85px;
-  margin-top:106.88px;
-  margin-left:auto;
-  margin-right:auto;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 107px;
+  width: 72.2vw;
+  height: 536px;
 }
-
-.ourexpertise>p{
+.ourmodels .head{
+  justify-content: center;
+  display: flex;
+  margin: auto;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  width: 42%;
+  height: 63px;
   color: #000;
   font-family: Montserrat Alternates;
   font-size: 70px;
-  font-style: normal;
   font-weight: 500;
-  line-height: normal;
+}
+.rect{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  border-radius: 16px;
+  color: #F9F9F9;
+  background-color: #0067FF;
+  width: 49%;
+  height: 170px;
 }
 .rect20and21{
-  display:flex;
-  gap:20px;
-  justify-content: center;
   margin-top: 96px;
-}
-.rectangle20{
-  width: 550px;
-  height: 170px;
-  border-radius: 16px;
-  background: #0067FF;
   display: flex;
-}
-.rectangle21{
-  width: 550px;
+  /* margin: auto; */
+  width: 100%;
   height: 170px;
-  border-radius: 16px;
-  background: #0067FF;
+  gap: 20px;
+}
+.rect22and23{
+  margin-top: 37px;
   display: flex;
+  /* margin: auto; */
+  width: 100%;
+  height: 170px;
+  gap: 20px;
 }
 
-.genomics{
-  color: #FFF;
-  width: 210.754px;
-  height:auto;
-  font-family: 'Montserrat Alternates';
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 100%;
+
+/* about us  */
+
+.aboutus{
+  width: 86.5vw;
+  height: 503px;
+  display: flex;
   margin: auto;
+  margin-top: 75px;
+  flex-direction: column;
 }
-
-.chemistry{
-  display: flex;
-  width: 210.754px;
-  height:auto;
-  color: #FFF;
-  font-family: 'Montserrat Alternates';
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 100%; /* 40px */
-  margin:auto;
-}
-
-.rectangle22and23{
-  display:flex;
-  gap:20px;
+.aboutus .head{
   justify-content: center;
-  margin-top:37px;
-}
-.rectangle22{
-  width: 550px;
-  height: 170px;
-  border-radius: 16px;
-  background: #0067FF;
   display: flex;
-  padding:1px;
-}
-.rectangle23{
-  width: 550px;
-  height: 170px;
-  border-radius: 16px;
-  background: #0067FF;
-  display: flex;
-}
-
-.bionics{
-  color: #FFF;
-  width: 210.754px;
-  height:auto;
-  font-family: 'Montserrat Alternates';
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 100%;
   margin: auto;
-}
-
-.genetic{
-  color: #FFF;
-  width: 210.754px;
-  height:auto;
-  font-family: 'Montserrat Alternates';
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 100%;
-  margin: auto;
-}
-
-.line2{
-  margin-top: 762px;
-  width: 1440.009px;
-  height: 1px;
-  background: #000;
-}
-
-/* Special features */
-
-.specialfeatures{
-  position: relative;
-  display: flex;
-  margin-top:95.88px;
-}
-
-.specialfeatures>p{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  width: 42%;
+  height: 63px;
   color: #000;
-font-family: 'Montserrat Alternates';
-font-size: 70px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
-width: auto;
-height:auto;
-margin:auto;
-}
-
-.frame15{
-  width:1120px;
-  height:388px;
-  display: flex;
-  margin:auto;
-  margin-top: 71px;
-} 
-
-.ellipse12{
-  display: flex;
-  width: 206px;
-  height: 199px;
-  border-radius: 50%;
-  background-color:#0067FF;
-  position: relative;
-  margin:auto;
-}
-
-.frame14{
-  width: 257.527px;
-  height: 388px;
-  margin:auto;
-}
-
-
-.frame13{
-  width: 263px;
-  height: 388px;
-  margin: auto;
-}
-
-.frame12{
-  width: 263px;
-  height: 388px;
-  margin:auto;
-}
-
-.Rectangle40{
-  width: 257.527px;
-  height: 331px;
-  border-radius: 32px;
-  background: #D9D9D9;
-  margin-top:-142px;
-}
-
-.ellipse12>p{
-  color: #FFF;
-  font-family: 'Montserrat Alternates';
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  width:auto;
-  height:auto;
-  display: flex;
-  justify-content: center;
-  margin:auto;
-}
-
-.content40{
-  width: 205px;
-  height: 136px;
-  color: #000;
-  font-family: 'Montserrat Alternates';
-  font-size:24px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  top:223px;
-  text-align: center;
-  justify-content: center;
-}
-
-
-/* contact us and about us style */
-
-.container2{
-    display: flex;
-    align-items: center;
-    margin-left: 93px;
-    width:1020px;
-    height:106px;
-    margin-top: 63rem;
-  }
-  
-  
-  
-  .logo2{
-    display:flex;
-    flex-direction: column;
-    gap:13.86px;
-  }
-  
-
-  .contactusheader{
-    color: #000;
-  font-family: MUDKTY+WTVolkolakGrotesque-Light;
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 200;
-  width:196px;
-  height:36px;
-  margin-left: 144px;
-  }
-  
-  .aboutusheader{
-  color: #000;
-  font-family: MUDKTY+WTVolkolakGrotesque-Light;
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 200;
-  height:36px;
-  width:156px;
-  margin-left:450px;
-  }
-  
-  .container {
-    margin-left: 185px;
-    width: 70rem;
-  }
-
-  .rectangle-42,
-  .rectangle-42 * {
-    box-sizing: border-box;
-  }
-  .rectangle-42 {
-    background: #0067ff;
-    border-radius: 45px;
-    width: 643px;
-    height: 273px;
-   
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-     /* Makes the container take up the entire viewport height */
-    text-align: center;
-  }
-  
-  .for-any-query {
-    display:flex;
-    flex-direction: column;
-    color: #ffffff;
-    text-align: left;
-    font: 300 24px/100% "MUDKTY+WTVolkolakGrotesque-Light", sans-serif;
-    margin-right: 75px;
-    margin-left: 36px;
-    margin-top: 28px;
-  }
-  
-  
-  .squareofquery{
-    font-family: "MUDKTY+WTVolkolakGrotesque-Light";
-    width:245px;
-    height:27px;
-    /* text-align: center; */
-    margin-bottom: 28px;
-    
-  }
-  .button{
-      width:245px;
-      height:101px;
-      display: flex;
-      flex-direction: column;
-      gap:21px;
-  }
-  
-  
-  .inbox1{
-    display:flex;
-    flex-direction: row;
-    width: 643px;
-    height: 273px;
-  }
-  
-  
-  
-  .boxes{
-      display:flex;
-      flex-direction: row;
-      gap:40px;
-      margin-left:72px;
-  }
-  .contactus,.aboutus, .for-any-query, .button{
-    font-family: 'Montserrat Alternates', sans-serif;
-  }
-  
-  .abcd-gmail-com * {
-    box-sizing: border-box;
-  }
-  .abcd-gmail-com {
-    color: #ffffff;
-    text-align: left;
-    width: 255px;
-    height:20px;
-    font: 400 24px/100% "Montserrat Alternates", sans-serif;
-    position: relative;
-    margin-bottom: 29px;
-  }
-  .abcd-gmail-com-2 * {
-    box-sizing: border-box;
-  }
-  .abcd-gmail-com-2 {
-    color: #ffffff;
-    text-align: left;
-    width: 255px;
-    height:20px;
-    font: 400 24px/100% "Montserrat Alternates", sans-serif;
-    position: relative;
-    margin-bottom: 53px;
-    /* margin-right: 31px; */
-  }
-  .ph-no-1,
-  .ph-no-1 * {
-    box-sizing: border-box;
-  }
-  .ph-no-1 {
-    color: #ffffff;
-    text-align: left;
-    width: 229px;
-    height:20px;
-    font: 400 24px/100% "Montserrat Alternates", sans-serif;
-    position: relative;
-    margin-bottom: 29px;
-    margin-top: 20px;
-  }
-  
-  .ph-no-2,
-  .ph-no-2 * {
-    box-sizing: border-box;
-  }
-  .ph-no-2 {
-    color: #ffffff;
-    text-align: left;
-    width: 229px;
-    height:20px;
-    font: 400 24px/100% "Montserrat Alternates", sans-serif;
-    position: relative;
-    margin-bottom: 29px;
-  }
-  
-  
-  
-    .information{
-      display:flex;
-      flex-direction: column;
-      gap:20px;
-  }
-  
-  
-  
-  .aboutus{
-    color: #FFF;
   font-family: Montserrat Alternates;
-  font-size: 24px;
-  font-style: normal;
+  font-size: 70px;
   font-weight: 500;
-  line-height: normal;
-  }
-  
-  
-  
-  .aboutus{
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-     /* Makes the container take up the entire viewport height */
-    text-align: center;
-  }
+}
+.rect24{
+  display: flex;
+  margin: auto;
+  margin-top: 64px;
+  gap: 7.7vw;
+}
+.rect24 .text{
+  width: 43.7vw;
+  font-size: 29px;
+}
+.rect24 .doctorpatient{
+  position: relative;
+}
+.rect24 .image{
+  display: flex;
+  position: relative;
+  width: 35vw;
+  z-index: 1;
+}
+.rect24 img{
+  width:100%;
+  height: 100%;
+}
+.rect24 .background{
+  display: flex;
+  position: absolute;
+  top: -14px;
+  left: 60px;
+  width: 26.5vw;
+  height: 21vw;
+  background: #C75050;
+  filter: blur(94px);
+  z-index:0; 
+} 
 
 
 
