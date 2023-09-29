@@ -3,40 +3,54 @@
     margin: 0;
     box-sizing: border-box;
     line-height: normal;
+    
 }
 .homepage{
     position: relative;
     background-color: #f9f9f9;
     width: 100%;
-    height: 812px;
+    height: 100%;
 }
-.rectangle-5{
+.rectangle-5 {
     position: relative;
     display: flex;
-    height: 69.1px;
-    top: 42px;
-    margin-left: 192px;
-    margin-right: 244px;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    padding: 2% 15%;
     align-items: center;
 }
-.rectangle-5 .nav{
-    display: flex;
-    position: absolute;
-    right: 0px;
+.logoname{
+    text-align: center;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+.rectangle-5 .company-icon {
+    margin-right: auto; 
 }
-.nav a{
+
+.rectangle-5 .nav {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px; 
+}
+
+.nav a {
     text-decoration: none;
     font-size: 16px;
-    padding-left: 103px;
     font-weight: 600;
     color: #170808;
+    white-space: nowrap; 
+    padding: 10px 15px; 
 }
 .login{
     display: flex;
-    position:absolute;
-    top: 208px;
-    width: 100%;
-    height: 512px;
+    position:relative;
+    margin: 1% 2%;
+    
 }
 .vector-login{
     margin-top: auto;
@@ -116,7 +130,7 @@ input[type="submit"]{
     background-color: #79a2ff;
     cursor: pointer;
 }
-.checkboxes{
+/* .checkboxes{
     margin-top: 35px;
     display: flex;
     flex-direction: column;
@@ -129,8 +143,9 @@ input[type="submit"]{
     width: 25px;
     margin-top: 2px;
     margin-right: 17px;
-    /* accent-color: red; when checkbox checked */
-}
+    accent-color: red; when checkbox checked
+} */
+/* 
 .checkbox1{
     display: flex;
     margin-bottom: 5px;
@@ -139,9 +154,112 @@ input[type="submit"]{
 .checkbox2{
     display: flex;
     align-items: center;
+} */
+
+
+
+
+
+@media screen and (max-width: 1100px) {
+    .rectangle-5 {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center;
+        margin-left: 20px; /* Adjust the margin for smaller screens */
+        margin-right: 20px;
+    }   
+
+    .rectangle-5 .company-icon {
+        margin: 0; /* Reset margin for the company icon */
+    }
+
+    .rectangle-5 .nav {
+        width: 100%; /* Make navigation links take full width on smaller screens */
+        justify-content: center; /* Center navigation links horizontally */
+    }
+
+    .im2 {
+        max-width: 50%; /* Make images responsive, adapt to the container width */
+        height: auto; /* Allow images to scale proportionally */
+    }
+
+    .login {
+        flex-direction: column; /* Stack login elements vertically */
+    }
+
+    .vector-login {
+        padding: 0; /* Remove padding */
+        text-align: center; /* Center align the vector image */
+    }
+
+    .line-div {
+        display: none; /* Hide the dividing line */
+    }
+
+    .rightlogin {
+        padding-left: 20px; /* Adjust padding */
+        width: auto; /* Allow content to expand to the screen width */
+    }
+
+    .username,
+    .divtoinput,
+    .password {
+        width: auto; /* Allow input containers to expand */
+        margin-top: 10px; /* Adjust margin */
+    }
+
+    .username .user,
+    .username .image,
+    .password .passw,
+    .password .image {
+        padding-left: 10px; /* Adjust padding */
+    }
+
+    input[type="submit"] {
+        margin-top: 10px; /* Adjust margin */
+        width: 100%; /* Make the submit button full-width */
+    }
 }
 
+/* Responsive styles for phones */
+@media screen and (max-width: 800px) {
+    .rectangle-5 {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center;
+        margin-left: 10px; /* Further reduce the margin for smaller screens */
+        margin-right: 10px;
+    }
 
+    
 
+    .rectangle-5 .company-icon {
+        margin: 0; /* Reset margin for the company icon */
+    }
 
+    .rectangle-5 .nav {
+        width: 100%; /* Make navigation links take full width on smaller screens */
+        justify-content: center; /* Center navigation links horizontally */
+    }
+
+    .im2 {
+        max-width: 50%; /* Make images responsive, adapt to the container width */
+        height: auto; /* Allow images to scale proportionally */
+    }
+
+    .rightlogin {
+        padding-left: 10px; /* Further reduce padding */
+    }
+
+    .username,
+    .divtoinput,
+    .password {
+        margin-top: 5px; /* Further reduce margin */
+    }
+
+    .username .user,
+    .username .image,
+    .password .passw,
+    .password .image {
+        padding-left: 5px; /* Further reduce padding */
+    }
+}
 
