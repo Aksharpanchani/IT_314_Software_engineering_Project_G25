@@ -1,60 +1,60 @@
 @font-face {
     font-family: volko;
-    src: url(/public/mudkty-wtvolkolakgrotesque-light.ttf);
-    font-family: 'Montserrat Alternates';
-  src: url('./Montserrat_Alternates/MontserratAlternates-Medium.ttf') format('truetype');
-}
+    src: url(/Frontend_and_UI_Design/Homepage/public/mudkty-wtvolkolakgrotesque-light.ttf);
+  }
 *{
-    font-family: 'Montserrat Alternates';
     margin: 0;
     box-sizing: border-box;
     line-height: normal;
 }
 
 .navbar{
-    position: absolute;
+    position: relative;
     display: flex;
-    height: 69.1px;
-    width: 1110px;
-    top: 27px;  
-    margin-left: 11rem;
-    margin-right: 11rem; 
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    padding: 2% 15%;
     align-items: center;
 }
 .nav{
     display: flex;
-    position: absolute;
-    right: 0px;
-    gap: 5rem;
+    flex-wrap: wrap; 
+    gap: 20px; 
 }
 .nav a{
+    font-family: Montserrat Alternates;
     text-decoration: none;
     font-size: 16px;
-    padding-left: 103px;
     font-weight: 600;
     color: #170808;
+    white-space: nowrap; 
+    padding: 10px 15px; 
 }
 
-.logoname {
-    padding-left: 3rem;
-}
+
 
 .welcome{
     color: #000;
-    font-family: MUDKTY+WTVolkolakGrotesque-Light;
+    font-family: volko;
     font-size: 36px;
     font-style: normal;
     font-weight: 200;
     line-height: normal;
-    margin-top: 8rem;
     display: flex;
     justify-content: center;
 }
 
-.medAI{
+.logo img{
+    width: 4.46338rem;
+    height: 4.32125rem;
+    flex-shrink: 0;
+}
+
+.logoname{
     color: #000;
-    font-family: Inter;
-    font-size: 36px;
+    text-align: center;
+    font-family: "Inter";
+    font-size: 1.25rem;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -67,8 +67,8 @@
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    margin-left: 4rem;
-    margin-top: 3rem;
+    padding-left: 4rem;
+    padding-top: 3rem;
 }
 
 .main{
@@ -82,10 +82,11 @@
 }
 
 .names {
-    justify-content: center;
+    white-space: nowrap;
     display: flex;
     flex-direction: column;
-    gap: 8%;
+    z-index: 1;
+    padding-right: 10px;
 }
 
 .input {
@@ -94,11 +95,13 @@
     flex-direction: column;
     justify-content: center;
     gap: 4%;
+    z-index: 1;
 }
 
 #row{
     display: flex;
     width: 100%;
+    padding: 8.8% 0 8.8% 0;
 }
 
 #fields{
@@ -133,6 +136,7 @@
     justify-self: center;
     padding-top: 8rem;
     padding-left: 8rem;
+    z-index: 1;
 }
 
 .background{
@@ -145,29 +149,21 @@
     flex-shrink: 0;
     border-radius: 602px;
     background: rgba(121, 162, 255, 0.60); 
-    z-index: 1;
     filter: blur(120px);
 }
 
-.back2{
-    display: flex;
-    position: absolute;
-    bottom: -20rem;
-    right: 0rem;
-    width: 39rem;
-    height: 27rem;
-    flex-shrink: 0;
-    border-radius: 602px;
-    background: #79A2FF;
-    filter: blur(200px);
-
+.back2 img{ 
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    
 }
 
 .align{
     width: 32%;
-    display: flex;
-    justify-content: right;
-    padding-top: 1rem;
+    display: inline;
+    padding: 2% 0 0 30%;
+    
 }
 .signup{
     display: inline-flex;
