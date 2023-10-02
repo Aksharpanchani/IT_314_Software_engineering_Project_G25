@@ -4,7 +4,6 @@
   }
 *{
     margin: 0;
-    box-sizing: border-box;
     line-height: normal;
 }
 
@@ -67,13 +66,13 @@
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    padding-left: 4rem;
+    padding-left: 5rem;
     padding-top: 3rem;
 }
 
 .main{
     display: flex;
-    margin-left: 4rem;
+    margin-left: 5rem;
 }
 
 .form{
@@ -87,6 +86,7 @@
     flex-direction: column;
     z-index: 1;
     padding-right: 10px;
+    padding-top: 25px;
 }
 
 .input {
@@ -101,7 +101,7 @@
 #row{
     display: flex;
     width: 100%;
-    padding: 8.8% 0 8.8% 0;
+    padding: 11% 0 10.5% 0;
 }
 
 #fields{
@@ -123,7 +123,7 @@
 }
 
 #textbox{
-    width: 313px;
+    width: 19.5625rem;
     height: 3.2rem;
     flex-shrink: 0;
     border-radius: 17px;
@@ -134,8 +134,11 @@
 
 .image{
     justify-self: center;
-    padding-top: 8rem;
-    padding-left: 8rem;
+    width: 33.625rem;
+    height: 26.3125rem;
+    position: relative;
+    margin-top: 8rem;
+    margin-left: 8rem;
     z-index: 1;
 }
 
@@ -160,9 +163,10 @@
 }
 
 .align{
-    width: 32%;
-    display: inline;
-    padding: 2% 0 0 30%;
+    white-space: nowrap;
+    padding: 0 0 2rem 25.3rem;
+    justify-content: center;
+    align-items: center;
     
 }
 .signup{
@@ -180,13 +184,13 @@
     line-height: normal;
 }
 
-.log{
+/* .log{
     color: #000;
     font-family: 'Montserrat Alternates';
     font-size: 1.5rem;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    padding: 4rem;
-    padding-top: 1rem;
-}
+    padding: 5rem;
+    padding-top: 2rem;
+} */
