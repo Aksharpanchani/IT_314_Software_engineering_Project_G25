@@ -1,0 +1,136 @@
+@font-face {
+    font-family: volko;
+    src: url(/Frontend_and_UI_Design/Homepage/public/mudkty-wtvolkolakgrotesque-light.ttf);
+  }
+
+*{
+    font-family: 'Montserrat Alternates';
+    margin: 0;
+    box-sizing: border-box;
+    line-height: normal;
+    
+}
+.homepage{
+    position: relative;
+    /* background-color: #f9f9f9; */
+    width: 100%;
+    height: 100%;
+}
+.rectangle-5 {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    padding: 2% 15%;
+    align-items: center;
+}
+.logoname{
+    text-align: center;
+    font-family: MADEEvolveSansEVO;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.rectangle-5 .company-icon {
+    margin-right: auto; 
+}
+.rectangle-5 .nav {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px; 
+}
+.nav a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #170808;
+    white-space: nowrap; 
+    padding: 10px 15px; 
+}
+.ellipse14 {
+    display: flex;
+    width: 1496px;
+    height:809px;
+}
+
+.blur-background {
+    display: flex;
+    position: absolute;
+    width: 38%;
+    height: 74.41%;
+    border-radius: 74.41%;
+    background: rgba(121, 162, 255, 0.70);
+    filter: blur(200px);
+    margin-left:7.42%;
+    z-index: 0;
+}
+
+.login-image {
+    /* width:36%;
+    height: 28.14%; */
+    flex-shrink: 0;
+    margin-top:8.65%;
+    z-index: 1;
+    margin-left:6.22%;
+    margin-top:5.56%;
+}
+
+.vertical-line {
+    margin-top:2%;
+    margin-left:5.28%;
+    border-left: 1px solid black;
+    height: 63.3%;
+}
+
+.you_are_a{
+    display: flex;
+    flex-direction: column;
+    gap:56.7%;
+    width: 14%;
+    height: 23.98%;
+    flex-shrink: 0;
+    color: #000;
+    font-family: 'Montserrat Alternates';
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50%; /* 21px */
+    margin-top: 10.8%;
+    margin-left:17.7%;
+    align-items: center;
+}
+
+.UserType{
+    display:flex;
+    gap:75px;
+}
+
+.button{
+    border-width: 0;
+    width:210px;
+    height:64px;
+    border-radius: 135px;
+    border-color:#AFC8FF;;
+    background-color: #AFC8FF;
+ 
+    text-align: center;
+    text-decoration: none;
+    color: #000;
+    font-family: 'Montserrat Alternates';
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50%; /* 21px */
+    cursor: pointer;
+    outline: none;
+  }
+
+  .doctor:hover {
+    background-color:green;
+    /* color: white; */
+  }
+
+  .patient:hover{
+    background-color: aqua;
+  }
