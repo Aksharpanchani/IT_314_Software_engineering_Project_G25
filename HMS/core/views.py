@@ -146,7 +146,7 @@ def login(request):
         return render(request, 'login.html')
 
 
-@login_required(login_url='login')
+# @login_required(login_url='login')
 def homepage(request):
     # user_profile = Profile.objects.get(user=request.user)
     # posts = Post.objects.all()
@@ -167,3 +167,6 @@ def patienthome(request):
 @login_required(login_url='login')
 def doctorhome(request):
     return render(request, 'doctorhome.html')
+
+def signup(request):
+    return render(request, 'signup.html')
