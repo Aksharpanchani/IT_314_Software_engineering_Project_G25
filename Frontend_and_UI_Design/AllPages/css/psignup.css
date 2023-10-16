@@ -9,6 +9,7 @@
 
 .navbar{
     position: relative;
+    z-index: 1;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between; 
@@ -33,6 +34,8 @@
 
 
 .welcome{
+    position: relative;
+    z-index: 1;
     color: #000;
     font-family: volko;
     font-size: 36px;
@@ -55,7 +58,8 @@
     font-family: Inter;
     font-size: 1.25rem;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
+    font-family: "MADEEvolveSansEVO";
     line-height: normal;
 }
 
@@ -154,10 +158,12 @@
     background: rgba(121, 162, 255, 0.60); 
     filter: blur(120px);
 }
-
-.back2 img{ 
+.back2{
     position: relative;
-    z-index: -1;
+    z-index: 0;
+}
+.back2 img{ 
+    
     position: fixed;
     right: 0px;
     bottom: 0px;
