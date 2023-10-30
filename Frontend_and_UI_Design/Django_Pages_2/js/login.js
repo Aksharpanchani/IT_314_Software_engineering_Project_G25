@@ -1,3 +1,5 @@
+//   not used currently
+
 function convertDivtoInput(divid,divuserid,defaultName) {
     const divContainer = document.getElementById(divid);
     divHTML = divContainer.innerHTML;

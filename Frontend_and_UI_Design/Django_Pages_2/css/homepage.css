@@ -1,6 +1,6 @@
 @font-face {
   font-family: volko;
-  src: url(/Frontend_and_UI_Design/Homepage/public/mudkty-wtvolkolakgrotesque-light.ttf);
+  src: url(../public/mudkty-wtvolkolakgrotesque-light.ttf);
 }
 *{
   font-family: Montserrat Alternates;

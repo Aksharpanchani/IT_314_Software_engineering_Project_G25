@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+        
+        <h2 class="title">Doctor Registration</h2>
+        <form action="" method="POST">
+        {% for message in messages %}
+        <h5>{{ message }}</h5>
+        {% endfor %}
+        {% csrf_token %}
+        <input type="text" required name="first_name" placeholder="First Name"><br>
+        <input type="text" required name="last_name" placeholder="Last Name"><br>
+        <input type="email" required name="email" placeholder="Email Address"><br>
+        <input type="password" required name="pass1" placeholder="Password"><br>
+        <input type="password" required name="pass2" placeholder="Confirm Password"><br>
+            {{ form }}
+            <br>
+        <button type="submit">Sign Up</button>
+
+        <h4 class="small">Already a member? <a href="login" class="small">Login</a></h4>
+
+    </form>
+
+    
+    </form>
+</body>
+</html>
