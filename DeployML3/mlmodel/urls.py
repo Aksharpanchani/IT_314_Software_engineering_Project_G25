@@ -8,7 +8,9 @@ router = routers.DefaultRouter()
 
 urlpatterns = [
    path('',views.home,name='home'),
-   path('predictor/',views.predictor,name = 'predictor'),
-   path('predictor/result/',views.formInfo,name='result'),
+   path('predictdiabetes/',views.predictor_diab,name = 'predictdiabetes'),
+   path('predictdiabetes/result/',views.formInfo_diab,name='result'),
+   path('predictheart/',views.predictor_heart,name = 'predictheart'),
+   path('predictheart/result/',views.formInfo_heart,name='result'),
    
 ]
