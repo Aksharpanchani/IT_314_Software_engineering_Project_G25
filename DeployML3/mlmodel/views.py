@@ -3,7 +3,7 @@ from django.http import HttpResponse
 
 from joblib import load
 diab_model = load('./SavedModels/diabetes_model.joblib')
-#heart_model = load('./SavesModels/heart_model.joblib')
+heart_model = load('./SavedModels/heart_model.joblib')
 
 def home(request):
     return HttpResponse('Helo')
