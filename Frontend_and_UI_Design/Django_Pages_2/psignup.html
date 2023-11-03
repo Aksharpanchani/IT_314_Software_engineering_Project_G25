@@ -13,12 +13,15 @@
 <body>
     
     <div class="navbar">
-        <div class="logo">
-            <img src="./public/logo.svg" alt="">
-            <div class="logoname">
-                MED.AI
+        <a href="./homepage.html">
+            <div class="logo" >
+                <img src="./public/logo.svg" alt="">
+                <div class="logoname">
+                    MED.AI
+                </div>
             </div>
-        </div>
+        </a>
+        
         <div class="nav">
             <a href="./homepage.html" class="logsign">Home</a>
             <a href="./homepage.html#contact" class="contact">Contact us</a>
@@ -35,10 +38,10 @@
     </div>
 
         <form action="" method="POST">
-        <!-- {% for message in messages %} -->
-        <!-- <h5>{{ message }}</h5>
+        {% for message in messages %}
+        <h5>{{ message }}</h5>
         {% endfor %}
-        {% csrf_token %} -->
+        {% csrf_token %}
 
         <div class="main">
             <div class="form">
@@ -79,7 +82,7 @@
                     <input type="email" id="textbox" required name="email" placeholder="Email Address">
                     <input type="password" id="textbox" required name="pass1" placeholder="Password">
                     <input type="password" id="textbox" required name="pass2" placeholder="Confirm Password">
-                    <!-- {{ form }} -->
+                    {{ form }}
                     <!--  -->
                     <input type="number" id="textbox" required name="height" placeholder="Height in Centimeters">
                     <input type="number" id="textbox" required name="weight" placeholder="Weight in Kilogram">
