@@ -1,6 +1,6 @@
 @font-face {
     font-family: volko;
-    src: url(/Frontend_and_UI_Design/Homepage/public/mudkty-wtvolkolakgrotesque-light.ttf);
+    src: url(../public/mudkty-wtvolkolakgrotesque-light.ttf);
   }
 
 *{
@@ -34,6 +34,8 @@
 }
 .rectangle-5 .company-icon {
     margin-right: auto; 
+    text-decoration: none;
+    color: black;
 }
 .rectangle-5 .nav {
     display: flex;
@@ -51,7 +53,7 @@
 .ellipse14 {
     display: flex;
     width: 1496px;
-    height:809px;
+    height:100%;
 }
 
 .blur-background {

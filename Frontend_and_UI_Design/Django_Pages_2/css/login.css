@@ -2,10 +2,8 @@
     font-family: 'Montserrat Alternates';
     margin: 0;
     box-sizing: border-box;
-    line-height: normal;
-    
+    line-height: normal;   
 }
-
 .rectangle-5 {
     position: relative;
     display: flex;
@@ -25,6 +23,8 @@
 }
 .rectangle-5 .company-icon {
     margin-right: auto; 
+    text-decoration: none;
+    color: black;
 }
 .rectangle-5 .nav {
     display: flex;

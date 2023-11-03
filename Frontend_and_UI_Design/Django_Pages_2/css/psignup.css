@@ -16,6 +16,9 @@
     padding: 2% 15%;
     align-items: center;
 }
+/* .navbar a{
+    text-decoration: none;
+} */
 .nav{
     display: flex;
     flex-wrap: wrap; 
@@ -45,7 +48,9 @@
     display: flex;
     justify-content: center;
 }
-
+.logo{
+    text-decoration: none;
+}
 .logo img{
     width: 4.46338rem;
     height: 4.32125rem;
