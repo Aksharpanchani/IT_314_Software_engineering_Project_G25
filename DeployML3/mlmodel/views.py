@@ -17,12 +17,19 @@ def formInfo_diab(request):
 
     HighBP = request.GET['HighBP']
     if HighBP=='No':
-        HighBP=1
-    else:
         HighBP=0
+    else:
+        HighBP=1
     print(HighBP)
     HighChol = request.GET['HighChol']
+
+    if HighChol=='No':
+        HighChol=0
+    else:
+        HighChol=1
+
     BMI = request.GET['BMI']
+
     Stroke = request.GET['Stroke']
     HeartDiseaseorAttack = request.GET['HeartDiseaseorAttack']
     GenHlth = request.GET['GenHlth']
