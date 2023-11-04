@@ -10,10 +10,10 @@ BLOODGROUP_CHOICES = (('OP', 'O +ve'), ('ON', 'O -ve'), ('AP', 'A +ve'), ('AN', 
           ('BP', 'B +ve'), ('BN', 'B -ve'), ('ABP', 'AB +ve'), ('ABN', 'AB -ve'))
 
 class psup(forms.Form):
-    bloodgroup = forms.ChoiceField(choices=BLOODGROUP_CHOICES, widget=forms.Select())
-    gender = forms.ChoiceField(label=mark_safe('<br />Gender'), choices=GENDER_CHOICES, widget=forms.RadioSelect())
+    # bloodgroup = forms.ChoiceField(choices=BLOODGROUP_CHOICES, widget=forms.Select())
+    # gender = forms.ChoiceField(label=mark_safe('<br />Gender'), choices=GENDER_CHOICES, widget=forms.RadioSelect())
     birthdate = forms.DateField(widget=forms.widgets.DateInput(attrs={'type': 'date'}))
-    phone_number = forms.IntegerField(label=mark_safe('<br />Phone Number'))
+    # phone_number = forms.IntegerField(label=mark_safe('<br />Phone Number'))
 
 class dsup(forms.Form):
     bloodgroup = forms.ChoiceField(choices=BLOODGROUP_CHOICES, widget=forms.Select())

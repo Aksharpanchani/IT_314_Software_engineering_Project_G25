@@ -28,6 +28,7 @@ def psignup(request):
         g = request.POST['gender']
         b = request.POST['bloodgroup']
         bd = request.POST['birthdate']
+        pn = request.POST['number']
 
         if password == password2:
             if User.objects.filter(email=email).exists():
@@ -48,8 +49,8 @@ def psignup(request):
                 # create profile object for new user
                 user_model = User.objects.get(username=username)
                 new_profile = PatientProfile.objects.create(user=user_model, id_user=user_model.id, first_name=fname,
-                                                            last_name=lname, height=h, weight=w, gender=g, bloodgroup=b
-                                                            , birthdate=bd)
+                                                            last_name=lname, height=h, weight=w, gender=g, bloodgroup=b,
+                                                            phone_number=pn, birthdate=bd)
                 new_profile.save()
 
                 send_mail('Warm Welcome to HMS',
@@ -64,7 +65,7 @@ def psignup(request):
 
 
     else:
-        return render(request, 'psignup.html', data)
+        return render(request, 'psignup2.html', data)
 
 
 def dsignup(request):

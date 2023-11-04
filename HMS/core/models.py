@@ -19,7 +19,7 @@ class PatientProfile(models.Model):
           ('BP', 'B +ve'), ('BN', 'B -ve'), ('ABP', 'AB +ve'), ('ABN', 'AB -ve'))
     gender = models.CharField(max_length=6, choices=g, default='M')
     bloodgroup = models.CharField(max_length=6, choices=bg, default='OP')
-    birthdate = models.DateField()
+    birthdate = models.DateField(default='16/04/2003')
     phone_number = models.IntegerField(default=0)
 
     def __str__(self):

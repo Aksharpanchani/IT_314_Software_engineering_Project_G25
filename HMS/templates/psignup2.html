@@ -70,6 +70,12 @@
                     <div class="weight" id="row">
                         <element id="fields"> Weight in Kg</element> <element id="apostrophe">*</element>
                     </div>
+                    <div class="gender" id="row">
+                        <element id="fields"> Gender</element> <element id="apostrophe">*</element>
+                    </div>
+                    <div class="Contact Number" id="row">
+                        <element id="fields"> Gender</element> <element id="apostrophe">*</element>
+                    </div>
                 </div>
 
                 <div class="input">
@@ -82,7 +88,22 @@
 
                     <input type="number" id="textbox" required name="height" placeholder="Height in Centimeters">
                     <input type="number" id="textbox" required name="weight" placeholder="Weight in Kilogram">
-                    {{ form }}
+                    Male <input type="radio" id="Male" name="gender" value="gender" required> 
+                    Female <input type="radio" id="Female" name="gender" value="gender" required> 
+                    <input type="number" id="textbox" required name="number" placeholder="Number">
+                    <select name="bloodgroup" id="bloodgroup">
+                        <option value="AP">A+</option>
+                        <option value="AN">A-</option>
+                        <option value="BP">B+</option>
+                        <option value="BN">B-</option>
+                        <option value="ABP">AB+</option>
+                        <option value="ABN">AB-</option>
+                        <option value="OP">O+</option>
+                        <option value="ON">O-</option>
+                      </select>
+
+                    <input type="date" id="birthdate" name="birthdate">
+                    
                 </div>
             </div>
 
@@ -110,3 +131,7 @@
     
 </body>
 </html>
+
+<!-- bloodgroup = forms.ChoiceField(choices=BLOODGROUP_CHOICES, widget=forms.Select())
+birthdate = forms.DateField(widget=forms.widgets.DateInput(attrs={'type': 'date'}))
+phone_number = forms.IntegerField(label=mark_safe('<br />Phone Number')) -->
