@@ -1,0 +1,58 @@
+@font-face {
+    font-family: volko;
+    src: url(../public/mudkty-wtvolkolakgrotesque-light.ttf);
+  }
+  *{
+    font-family: Montserrat Alternates;
+    margin: 0;
+    box-sizing: border-box;
+    line-height: normal;
+  }
+
+.ourmodels{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 107px;
+    width: 72.2vw;
+    height: 536px;
+  }
+  .ourmodels .head{
+    justify-content: center;
+    display: flex;
+    margin: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    
+    height: 63px;
+    color: #000;
+    font-family: Montserrat Alternates;
+    font-size: 70px;
+    font-weight: 500;
+  }
+  .rect{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 40px;
+    border-radius: 16px;
+    color: #F9F9F9;
+    background-color: #0067FF;
+    width: 49%;
+    height: 170px;
+  }
+  .rect20and21{
+    margin-top: 96px;
+    display: flex;
+    width: 100%;
+    height: 170px;
+    gap: 20px;
+  }
+  .rect22and23{
+    margin-top: 37px;
+    display: flex;
+    width: 100%;
+    height: 170px;
+    gap: 20px;
+  }

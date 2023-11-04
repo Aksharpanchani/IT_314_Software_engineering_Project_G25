@@ -72,6 +72,7 @@ def dsignup(request):
     # gnbg = dsup()
     # data = {'form': gnbg}
     if request.method == 'POST':
+
         username = (str(DoctorProfile.objects.count() + 1) + 'D')
         email = request.POST['email']
         password = request.POST['pass1']
@@ -83,7 +84,7 @@ def dsignup(request):
         speciality = request.POST['speciality']
         wa = request.POST['work_address']
         pn = request.POST['number']
-        c = request.POST['certificate']
+        certi = request.FILES.get('certificate')
 
         if password == password2:
             if User.objects.filter(email=email).exists():
@@ -105,7 +106,7 @@ def dsignup(request):
                 user_model = User.objects.get(username=username)
                 new_profile = DoctorProfile.objects.create(user=user_model, id_user=user_model.id, first_name=fname,
                                                            last_name=lname, gender=g, birthdate=bd, speciality=speciality, work_address=wa,
-                                                           phone_number=pn, certificate=c)
+                                                           phone_number=pn, certificate=certi)
                 new_profile.save()
 
                 send_mail('Warm Welcome to HMS',
@@ -169,3 +170,68 @@ def doctorhome(request):
 
 def signup(request):
     return render(request, 'signup.html')
+
+
+
+
+
+
+
+
+
+from joblib import load
+
+
+
+
+#Views of Diabetes
+def predictor_diab(request):
+    return render(request,'form_diab.html')
+
+def formInfo_diab(request):
+    diab_model = load('./SavedModels/diabetes_model.joblib')
+    
+    HighBP = request.GET['HighBP']
+    if HighBP=='No':
+        HighBP=0
+    else:
+        HighBP=1
+    print(HighBP)
+    HighChol = request.GET['HighChol']
+
+    if HighChol=='No':
+        HighChol=0
+    else:
+        HighChol=1
+
+    BMI = request.GET['BMI']
+
+    Stroke = request.GET['Stroke']
+    HeartDiseaseorAttack = request.GET['HeartDiseaseorAttack']
+    GenHlth = request.GET['GenHlth']
+    Age = request.GET['Age']
+    y_pred = diab_model.predict_proba([[HighBP,HighChol,BMI,Stroke,HeartDiseaseorAttack,GenHlth,Age]])
+    y_pred = y_pred*100
+    return render(request,'result_diab.html',{'data':y_pred[0][1]})
+
+
+#Views of Heart Disease
+def predictor_heart(request):
+    return render(request,'form_heart.html')
+
+def formInfo_heart(request):
+    heart_model = load('./SavedModels/heart_model.joblib')
+    age = request.GET['Age']
+    height = request.GET['Height']
+    weight = request.GET['Weight']
+    ap_hi = request.GET['Systolic BP']
+    ap_lo = request.GET['Diastolic BP']
+    cholestrol = request.GET['Cholestrol Level']
+    glucose = request.GET['Glucose Level']
+    smoking = request.GET['Smoking']
+    active = request.GET['PhysicalActivity']
+
+    y_pred = heart_model.predict_proba([[age,height,weight,ap_hi,ap_lo,cholestrol,glucose,smoking,active]])
+    y_pred = y_pred
+    return render(request,'result_heart.html',{'data':y_pred[0][1]})
+

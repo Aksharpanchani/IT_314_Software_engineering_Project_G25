@@ -12,4 +12,13 @@ urlpatterns = [
     path('doctorhome', views.doctorhome, name='doctorhome'),
     path('', views.homepage, name='homepage'),
     path('signup', views.signup, name='signup'),
+    path('predictdiabetes/',views.predictor_diab,name = 'predictdiabetes'),
+    path('predictdiabetes/result/',views.formInfo_diab,name='result'),
+    path('predictheart/',views.predictor_heart,name = 'predictheart'),
+    path('predictheart/result/',views.formInfo_heart,name='result'),
+    
 ]
+
+
+
+
