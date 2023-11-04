@@ -40,7 +40,7 @@ class DoctorProfile(models.Model):
     # bloodgroup = models.CharField(max_length=6, choices=bg, default='OP')
     speciality = models.TextField(default='MBBS')
     work_address = models.TextField(default='none')
-    certificate = models.FileField(upload_to='certi', default='w.pdf')
+    certificate = models.FileField(upload_to='certi/', default='w.pdf')
 
 
     def __str__(self):
