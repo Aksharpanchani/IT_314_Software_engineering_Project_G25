@@ -19,8 +19,19 @@
         <input type="email" required name="email" placeholder="Email Address"><br>
         <input type="password" required name="pass1" placeholder="Password"><br>
         <input type="password" required name="pass2" placeholder="Confirm Password"><br>
-            {{ form }}
-            <br>
+            <!-- {{ form }} -->
+        <br>
+        Gender: 
+        Male <input type="radio" id="Male" name="gender" value="gender" required> 
+        Female <input type="radio" id="Female" name="gender" value="gender" required> <br>
+
+        <input type="number" id="textbox" required name="number" placeholder="Number"><br>
+            
+        <input type="date" id="birthdate" name="birthdate"><br>
+        Speciality:<input type="text" required name="speciality" placeholder="Speciality"><br>
+        Work Address:<input type="text" required name="work_address" placeholder="Work Address"><br>
+        Certificate: <input type="file" name="certificate" required accept="application/pdf">
+
         <button type="submit">Sign Up</button>
 
         <h4 class="small">Already a member? <a href="login" class="small">Login</a></h4>

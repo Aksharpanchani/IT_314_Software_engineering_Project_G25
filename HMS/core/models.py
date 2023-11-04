@@ -35,12 +35,12 @@ class DoctorProfile(models.Model):
     birthdate = models.DateField()
     g = (('M', 'Male'), ('F', 'Female'))
     gender = models.CharField(max_length=6, choices=g, default='M')
-    bg = (('OP', 'O +ve'), ('ON', 'O -ve'), ('AP', 'A +ve'), ('AN', 'A -ve'),
-          ('BP', 'B +ve'), ('BN', 'B -ve'), ('ABP', 'AB +ve'), ('ABN', 'AB -ve'))
-    bloodgroup = models.CharField(max_length=6, choices=bg, default='OP')
+    # bg = (('OP', 'O +ve'), ('ON', 'O -ve'), ('AP', 'A +ve'), ('AN', 'A -ve'),
+    #       ('BP', 'B +ve'), ('BN', 'B -ve'), ('ABP', 'AB +ve'), ('ABN', 'AB -ve'))
+    # bloodgroup = models.CharField(max_length=6, choices=bg, default='OP')
     speciality = models.TextField(default='MBBS')
     work_address = models.TextField(default='none')
-    certificate = models.FileField(default='NULL')
+    certificate = models.FileField()
 
 
     def __str__(self):

@@ -10,12 +10,12 @@ from django.contrib.auth.decorators import login_required
 
 # from HMS.core.models import PatientProfile
 from core.models import PatientProfile, DoctorProfile
-from .forms import psup, dsup
+# from .forms import psup, dsup
 
 
 def psignup(request):
-    gnbg = psup()
-    data = {'form': gnbg}
+    # gnbg = psup()
+    # data = {'form': gnbg}
     if request.method == 'POST':
         username = (str(PatientProfile.objects.count() + 1) + 'P')
         email = request.POST['email']
@@ -65,12 +65,12 @@ def psignup(request):
 
 
     else:
-        return render(request, 'psignup2.html', data)
+        return render(request, 'psignup.html')
 
 
 def dsignup(request):
-    gnbg = dsup()
-    data = {'form': gnbg}
+    # gnbg = dsup()
+    # data = {'form': gnbg}
     if request.method == 'POST':
         username = (str(DoctorProfile.objects.count() + 1) + 'D')
         email = request.POST['email']
@@ -79,11 +79,10 @@ def dsignup(request):
         fname = request.POST['first_name']
         lname = request.POST['last_name']
         g = request.POST['gender']
-        b = request.POST['bloodgroup']
         bd = request.POST['birthdate']
         speciality = request.POST['speciality']
         wa = request.POST['work_address']
-        pn = request.POST['phone_number']
+        pn = request.POST['number']
         c = request.POST['certificate']
 
         if password == password2:
@@ -105,8 +104,7 @@ def dsignup(request):
                 # create profile object for new user
                 user_model = User.objects.get(username=username)
                 new_profile = DoctorProfile.objects.create(user=user_model, id_user=user_model.id, first_name=fname,
-                                                           last_name=lname, gender=g, bloodgroup=b
-                                                           , birthdate=bd, speciality=speciality, work_address=wa,
+                                                           last_name=lname, gender=g, birthdate=bd, speciality=speciality, work_address=wa,
                                                            phone_number=pn, certificate=c)
                 new_profile.save()
 
@@ -122,7 +120,7 @@ def dsignup(request):
 
 
     else:
-        return render(request, 'dsignup.html', data)
+        return render(request, 'dsignup.html')
 
 
 # Create your views here.
