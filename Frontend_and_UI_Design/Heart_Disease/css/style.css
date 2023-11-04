@@ -1,0 +1,447 @@
+body{
+    background: #EFEFEF;
+    
+}
+/* .container{
+    width:100vw;
+    height:100vh;
+} */
+.logo{
+    width: 4.959vw;
+    height: 7.12vh;
+}
+
+.logo_with_name{
+    display:flex;
+    flex-direction:column;
+    
+    /* width: 5.28vw;
+    height: 7.12vh; */
+}
+
+.MEDAI{
+    color: #000;
+    text-align: center;
+    font-family: "MADEEvolveSansEVO";
+    font-size:20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    width:63px;
+    height:23px;
+    margin-top:20%;
+    margin-left:7%;
+}
+.header{
+    display:flex;
+    margin-left:4.79vw;
+    margin-top:4.94vh;
+}
+
+button{
+    display: inline;
+    /* width: 152px;
+    height: 53px; */
+    width:13vw;
+    height:6vh;
+    margin-top: 2.2vh;
+    flex-shrink: 0;
+    border-radius: 1.9vw;
+    background: #FFF;
+    color: #000;
+    font-family: "Montserrat Alternates";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    cursor: pointer;
+    border:none;
+}
+
+button:hover{
+    background-color: greenyellow;
+}
+
+.Run_Model{
+    /* margin-left:114.59px; */
+    margin-left:7.96vw;
+}
+
+.Get_Report{
+    /* margin-left:41px; */
+    margin-left:2.85vh;
+}
+
+.Doctor_Name>img{
+    background-color: #EFEFEF;
+    border-radius: 40%;
+}
+
+.doctorNameInput{
+    background: #FFF;
+    border:none;
+    color:black;
+    font-family: "Montserrat Alternates";
+    font-size: 23px;
+    font-style:normal;
+    font-weight: 400;
+    line-height: normal;
+    /* width: 230px; */
+    width:16vw;
+    /* height:29px; */
+    height:3vh;
+    margin-top:1.4vh;
+    margin-left:1.8vw;
+}
+
+.Doctor_Name{
+    display: flex;
+    /* width: 360px; */
+    width:25vw;
+    /* height: 53px; */
+    height:5.5vh;
+    border-radius: 1.9vw;
+    background: #FFF;
+    gap:2.5vw;
+    /* margin-left: 418px; */
+    margin-left:29vw;
+    margin-top: 2.2vh;
+}
+
+.LeftPart{
+    display:flex;
+    flex-direction:column;
+}
+
+.Heart_Disease{
+    width:30.5vw;
+    height:19.6vh;
+    color: #000;
+    font-family: "MUDKTY+WTVolkolakGrotesque-Light";
+    font-size: 90px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 100%; /* 90px */
+    margin-top:5.5vh;
+    margin-left:5.8vw;
+}
+
+
+.ellipse10{
+    width: 491px;
+    /* width:34%; */
+    height: 491px;
+    /* height:50.57%; */
+    border-radius: 491px;
+    background: #D9D9D9;
+    margin-top:67px;
+    /* margin-top:6.9%; */
+    margin-left: 3.4%;
+}
+
+.HDisease_Prediction{
+    display: inline-flex;
+    height: 382px;
+    /* height:37.69%; */
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    margin-top:22px;
+    /* margin-top:2.9%; */
+    margin-left:14px;
+}
+
+.ellipse11{
+    display: flex;
+    position: relative;
+    width: 449px;
+    height: 449px;
+    flex-shrink: 0;
+    border-radius: 449px;
+    background: #FFF;
+    /* position: absolute; */
+    top:21px;
+    /* top:4.28%; */
+    left:21px;
+    /* left:4.28%; */
+}
+
+.Param{
+    display:flex;
+    gap:1vw;
+    margin-top:2vh;
+    margin-left:7.4vw;
+
+}
+
+.Blue{
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    background-color:#407BFF;
+}
+
+.Parameters{
+    width:12.8vw;
+    height:3.1vh;
+    color: #000;
+    font-family: "Montserrat Alternates";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%; /* 30px */
+}
+
+.grid-container {
+    padding-top:2vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin-top:2%;
+    gap:2em;
+    margin-left:7.4vw;
+
+}
+
+.grid-item{
+    width: 11.8vw;
+    height: 17.3vh;
+    flex-shrink: 0;
+    border-radius: 25px;
+    background: #D9D9D9;
+    color: #000;
+    font-family: "Montserrat Alternates";
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.High_BP{
+    width:100%;
+    height:2.9vh;
+    justify-content: center;
+    text-align: center;
+    margin-top:10.12%;
+}
+
+.Stroke{
+    width:100%;
+    height:2.9vh;
+    text-align: center;
+    margin-top:10.12%;
+}
+
+.GenHlth{
+    width:100%;
+    height:2.9vh;
+    text-align: center;
+    margin-top:10.12%;
+}
+
+.H_Attack{
+    width:100%;
+    height:auto;
+    text-align: center;
+    margin-top:2%;
+}
+
+.BMI{
+    width:100%;
+    height:2.9vh;
+    text-align: center;
+    margin-top:9.52%;
+
+}
+
+.High_Chol{
+
+    width:100%;
+    height:2.9vh;
+    margin-top:11%;
+    text-align: center;
+
+}
+
+.Age{
+
+    width:100%;
+    height:2.9vh;
+    text-align: center;
+    margin-top:9%;
+}
+
+.grid-item input{
+    width: 9.2vw;
+    height: 4.3vh;
+    flex-shrink: 0;
+    border-radius: 15px;
+    background: #FFF;
+    border:none;
+    margin-top:6.1vh;
+    margin-left:11.8%;
+}
+
+#grid-item4 input{
+    margin-top:5.2vh;
+}
+
+.container1{
+    display:flex;
+}
+
+.BlueDot{
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    background-color:#407BFF;
+}
+
+.Prediction{
+    width:10.88vw;
+    height:3.1vh;
+    color: #000;
+    font-family: "Montserrat Alternates";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%; /* 30px */
+
+}
+
+.Predict{
+    position: relative;
+    display:flex;
+    flex-direction: row;
+    margin-top:7.1vh;
+    margin-left:7.4vw;
+    gap:1vw;
+    z-index: 1;
+}
+
+.Param_grid_Prediction{
+    display:flex;
+    flex-direction: column;
+    gap:2vh;
+}
+
+.GIF img{
+    position: relative;
+    border-radius: 20px;
+    /* width:18.68vw; */
+    width:269px;
+    height:217px;
+    /* height:22.35vh; */
+    z-index: 2;
+    margin-bottom:53px;
+}
+
+.Box1 input{
+    /* width: 10.2vw; */
+    width:147px;
+    height:116px;
+    /* height: 11.9vh; */
+    flex-shrink: 0;
+    border-radius: 15px;
+    background: #FFF;
+    border:none;
+}
+
+.Box1{
+    /* margin-top:2.16vh; */
+    margin-top:21px;
+    display:flex;
+    flex-direction: row;
+    /* width: 31.6vw; */
+    width:455px;
+    height:170px;
+    /* height: 17.5vh; */
+    flex-shrink: 0;
+    border-radius: 35px;
+    background: #D9D9D9;
+    justify-content: center;
+    align-items: center;
+    gap:3%;
+    /* margin-left:7.4vw; */
+    margin-left:100px;
+
+}
+
+.whitebox{
+    position: absolute;
+    border-radius: 21px;
+    background: #FFF;
+    /* width:15.83vw; */
+    width:226px;
+    height:112px;
+    /* height:11.53vh; */
+    margin-top: 78px;
+    margin-left:24px;
+    z-index:1;
+}
+
+@media screen and (max-width: 1200px) {
+    button {
+      font-size: 16px;
+    }
+  
+
+  .doctorNameInput{
+    font-size:20px;
+  }
+
+  .MEDAI{
+    margin-top:12px;
+    margin-left:5px;
+    font-size: 20px;
+  }
+
+  .Doctor_Name{
+    gap:2vw;
+  }
+
+  .High_Chol{
+    width:100%;
+    height:17.26%;
+    font-size: 18px;
+    margin-left:10%;
+    margin-top:11%;
+    align-items: center;
+  }
+  .H_Attack{
+    font-size:14px;
+    margin-top:18px;
+}
+
+.Parameters{
+    font-size:20px;
+}
+
+.Prediction{
+    font-size:20px;
+}
+
+.Param_grid_Prediction{
+    display:flex;
+    flex-direction: column;
+    gap:2vh;
+}
+
+}
+
+@media screen and (max-width:1300){
+
+    .grid-item input{
+        margin-top:0;
+    }
+
+    
+    .Param_grid_Prediction{
+        display:flex;
+        flex-direction: column;
+        gap:2vh;
+        margin-left:100px;
+    }
+}
