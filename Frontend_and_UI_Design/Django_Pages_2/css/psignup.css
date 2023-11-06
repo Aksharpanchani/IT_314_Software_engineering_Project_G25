@@ -16,9 +16,6 @@
     padding: 2% 15%;
     align-items: center;
 }
-/* .navbar a{
-    text-decoration: none;
-} */
 .nav{
     display: flex;
     flex-wrap: wrap; 
@@ -51,12 +48,6 @@
 .logo{
     text-decoration: none;
 }
-.logo img{
-    width: 4.46338rem;
-    height: 4.32125rem;
-    flex-shrink: 0;
-}
-
 .logoname{
     color: #000;
     text-align: center;
@@ -168,7 +159,6 @@
     z-index: 0;
 }
 .back2 img{ 
-    
     position: fixed;
     right: 0px;
     bottom: 0px;

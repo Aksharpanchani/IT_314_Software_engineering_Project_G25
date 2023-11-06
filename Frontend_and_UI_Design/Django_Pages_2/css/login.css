@@ -167,17 +167,14 @@ button{
     .rectangle-5 .company-icon {
         margin: 0; /* Reset margin for the company icon */
     }
-
     .rectangle-5 .nav {
         width: 100%; /* Make navigation links take full width on smaller screens */
         justify-content: center; /* Center navigation links horizontally */
     }
-
     .im2 {
         max-width: 50%; /* Make images responsive, adapt to the container width */
         height: auto; /* Allow images to scale proportionally */
     }
-
     .login {
         flex-direction: column; /* Stack login elements vertically */
     }
