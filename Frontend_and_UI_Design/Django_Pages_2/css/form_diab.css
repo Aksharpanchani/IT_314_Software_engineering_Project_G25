@@ -12,6 +12,7 @@ body{
     overflow-x: hidden;
     /* height: 2000px; */
 }
+
 .background1{
     width: 38vw;
     height: 38vw;
@@ -217,26 +218,42 @@ body{
     padding-top: 17px;
     background: #D9D9D9;
     font-family: "Montserrat Alternates";
-    font-size: 24px;
+    font-size: 21px;
     font-weight: 500;
 }
 .grid-item div{
-    width: 100%;
     text-align: center;
+    word-break: break-all;
 }
-.grid-item input{
+.grid-item .input2{
     text-align: center;
     display: flex;
     position: absolute;
+    bottom: 40px;
     font-size: 30px;
     font-weight: 600;
-    bottom: 19px;
-    height: 43px;
     width: 8.8vw;
-    margin-left: 0.93vw;
+    height: 43px;
+    margin-left: 1vw;
     border-radius: 15px;
     background: #FFF;
     border:none;
+}
+.grid-item .dropdown{
+    width: 8.8vw;
+    height: 43px;
+    border: none;
+    border-radius: 8px;
+    margin-left: 1vw;
+    position: absolute;
+    bottom: 40px;
+}
+.radio-buttons{
+    margin-top: 25px;
+}
+.form-check{
+    margin: auto;
+    width: 100px;
 }
 
 
