@@ -204,25 +204,13 @@ body{
 .grid-container {
     margin-top: 32px;
     margin-left: 20px;
-    /* display: grid;
+    display: grid;
     column-gap: 1.33vw;
     row-gap: 3.4vw;
     grid-template-columns: 11.3vw 11.3vw 11.3vw 11.3vw;
     grid-template-rows: 11.3vw 11.3vw;
     justify-content: center;
-    align-items: center; */
-    display: flex;
-    flex-direction: column;
-    gap:3.3vw;
-}
-.row{
-    display: flex;
-    gap:1.47vw;
-}
-.row-center{
-    display: flex;
-    justify-content: center;
-    gap:1.47vw;
+    align-items: center;
 }
 .grid-item{
     position: relative;
