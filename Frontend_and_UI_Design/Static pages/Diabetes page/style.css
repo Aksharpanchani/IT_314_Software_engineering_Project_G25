@@ -1,7 +1,3 @@
-@font-face {
-  font-family: volko;
-  src: url(../mudkty-wtvolkolakgrotesque-light.ttf);
-}
 .diabetes-static-page,
 .diabetes-static-page * {
   box-sizing: border-box;
@@ -9,7 +5,7 @@
 .diabetes-static-page {
   background: #efefef;
   width: 100vw;
-  height: 4062px;
+  height: 3836px;
   position: relative;
   overflow: hidden;
 }
@@ -80,9 +76,7 @@
 .diabetes-ml-model {
   color: #000000;
   text-align: left;
-  font-family: volko;
   font: 300 64px/100% "MUDKTY+WTVolkolakGrotesque-Light", sans-serif;
-  
   position: absolute;
   left: 409px;
   top: 191px;
@@ -207,6 +201,16 @@
   left: -1971px;
   top: 3531px;
 }
+.ellipse-19 {
+  background: #fc8f93;
+  border-radius: 50%;
+  width: 574px;
+  height: 862px;
+  position: absolute;
+  left: 1043px;
+  top: 3004px;
+  filter: blur(239.5px);
+}
 .https-lottiefiles-com-animations-data-scanning-9-p-3-as-kkz-59 {
   width: 494px;
   height: 474px;
@@ -230,10 +234,22 @@
   top: -397.5px;
   overflow: visible;
 }
-.ellipse-15 {
+.ellipse-16 {
   position: absolute;
-  left: 882px;
-  top: 2179px;
+  left: -224px;
+  top: 2049px;
+  overflow: visible;
+}
+.ellipse-20 {
+  position: absolute;
+  left: -224px;
+  top: 3573px;
+  overflow: visible;
+}
+.ellipse-18 {
+  position: absolute;
+  left: -145px;
+  top: 868px;
   overflow: visible;
 }
 .frame-5 {
@@ -310,8 +326,8 @@
   text-align: left;
   font: 500 24px/153% "Montserrat Alternates", sans-serif;
   position: absolute;
-  left: 188px;
-  top: 1771px;
+  left: 948px;
+  top: 1320px;
 }
 .classification-report {
   color: #000000;
@@ -319,14 +335,7 @@
   font: 500 24px/153% "Montserrat Alternates", sans-serif;
   position: absolute;
   left: 188px;
-  top: 2262px;
-}
-.juicy-woman-with-graph-chart-1 {
-  width: 563px;
-  height: 344px;
-  position: absolute;
-  left: 969px;
-  top: 1311px;
+  top: 1798px;
 }
 .ellipse-132 {
   background: #fc8f93;
@@ -334,8 +343,18 @@
   width: 574px;
   height: 862px;
   position: absolute;
-  left: 997px;
-  top: 1598px;
+  left: 1019px;
+  top: 1204px;
+  filter: blur(239.5px);
+}
+.ellipse-17 {
+  background: #fc8f93;
+  border-radius: 50%;
+  width: 574px;
+  height: 862px;
+  position: absolute;
+  left: 1137px;
+  top: -111px;
   filter: blur(239.5px);
 }
 .frame-6 {
@@ -346,7 +365,7 @@
   justify-content: flex-start;
   position: absolute;
   left: 663px;
-  top: 3559px;
+  top: 3171px;
 }
 .working-of-the-diagnostic-expert-system {
   color: #000000;
@@ -370,7 +389,7 @@
   height: 893px;
   position: absolute;
   left: 188px;
-  top: 2631px;
+  top: 2243px;
 }
 .about-our-dataset {
   color: #050505;
@@ -406,14 +425,14 @@
   height: 271px;
   position: absolute;
   left: 188px;
-  top: 2326px;
+  top: 1862px;
 }
 ._2206-i-105-037-s-m-005-c-13-1 {
   width: 487px;
   height: 413px;
   position: absolute;
   left: 156px;
-  top: 3606px;
+  top: 3218px;
 }
 .frame {
   width: 316px;
@@ -1939,12 +1958,12 @@
   height: 551px;
   position: absolute;
   left: 604px;
-  top: 3004px;
+  top: 2616px;
 }
 .untitled-2 {
   width: 473px;
   height: 412px;
   position: absolute;
-  left: 190px;
-  top: 1833px;
+  left: 950px;
+  top: 1382px;
 }

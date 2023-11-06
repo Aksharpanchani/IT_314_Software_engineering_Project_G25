@@ -4,10 +4,26 @@
 }
 .heart-static-page {
   background: #efefef;
-  width: 1496px;
-  height: 3696px;
+  width: 100vw;
+  height: 3329px;
   position: relative;
   overflow: hidden;
+}
+.ellipse-18 {
+  background: #fc8f93;
+  border-radius: 50%;
+  width: 574px;
+  height: 862px;
+  position: absolute;
+  left: 1033px;
+  top: 2735px;
+  filter: blur(239.5px);
+}
+.ellipse-17 {
+  position: absolute;
+  left: -366px;
+  top: 2286px;
+  overflow: visible;
 }
 .vector-1 {
   position: absolute;
@@ -21,6 +37,26 @@
   top: 75.48px;
   transform: translate(-41.98px, 0px);
   overflow: visible;
+}
+.ellipse-13 {
+  background: #fc8f93;
+  border-radius: 50%;
+  width: 574px;
+  height: 862px;
+  position: absolute;
+  left: 997px;
+  top: 296px;
+  filter: blur(239.5px);
+}
+.ellipse-16 {
+  background: #fc8f93;
+  border-radius: 50%;
+  width: 574px;
+  height: 862px;
+  position: absolute;
+  left: 997px;
+  top: 1503px;
+  filter: blur(239.5px);
 }
 .vector-13 {
   position: absolute;
@@ -105,14 +141,6 @@
   left: 188px;
   top: 1295px;
 }
-.about-our-dataset {
-  color: #050505;
-  text-align: left;
-  font: 300 32px/100% "MUDKTY+WTVolkolakGrotesque-Light", sans-serif;
-  position: absolute;
-  left: 198px;
-  top: 2567px;
-}
 .dataset-overview {
   color: #000000;
   text-align: left;
@@ -122,6 +150,12 @@
   top: 3473px;
   width: 308.86px;
   height: 58px;
+}
+.ellipse-15 {
+  position: absolute;
+  left: -192px;
+  top: 817px;
+  overflow: visible;
 }
 .our-dataset-dating-back-to-1988-is-comprised-of-four-main-databases-cleveland-hungary-switzerland-and-long-beach-v-these-databases-collectively-contain-76-attributes-each-serving-a-specific-purpose-in-the-diagnosis-of-heart-diseases-the-most-crucial-attribute-the-target-field-indicates-the-presence-of-heart-disease-in-the-patient-denoted-as-an-integer-value-where-0-signifies-no-disease-and-1-represents-the-presence-of-disease {
   color: #0e0d0d;
@@ -240,7 +274,7 @@
   left: -1964px;
   top: 3606px;
 }
-.ellipse-13 {
+.ellipse-132 {
   background: #79a2ff;
   border-radius: 50%;
   width: 602px;
@@ -254,12 +288,6 @@
   position: absolute;
   left: 310px;
   top: -397.5px;
-  overflow: visible;
-}
-.ellipse-15 {
-  position: absolute;
-  left: 882px;
-  top: 2179px;
   overflow: visible;
 }
 .network-robot-assistant-working-on-laptop-1 {
@@ -307,23 +335,23 @@
   width: 478px;
   height: 377px;
   position: absolute;
-  left: 192px;
-  top: 1782px;
+  left: 952px;
+  top: 1349px;
 }
 .untitled-1 {
   width: 596px;
   height: 229px;
   position: absolute;
   left: 188px;
-  top: 2261px;
+  top: 1800px;
 }
 .confusion-matrix {
   color: #000000;
   text-align: left;
   font: 500 24px/153% "Montserrat Alternates", sans-serif;
   position: absolute;
-  left: 188px;
-  top: 1728px;
+  left: 948px;
+  top: 1295px;
 }
 .classification-report {
   color: #000000;
@@ -331,7 +359,15 @@
   font: 500 24px/153% "Montserrat Alternates", sans-serif;
   position: absolute;
   left: 188px;
-  top: 2205px;
+  top: 1744px;
+}
+.about-our-dataset {
+  color: #050505;
+  text-align: left;
+  font: 300 32px/100% "MUDKTY+WTVolkolakGrotesque-Light", sans-serif;
+  position: absolute;
+  left: 198px;
+  top: 2127px;
 }
 .working-of-the-diagnostic-expert-system {
   color: #000000;
@@ -339,7 +375,7 @@
   font: 300 32px/154% "MUDKTY+WTVolkolakGrotesque-Light", sans-serif;
   position: absolute;
   left: 758px;
-  top: 3346px;
+  top: 2906px;
   width: 550px;
   height: 60px;
 }
@@ -348,31 +384,14 @@
   height: 471px;
   position: absolute;
   left: 882px;
-  top: 2687px;
-}
-.juicy-woman-with-graph-chart-1 {
-  width: 563px;
-  height: 344px;
-  position: absolute;
-  left: 969px;
-  top: 1311px;
-}
-.ellipse-132 {
-  background: #fc8f93;
-  border-radius: 50%;
-  width: 574px;
-  height: 862px;
-  position: absolute;
-  left: 997px;
-  top: 1598px;
-  filter: blur(239.5px);
+  top: 2247px;
 }
 ._10606210-9817-1 {
   width: 584px;
   height: 365px;
   position: absolute;
   left: 109px;
-  top: 3331px;
+  top: 2891px;
 }
 .harnessing-the-power-of-artificial-intelligence-our-advanced-system-has-been-meticulously-crafted-to-revolutionize-early-detection-and-intervention-thereby-significantly-improving-cardiovascular-health-outcomes {
   color: #000000;
@@ -380,7 +399,7 @@
   font: 500 24px/154% "Montserrat Alternates", sans-serif;
   position: absolute;
   left: 758px;
-  top: 3446px;
+  top: 3006px;
   width: 567px;
 }
 .age-height-weight-gender-systolic-blood-pressure-diastolic-cholesterol-glucose-smoking-alcohol-intake-physical-activity-presence-or-absence-of-cardiovascular-disease-all-of-the-dataset-values-were-collected-at-the-moment-of-medical-examination {
@@ -389,7 +408,7 @@
   font: 500 24px/154% "Montserrat Alternates", sans-serif;
   position: absolute;
   left: 188px;
-  top: 2778px;
+  top: 2338px;
   width: 756px;
 }
 .age-height-weight-gender-systolic-blood-pressure-diastolic-cholesterol-glucose-smoking-alcohol-intake-physical-activity-presence-or-absence-of-cardiovascular-disease-all-of-the-dataset-values-were-collected-at-the-moment-of-medical-examination-span {
@@ -406,6 +425,6 @@
   font: 500 24px/154% "Montserrat Alternates", sans-serif;
   position: absolute;
   left: 205px;
-  top: 2620px;
+  top: 2180px;
   width: 546px;
 }
