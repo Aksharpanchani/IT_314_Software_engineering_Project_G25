@@ -5,7 +5,6 @@
     line-height: normal;
     
 }
-
 .rectangle-5 {
     position: relative;
     display: flex;
@@ -23,7 +22,9 @@
     line-height: normal;
     font-family: "MADEEvolveSansEVO";
 }
-.rectangle-5 .company-icon {
+.rectangle-5 .company-icon{
+    color: black;
+    text-decoration: none;
     margin-right: auto; 
 }
 .rectangle-5 .nav {
