@@ -11,36 +11,15 @@
     <title>Doctor signup</title>
 </head>
 <body>
-    <div class="navbar">
-        <div class="logo">
-            <img src="../static/public/logo.svg" alt="">
-            <div class="logoname">
-                MED.AI
-            </div>
-        </div>
-        <div class="nav">
-            <a href="homepage" class="logsign">Home</a>
-            <a href="#" class="contact">Contact us</a>
-            <a href="#" class="about">About us</a>
-            <a href="login" class="logsign">Login</a>
-        </div>
-    </div>
-    <div class="welcome">
-        <p>Welcome to <span class="medAI">MED.AI</span></p>
-    </div>
-
-    <div class="instruction">
-        <p>Please enter your details here</p>
-    </div>
+    
         
-        <!-- <h2 class="title">Doctor Registration</h2> -->
+        <h2 class="title">Doctor Registration</h2>
         <form action="" method="POST" enctype="multipart/form-data">
         {% for message in messages %}
         <h5>{{ message }}</h5>
         {% endfor %}
         {% csrf_token %}
 
-    </form>
     <div class="main">
         <div class="form">
             <div class="names">
@@ -122,9 +101,7 @@
 
         <h4 class="small">Already a member? <a href="login" class="small">Login</a></h4>
 
-    
     </form>
-
     <div class="background">
 
     </div>

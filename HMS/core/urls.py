@@ -16,6 +16,7 @@ urlpatterns = [
     path('predictdiabetes/result/',views.formInfo_diab,name='result'),
     path('predictheart/',views.predictor_heart,name = 'predictheart'),
     path('predictheart/result/',views.formInfo_heart,name='result'),
+    path('venue_pdf',views.venue_pdf,name='venue_pdf'),
 
 
 ]
