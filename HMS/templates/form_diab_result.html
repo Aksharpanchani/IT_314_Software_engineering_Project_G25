@@ -13,32 +13,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
     <link rel="icon" href="../static/public/favicon.ico">
     <link rel="stylesheet" href="../static/css/form_diab.css">
-    <title>Diabetes Prediction</title>
+    <title>Diabetes Prediction Result</title>
 
 </head>
 
 <body>
-
-
-    <!-- <form action="result">
-
-        PatientID = <input type="number" name="pid" required>
-
-        HighBP = Yes <input type="radio" id = "Yes" name="HighBP" value = "HighBP" required>
-        No <input type="radio" id = "No" name="HighBP" value = "NormalBP" required><br> -->
-    <!-- HighChol = <input type="number" name="HighChol" required> -->
-    <!-- HighChol: Yes <input type="radio" id = "Yes" name="HighChol" value = "HighChol" required>
-        No <input type="radio" id = "No" name="HighChol" value = "NormalChol" required>
-        <br>
-        BMI = <input type="number" name="BMI" required><br>
-        Stroke = <input type="number" name="Stroke" required><br>
-        HeartDiseaseorAttack = <input type="number" name="HeartDiseaseorAttack" required>
-        GenHlth = <input type="number" name="GenHlth"  required>
-        Age =<input type="number" name="Age" required>
-        <input type="submit"> 
-    </form> -->
-
-    <form action="result">
+    
+    <form action="result"></form>
 
         <div class="background1"></div>
         <div class="background2">
@@ -46,7 +27,7 @@
         </div>
         <div class="header">
             <a href="./homepage.html" class="logo">
-                <img src="./public/logo.svg" alt="">
+                <img src="../static/public/logo.svg" alt="">
                 <div class="logoname">MED.AI</div>
             </a>
             <div class="Patient_ID">
@@ -66,7 +47,7 @@
                 <div class="ellipse10">
                     <div class="ellipse11">
                         <div class="HDisease_Prediction"><img
-                                src="../static/FrameDiabetes.svg" alt=""></div>
+                                src="../static/public/FrameDiabetes.svg" alt=""></div>
                     </div>
                 </div>
             </div>
@@ -86,13 +67,11 @@
                         <div>High BP</div>
                         <div class="radio-buttons">
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="HighBP" id="Yes" value="HighBP"
-                                    required>
+                                <input class="form-check-input" type="radio" name="HighBP" id="Yes" value="HighBP" checked>
                                 <label class="form-check-label" for="Yes">Yes</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="HighBP" id="No" value="NormalBP"
-                                    required>
+                                <input class="form-check-input" type="radio" name="HighBP" id="No" value="NormalBP" readonly>
                                 <label class="form-check-label" for="No">No</label>
                             </div>
                         </div>
@@ -103,31 +82,27 @@
                         <div>High Cholestrol</div>
                         <div class="radio-buttons">
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="HighChol" id="Yes" value="HighChol"
-                                    required>
+                                <input class="form-check-input" type="radio" name="HighChol" id="Yes" value="HighChol" readonly>
                                 <label class="form-check-label" for="Yes">Yes</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="HighChol" id="No" value="NormalChol"
-                                    required>
+                                <input class="form-check-input" type="radio" name="HighChol" id="No" value="NormalChol" readonly>
                                 <label class="form-check-label" for="No">No</label>
                             </div>
                         </div>
                     </div>
                     <div class="grid-item" id="grid-item3">
-                        <div>BMI</div><input type="number" class="input2" name="BMI" id="" required>
+                        <div>BMI</div><input type="number" class="input2" name="BMI" id="" readonly>
                     </div>
                     <div class="grid-item" id="grid-item4">
                         <div>Stroke</div>
                         <div class="radio-buttons">
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="Stroke" id="Yes" value="YesStroke"
-                                    required>
+                                <input class="form-check-input" type="radio" name="Stroke" id="Yes" value="YesStroke" readonly>
                                 <label class="form-check-label" for="Yes">Yes</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="Stroke" id="No" value="NoStroke"
-                                    required>
+                                <input class="form-check-input" type="radio" name="Stroke" id="No" value="NoStroke" readonly>
                                 <label class="form-check-label" for="No">No</label>
                             </div>
                         </div>
@@ -138,19 +113,19 @@
                         <div class="radio-buttons">
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="HeartDiseaseorAttack" id="Yes"
-                                    value="YesHeartDiseaseorAttack" required>
+                                    value="YesHeartDiseaseorAttack" readonly>
                                 <label class="form-check-label" for="Yes">Yes</label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="HeartDiseaseorAttack" id="No"
-                                    value="NoHeartDiseaseorAttack" required>
+                                    value="NoHeartDiseaseorAttack" readonly>
                                 <label class="form-check-label" for="No">No</label>
                             </div>
                         </div>
                     </div>
                     <div class="grid-item" id="grid-item6">
                         <div>GenHlth</div>
-                        <select name="GenHlth" id="" class="dropdown">
+                        <select name="GenHlth" id="" class="dropdown" readonly>
                             <option value="1">Best</option>
                             <option value="2">Mediocre</option>
                             <option value="3">Average</option>
@@ -159,7 +134,7 @@
                         </select>
                     </div>
                     <div class="grid-item" id="grid-item7">
-                        <div>Age</div><input type="number" class="input2" name="Age" id="" required>
+                        <div>Age</div><input type="number" class="input2" name="Age" id="" readonly>
                     </div>
                     <!-- </div> -->
                 </div>
@@ -168,10 +143,10 @@
                 <!-------------------------- Prediction and Reset ----------------------- -->
 
 
-                <div class="predictandreset">
+                <!-- <div class="predictandreset">
                     <button class="predict button1">Predict</button>
                     <button class="reset button1">Reset</button>
-                </div>
+                </div> -->
 
 
                 <!-- ------------------ Prediction ------------------------>
@@ -188,10 +163,12 @@
                                 <img src="https://www.figma.com/file/hN3Ifs6FNCKexSSf0pMOda/image/d009a3c45532e0fbd721c2c10814be70e208f5a8"
                                     alt="PredictionImage">
                             </Div>
-                            <input type="text" name="" id="">
+                            <input type="text" name="" id="" readonly>
                         </div>
                         <div class="statisfied_or_not">
-                            <br><button class="satisfied button1">Satisfied</button><br>
+                            <br>
+                            <button class="satisfied button1">Satisfied</button>
+                            <br>
                             <button class="not_satisfied button1">Not Satisfied</button>
                         </div>
                     </div>
@@ -228,7 +205,6 @@
             </div>
         </div>
 
-    </form>
 </body>
 
 </html>
