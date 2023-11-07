@@ -300,6 +300,7 @@ body{
 .Prediction2{
     display: flex;
     gap:15px;
+    align-items: center;
 }
 .GIF img{
     background-color: #FFF;
@@ -331,18 +332,25 @@ body{
     gap:10px;
 }
 .statisfied_or_not{
+    padding: 0;
+    margin: 21px 0 0 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-}
-.statisfied_or_not>.satisfied{
-    color: #EFEFEF;
-    background: #407BFF;
-}
-.statisfied_or_not>.not_satisfied{
+    
+    position: relative;
+    width: 17vw;
+    height: 168px;
+    border-radius: 25px;
     background: #D9D9D9;
-    color: #407BFF;
+    font-family: "Montserrat Alternates";
+    font-size: 21px;
+    font-weight: 500
+    
+}
+.satis{
+   margin: 15px 50px;
+   text-wrap: nowrap; 
 }
 
 
@@ -372,7 +380,10 @@ body{
     width: 36.7vw;
     height: 124px;
     background: #FFF;
-    border-radius: 30px;
+    border-radius: 10px;
+    /* word-wrap: break-word;
+    word-break: break-all; */
+    resize: none;
 }
 .WhiteDot{
     width: 1.2vw;
