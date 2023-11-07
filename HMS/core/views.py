@@ -186,7 +186,9 @@ from joblib import load
 
 #Views of Diabetes
 def predictor_diab(request):
-    return render(request,'form_diab.html')
+    doctor_profile=DoctorProfile.objects.get(user=request.user)
+
+    return render(request,'form_diab.html',{'doctor_profile':doctor_profile})
 
 def formInfo_diab(request):
     diab_model = load('./SavedModels/diabetes_model.joblib')
