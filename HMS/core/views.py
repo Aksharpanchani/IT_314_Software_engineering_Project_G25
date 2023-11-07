@@ -191,6 +191,9 @@ def predictor_diab(request):
 def formInfo_diab(request):
     diab_model = load('./SavedModels/diabetes_model.joblib')
     
+    PatientID = request.GET['pid']
+    DiseaseName = 'Diabetes'
+
     HighBP = request.GET['HighBP']
     if HighBP=='No':
         HighBP=0
@@ -210,8 +213,12 @@ def formInfo_diab(request):
     HeartDiseaseorAttack = request.GET['HeartDiseaseorAttack']
     GenHlth = request.GET['GenHlth']
     Age = request.GET['Age']
+
     y_pred = diab_model.predict_proba([[HighBP,HighChol,BMI,Stroke,HeartDiseaseorAttack,GenHlth,Age]])
     y_pred = y_pred*100
+
+    #Save model here
+
     return render(request,'result_diab.html',{'data':y_pred[0][1]})
 
 
