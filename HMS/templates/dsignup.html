@@ -34,7 +34,7 @@
         <p>Please enter your details here</p>
     </div>
         <!-- <h2 class="title">Doctor Registration</h2> -->
-        <form action="" method="POST" enctype="multipart/form-data">
+        <form onsubmit="return validateForm()" method="POST" enctype="multipart/form-data" name="form1">
         {% for message in messages %}
         <h5>{{ message }}</h5>
         {% endfor %}
@@ -95,17 +95,17 @@
                 Male <input type="radio" id="Male" name="gender" value="gender" required> 
                 Female <input type="radio" id="Female" name="gender" value="gender" required> <br> -->
 
-                <select name="gender" id="textbox">
+                <select name="gender" id="textbox" required>
                     <option value="Male">Male</option>
                     <option value="Female">Female</option>
                 </select>
 
-                <input type="number" id="textbox" required name="number" placeholder="Number">
+                <input type="number" id="textbox" required name="number" placeholder="Number" >
                     
-                <input type="date" id="textbox" name="birthdate">
-                <input type="text" id="textbox" required name="speciality" placeholder="Speciality">
-                <input type="text" id="textbox" required name="work_address" placeholder="Work Address">
-                <input type="file" id="textbox file" name="certificate" required > <!--accept="application/pdf"-->
+                <input type="date" id="textbox" name="birthdate" required>
+                <input type="text" id="textbox" required name="speciality" placeholder="Speciality" >
+                <input type="text" id="textbox" required name="work_address" placeholder="Work Address" >
+                <input type="file" id="textbox file" name="certificate"  > <!--accept="application/pdf"-->
 
                 </div>
             </div>
@@ -129,5 +129,6 @@
         <!-- <img src="../static/public/Ellipse_13.svg"> -->
     </div>
 
+    <script src="../static/js/dsignup.js"></script>
 </body>
 </html>

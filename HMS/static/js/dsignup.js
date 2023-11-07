@@ -5,6 +5,9 @@ function validateForm(){
     var email = form1["email"];
     var password = form1["pass1"];
     var cpassword = form1["pass2"];
+    var number = form1["number"];
+    var year = form1["birthdate"];  
+    var birthyear = new Date(year.value).getFullYear();  
 
 
     // Trim the input values to remove leading and trailing spaces
@@ -26,5 +29,22 @@ function validateForm(){
         cpassword.value = "";
         return false;
     }
+
+    if(number.value.length!=10){
+        alert("Invalid Number.");
+        number.value = "";
+        return false;
+    }
+
+    // console.log(year.value);
+    //console.log(birthyear);
+    if(birthyear>2010)
+    {
+        alert("Invalid Date of birthdate");
+        year.value="";
+        return false;
+    }
+
+
     return true;
 }
