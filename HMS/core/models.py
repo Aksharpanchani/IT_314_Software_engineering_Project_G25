@@ -45,3 +45,23 @@ class DoctorProfile(models.Model):
 
     def __str__(self):
         return self.user.username
+
+class Report(models.Model):
+    doctor = models.ForeignKey(DoctorProfile, on_delete=models.CASCADE)
+    patient = models.ForeignKey(PatientProfile, on_delete=models.CASCADE)
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4)
+    disease = models.CharField(max_length=60)
+
+    HighBP = models.IntegerField(default=-1)
+    HighChol = models.IntegerField(default=-1)
+    BMI = models.IntegerField(default=-1)
+    Stroke = models.IntegerField(default=-1)
+    HeartDiseaseAttack = models.IntegerField(default=-1)
+    GenHlth = models.IntegerField(default=-1)
+    Age = models.IntegerField(default=-1)
+
+    DoctorConclusion = models.IntegerField(default=1)
+    DoctorPrescription = models.TextField()
+
+    def __str__(self):
+        return self.id
