@@ -7,6 +7,7 @@ function validateForm(){
     var cpassword = form1["pass2"];
     var height = form1["height"];
     var weight = form1["weight"];
+    var number = form1["number"];
 
 
     // Trim the input values to remove leading and trailing spaces
@@ -36,6 +37,11 @@ function validateForm(){
     if(weight.value<5 || weight.value>500){
         alert("Invalid Weight.");
         weight.value = "";
+        return false;
+    }
+    if(number.value.length!=11){
+        alert("Invalid Number.");
+        number.value = "";
         return false;
     }
     return true;
