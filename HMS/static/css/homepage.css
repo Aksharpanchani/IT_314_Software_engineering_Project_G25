@@ -75,18 +75,6 @@ body{
   font-weight: 200;
   line-height: 100%;
 }
-.startprogram{
-  position: absolute;
-  right: 66px;
-  top: 265px;
-  width: 227px;
-  height: 63px;
-  color: #FFF;
-  font-size: 20px;
-  background-color: #0067FF;
-  border-width: 0;
-  border-radius: 31.5px;
-}
 .shapefuture{
   position: absolute;
   left: 95.41px;

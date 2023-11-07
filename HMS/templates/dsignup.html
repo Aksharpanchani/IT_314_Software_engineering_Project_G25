@@ -9,7 +9,7 @@
     
         
         <h2 class="title">Doctor Registration</h2>
-        <form action="" method="POST" enctype="multipart/form-data">
+        <form onsubmit="return validateForm()" action="" method="POST" enctype="multipart/form-data">
         {% for message in messages %}
         <h5>{{ message }}</h5>
         {% endfor %}
@@ -34,11 +34,9 @@
 
         <button type="submit">Sign Up</button>
 
-        <h4 class="small">Already a member? <a href="login" class="small">Login</a></h4>
+        <h4 class="small">Already a member? <a href="./login.html" class="small">Login</a></h4>
 
     </form>
-
-    
-    </form>
+    <script src="./js/dsignup.js"></script>
 </body>
 </html>

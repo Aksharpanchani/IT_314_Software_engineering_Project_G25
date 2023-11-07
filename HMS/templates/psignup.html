@@ -20,10 +20,10 @@
             </div>
         </div>
         <div class="nav">
-            <a href="homepage" class="logsign">Home</a>
-            <a href="#" class="contact">Contact us</a>
-            <a href="#" class="about">About us</a>
-            <a href="login" class="logsign">Login</a>
+            <a href="./homepage.html" class="logsign">Home</a>
+            <a href="./homepage.html#contact" class="contact">Contact us</a>
+            <a href="./homepage.html#line1" class="about">About us</a>
+            <a href="./login.html" class="logsign">Login</a>
         </div>
     </div>
     <div class="welcome">
@@ -34,7 +34,7 @@
         <p>Please enter your details here</p>
     </div>
 
-        <form action="" method="POST">
+        <form onsubmit="return validateForm()" action=""   method="POST" name="form1">
         {% for message in messages %}
         <h5>{{ message }}</h5>
         {% endfor %}
@@ -128,9 +128,7 @@
             <button type="submit" class="signup">Create account</button>
         </div>
 
-<!--        <div class="log">-->
-<!--            <h4 class="small">Already a member? <a href="login" class="small">Login</a></h4>-->
-<!--        </div>-->
+
 
     </form>
 
@@ -140,7 +138,7 @@
     <div class="back2">
         <img src="../static/public/Ellipse_13.svg">
     </div>
-    
+    <script src="./js/psignup.js"></script>
 </body>
 </html>
 
