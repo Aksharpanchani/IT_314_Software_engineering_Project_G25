@@ -191,35 +191,92 @@ def predictor_diab(request):
 def formInfo_diab(request):
     diab_model = load('./SavedModels/diabetes_model.joblib')
     
-    PatientID = request.GET['pid']
+    PatientID = request.GET['PatientID']
     DiseaseName = 'Diabetes'
 
     HighBP = request.GET['HighBP']
     if HighBP=='No':
-        HighBP=0
+        HighBPML=0
     else:
-        HighBP=1
-    print(HighBP)
+        HighBPML=1
+    
     HighChol = request.GET['HighChol']
 
+
     if HighChol=='No':
-        HighChol=0
+        HighCholML=0
     else:
-        HighChol=1
+        HighCholML=1
 
     BMI = request.GET['BMI']
 
     Stroke = request.GET['Stroke']
-    HeartDiseaseorAttack = request.GET['HeartDiseaseorAttack']
-    GenHlth = request.GET['GenHlth']
-    Age = request.GET['Age']
+    if Stroke=='No':
+        StrokeML=0
+    else:
+        StrokeML=1
 
-    y_pred = diab_model.predict_proba([[HighBP,HighChol,BMI,Stroke,HeartDiseaseorAttack,GenHlth,Age]])
+
+    HeartDiseaseorAttack = request.GET['HeartDiseaseorAttack']
+    if HeartDiseaseorAttack=='No':
+        HeartDiseaseorAttackML=0
+    else:
+        HeartDiseaseorAttackML=1
+
+
+    GenHlth = request.GET['GenHlth']
+    switcher = {
+        "1": 1,
+        "2":2,
+        "3":3,
+        "4":4,
+        "5":5,
+    }
+    GenHlthML = switcher.get(GenHlth)
+    Age = request.GET['Age']
+    Age= int(Age)
+
+    if Age<=24:
+        AgeML=1
+    elif Age<=29:
+        AgeML=2
+    elif Age<=34:
+        AgeML=3
+    elif Age<=39:
+        AgeML=4
+    elif Age<=44:
+        AgeML=5
+    elif Age<=49:
+        AgeML=6
+    elif Age<=54:
+        AgeML=7
+    elif Age<=59:
+        AgeML=8
+    elif Age<=64:
+        AgeML=9
+    elif Age<=69:
+        AgeML=10
+    elif Age<=74:
+        AgeML=11
+    elif Age<=79 :
+        AgeML=12
+    else:
+        AgeML=13
+    
+    
+
+    #print(HighBP,HighChol, HeartDiseaseorAttack,GenHlth,Age,Stroke,BMI,PatientID,DiseaseName)
+
+
+    y_pred = diab_model.predict_proba([[HighBPML,HighCholML,BMI,StrokeML,HeartDiseaseorAttackML,GenHlthML,AgeML]])
     y_pred = y_pred*100
 
-    #Save model here
+    y_out= round(y_pred[0][1],2)
 
-    return render(request,'result_diab.html',{'data':y_pred[0][1]})
+    #Save model here
+    df_report = [[HighBP,HighChol,BMI,Stroke,HeartDiseaseorAttack,GenHlth,Age]]
+    return render(request,'result_diab.html',{'data':y_out, 'PatientID':PatientID ,'DiseaseName':DiseaseName,'HighBP':HighBP,'HighChol':HighChol ,'BMI':BMI ,
+                                              'Stroke':Stroke,'HeartDiseaseorAttack':HeartDiseaseorAttack,'GenHlth': GenHlth,'Age':Age})
 
 
 #Views of Heart Disease

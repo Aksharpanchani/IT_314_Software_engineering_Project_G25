@@ -9,6 +9,34 @@
 </head>
 <body>
     <h2>There is a {{data}}% chance that your patient has diabetes!!!</h2><br>
-    <h3> <a href="{% url 'venue_pdf' %}">GetReport</a>
+    
+    
+    <h2>Data</h2><br>
+    <h5>
+        PID: {{PatientID}} <br>
+        DN: {{DiseaseName}} <br>
+        HBP: {{HighBP}} <br>
+        HChol: {{HighChol}} <br>
+        BMI: {{BMI}} <br>
+        Stroke: {{Stroke}} <br>
+        HDoA: {{HeartDiseaseorAttack}} <br>
+        GenHlth: {{GenHlth}} <br>
+        Age: {{Age}} <br>
+
+    </h5>
+
+    <!-- <h3> <a href="{% url 'venue_pdf' %}">GetReport</a> -->
+    
+    
+    <form action="venue_pdf" method="POST">
+        {% csrf_token %}
+        <textarea name="prescription" id="" cols="30" rows="10"></textarea>
+        <textarea name="DoctorVerdict" id="" cols="30" rows="10"></textarea>
+
+        <input type="submit" value="GetReport">
+    </form>
+    
+        
+        
 </body>
 </html>
