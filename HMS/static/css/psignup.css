@@ -101,7 +101,8 @@
 #row{
     display: flex;
     width: 100%;
-    padding: 18.3% 0 10.5% 0;
+    height: 38rem;
+    padding: 9.3% 0 10.5% 0;
 }
 
 #fields{
@@ -132,6 +133,11 @@
     justify-self: right;
 }
 
+#textbox\ file {
+    margin-top: 7.5%;
+    height: 2rem;
+}
+
 .image{
     justify-self: center;
     width: 33.625rem;
@@ -155,14 +161,23 @@
     filter: blur(120px);
 }
 .back2{
-    position: relative;
     z-index: 0;
+    display: flex;
+    position: absolute;
+    bottom: -57rem;
+    right: 0rem;
+    width: 20rem;
+    height: 28rem;
+    flex-shrink: 0;
+    border-radius: 602px;
+    background: rgba(121, 162, 255, 0.60);
+    filter: blur(120px);
 }
-.back2 img{ 
-    position: fixed;
+/* .back2 img{ 
+    position: relative;
     right: 0px;
     bottom: 0px;
-}
+} */
 
 .align{
     white-space: nowrap;
