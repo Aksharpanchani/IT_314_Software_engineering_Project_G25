@@ -38,7 +38,7 @@
         <input type="submit"> 
     </form> -->
 
-    <form onsubmit="return validateForm()" action="result" name="form1"  >
+    <form action="result">
 
         <div class="background1"></div>
         <div class="background2">
@@ -46,7 +46,7 @@
         </div>
         <div class="header">
             <a href="./homepage.html" class="logo">
-                <img src="../static/public/logo.svg" alt="">
+                <img src="./public/logo.svg" alt="">
                 <div class="logoname">MED.AI</div>
             </a>
             <div class="Patient_ID">
@@ -66,7 +66,7 @@
                 <div class="ellipse10">
                     <div class="ellipse11">
                         <div class="HDisease_Prediction"><img
-                                src="../static/public/FrameDiabetes.svg" alt=""></div>
+                                src="../static/FrameDiabetes.svg" alt=""></div>
                     </div>
                 </div>
             </div>
@@ -169,16 +169,66 @@
 
 
                 <div class="predictandreset">
-                    <button  type="submit" class="predict button1">Predict</button>
-                    <button  type="reset"  class="reset button1">Reset</button>
+                    <button class="predict button1">Predict</button>
+                    <button class="reset button1">Reset</button>
                 </div>
 
+
+                <!-- ------------------ Prediction ------------------------>
+
+
+                <div class="Prediction">
+                    <div class="Param">
+                        <div class="BlueDot"></div>
+                        <div class="Parameters">Prediction</div>
+                    </div>
+                    <div class="Prediction2">
+                        <div class="Box1">
+                            <Div class="GIF">
+                                <img src="https://www.figma.com/file/hN3Ifs6FNCKexSSf0pMOda/image/d009a3c45532e0fbd721c2c10814be70e208f5a8"
+                                    alt="PredictionImage">
+                            </Div>
+                            <input type="text" name="" id="">
+                        </div>
+                        <div class="statisfied_or_not">
+                            <br><button class="satisfied button1">Satisfied</button><br>
+                            <button class="not_satisfied button1">Not Satisfied</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ------------------------------ Get Report ----------------------------->
+
+
+                <div class="GetReport_Prescription_Submit">
+                    <div class="Param">
+                        <div class="BlueDot"></div>
+                        <div class="Parameters">Get Report</div>
+                    </div>
+                    <div class="Box2">
+                        <div class="text">
+                            <div class="WhiteDot"></div>
+                            <div class="t">Doctor's Verdict</div>
+                        </div>
+                        <div class="whitebox"></div>
+                    </div>
+                    <br><br>
+                    <div class="Box2">
+                        <div class="text">
+                            <div class="WhiteDot"></div>
+                            <div class="t">Prescription</div>
+                        </div>
+                        <div class="whitebox"></div>
+                    </div>
+
+                    <button class="submit_report">Submit Report</button>
+
+
+                </div>
             </div>
         </div>
-        </div>
-    </form>
 
-    <script src="../static/js/form_diab.js"></script>
+    </form>
 </body>
 
 </html>
