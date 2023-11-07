@@ -191,6 +191,9 @@ def predictor_diab(request):
 def formInfo_diab(request):
     diab_model = load('./SavedModels/diabetes_model.joblib')
     
+    PatientID = request.GET['pid']
+    DiseaseName = 'Diabetes'
+
     HighBP = request.GET['HighBP']
     if HighBP=='No':
         HighBP=0
@@ -210,8 +213,12 @@ def formInfo_diab(request):
     HeartDiseaseorAttack = request.GET['HeartDiseaseorAttack']
     GenHlth = request.GET['GenHlth']
     Age = request.GET['Age']
+
     y_pred = diab_model.predict_proba([[HighBP,HighChol,BMI,Stroke,HeartDiseaseorAttack,GenHlth,Age]])
     y_pred = y_pred*100
+
+    #Save model here
+
     return render(request,'result_diab.html',{'data':y_pred[0][1]})
 
 
@@ -234,4 +241,37 @@ def formInfo_heart(request):
     y_pred = heart_model.predict_proba([[age,height,weight,ap_hi,ap_lo,cholestrol,glucose,smoking,active]])
     y_pred = y_pred
     return render(request,'result_heart.html',{'data':y_pred[0][1]})
+
+
+#Getting Report
+from django.http import FileResponse
+import io
+from reportlab.pdfgen import canvas
+from reportlab.lib.units import inch
+from reportlab.lib.pagesizes import letter
+
+def venue_pdf(request):
+    buf = io.BytesIO()
+    c = canvas.Canvas(buf,pagesize=letter,bottomup=0)
+    textob = c.beginText()
+    textob.setTextOrigin(inch,inch)
+    textob.setFont("Helvetica",14)
+
+    #List of lines
+    lines=[
+        "Hello my name is",
+        "Vansh line 2",
+        "line 3",
+    ]
+
+    #Loop
+
+    for line in lines:
+        textob.textLine(line)
+    
+    c.drawText(textob)
+    c.showPage()
+    c.save()
+    buf.seek(0)
+    return FileResponse(buf,as_attachment=True, filename='venue.pdf')
 

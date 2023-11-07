@@ -59,6 +59,7 @@ class Report(models.Model):
     HeartDiseaseAttack = models.IntegerField(default=-1)
     GenHlth = models.IntegerField(default=-1)
     Age = models.IntegerField(default=-1)
+    Result = models.IntegerField(default=-1)
 
     DoctorConclusion = models.IntegerField(default=1)
     DoctorPrescription = models.TextField()
