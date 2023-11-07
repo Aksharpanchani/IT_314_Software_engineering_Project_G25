@@ -12,8 +12,28 @@
 </head>
 <body>
     
-        
-        <h2 class="title">Doctor Registration</h2>
+    <div class="navbar">
+        <a href="./homepage.html" class="logo">
+            <img src="../static/public/logo.svg" alt="">
+            <div class="logoname">
+                MED.AI
+            </div>
+        </a>
+        <div class="nav">
+            <a href="./homepage.html" class="logsign">Home</a>
+            <a href="./homepage.html#contact" class="contact">Contact us</a>
+            <a href="./homepage.html#line1" class="about">About us</a>
+            <a href="./login.html" class="logsign">Login</a>
+        </div>
+    </div>
+    <div class="welcome">
+        <p>Welcome to <span class="medAI">MED.AI</span></p>
+    </div>
+
+    <div class="instruction">
+        <p>Please enter your details here</p>
+    </div>
+        <!-- <h2 class="title">Doctor Registration</h2> -->
         <form action="" method="POST" enctype="multipart/form-data">
         {% for message in messages %}
         <h5>{{ message }}</h5>
