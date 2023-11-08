@@ -99,8 +99,8 @@ def dsignup(request):
 
                 # log user in and redirect to settings page
 
-                user_login = auth.authenticate(username=username, password=password)
-                auth.login(request, user_login)
+                # user_login = auth.authenticate(username=username, password=password)
+                # auth.login(request, user_login)
 
                 # create profile object for new user
                 user_model = User.objects.get(username=username)
@@ -110,15 +110,14 @@ def dsignup(request):
                 new_profile.save()
 
                 send_mail('Warm Welcome to HMS',
-                          "hello doctor, " + fname + " " + lname + " how are you?" + " Your username is: " + username + ".",
+                          "hello doctor, " + fname + " " + lname + " how are you?" + " Your username is: " + username + ". " + "Your profile will be verified after 2-3 business days.",
                           'djangoautomailsystem@gmail.com',
                           [email], fail_silently=False)
 
-                return redirect('doctorhome')
+                return redirect('homepage')
         else:
             messages.info(request, 'Password not matching')
             return redirect('dsignup')
-
 
     else:
         return render(request, 'dsignup.html')
@@ -138,7 +137,11 @@ def login(request):
             if s[len(s) - 1] == 'P':
                 return redirect('patienthome')
             else:
-                return redirect('doctorhome')
+                if DoctorProfile.objects.get(user=user).Verified == True:
+                    return redirect('doctorhome')
+                else:
+                    messages.info(request, 'Your profile is yet to be verified')
+                    return redirect('login')
         else:
             messages.info(request, 'Credentials invalid')
             return redirect('login')
@@ -163,10 +166,15 @@ def homepage(request):
 def patienthome(request):
     return render(request, 'patienthome.html')
 
+@login_required(login_url='login')
+def logout(request):
+    auth.logout(request)
+    return redirect('login')
 
 @login_required(login_url='login')
 def doctorhome(request):
-    return render(request, 'doctorhome.html')
+    doctor_profile = DoctorProfile.objects.get(user=request.user)
+    return render(request, 'doctorhome.html', {'DoctorProfile': doctor_profile})
 
 def signup(request):
     return render(request, 'signup.html')
