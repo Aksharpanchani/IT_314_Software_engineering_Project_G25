@@ -53,7 +53,7 @@
                 <input type="text" class="patient_id_input" placeholder="Patient Id" name="PatientID">
             </div>
             <div class="Doctor_Name">
-                <input type="text" class="doctorNameInput" placeholder="{{ doctor_profile.first_name }}" readonly>
+                <input type="text" class="doctorNameInput" placeholder="{{ DoctorProfile.first_name }} {{DoctorProfile.last_name}}" readonly>
                 <img src="../static/public/user.svg" alt="User">
             </div>
         </div>
