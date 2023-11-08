@@ -39,7 +39,7 @@
                 <div class="logoname">MED.AI</div>
             </a>
             <div class="Patient_ID">
-                <input type="text" class="patient_id_input" placeholder="Patient Id" name="PatientID">
+                <input type="text" class="patient_id_input" placeholder="Patient Id" name="PatientID" required>
             </div>
             <div class="Doctor_Name">
                 <input type="text" class="doctorNameInput" placeholder="{{ DoctorProfile.first_name }} {{DoctorProfile.last_name}}" readonly>
@@ -69,11 +69,11 @@
                 </div>
                 <div class="grid-container">
                     <div class="grid-item" id="grid-item1">
-                        <div>Systolic Blood Pressure</div><input type="number" class="input2" name="Systolic BP" id="" required>
+                        <div>Systolic Blood Pressure</div><input type="number" class="input2" name="SystolicBP" id="" required>
                     </div>
 
                     <div class="grid-item" id="grid-item2">
-                        <div>Diastolic Blood Pressure</div><input type="number" class="input2" name="Diastolic BP" id="" required>
+                        <div>Diastolic Blood Pressure</div><input type="number" class="input2" name="DiastolicBP" id="" required>
                     </div>
                     
                     <div class="grid-item" id="grid-item3">
@@ -102,11 +102,11 @@
                         <div>Physical Activity</div>
                         <div class="radio-buttons">
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="PA" id="Yes2" value="Yes" required>
+                                <input class="form-check-input" type="radio" name="PhysicalActivity" id="Yes2" value="Yes" required>
                                 <label class="form-check-label" for="Yes2">Yes</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="PA" id="No2" value="No" required>
+                                <input class="form-check-input" type="radio" name="PhysicalActivity" id="No2" value="No" required>
                                 <label class="form-check-label" for="No2">No</label>
                             </div>
                         </div>

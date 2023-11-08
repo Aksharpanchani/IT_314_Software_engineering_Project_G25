@@ -294,23 +294,49 @@ def formInfo_diab(request):
 
 #Views of Heart Disease
 def predictor_heart(request):
-    return render(request,'form_heart.html')
+    doctor_profile=DoctorProfile.objects.get(user=request.user)
+    return render(request,'form_heart.html',{'DoctorProfile':doctor_profile})
 
 def formInfo_heart(request):
     heart_model = load('./SavedModels/heart_model.joblib')
-    age = request.GET['Age']
-    height = request.GET['Height']
-    weight = request.GET['Weight']
-    ap_hi = request.GET['Systolic BP']
-    ap_lo = request.GET['Diastolic BP']
-    cholestrol = request.GET['Cholestrol Level']
-    glucose = request.GET['Glucose Level']
-    smoking = request.GET['Smoking']
-    active = request.GET['PhysicalActivity']
 
-    y_pred = heart_model.predict_proba([[age,height,weight,ap_hi,ap_lo,cholestrol,glucose,smoking,active]])
-    y_pred = y_pred
-    return render(request,'result_heart.html',{'data':y_pred[0][1]})
+    doctor_profile=DoctorProfile.objects.get(user=request.user)
+    PatientID = request.GET['PatientID']
+    DiseaseName = "Cardio Vascular Disease"
+    Age = request.GET['Age']
+    Age= int(Age)
+    Height = request.GET['Height']
+    Height= int(Height)
+    Weight = request.GET['Weight']
+    Weight = int(Weight)
+    SystolicBP = request.GET['SystolicBP']  #aka ap_hi in ML model
+    SystolicBP= int(SystolicBP)
+    DiastolicBP = request.GET['DiastolicBP'] #aka ap_lo in ML model
+    DiastolicBP= int(DiastolicBP)
+    CholestrolLevel = request.GET['CholestrolLevel']
+    CholestrolLevel= int(CholestrolLevel)
+    GlucoseLevel = request.GET['GlucoseLevel']
+    GlucoseLevel= int(GlucoseLevel)
+    Smoking = request.GET['Smoking']
+    PhysicalActivity = request.GET['PhysicalActivity'] #aka active in ML model
+
+    if Smoking=='Yes':
+        SmokingML = 1
+    else:
+        SmokingML=0
+
+    if PhysicalActivity=='Yes':
+        PhysicalActivityML = 1
+    else:
+        PhysicalActivityML=0
+
+    y_pred = heart_model.predict_proba([[Age,Height,Weight,SystolicBP,DiastolicBP,CholestrolLevel,GlucoseLevel,SmokingML,PhysicalActivityML]])
+    #y_pred = heart_model.predict_proba([[2,168,62,110,80,1,1,1,1]])
+    y_pred = y_pred*100
+    y_out= round(y_pred[0][1],2)
+    return render(request,'result_heart.html',{'data':y_out,'PhysicalActivity': PhysicalActivity,'Smoking': Smoking ,'GlucoseLevel': GlucoseLevel ,
+                                               'CholestrolLevel': CholestrolLevel ,'DiastolicBP':DiastolicBP ,'SystolicBP': SystolicBP,'Weight':Weight ,'Height':Height
+                                                 , 'Age':Age ,'DiseaseName': DiseaseName ,'PatientID': PatientID,'DoctorProfile':doctor_profile})
 
 
 #Getting Report
@@ -371,6 +397,70 @@ def venue_pdf(request):
         "Symptoms of Heart Attack : " + HeartDiseaseorAttack,
         "General Health (Out of 5) : " + GenHlth,
         "Diabetes : "+Conclusion,   
+        "Prescription : " + Prescription,
+        "General Advice : " + Verdict
+    ]
+
+    #Loop
+
+    for line in lines:
+        textob.textLine(line)
+    
+    c.drawText(textob)
+    c.showPage()
+    c.save()
+    buf.seek(0)
+
+    reportName = Patient.first_name + " " + Disease + " " + "Report.pdf"
+    return FileResponse(buf,as_attachment=True, filename=reportName)
+
+
+def heartreport_pdf(request):
+
+    #Fetching data from form
+    DoctorName = request.POST['DoctorName']
+    PatientID = request.POST['PatientID']
+    DiseaseName = request.POST['DiseaseName']
+    PhysicalActivity = request.POST['PhysicalActivity']
+    Smoking = request.POST['Smoking']
+    GlucoseLevel = request.POST['GlucoseLevel']
+    CholestrolLevel = request.POST['CholestrolLevel']
+    DiastolicBP = request.POST['DiastolicBP']
+    SystolicBP = request.POST['SystolicBP']
+    Weight = request.POST['Weight']
+    Height = request.POST['Height']
+    Age = request.POST['Age']
+    Disease = request.POST['DiseaseName']
+    Disease = request.POST['DiseaseName']
+
+    Prediction  = request.POST['Prediction'] #Only for model
+    TrueResult = request.POST['TrueResult']
+    Prescription = request.POST['Prescription']
+    Verdict = request.POST['DoctorVerdict']
+
+    Patient = PatientProfile.objects.get(user=User.objects.get(username=PatientID))
+
+    #Generating PDF
+
+    buf = io.BytesIO()
+    c = canvas.Canvas(buf,pagesize=letter,bottomup=0)
+    textob = c.beginText()
+    textob.setTextOrigin(inch,inch)
+    textob.setFont("Helvetica",14)
+
+    #List of lines
+
+    if TrueResult=="Satisfied":
+        Conclusion = "Positive"
+    else:
+        Conclusion = "Negative"
+
+    lines=[
+        "Doctor : " + DoctorName,
+        "Disease : " + Disease,
+        "Patient : " + Patient.first_name + " " + Patient.last_name,
+        "Age :" + Age,
+        "HeartDisease : "+Conclusion,   
         "Prescription : " + Prescription,
         "General Advice : " + Verdict
     ]
