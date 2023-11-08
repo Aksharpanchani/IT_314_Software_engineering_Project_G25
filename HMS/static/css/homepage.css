@@ -5,7 +5,8 @@
 *{
   font-family: Montserrat Alternates;
   margin: 0;
-  box-sizing: border-box;
+  box-sizing: border-box; 
+  /* Padding does not affect size of Div */
   line-height: normal;
 }
 html{
