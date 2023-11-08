@@ -14,12 +14,14 @@ urlpatterns = [
     path('logout', views.logout, name='logout'),
     path('', views.homepage, name='homepage'),
     path('signup', views.signup, name='signup'),
+
+    #ML Model urls
     path('predictdiabetes/', views.predictor_diab, name='predictdiabetes'),
     path('predictdiabetes/result/', views.formInfo_diab, name='resultdiabetes'),
+    path('predictdiabetes/result/venue_pdf', views.venue_pdf, name='venue_pdf'),
     path('predictheart/', views.predictor_heart, name = 'predictheart'),
     path('predictheart/result/', views.formInfo_heart, name='resultheart'),
-    path('predictdiabetes/result/venue_pdf', views.venue_pdf, name='venue_pdf'),
-    path('predictheart/result/heartreport_pdf', views.venue_pdf, name='heartreport_pdf'),
+    path('predictheart/result/heartreport_pdf', views.heartreport_pdf, name='heartreport_pdf'),
 
 
 ]

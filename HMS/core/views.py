@@ -430,8 +430,6 @@ def heartreport_pdf(request):
     Weight = request.POST['Weight']
     Height = request.POST['Height']
     Age = request.POST['Age']
-    Disease = request.POST['DiseaseName']
-    Disease = request.POST['DiseaseName']
 
     Prediction  = request.POST['Prediction'] #Only for model
     TrueResult = request.POST['TrueResult']
@@ -457,7 +455,7 @@ def heartreport_pdf(request):
 
     lines=[
         "Doctor : " + DoctorName,
-        "Disease : " + Disease,
+        "Disease : " + DiseaseName,
         "Patient : " + Patient.first_name + " " + Patient.last_name,
         "Age :" + Age,
         "HeartDisease : "+Conclusion,   
@@ -475,5 +473,5 @@ def heartreport_pdf(request):
     c.save()
     buf.seek(0)
 
-    reportName = Patient.first_name + " " + Disease + " " + "Report.pdf"
+    reportName = Patient.first_name + " " + DiseaseName + " " + "Report.pdf"
     return FileResponse(buf,as_attachment=True, filename=reportName)

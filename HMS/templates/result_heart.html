@@ -8,28 +8,14 @@
     <title>Status</title>
 </head>
 <body>
-    <h2>There is a {{data}}% chance that your patient has diabetes!!!</h2><br>
+    <h2>There is a {{data}}% chance that your patient has heart diabetes!!!</h2><br>
     
     
     <h2>Data</h2><br>
-    <!-- <h5>
-        <input value={{PatientID}} type="text" readonly>
-        DID: {{doctor_profile.first_name}}
-        PID: {{PatientID}} <br>
-        DN: {{DiseaseName}} <br>
-        HBP: {{HighBP}} <br>
-        HChol: {{HighChol}} <br>
-        BMI: {{BMI}} <br>
-        Stroke: {{Stroke}} <br>
-        HDoA: {{HeartDiseaseorAttack}} <br>
-        GenHlth: {{GenHlth}} <br>
-        Age: {{Age}} <br>
-
-    </h5> -->
-
-    <!-- <h3> <a href="{% url 'venue_pdf' %}">GetReport</a> -->
+    
     
     <a href="homepage2">Home</a>
+    
     <form action="heartreport_pdf" method="POST">
         {% csrf_token %}
 
@@ -41,7 +27,7 @@
         Wt<input type="text" name="Weight" id="" value={{Weight}} readonly>
         SystolicBP<input type="text" name="SystolicBP" id="" value={{SystolicBP}} readonly>
         DiastolicBP<input type="text" name="DiastolicBP" id="" value={{DiastolicBP}} readonly>
-        Cholestrol<input type="number" name="Cholestrol" id="" value={{Cholestrol}} readonly>
+        Cholestrol<input type="number" name="CholestrolLevel" id="" value={{CholestrolLevel}} readonly>
         Glucose<input type="text" name="GlucoseLevel" id="" value={{GlucoseLevel}} readonly>
         Smoking<input type="text" name="Smoking" id="" value={{Smoking}} readonly>
         PhysicalActivity<input type="text" name="PhysicalActivity" id="" value={{PhysicalActivity}} readonly>
