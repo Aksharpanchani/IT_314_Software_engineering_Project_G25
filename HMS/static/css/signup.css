@@ -1,6 +1,6 @@
 @font-face {
     font-family: volko;
-    src: url(/Frontend_and_UI_Design/Homepage/public/mudkty-wtvolkolakgrotesque-light.ttf);
+    src: url(../public/mudkty-wtvolkolakgrotesque-light.ttf);
   }
 
 *{
@@ -33,9 +33,9 @@
     line-height: normal;
 }
 .rectangle-5 .company-icon {
+    margin-right: auto; 
     text-decoration: none;
     color: black;
-    margin-right: auto; 
 }
 .rectangle-5 .nav {
     display: flex;
@@ -51,11 +51,9 @@
     padding: 10px 15px; 
 }
 .ellipse14 {
-    position: relative;
-    z-index: -1;
     display: flex;
     width: 1496px;
-    height:809px;
+    height:100%;
 }
 
 .blur-background {
@@ -81,12 +79,17 @@
 }
 
 .vertical-line {
+    /* right: 0px; */
     margin-top:2%;
     margin-left:5.28%;
-    border-left: 1px solid black;
-    height: 63.3%;
+    /* border-left: 1px solid black; */
+    background-color: black;
+    width: 1px;
+    height: 475px;
 }
-
+.you{
+    margin-bottom: 110px;
+}
 .you_are_a{
     display: flex;
     flex-direction: column;
