@@ -188,11 +188,12 @@ from joblib import load
 def predictor_diab(request):
     doctor_profile=DoctorProfile.objects.get(user=request.user)
 
-    return render(request,'form_diab.html',{'doctor_profile':doctor_profile})
+    return render(request,'form_diab.html',{'DoctorProfile':doctor_profile})
 
 def formInfo_diab(request):
     diab_model = load('./SavedModels/diabetes_model.joblib')
     
+    doctor_profile=DoctorProfile.objects.get(user=request.user)
     PatientID = request.GET['PatientID']
     DiseaseName = 'Diabetes'
 
@@ -276,8 +277,10 @@ def formInfo_diab(request):
     y_out= round(y_pred[0][1],2)
 
     #Save model here
-    df_report = [[HighBP,HighChol,BMI,Stroke,HeartDiseaseorAttack,GenHlth,Age]]
-    return render(request,'result_diab.html',{'data':y_out, 'PatientID':PatientID ,'DiseaseName':DiseaseName,'HighBP':HighBP,'HighChol':HighChol ,'BMI':BMI ,
+    #df_report = [[HighBP,HighChol,BMI,Stroke,HeartDiseaseorAttack,GenHlth,Age]]
+
+    
+    return render(request,'result_diab.html',{'data':y_out, 'DoctorProfile':doctor_profile,'PatientID':PatientID ,'DiseaseName':DiseaseName,'HighBP':HighBP,'HighChol':HighChol ,'BMI':BMI ,
                                               'Stroke':Stroke,'HeartDiseaseorAttack':HeartDiseaseorAttack,'GenHlth': GenHlth,'Age':Age})
 
 
@@ -309,7 +312,32 @@ from reportlab.pdfgen import canvas
 from reportlab.lib.units import inch
 from reportlab.lib.pagesizes import letter
 
+@login_required(login_url='login')
+def homepage2(request):
+    return redirect('doctorhome')
+
 def venue_pdf(request):
+
+    #Fetching data from form
+    DoctorName = request.POST['DoctorName']
+    PatientID = request.POST['PatientID']
+    Disease = request.POST['DiseaseName']
+    HighBP = request.POST['HighBP']
+    HighChol = request.POST['HighChol']
+    BMI = request.POST['BMI']
+    Stroke = request.POST['Stroke']
+    HeartDiseaseorAttack = request.POST['HeartDiseaseorAttack']
+    GenHlth = request.POST['GenHlth']
+    Age = request.POST['Age']
+    Prediction  = request.POST['Prediction'] #Only for model
+    TrueResult = request.POST['TrueResult']
+    Prescription = request.POST['Prescription']
+    Verdict = request.POST['DoctorVerdict']
+
+    Patient = PatientProfile.objects.get(user=User.objects.get(username=PatientID))
+
+    #Generating PDF
+
     buf = io.BytesIO()
     c = canvas.Canvas(buf,pagesize=letter,bottomup=0)
     textob = c.beginText()
@@ -317,10 +345,26 @@ def venue_pdf(request):
     textob.setFont("Helvetica",14)
 
     #List of lines
+
+    if TrueResult=="Satisfied":
+        Conclusion = "Positive"
+    else:
+        Conclusion = "Negative"
+
     lines=[
-        "Hello my name is",
-        "Vansh line 2",
-        "line 3",
+        "Doctor : " + DoctorName,
+        "Disease : " + Disease,
+        "Patient : " + Patient.first_name + " " + Patient.last_name,
+        "Age :" + Age,
+        "Blood Pressure Level: " + HighBP,
+        "Cholestrol Level : " + HighChol,
+        "BMI (Body Mass Index) : " + BMI,
+        "Stroke : " + Stroke,
+        "Symptoms of Heart Attack : " + HeartDiseaseorAttack,
+        "General Health (Out of 5) : " + GenHlth,
+        "Diabetes : "+Conclusion,   
+        "Prescription : " + Prescription,
+        "General Advice : " + Verdict
     ]
 
     #Loop
@@ -332,5 +376,6 @@ def venue_pdf(request):
     c.showPage()
     c.save()
     buf.seek(0)
-    return FileResponse(buf,as_attachment=True, filename='venue.pdf')
 
+    reportName = Patient.first_name + " " + Disease + " " + "Report.pdf"
+    return FileResponse(buf,as_attachment=True, filename=reportName)

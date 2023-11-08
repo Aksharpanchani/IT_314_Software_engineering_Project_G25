@@ -12,8 +12,9 @@
     
     
     <h2>Data</h2><br>
-    <h5>
+    <!-- <h5>
         <input value={{PatientID}} type="text" readonly>
+        DID: {{doctor_profile.first_name}}
         PID: {{PatientID}} <br>
         DN: {{DiseaseName}} <br>
         HBP: {{HighBP}} <br>
@@ -24,14 +25,31 @@
         GenHlth: {{GenHlth}} <br>
         Age: {{Age}} <br>
 
-    </h5>
+    </h5> -->
 
     <!-- <h3> <a href="{% url 'venue_pdf' %}">GetReport</a> -->
     
-    
+    <a href="homepage2">Home</a>
     <form action="venue_pdf" method="POST">
         {% csrf_token %}
-        <textarea name="prescription" id="" cols="30" rows="10"></textarea>
+
+        DoctorName<input type="text" name="DoctorName" id="" value="{{DoctorProfile.first_name}} {{DoctorProfile.last_name}}" readonly>
+        PID<input type="text" name="PatientID"  id="" value={{PatientID}}  readonly>
+        Disease<input type="text" name="DiseaseName"  id="" value={{DiseaseName}}  readonly>
+        HBP<input type="text" name="HighBP" id="" value={{HighBP}} readonly>
+        HChol<input type="text" name="HighChol" id="" value={{HighChol}} readonly>
+        BMI<input type="number" name="BMI" id="" value={{BMI}} readonly>
+        Stroke<input type="text" name="Stroke" id="" value={{Stroke}} readonly>
+        HDoA<input type="text" name="HeartDiseaseorAttack" id="" value={{HeartDiseaseorAttack}} readonly>
+        GH<input type="number" name="GenHlth" id="" value={{GenHlth}} readonly>
+        Age<input type="number" name="Age" id="" value={{Age}} readonly>
+
+        <!-- Make the radio button as mandatory field -->
+        Satisfied<input type="radio" name="TrueResult" id="" value="Satisfied">
+        Unsatisfied<input type="radio" name="TrueResult" id="" value="Unsatisfied">
+    
+        Prediction <input type="number" name="Prediction" id="" value={{data}} readonly>
+        <textarea name="Prescription" id="" cols="30" rows="10"></textarea>
         <textarea name="DoctorVerdict" id="" cols="30" rows="10"></textarea>
 
         <input type="submit" value="GetReport">
