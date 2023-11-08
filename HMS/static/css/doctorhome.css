@@ -37,8 +37,8 @@ body{
 }
 .header{
   /* display: static; */
-  position: relative;
   display:flex;
+  position: relative;
   margin-left:6.2vw;
   margin-right:6.2vw;
   margin-top:48px;
@@ -47,16 +47,17 @@ body{
 
 
 #logout{
-  display: flex;
-  position: absolute;
-  left: 10.5vw;
-  align-items: center;
+  /* display: flex; */
+  /* position: absolute; */
+  /* left: 10.5vw; */
+  /* align-items: center; */
   width:10vw;
   height: 53px;
+  margin-left: 5.7vw;
   border-radius: 28.5px;
   background: #FFF;
-  margin-right:25.6vw;
-  justify-content: center;
+  /* margin-right:25.6vw; */
+  /* justify-content: center; */
   color:black;
   font-family: "Montserrat Alternates";
   font-size: 20px;
