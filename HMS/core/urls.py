@@ -23,6 +23,8 @@ urlpatterns = [
     path('predictheart/result/', views.formInfo_heart, name='resultheart'),
     path('predictheart/result/heartreport_pdf', views.heartreport_pdf, name='heartreport_pdf'),
 
+    #Jugaad 
+    path('predictdiabetes/homepage2', views.homepage2, name='homepage2'),
 
 ]
 
