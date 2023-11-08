@@ -8,6 +8,8 @@ function validateForm(){
     var height = form1["height"];
     var weight = form1["weight"];
     var number = form1["number"];
+    var year = form1["birthdate"];  
+    var birthyear = new Date(year.value).getFullYear();
 
 
     // Trim the input values to remove leading and trailing spaces
@@ -39,10 +41,18 @@ function validateForm(){
         weight.value = "";
         return false;
     }
-    if(number.value.length!=11){
+    if(number.value.length!=10){
         alert("Invalid Number.");
         number.value = "";
         return false;
     }
+    if(birthyear>2010)
+    {
+        alert("Invalid Date of birthdate");
+        year.value="";
+        return false;
+    }
+
+
     return true;
 }
