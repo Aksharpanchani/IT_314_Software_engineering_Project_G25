@@ -45,7 +45,8 @@ body{
   align-items: center;
 }
 
-.log_out{
+
+#logout{
   display: flex;
   position: absolute;
   left: 10.5vw;
@@ -56,17 +57,19 @@ body{
   background: #FFF;
   margin-right:25.6vw;
   justify-content: center;
-}
-.patient_id_input{
-  background: #FFF;
-  border:none;
   color:black;
   font-family: "Montserrat Alternates";
   font-size: 20px;
   font-weight: 400;
-  width:5.5vw;
-  height:24px;
+  border:none;
+  cursor: pointer;
 }
+
+#logout:hover {
+  background-color: blue; /* Change background color on hover */
+  color: #fff; /* Change text color on hover */
+}
+
 .Doctor_Name{
   display: flex;
   position: absolute;
