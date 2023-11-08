@@ -119,13 +119,14 @@ body{
     line-height: 100%; /* line height -> sets distance between lines of text*/
 }
 .HDisease_Prediction{
-    /* display: inline-flex; */
     width:32.7vw;
     height:24.5vw;
     align-items: center;
     flex-shrink: 0;
-    /* margin-top:2.8vw; */
-    /* margin-left:4.41vw; */
+    margin-top:53px;
+}
+.HDisease_Prediction img{
+    width: 100%;
 }
 
 

@@ -98,12 +98,13 @@ body{
       /* Left Part */
       
 .Container{
-  margin-top: 5vh;
+  margin-top: 43px;
   display: flex;
 }
 .LeftPart{
   display:flex;
   margin-left: 6.2vw;
+  margin-top: 25px;
   flex-direction:column;
   /* margin-right: 5vw; */
 }
@@ -116,68 +117,71 @@ body{
   line-height: 100%; /* line height -> sets distance between lines of text*/
 }
 .HDisease_Prediction{
-  /* display: inline-flex; */
   width:32.7vw;
   height:24.5vw;
   align-items: center;
   flex-shrink: 0;
-  /* margin-top:2.8vw; */
-  /* margin-left:4.41vw; */
+  margin-top:53px;
+}
+.HDisease_Prediction img{
+  width: 100%;
 }
 
 /* Our models */
 
 
-  .ourmodels{
-    display: flex;
-    flex-direction: column;
-    margin-left:17.6vw;
-    
-  }
-
-  .head{
-    width:29.5vw;
-    display: flex;
-    flex-direction: column;
-    color: #000;
-    font-family: "Montserrat Alternates";
-    font-size: 70px;
-    font-weight: 500;
-  }
-
-  .choose_a{
-    width:auto;
-    margin:auto;
-  }
-
-  .model{
-    width:auto;
-    margin:auto;
-  }
- 
-  .rect{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    font-size: 40px;
-    border-radius: 30px;
-    color: #F9F9F9;
-    background-color: #0067FF;
-    width:30.34vw;
-    height:9.22vw;
-  }
-  .rect20and21{
-    margin-top: 7.4vh;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 20px;
-  }
-  .rect22and23{
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 20px;
-  }
+.ourmodels{
+  display: flex;
+  flex-direction: column;
+  margin-left:17.6vw;
+  
+}
+.head{
+  width:29.5vw;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  color: #000;
+  font-family: "Montserrat Alternates";
+  font-size: 70px;
+  font-weight: 500;
+}
+.choose_a{
+  width:auto;
+  margin:auto;
+}
+.model{
+  width:auto;
+  margin:auto;
+}
+.rect{
+  display: flex;
+  font-family: "Montserrat Alternates";;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 40px;
+  border-radius: 30px;
+  color: #000;
+  background-color: #D9D9D9;;
+  width:30.34vw;
+  height:9.22vw;
+}
+.rect:hover{
+  background: #0067FF;
+  color: #F9F9F9;
+}
+.rect20and21{
+  margin-top: 7.4vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+}
+.rect22and23{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+}
