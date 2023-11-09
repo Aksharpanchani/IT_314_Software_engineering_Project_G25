@@ -131,8 +131,33 @@ body{
   width: 100%;
 }
 
-/* Our models */
+#my_patients{
+  display: flex;
+  margin-top:11vw;
+  margin-left:7.6vw;
+  width: 17.7vw;
+  height: 70px;
+  color: #000;
+  font-family: "Montserrat Alternates";
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 30px */
+  border-radius: 24px;
+  background: #D9D9D9;
+  cursor: pointer;
+  border:none;
+  align-items: center;
+  justify-content: center;
+  margin-bottom:8.1vh;
+}
 
+#my_patients:hover {
+  background-color: #407BFF;; /* Change background color on hover */
+  color: #fff; /* Change text color on hover */
+}
+
+/* Our models */
 
 .ourmodels{
   display: flex;
@@ -167,7 +192,7 @@ body{
   font-size: 40px;
   border-radius: 30px;
   color: #000;
-  background-color: #D9D9D9;;
+  background-color: #D9D9D9;
   width:30.34vw;
   height:9.22vw;
 }
