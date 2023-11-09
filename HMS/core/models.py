@@ -13,7 +13,6 @@ class PatientProfile(models.Model):
     first_name = models.CharField(max_length=32)
     last_name = models.CharField(max_length=32)
     height = models.IntegerField(default=1)
-    weight = models.IntegerField(default=1)
     g = (('M', 'Male'), ('F', 'Female'))
     bg = (('OP', 'O +ve'), ('ON', 'O -ve'), ('AP', 'A +ve'), ('AN', 'A -ve'),
           ('BP', 'B +ve'), ('BN', 'B -ve'), ('ABP', 'AB +ve'), ('ABN', 'AB -ve'))

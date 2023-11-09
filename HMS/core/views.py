@@ -49,7 +49,7 @@ def psignup(request):
                 # create profile object for new user
                 user_model = User.objects.get(username=username)
                 new_profile = PatientProfile.objects.create(user=user_model, id_user=user_model.id, first_name=fname,
-                                                            last_name=lname, height=h, weight=w, gender=g, bloodgroup=b,
+                                                            last_name=lname, height=h, gender=g, bloodgroup=b,
                                                             phone_number=pn, birthdate=bd)
                 new_profile.save()
 
