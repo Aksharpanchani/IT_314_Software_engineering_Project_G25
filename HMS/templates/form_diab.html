@@ -41,12 +41,12 @@
             <!-- <img src="./public/Ellipse_13.svg"> -->
         </div>
         <div class="header">
-            <a href="./homepage" class="logo">
+            <a href="homepage2" class="logo">
                 <img src="../static/public/logo.svg" alt="">
                 <div class="logoname">MED.AI</div>
             </a>
             <div class="Patient_ID">
-                <input type="text" class="patient_id_input" placeholder="Patient Id" name="PatientID">
+                <input type="text" class="patient_id_input" placeholder="Patient Id" name="PatientID" required>
             </div>
             <div class="Doctor_Name">
                 <input type="text" class="doctorNameInput" placeholder="{{ DoctorProfile.first_name }} {{DoctorProfile.last_name}}" readonly>
@@ -59,12 +59,9 @@
         <div class="Container">
             <div class="LeftPart">
                 <div class="Heart_Disease">Diabetes Prediction</div>
-                <div class="ellipse10">
-                    <div class="ellipse11">
-                        <div class="HDisease_Prediction"><img
-                                src="../static/public/FrameDiabetes.svg" alt=""></div>
+                    <div class="HDisease_Prediction">
+                        <img src="../static/public/DiabetesFrame.svg" alt="">
                     </div>
-                </div>
             </div>
 
 
@@ -82,13 +79,11 @@
                         <div>High BP</div>
                         <div class="radio-buttons">
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="HighBP" id="Yes1" value="Yes"
-                                    required>
+                                <input class="form-check-input" type="radio" name="HighBP" id="Yes1" value="Yes"required>
                                 <label class="form-check-label" for="Yes1">Yes</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="HighBP" id="No1" value="No"
-                                    required>
+                                <input class="form-check-input" type="radio" name="HighBP" id="No1" value="No"required>
                                 <label class="form-check-label" for="No1">No</label>
                             </div>
                         </div>
@@ -99,13 +94,11 @@
                         <div>High Cholestrol</div>
                         <div class="radio-buttons">
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="HighChol" id="Yes2" value="Yes"
-                                    required>
+                                <input class="form-check-input" type="radio" name="HighChol" id="Yes2" value="Yes"required>
                                 <label class="form-check-label" for="Yes2">Yes</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="HighChol" id="No2" value="No"
-                                    required>
+                                <input class="form-check-input" type="radio" name="HighChol" id="No2" value="No"required>
                                 <label class="form-check-label" for="No2">No</label>
                             </div>
                         </div>
@@ -117,13 +110,11 @@
                         <div>Stroke</div>
                         <div class="radio-buttons">
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="Stroke" id="Yes3" value="Yes"
-                                    required>
+                                <input class="form-check-input" type="radio" name="Stroke" id="Yes3" value="Yes"required>
                                 <label class="form-check-label" for="Yes3">Yes</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="Stroke" id="No3" value="No"
-                                    required>
+                                <input class="form-check-input" type="radio" name="Stroke" id="No3" value="No"required>
                                 <label class="form-check-label" for="No3">No</label>
                             </div>
                         </div>
@@ -133,13 +124,11 @@
                         <div>HeartDisease or Attack</div>
                         <div class="radio-buttons">
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="HeartDiseaseorAttack" id="Yes4"
-                                    value="Yes" required>
+                                <input class="form-check-input" type="radio" name="HeartDiseaseorAttack" id="Yes4" value="Yes" required>
                                 <label class="form-check-label" for="Yes4">Yes</label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="HeartDiseaseorAttack" id="No4"
-                                    value="No" required>
+                                <input class="form-check-input" type="radio" name="HeartDiseaseorAttack" id="No4" value="No" required>
                                 <label class="form-check-label" for="No4">No</label>
                             </div>
                         </div>
@@ -157,7 +146,6 @@
                     <div class="grid-item" id="grid-item7">
                         <div>Age</div><input type="number" class="input2" name="Age" id="" required>
                     </div>
-                    <!-- </div> -->
                 </div>
 
 

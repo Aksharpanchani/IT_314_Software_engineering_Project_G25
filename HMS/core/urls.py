@@ -14,12 +14,17 @@ urlpatterns = [
     path('logout', views.logout, name='logout'),
     path('', views.homepage, name='homepage'),
     path('signup', views.signup, name='signup'),
-    path('predictdiabetes/', views.predictor_diab, name='predictdiabetes'),
-    path('predictdiabetes/result/', views.formInfo_diab, name='result'),
-    path('predictheart/', views.predictor_heart, name = 'predictheart'),
-    path('predictheart/result/', views.formInfo_heart, name='result'),
-    path('predictdiabetes/result/venue_pdf', views.venue_pdf, name='venue_pdf'),
 
+    #ML Model urls
+    path('predictdiabetes/', views.predictor_diab, name='predictdiabetes'),
+    path('predictdiabetes/result/', views.formInfo_diab, name='resultdiabetes'),
+    path('predictdiabetes/result/venue_pdf', views.venue_pdf, name='venue_pdf'),
+    path('predictheart/', views.predictor_heart, name = 'predictheart'),
+    path('predictheart/result/', views.formInfo_heart, name='resultheart'),
+    path('predictheart/result/heartreport_pdf', views.heartreport_pdf, name='heartreport_pdf'),
+
+    #Jugaad 
+    path('predictdiabetes/homepage2', views.homepage2, name='homepage2'),
 
 ]
 

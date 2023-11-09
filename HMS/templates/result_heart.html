@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Status</title>
+</head>
+<body>
+    <h2>There is a {{data}}% chance that your patient has heart diabetes!!!</h2><br>
+    
+    
+    <h2>Data</h2><br>
+    
+    
+    <a href="homepage2">Home</a>
+    
+    <form action="heartreport_pdf" method="POST">
+        {% csrf_token %}
+
+        DoctorName<input type="text" name="DoctorName" id="" value="{{DoctorProfile.first_name}} {{DoctorProfile.last_name}}" readonly>
+        PID<input type="text" name="PatientID"  id="" value={{PatientID}}  readonly>
+        Disease<input type="text" name="DiseaseName"  id="" value={{DiseaseName}}  readonly>
+        Age<input type="number" name="Age" id="" value={{Age}} readonly>
+        Height<input type="text" name="Height" id="" value={{Height}} readonly>
+        Wt<input type="text" name="Weight" id="" value={{Weight}} readonly>
+        SystolicBP<input type="text" name="SystolicBP" id="" value={{SystolicBP}} readonly>
+        DiastolicBP<input type="text" name="DiastolicBP" id="" value={{DiastolicBP}} readonly>
+        Cholestrol<input type="number" name="CholestrolLevel" id="" value={{CholestrolLevel}} readonly>
+        Glucose<input type="text" name="GlucoseLevel" id="" value={{GlucoseLevel}} readonly>
+        Smoking<input type="text" name="Smoking" id="" value={{Smoking}} readonly>
+        PhysicalActivity<input type="text" name="PhysicalActivity" id="" value={{PhysicalActivity}} readonly>
+        
+
+        <!-- Make the radio button as mandatory field -->
+        Satisfied<input type="radio" name="TrueResult" id="" value="Satisfied">
+        Unsatisfied<input type="radio" name="TrueResult" id="" value="Unsatisfied">
+    
+        Prediction <input type="number" name="Prediction" id="" value={{data}} readonly>
+        <textarea name="Prescription" id="" cols="30" rows="10"></textarea>
+        <textarea name="DoctorVerdict" id="" cols="30" rows="10"></textarea>
+
+        <input type="submit" value="GetReport">
+    </form>
+    
+        
+        
+</body>
+</html>
