@@ -155,5 +155,6 @@ body {
     }
     .login-image img {
         width: 50vw;
+        height: 45vh;
     }
 }
