@@ -9,7 +9,7 @@ from django.core.mail import send_mail
 from django.contrib.auth.decorators import login_required
 
 # from HMS.core.models import PatientProfile
-from core.models import PatientProfile, DoctorProfile
+from core.models import PatientProfile, DoctorProfile, Report
 # from .forms import psup, dsup
 
 
@@ -203,6 +203,7 @@ def formInfo_diab(request):
     
     doctor_profile=DoctorProfile.objects.get(user=request.user)
     PatientID = request.GET['PatientID']
+    patient_profile = PatientProfile.objects.get(user=User.objects.get(username=PatientID))
     DiseaseName = 'Diabetes'
 
     HighBP = request.GET['HighBP']
@@ -285,11 +286,16 @@ def formInfo_diab(request):
     y_out= round(y_pred[0][1],2)
 
     #Save model here
+    new_report = Report.objects.create(doctor=doctor_profile, patient=patient_profile, disease=DiseaseName, HighBP=HighBPML,
+                                       HighChol=HighCholML, BMI=BMI, Stroke=StrokeML, HeartDiseaseAttack=HeartDiseaseorAttackML,
+                                       GenHlth=GenHlthML, Age=AgeML, Result=y_out)
+    report_id = new_report.id
+
     #df_report = [[HighBP,HighChol,BMI,Stroke,HeartDiseaseorAttack,GenHlth,Age]]
 
     
     return render(request,'result_diab.html',{'data':y_out, 'DoctorProfile':doctor_profile,'PatientID':PatientID ,'DiseaseName':DiseaseName,'HighBP':HighBP,'HighChol':HighChol ,'BMI':BMI ,
-                                              'Stroke':Stroke,'HeartDiseaseorAttack':HeartDiseaseorAttack,'GenHlth': GenHlth,'Age':Age})
+                                              'Stroke':Stroke,'HeartDiseaseorAttack':HeartDiseaseorAttack,'GenHlth': GenHlth,'Age':Age, 'report_id':report_id})
 
 
 #Views of Heart Disease
@@ -343,6 +349,18 @@ def venue_pdf(request):
     Verdict = request.POST['DoctorVerdict']
 
     Patient = PatientProfile.objects.get(user=User.objects.get(username=PatientID))
+    Doctor = DoctorProfile.objects.get(user=request.user)
+    report = Report.objects.filter(doctor=Doctor, patient=Patient, disease=Disease).last()
+
+
+    report.DoctorPrescription = Prescription
+    report.DoctorGeneralAdvice = Verdict
+    if TrueResult == "Satisfied":
+        report.DoctorConclusion = 1
+    else:
+        report.DoctorConclusion = 0
+
+    report.save()
 
     #Generating PDF
 

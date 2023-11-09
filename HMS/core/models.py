@@ -63,6 +63,7 @@ class Report(models.Model):
 
     DoctorConclusion = models.IntegerField(default=1)
     DoctorPrescription = models.TextField()
+    DoctorGeneralAdvice = models.TextField(default='abc')
 
     def __str__(self):
-        return self.id
+        return str(self.id)
