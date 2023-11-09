@@ -21,8 +21,9 @@ body {
 
 .rectangle-5 {
     display: flex;
-    justify-content: space-between;
-    padding: 2vh 5vw;
+    gap: 34vw;
+    justify-content: flex-end;
+    padding: 7vh 5vw 1vh;
     align-items: center;
 }
 
@@ -32,6 +33,12 @@ body {
     font-weight: 600;
 }
 
+.logoandname{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .rectangle-5 .company-icon {
     display: flex;
     align-items: center;
@@ -39,7 +46,7 @@ body {
 
 .rectangle-5 .nav {
     display: flex;
-    gap: 20px;
+    gap: 10vw;
 }
 
 .nav a {
@@ -53,7 +60,7 @@ body {
 .ellipse14 {
     display: flex;
     width: 100vw;
-    min-height: 80vh;
+    min-height: 65vh;
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -99,14 +106,14 @@ body {
 
 .UserType {
     display: flex;
-    gap: 20px;
+    gap: 8vw;
 }
 
 .button {
     border: none;
     width: 15vw;
     min-width: 150px;
-    height: 7vh;
+    height: 9vh;
     min-height: 50px;
     border-radius: 135px;
     background-color: #AFC8FF;
@@ -125,7 +132,16 @@ body {
     .you_are_a {
         font-size: 4.5vw;
     }
-
+    .rectangle-5 {
+        display: flex;
+        gap: 5vw;
+        justify-content: flex-end;
+        padding: 7vh 5vw 1vh;
+        align-items: center;
+    }
+    .rectangle-5 .nav {
+        gap: 3px;
+    }
     .button {
         width: 30vw;
         font-size: 4vw;
