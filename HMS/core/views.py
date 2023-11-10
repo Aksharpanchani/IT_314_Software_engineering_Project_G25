@@ -196,13 +196,17 @@ from joblib import load
 def predictor_diab(request):
     doctor_profile=DoctorProfile.objects.get(user=request.user)
 
-    return render(request,'form_diab.html',{'DoctorProfile':doctor_profile})
+    return render(request, 'form_diab.html', {'DoctorProfile':doctor_profile})
 
 def formInfo_diab(request):
     diab_model = load('./SavedModels/diabetes_model.joblib')
     
     doctor_profile=DoctorProfile.objects.get(user=request.user)
     PatientID = request.GET['PatientID']
+    patientcheck = User.objects.filter(username=PatientID).count()
+    if patientcheck == 0:
+        messages.info(request, 'No such patient exists')
+        return redirect('predictdiabetes')
     patient_profile = PatientProfile.objects.get(user=User.objects.get(username=PatientID))
     DiseaseName = 'Diabetes'
 
@@ -356,6 +360,12 @@ from reportlab.lib.pagesizes import letter
 def homepage2(request):
     return redirect('doctorhome')
 
+@login_required(login_url='login')
+def doctorreport(request):
+    docprof = DoctorProfile.objects.get(user=request.user)
+    reports = Report.objects.filter(doctor=docprof)
+    return render(request, 'doctorreport.html', {'doctorprofile': docprof, 'reports': reports})
+
 def venue_pdf(request):
 
     #Fetching data from form
@@ -375,8 +385,9 @@ def venue_pdf(request):
     Verdict = request.POST['DoctorVerdict']
 
     Patient = PatientProfile.objects.get(user=User.objects.get(username=PatientID))
+
     Doctor = DoctorProfile.objects.get(user=request.user)
-    report = Report.objects.filter(doctor=Doctor, patient=Patient, disease=Disease).last()
+    report = Report.objects.filter(doctor=Doctor, patient=Patient, disease=Disease).latest('date')
 
 
     report.DoctorPrescription = Prescription

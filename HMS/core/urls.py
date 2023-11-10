@@ -14,6 +14,7 @@ urlpatterns = [
     path('logout', views.logout, name='logout'),
     path('', views.homepage, name='homepage'),
     path('signup', views.signup, name='signup'),
+    path('doctorreport', views.doctorreport, name='doctorreport'),
 
     #ML Model urls
     path('predictdiabetes/', views.predictor_diab, name='predictdiabetes'),

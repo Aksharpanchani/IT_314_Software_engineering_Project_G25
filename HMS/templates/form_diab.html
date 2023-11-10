@@ -33,7 +33,9 @@
         Age =<input type="number" name="Age" required>
         <input type="submit"> 
     </form> -->
-
+    {% for message in messages %}
+        <h5>{{ message }}</h5>
+    {% endfor %}
     <form onsubmit="return validateForm()" action="result" name="form1"  >
 
         <div class="background1"></div>
