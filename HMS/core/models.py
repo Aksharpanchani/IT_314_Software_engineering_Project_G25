@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth import get_user_model
 import uuid
-from datetime import date, datetime
+from datetime import date, datetime, time
 
 User = get_user_model()
 
@@ -63,6 +63,8 @@ class Report(models.Model):
     DoctorConclusion = models.IntegerField(default=1)
     DoctorPrescription = models.TextField()
     DoctorGeneralAdvice = models.TextField(default='abc')
+
+    date = models.DateTimeField(default=datetime.now)
 
     def __str__(self):
         return str(self.id)
