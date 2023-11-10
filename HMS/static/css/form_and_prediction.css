@@ -253,6 +253,7 @@ body{
     display: flex;
     margin: auto;
     margin-top: 70px;
+    margin-bottom: 50px;
     gap: 1.3vw;
 }
 .button1{
