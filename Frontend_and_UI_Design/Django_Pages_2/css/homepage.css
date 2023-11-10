@@ -19,36 +19,41 @@ body{
   display: flex;
   flex-direction: column;
   width: 87.5vw;
-  height: 666px;
+  height: 48vw;
   border-radius: 75px;
   margin:auto;
   margin-top: 43px;
   background-color:#eaeaea;
   z-index: 0;
 }
+.company-icon img{
+  width: 4.8vw;
+}
+/* .company-icon{
+  display: flex;
+} */
 .logoname{
+  text-align: center;
   width:63px;
   height:23px;
   color: #000;
   font-weight: 600;
-  font-size: 20px;
-  margin-left: 5px;
-  margin-top: 5px;
+  font-size: 1.4vw;
   font-family: "MADEEvolveSansEVO";
 }
 .logoandname{
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
 }
 .navbar{
   position: relative;
-  margin-top: 52px;
+  margin-top: 5vw;
   display: flex;
-  height: 97px;
-  width: 74vw; 
-  margin-left: 95px;
-  margin-right: 105px; 
+  height: 10vw;
+  width: 74vw;
+  margin-left: 7.5vw;
+  margin-right: 105px;
   align-items: center;
 }
 .nav{
@@ -58,51 +63,39 @@ body{
 }
 .nav a{
   text-decoration: none;
-  font-size: 16px;
-  padding-left: 103px;
+  font-size: 1.4vw;
+  padding-left: 5vw;
   font-weight: 600;
   color: #170808;
 }
 .diagnostic{
   display: flex;
-  margin-left: 85px;
-  margin-top: 70px;
-  width: 64vw;
+  margin-left: 7vw;
+  margin-top: 4vw;
+  width: 60vw;
   height: 291px;
   color: #141111;
   font-family: volko;
-  font-size: 128px;
+  font-size: 8vw;
   font-weight: 200;
   line-height: 100%;
 }
-.startprogram{
-  position: absolute;
-  right: 66px;
-  top: 265px;
-  width: 227px;
-  height: 63px;
-  color: #FFF;
-  font-size: 20px;
-  background-color: #0067FF;
-  border-width: 0;
-  border-radius: 31.5px;
-}
 .shapefuture{
   position: absolute;
-  left: 95.41px;
-  top: 546px;
-  width: 419.658px;
+  left: 7vw;
+  top: 40vw;
+  width: 30vw;
   height: 101px;
-  font-size: 16px;
+  font-size: 1.3vw;
   font-weight: 400;
 }
 .est{
   position: absolute;
   color: #000;
-  right: 187px;
-  top: 546px;
-  width: 68.728px;
-  font-size: 16px;
+  right: 10vw;
+  top: 37vw;
+  width: 10vw;
+  font-size: 1.2vw;
   font-weight: 400;
 }
 .rectangle6{
@@ -116,7 +109,7 @@ body{
   position: relative;
   align-items: center;
   width: 87.5vw;
-  height: 100px;
+  height: 7vw;
   border-radius: 20px;
   background-color: #0067FF;
   color: #FFF;
@@ -126,9 +119,9 @@ body{
 }
 .rectangle6 .text{
   font-family: volko;
-  font-size: 40px;
+  font-size: 2.8vw;
   font-weight: 200;
-  padding-left: 95px;
+  padding-left: 7vw;
 }
 .rectangle6 .heart{
   position: absolute;
@@ -158,7 +151,7 @@ body{
 /* Our Models */
 
 .line{
-  margin-top: 146px;
+  margin-top: 2vw;
   background-color: black;
   height: 1px;
   width: 100vw;
@@ -167,9 +160,9 @@ body{
   display: flex;
   flex-direction: column;
   margin: auto;
-  margin-top: 107px;
+  margin-top: 96px;
   width: 72.2vw;
-  height: 536px;
+  height: 50vw;
 }
 .ourmodels .head{
   justify-content: center;
@@ -177,33 +170,33 @@ body{
   margin: auto;
   margin-top: 0px;
   margin-bottom: 0px;
-  width: 42%;
+  width: 100%;
   height: 63px;
   color: #000;
   font-family: Montserrat Alternates;
-  font-size: 70px;
+  font-size: 5vw;
   font-weight: 500;
 }
 .rect{
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 40px;
+  font-size: 3vw;
   border-radius: 16px;
   color: #F9F9F9;
   background-color: #0067FF;
   width: 49%;
-  height: 170px;
+  height: 11vw;
 }
 .rect20and21{
   margin-top: 96px;
+  margin-bottom: 10px;
   display: flex;
   width: 100%;
-  height: 170px;
+  height: 14vw;
   gap: 20px;
 }
 .rect22and23{
-  margin-top: 37px;
   display: flex;
   width: 100%;
   height: 170px;
@@ -214,7 +207,7 @@ body{
 /* about us  */
 .aboutus{
   width: 86.5vw;
-  height: 503px;
+  height: 43vw;
   display: flex;
   margin: auto;
   margin-top: 75px;
@@ -230,18 +223,18 @@ body{
   height: 63px;
   color: #000;
   font-family: Montserrat Alternates;
-  font-size: 70px;
+  font-size: 5vw;
   font-weight: 500;
 }
 .rect24{
   display: flex;
   margin: auto;
-  margin-top: 64px;
+  margin-top: 3vw;
   gap: 7.7vw;
 }
 .rect24 .text{
   width: 43.7vw;
-  font-size: 29px;
+  font-size: 2.05vw;
 }
 .rect24 .doctorpatient{
   position: relative;
@@ -278,22 +271,25 @@ body{
   .contactandlogo .head{
     margin-left: 2.5vw;
     font-family: Montserrat Alternates;
-    font-size: 40px;
+    font-size: 3vw;
     font-style: normal;
     font-weight: 500;
   }
   .queries{
+    position: relative;
     color: #FFF;
     width: 86.8vw;
-    height: 273px;
-    align-items: center;
+    height: 20vw;
     margin: auto;
     margin-top: 56px;
     display: flex;
     border-radius: 45px;
     background: #0067FF;
+    justify-content: space-between;
+    align-items: center;
   }
   .enteremail{
+    margin-left: 3vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -302,22 +298,20 @@ body{
   .enteremail form{
     display: flex;
     flex-direction: column;
-    margin-left: 90px;
-    margin-right: 20px;
   }
   .form input{
     background:#D9D9D9;
     border-width: 0px;
-    height: 54px;
-    border-radius: 64px;
-    font-size: 32px;
+    height: 3.5vw;
+    border-radius: 3vw;
+    font-size: 2.2vw;
     text-align: center;
   }
   form input::placeholder{
     color:#000;
   }
   .form input[type=email]{
-    background:#D9D9D9 ;
+    background:#D9D9D9;
     margin-top: 22px;
     width: 20.7vw;
     margin-bottom: 22px;
@@ -332,11 +326,28 @@ body{
   .enteremail .text{
     font-size: 20px;
   }
+  .typequery textarea{
+    /* position: absolute; */
+    font-size: 20px;
+    width: 32vw;
+    height: 10vw;
+    border-radius: 10px;
+    background: #D9D9D9;
+    border: none;
+    resize: none;
+  }
+  .typequery textarea::-webkit-input-placeholder{
+    position:absolute;
+    top: 0.6vw;
+    left: 0.6vw;
+  }
   .emailandnumber{
+    /* position: absolute; */
+    margin-right: 20px;
     display: flex;
     flex-direction: column;
-    font-size: 20px;
-    gap: 29px;
+    font-size: 1.6vw;
+    gap: 1.5vw;
   }
   .emailandnumber .phone{
     display: flex;
@@ -346,37 +357,43 @@ body{
     display: flex;
     align-items: center;
   }
+  .emailandnumber svg{
+    width: 1.9vw;
+  }
   
 
   /* footer */
 
-footer{
-  position: absolute;
+.footer{
+  position: relative;
   display: flex;
   width: 100vw;
   height: 65px;
   background: #0067FF;
-  align-items: center;
   margin-top: 58px;
+  align-items: center;
 }
 
 .copyright{
-  margin-top: 10px;
-  color: #FFFFFF;
   display: flex;
+  color: #FFF;
   align-items: center;
-  font-size: 24px;
+  font-size: 1.3vw;
   margin-left: 143px;
-  line-height: 100%;
 }
 .atr-icon{
   margin-bottom: 10px;
   margin-right: 2px;
 }
 .icons{
-  margin-left: 450px;
+  position: absolute;
+  right: 2vw;
+  margin-left: 30vw;
   display: flex;
-  gap: 34px;
+  gap: 2.2vw;
   justify-content: center;
   align-items: center;
+}
+.icons svg{
+  width: 4.2vw;
 }
