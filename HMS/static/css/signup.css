@@ -1,143 +1,159 @@
 @font-face {
     font-family: volko;
-    src: url(../public/mudkty-wtvolkolakgrotesque-light.ttf);
-  }
-
-*{
-    font-family: 'Montserrat Alternates';
-    margin: 0;
-    box-sizing: border-box;
-    line-height: normal;
-    
+    src: url(/Frontend_and_UI_Design/Homepage/public/mudkty-wtvolkolakgrotesque-light.ttf);
 }
-.homepage{
+* {
+    font-family: 'Montserrat Alternates', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    line-height: 1.6;
+}
+.homepage {
     position: relative;
-    /* background-color: #f9f9f9; */
-    width: 100%;
-    height: 100%;
+    width: 100vw;
 }
 .rectangle-5 {
-    position: relative;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; 
-    padding: 2% 15%;
+    gap: 34vw;
+    justify-content: flex-end;
+    padding: 7vh 5vw 1vh;
     align-items: center;
-}
-.logoname{
-    text-align: center;
-    font-family: MADEEvolveSansEVO;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-}
-.rectangle-5 .company-icon {
-    margin-right: auto; 
-    text-decoration: none;
-    color: black;
-}
-.rectangle-5 .nav {
-    display: flex;
-    flex-wrap: wrap; 
-    gap: 20px; 
-}
-.nav a {
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 600;
-    color: #170808;
-    white-space: nowrap; 
-    padding: 10px 15px; 
-}
-.ellipse14 {
-    display: flex;
-    width: 1496px;
-    height:100%;
+    margin-bottom: 50px;
 }
 
+.logoname {
+    font-family: 'MADEEvolveSansEVO', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.logoandname{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: black;
+    text-decoration: none;
+}
+
+.rectangle-5 .company-icon {
+    display: flex;
+    align-items: center;
+}
+
+.rectangle-5 .nav {
+    display: flex;
+    gap: 10vw;
+}
+
+.nav a {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #170808;
+    padding: 10px 15px;
+}
+
+.ellipse14 {
+    display: flex;
+    width: 100vw;
+    min-height: 65vh;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+/* CSS for the blur background */
 .blur-background {
     display: flex;
     position: absolute;
-    width: 38%;
+    top: 10%;  /* Example position */
+    left: 7.5%;
+    width: 100%;
+    max-width: 400px;
     height: 74.41%;
     border-radius: 74.41%;
     background: rgba(121, 162, 255, 0.70);
     filter: blur(200px);
-    margin-left:7.42%;
-    z-index: 0;
+    z-index: -1; /* Lower z-index to ensure it's below the image */
 }
 
-.login-image {
-    /* width:36%;
-    height: 28.14%; */
-    flex-shrink: 0;
-    margin-top:8.65%;
-    z-index: 1;
-    margin-left:6.22%;
-    margin-top:5.56%;
+/* CSS for the login image */
+.login-image img {
+    width: 33vw;
+    height: 66vh;
+    /*max-width: 400px;*/
+    position: relative; /* This makes .login-image a positioned ancestor for any absolute children */
+    z-index: 1; /* Higher z-index to ensure it's above the background */
 }
+
 
 .vertical-line {
-    /* right: 0px; */
-    margin-top:2%;
-    margin-left:5.28%;
-    /* border-left: 1px solid black; */
-    background-color: black;
-    width: 1px;
-    height: 475px;
+    border-left: 1px solid black;
+    height: 60vh;
 }
-.you{
-    margin-bottom: 110px;
-}
-.you_are_a{
+
+.you_are_a {
     display: flex;
     flex-direction: column;
-    gap:56.7%;
-    width: 14%;
-    height: 23.98%;
-    flex-shrink: 0;
-    color: #000;
-    font-family: 'Montserrat Alternates';
-    font-size: 42px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 50%; /* 21px */
-    margin-top: 10.8%;
-    margin-left:17.7%;
     align-items: center;
-}
-
-.UserType{
-    display:flex;
-    gap:75px;
-}
-
-.button{
-    border-width: 0;
-    width:210px;
-    height:64px;
-    border-radius: 135px;
-    border-color:#AFC8FF;;
-    background-color: #AFC8FF;
- 
+    font-size: 3.5vw;
     text-align: center;
-    text-decoration: none;
+}
+
+.UserType {
+    display: flex;
+    gap: 8vw;
+}
+
+.button {
+    border: none;
+    width: 15vw;
+    min-width: 150px;
+    height: 9vh;
+    min-height: 50px;
+    border-radius: 135px;
+    background-color: #AFC8FF;
     color: #000;
-    font-family: 'Montserrat Alternates';
-    font-size: 42px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 50%; /* 21px */
+    font-size: 3vw;
     cursor: pointer;
     outline: none;
-  }
+}
 
-  .doctor:hover {
-    background-color:green;
-    /* color: white; */
-  }
+.doctor:hover,
+.patient:hover {
+    transform: scale(1.05);
+}
 
-  .patient:hover{
-    background-color: aqua;
-  }
+@media only screen and (max-width: 720px) {
+    .you_are_a {
+        font-size: 4.5vw;
+    }
+    .rectangle-5 {
+        display: flex;
+        gap: 5vw;
+        justify-content: center;
+        padding: 7vh 5vw 1vh;
+        align-items: center;
+    }
+    .rectangle-5 .nav {
+        gap: 3px;
+    }
+    .button {
+        width: 30vw;
+        font-size: 4vw;
+    }
+    .blur-background {
+        left: 10%;
+        width: 50vw;
+    }
+    .vertical-line {
+        display: none;
+    }
+    .login-image img {
+        width: 50vw;
+        height: 45vh;
+    }
+}
