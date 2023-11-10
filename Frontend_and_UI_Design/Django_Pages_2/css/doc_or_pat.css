@@ -134,7 +134,7 @@ body {
     .rectangle-5 {
         display: flex;
         gap: 5vw;
-        justify-content: flex-end;
+        justify-content: center;
         padding: 7vh 5vw 1vh;
         align-items: center;
     }
