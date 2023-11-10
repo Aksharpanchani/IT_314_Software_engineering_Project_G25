@@ -48,11 +48,11 @@
                 <div class="logoname">MED.AI</div>
             </a>
             <div class="Patient_ID">
-                <input type="text" class="patient_id_input" placeholder="Patient Id" name="PatientID" required>
+                <input type="text" class="patient_id_input" placeholder="Patient Id" name="PatientID" required maxlength="30">
             </div>
             <div class="Doctor_Name">
                 <input type="text" class="doctorNameInput" placeholder="{{ DoctorProfile.first_name }} {{DoctorProfile.last_name}}" readonly>
-                <img src="../static/public/user.svg" alt="User">
+                <img src="../static/public/user.svg" alt="User" maxlength="30">
             </div>
         </div>
 
@@ -106,7 +106,7 @@
                         </div>
                     </div>
                     <div class="grid-item" id="grid-item3">
-                        <div>BMI</div><input type="number" class="input2" name="BMI" id="" required>
+                        <div>BMI</div><input type="number" class="input2" name="BMI" id="" required maxlength="4">
                     </div>
                     <div class="grid-item" id="grid-item4">
                         <div>Stroke</div>
@@ -146,7 +146,7 @@
                         </select>
                     </div>
                     <div class="grid-item" id="grid-item7">
-                        <div>Age</div><input type="number" class="input2" name="Age" id="" required>
+                        <div>Age</div><input type="number" class="input2" name="Age" id="" required maxlength="4">
                     </div>
                 </div>
 

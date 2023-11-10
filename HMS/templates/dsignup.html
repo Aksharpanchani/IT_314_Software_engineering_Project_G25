@@ -85,11 +85,11 @@
             </div>
 
             <div class="input">
-                <input type="text" id="textbox" required name="first_name" placeholder="First Name">
-                <input type="text" id="textbox" required name="last_name" placeholder="Last Name">
-                <input type="email" id="textbox" required name="email" placeholder="Email Address">
-                <input type="password" id="textbox" required name="pass1" placeholder="Password">
-                <input type="password" id="textbox" required name="pass2" placeholder="Confirm Password">
+                <input type="text" id="textbox" required name="first_name" placeholder="First Name" maxlength="30">
+                <input type="text" id="textbox" required name="last_name" placeholder="Last Name" maxlength="30">
+                <input type="email" id="textbox" required name="email" placeholder="Email Address" maxlength="30">
+                <input type="password" id="textbox" required name="pass1" placeholder="Password" maxlength="30">
+                <input type="password" id="textbox" required name="pass2" placeholder="Confirm Password" maxlength="30">
                     <!-- {{ form }} -->
                 <!-- Gender: 
                 Male <input type="radio" id="Male" name="gender" value="gender" required> 
@@ -100,12 +100,12 @@
                     <option value="Female">Female</option>
                 </select>
 
-                <input type="number" id="textbox" required name="number" placeholder="Number" >
+                <input type="number" id="textbox" required name="number" placeholder="Number" maxlength="30" >
                     
-                <input type="date" id="textbox" name="birthdate" required>
-                <input type="text" id="textbox" required name="speciality" placeholder="Speciality" >
-                <input type="text" id="textbox" required name="work_address" placeholder="Work Address" >
-                <input type="file" id="textbox file" name="certificate"  > <!--accept="application/pdf"-->
+                <input type="date" id="textbox" name="birthdate" required maxlength="30">
+                <input type="text" id="textbox" required name="speciality" placeholder="Speciality" maxlength="30" >
+                <input type="text" id="textbox" required name="work_address" placeholder="Work Address" maxlength="30" >
+                <input type="file" id="textbox file" name="certificate" maxlength="30"  > <!--accept="application/pdf"-->
 
                 </div>
             </div>
