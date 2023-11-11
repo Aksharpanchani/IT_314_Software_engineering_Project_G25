@@ -11,64 +11,54 @@ body{
   position: relative;
   background-color: #EFEFEF;
   overflow-x: hidden;
-  /* height: 2000px; */
-}
-.background1{
-  width: 38vw;
-  height: 38vw;
-  position: absolute;
-  border-radius: 19vw;
-  background: rgba(121, 162, 255, 0.60);
-  filter: blur(200px);
-  right: -8vw;
-  top: -150px;
 }
 .logo{
   text-decoration: none;
 }
+.logo img{
+  width: 4.75vw;
+}
 .logoname{
   color: #000;
   text-align: center;
-  font-size: 1.25rem;
+  font-size: 1.33vw;
   font-style: normal;
   font-weight: 600;
   font-family: "MADEEvolveSansEVO";
   line-height: normal;
 }
 .header{
-  /* display: static; */
   display:flex;
   position: relative;
-  margin-left:6.2vw;
-  margin-right:6.2vw;
-  margin-top:48px;
+  margin-left: 6.2vw;
+  margin-top:3.2vw;
+  margin-right: 12vw;
   align-items: center;
 }
-
-
 #logout{
-  /* display: flex; */
-  /* position: absolute; */
-  /* left: 10.5vw; */
-  /* align-items: center; */
+  display: flex;
   width:10vw;
-  height: 53px;
+  height: 3.5vw;
   margin-left: 5.7vw;
+  align-items: center;
+  text-decoration: none;
+}
+#logout button{
+  width: 100%;
+  height: 100%;
   border-radius: 28.5px;
   background: #FFF;
-  /* margin-right:25.6vw; */
-  /* justify-content: center; */
   color:black;
   font-family: "Montserrat Alternates";
-  font-size: 20px;
+  font-size: 1.33vw;
   font-weight: 400;
   border:none;
   cursor: pointer;
 }
 
-#logout:hover {
-  background-color: blue; /* Change background color on hover */
-  color: #fff; /* Change text color on hover */
+#logout button:hover {
+  background-color: blue;
+  color: #fff;
 }
 
 .Doctor_Name{
@@ -77,47 +67,49 @@ body{
   right: 0px;
   align-items: center;
   width:25vw;
-  height: 53px;
+  height: 3.5vw;
   border-radius: 28.5px;
   background: #FFF;
-  gap:6.28vw;
-  margin-left:29vw;
-}
-.Doctor_Name img{
-  background-color: #EFEFEF;
-  border-radius: 40%;
+  margin-left:20vw;
 }
 .doctorNameInput{
   background: #FFF;
   border:none;
   color:black;
   font-family: "Montserrat Alternates";
-  font-size: 23px;
+  font-size: 1.33vw;
   font-weight: 400;
-  width:13vw;
-  height:29px;
+  width:14vw;
+  height:2vw;
   margin-left:1.8vw;
 }
+.Doctor_Name img{
+  position: absolute;
+  right: 0;
+  background-color: #EFEFEF;
+  border-radius: 40%;
+  width: 3vw;
+}
 
-      /* Left Part */
+/* Left Part */
       
 .Container{
-  margin-top: 43px;
+  margin-top: 2.8vw;
   display: flex;
+  margin-bottom: 3.3vw;
 }
 .LeftPart{
   display:flex;
   margin-left: 6.2vw;
-  margin-top: 25px;
+  margin-top: 1.67vw;
   flex-direction:column;
-  /* margin-right: 5vw; */
 }
 .Heart_Disease{
   width:22.7vw;
-  height:190px;
+  height:12.7vw;
   color: #000;
   font-family: volko;
-  font-size: 90px;
+  font-size: 6vw;
   line-height: 100%; /* line height -> sets distance between lines of text*/
 }
 .HDisease_Prediction{
@@ -125,7 +117,7 @@ body{
   height:24.5vw;
   align-items: center;
   flex-shrink: 0;
-  margin-top:53px;
+  margin-top:3.5vw;
 }
 .HDisease_Prediction img{
   width: 100%;
@@ -133,28 +125,25 @@ body{
 
 #my_patients{
   display: flex;
-  margin-top:11vw;
-  margin-left:7.6vw;
   width: 17.7vw;
-  height: 70px;
+  height: 4.7vw;
+  margin: auto;
+  margin-top:11vw;
   color: #000;
   font-family: "Montserrat Alternates";
-  font-size: 30px;
-  font-style: normal;
+  font-size: 2vw;
   font-weight: 400;
-  line-height: 100%; /* 30px */
   border-radius: 24px;
   background: #D9D9D9;
   cursor: pointer;
   border:none;
   align-items: center;
   justify-content: center;
-  margin-bottom:8.1vh;
 }
 
 #my_patients:hover {
-  background-color: #407BFF;; /* Change background color on hover */
-  color: #fff; /* Change text color on hover */
+  background-color: #407BFF;
+  color: #fff;
 }
 
 /* Our models */
@@ -162,26 +151,18 @@ body{
 .ourmodels{
   display: flex;
   flex-direction: column;
-  margin-left:17.6vw;
-  
+  margin-left:20vw;
 }
 .head{
   width:29.5vw;
-  margin-top: 25px;
+  margin-top: 1.67vw;
   display: flex;
   flex-direction: column;
   color: #000;
   font-family: "Montserrat Alternates";
-  font-size: 70px;
+  font-size: 4.67vw;
   font-weight: 500;
-}
-.choose_a{
-  width:auto;
-  margin:auto;
-}
-.model{
-  width:auto;
-  margin:auto;
+  text-align: center;
 }
 .rect{
   display: flex;
@@ -189,7 +170,7 @@ body{
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  font-size: 40px;
+  font-size: 2.67vw;
   border-radius: 30px;
   color: #000;
   background-color: #D9D9D9;
@@ -200,17 +181,10 @@ body{
   background: #0067FF;
   color: #F9F9F9;
 }
-.rect20and21{
-  margin-top: 7.4vh;
+.bigrect{
+  margin-top: 5.6vw;
   display: flex;
   flex-direction: column;
   width: 100%;
-  gap: 20px;
-}
-.rect22and23{
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  gap: 20px;
+  gap: 1.33vw;
 }

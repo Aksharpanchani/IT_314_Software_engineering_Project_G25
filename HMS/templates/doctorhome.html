@@ -16,13 +16,7 @@
             <img src="../static/public/logo.svg" alt="">
             <div class="logoname">MED.AI</div>
         </a>
-
-        <a href="logout">
-        <button id="logout" type="button">
-                Log Out
-        </button>
-        </a>
-
+        <a id="logout" href="logout"><button  type="button">Log Out</button></a>
         <div class="Doctor_Name">
             <input type="text" class="doctorNameInput" placeholder="{{ DoctorProfile.first_name }} {{DoctorProfile.last_name}}" readonly>
             <img src="../static/public/user.svg" alt="User">
@@ -38,43 +32,22 @@
             <div class="Heart_Disease">
                 Doctor's Dashboard
             </div>
-            <!-- <div class="ellipse10"> -->
-                <!-- <div class="ellipse11"> -->
             <div class="HDisease_Prediction">
                 <img src="../static/public/My_Dashboard_Frame.svg" alt="">
             </div>
-                <!-- </div> -->
-            <!-- </div> -->
-            <button id="my_patients" type="button">
-                My Patients
-            </button>
+            <button id="my_patients" type="button">My Patients</button>
         </div>
 
         <!-- Right Part -->
         
         <div class="ourmodels">
-            <div class="head">
-
-                <div class="choose_a">
-               Choose a 
-                </div>
-
-                <div class="model">
-                Model
-                </div>
-
-            </div>
-            
-            <div class="rect20and21">
+            <div class="head">Choose a Model</div>
+            <div class="bigrect">
                 <a href="predictdiabetes/" class="rect">Diabetes</a>
                 <a href="predictheart/" class="rect">Heart</a>
-            </div>
-                
-            <div class="rect22and23"> 
                 <a href="" class="rect">Coming Soon</a>
                 <a href="" class="rect">Coming Soon</a>
             </div>
-        </div>
     </div>
     
 </body>

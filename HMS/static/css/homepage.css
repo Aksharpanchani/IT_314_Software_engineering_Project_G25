@@ -23,7 +23,7 @@ body{
   height: 48vw;
   border-radius: 75px;
   margin:auto;
-  margin-top: 43px;
+  margin-top: 2.8vw;
   background-color:#eaeaea;
   z-index: 0;
 }
@@ -98,7 +98,7 @@ body{
 .rectangle6{
   position: relative;
   margin: auto;
-  margin-top: 12px;
+  margin-top: 0.8vw;
   width: 87.5vw;
 }
 .rectangle6 .box{
@@ -205,7 +205,7 @@ body{
   height: 43vw;
   display: flex;
   margin: auto;
-  margin-top: 75px;
+  margin-top: 5vw;
   flex-direction: column;
 }
 .aboutus .head{
@@ -260,7 +260,7 @@ body{
   .contactandlogo{
     display: flex;
     align-items: center;
-    margin-top: 62px;
+    margin-top: 4.1vw;
     margin-left: 6.5vw;
   }
   .contactandlogo .head{
@@ -276,7 +276,7 @@ body{
     width: 86.8vw;
     height: 20vw;
     margin: auto;
-    margin-top: 56px;
+    margin-top: 3.7vw;
     display: flex;
     border-radius: 45px;
     background: #0067FF;
@@ -365,9 +365,9 @@ body{
   position: relative;
   display: flex;
   width: 100vw;
-  height: 65px;
+  height: 5vw;
   background: #0067FF;
-  margin-top: 58px;
+  margin-top: 3.8vw;
   align-items: center;
 }
 
@@ -376,7 +376,7 @@ body{
   color: #FFF;
   align-items: center;
   font-size: 1.3vw;
-  margin-left: 143px;
+  margin-left: 10vw;
 }
 .atr-icon{
   margin-bottom: 10px;
