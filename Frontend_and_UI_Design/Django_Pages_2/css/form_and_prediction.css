@@ -23,16 +23,16 @@ body{
     top: -7vw;
 }
 .background2{
-    position: absolute;
-    border-radius: 19vw;
-    width: 38vw;
-    height: 38vw;
-    background: rgba(121, 162, 255, 0.60);
-    filter: blur(200px);
+    /* position: absolute; */
+    /* border-radius: 19vw; */
+    /* width: 38vw; */
+    /* height: 38vw; */
+    /* background: rgba(121, 162, 255, 0.60); */
+    /* filter: blur(200px); */
     /* transform: rotate(90deg); */
-    left: -8vw;
-    top: 500px;
-    z-index: -1;
+/*    left: -8vw;*/
+/*    top: 500px;*/
+/*    z-index: -1;*/
 }
 .logo{
     text-decoration: none;
@@ -52,7 +52,7 @@ body{
     display:flex;
     margin-left:6.2vw;
     margin-right:6.2vw;
-    margin-top: 3vw;
+    margin-top: 2vw;
     align-items: center;
     height: 3vw;
     width: 87vw;
@@ -120,17 +120,17 @@ body{
 }
 .LeftPart{
     display:flex;
-    margin-top: 3vw;
+    margin-top: 1vw;
     margin-left: 6.2vw;
     flex-direction:column;
     margin-right: 5vw;
 }
 .Heart_Disease{
     width: 20vw;
-    height: 11vw;
+    height: 10vw;
     color: #000;
     font-family: volko;
-    font-size: 6.5vw;
+    font-size: 6vw;
     align-content: center;
     line-height: 100%; /* line height -> sets distance between lines of text*/
 }
@@ -152,7 +152,7 @@ body{
 .RightPart{
     margin-top: 2vw;
     width: 52vw;
-    height: 50vw;
+    height: 45vw;
     border-radius: 2vw;
     overflow-y: scroll;
     background: #d7cbcb4c;
@@ -257,7 +257,7 @@ body{
     height: 5vw;
     display: flex;
     margin: auto;
-    margin-top: 6vw;
+    margin-top: 5vw;
     margin-bottom: 1vw;
     gap: 1.3vw;
 }
@@ -432,19 +432,13 @@ body{
         flex-direction: column;
         width: 10vw;
     }
-    /* .Patient_ID{
-        display:none;
-    }
-    .Doctor_Name{
-        display:none;
-    } */
     .background1{
         display:none;
     }
     .RightPart{
         width: 94vw;
         margin-left: 1.5vw;
-        margin-top: -20vw;
+        margin-top: -10vw;
     }
     .grid-container{
         column-gap: 12vw;
@@ -454,7 +448,7 @@ body{
     .Heart_Disease{
         position: relative;
         width: 20vw;
-        top: 6vw;
+        top: 9vw;
         font-size: 8vw;
     }
     .grid-item{
@@ -462,10 +456,11 @@ body{
     }
     .HDisease_Prediction img {
         position: relative;
-        top: -25vw;
+        top: -20vw;
         left: 50vw;
     }
     .grid-item div{
         font-size: 2.2vw;
+        height: 3vw;
     }
 }
