@@ -2,200 +2,168 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat Alternates:wght@400;500;600&display=swap" />
-    <link href="https://db.onlinewebfonts.com/c/1938c6d3ea712f9bdcf348aa789f5d68?family=MADEEvolveSansEVO" rel="stylesheet" type="text/css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">    
-    <link rel="icon" href="public/favicon.ico">
-    <link rel="stylesheet" href="/Frontend_and_UI_Design/Django_Pages_2/css/form_diab.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Montserrat Alternates:wght@400;500;600&display=swap" />
+    <link href="https://db.onlinewebfonts.com/c/1938c6d3ea712f9bdcf348aa789f5d68?family=MADEEvolveSansEVO"rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+    <link rel="icon" href="../static/public/favicon.ico">
+    <link rel="stylesheet" href="./css/form_and_prediction.css">
     <title>Diabetes Prediction</title>
 </head>
+
 <body>
-    
+
+
+    <!-- <form action="result">
+
+        PatientID = <input type="number" name="pid" required>
+
+        HighBP = Yes <input type="radio" id = "Yes" name="HighBP" value = "HighBP" required>
+        No <input type="radio" id = "No" name="HighBP" value = "NormalBP" required><br> -->
+    <!-- HighChol = <input type="number" name="HighChol" required> -->
+    <!-- HighChol: Yes <input type="radio" id = "Yes" name="HighChol" value = "HighChol" required>
+        No <input type="radio" id = "No" name="HighChol" value = "NormalChol" required>
+        <br>
+        BMI = <input type="number" name="BMI" required><br>
+        Stroke = <input type="number" name="Stroke" required><br>
+        HeartDiseaseorAttack = <input type="number" name="HeartDiseaseorAttack" required>
+        GenHlth = <input type="number" name="GenHlth"  required>
+        Age =<input type="number" name="Age" required>
+        <input type="submit"> 
+    </form> -->
+    <!-- {% for message in messages %}
+        <h5>{{ message }}</h5>
+    {% endfor %} -->
+    <form onsubmit="return validateForm()" action="result" name="form1"  >
+
         <div class="background1"></div>
         <div class="background2">
             <!-- <img src="./public/Ellipse_13.svg"> -->
         </div>
         <div class="header">
-            <a href="./homepage.html" class="logo">
+            <a href="homepage.html" class="logo">
                 <img src="./public/logo.svg" alt="">
                 <div class="logoname">MED.AI</div>
             </a>
             <div class="Patient_ID">
-                <input type="text" class="patient_id_input" placeholder="Patient Id" readonly>
+                <input type="text" class="patient_id_input" placeholder="Patient Id" name="PatientID" required maxlength="30">
             </div>
             <div class="Doctor_Name">
-                <input type="text" class="doctorNameInput" placeholder="Name Of Doctor" readonly>
-                <img src="/Frontend_and_UI_Design/Django_Pages_2/public/user.svg" alt="User">
+                <input type="text" class="doctorNameInput" placeholder="{{ DoctorProfile.first_name }} {{DoctorProfile.last_name}}" readonly>
+                <img src="./public/user.svg" alt="User" maxlength="30">
             </div>
         </div>
-        
+
         <!-- LeftPart -->
 
         <div class="Container">
             <div class="LeftPart">
                 <div class="Heart_Disease">Diabetes Prediction</div>
-                <div class="ellipse10">
-                    <div class="ellipse11">
-                        <div class="HDisease_Prediction"><img src="/Frontend_and_UI_Design/Django_Pages_2/public/FrameDiabetes.svg" alt=""></div>   
+                    <div class="HDisease_Prediction">
+                        <img src="./public/FrameDiabetes.svg" alt="">
                     </div>
-                </div>
-            </div>
-
-            
-        <!-- ----------------------- Scrollable Part --------------------------- -->
-        <!-- RightPart -->
-
-
-        <div class="RightPart">
-            <div class="Param">
-                <div class="BlueDot"></div>
-                <div class="Parameters">Parameters</div>
-            </div>
-            <div class="grid-container">
-                <div class="grid-item" id="grid-item1">
-                    <div>High BP</div>
-                    <div class="radio-buttons">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="HighBP" id="Yes" value="HighBP" required>
-                            <label class="form-check-label" for="Yes">Yes</label>
-                        </div>
-                        <div class="form-check">
-                          <input class="form-check-input" type="radio" name="HighBP" id="No" value="NormalBP" required>
-                          <label class="form-check-label" for="No">No</label>
-                        </div>
-                    </div>
-                    
-                    <!-- <input type="number" name="" id=""> -->
-                </div>
-                <div class="grid-item" id="grid-item2">
-                    <div>High Cholestrol</div>
-                    <div class="radio-buttons">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="HighChol" id="Yes" value="HighChol" required>
-                            <label class="form-check-label" for="Yes">Yes</label>
-                        </div>
-                        <div class="form-check">
-                          <input class="form-check-input" type="radio" name="HighChol" id="No" value="NormalChol" required>
-                          <label class="form-check-label" for="No">No</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="grid-item" id="grid-item3">
-                    <div>BMI</div><input type="number" class="input2" name="BMI" id="" required>
-                </div>
-                <div class="grid-item" id="grid-item4">
-                    <div>Stroke</div>
-                    <div class="radio-buttons">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="Stroke" id="Yes" value="YesStroke" required>
-                            <label class="form-check-label" for="Yes">Yes</label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="Stroke" id="No" value="NoStroke" required>
-                            <label class="form-check-label" for="No">No</label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="grid-item" id="grid-item5">
-                    <div>HeartDisease or Attack</div>
-                    <div class="radio-buttons">
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="HeartDiseaseorAttack" id="Yes" value="YesHeartDiseaseorAttack" required>
-                            <label class="form-check-label" for="Yes">Yes</label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="radio" name="HeartDiseaseorAttack" id="No" value="NoHeartDiseaseorAttack" required>
-                            <label class="form-check-label" for="No">No</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="grid-item" id="grid-item6">
-                    <div>GenHlth</div>
-                    <select name="GenHlth" id="" class="dropdown">
-                        <option value="1">Best</option>
-                        <option value="2">Mediocre</option>
-                        <option value="3">Average</option>
-                        <option value="4">Below Average</option>
-                        <option value="5">Poor</option>
-                    </select>
-                </div>
-                <div class="grid-item" id="grid-item7">
-                    <div>Age</div><input type="number" class="input2" name="Age" id="" required>
-                </div>
-                <!-- </div> -->
-            </div>
-        
-
-            <!-------------------------- Prediction and Reset ----------------------- -->
-
-
-            <div class="predictandreset">
-                <button class="predict button1">Predict</button>
-                <button class="reset button1">Reset</button>
             </div>
 
 
-            <!-- ------------------ Prediction ------------------------>
+            <!-- ----------------------- Scrollable Part --------------------------- -->
+            <!-- RightPart -->
 
 
-            <div class="Prediction">
+            <div class="RightPart">
                 <div class="Param">
                     <div class="BlueDot"></div>
-                    <div class="Parameters">Prediction</div>
+                    <div class="Parameters">Parameters</div>
                 </div>
-                <div class="Prediction2">
-                    <div class="Box1">
-                        <Div class="GIF">
-                            <img src="https://www.figma.com/file/hN3Ifs6FNCKexSSf0pMOda/image/d009a3c45532e0fbd721c2c10814be70e208f5a8" alt="PredictionImage">
-                        </Div>
-                            <input type="text" name="" id="">
+                <div class="grid-container">
+                    <div class="grid-item" id="grid-item1">
+                        <div>High BP</div>
+                        <div class="radio-buttons">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="HighBP" id="Yes1" value="Yes"required>
+                                <label class="form-check-label" for="Yes1">Yes</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="HighBP" id="No1" value="No"required>
+                                <label class="form-check-label" for="No1">No</label>
+                            </div>
+                        </div>
+
+                        <!-- <input type="number" name="" id=""> -->
                     </div>
-                    <div class="statisfied_or_not">
-                        <br><button class="satisfied button1">Satisfied</button><br>
-                        <button class="not_satisfied button1">Not Satisfied</button>
+                    <div class="grid-item" id="grid-item2">
+                        <div>High Cholestrol</div>
+                        <div class="radio-buttons">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="HighChol" id="Yes2" value="Yes"required>
+                                <label class="form-check-label" for="Yes2">Yes</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="HighChol" id="No2" value="No"required>
+                                <label class="form-check-label" for="No2">No</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-item" id="grid-item3">
+                        <div>BMI</div><input type="number" class="input2" name="BMI" id="" required maxlength="4">
+                    </div>
+                    <div class="grid-item" id="grid-item4">
+                        <div>Stroke</div>
+                        <div class="radio-buttons">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="Stroke" id="Yes3" value="Yes"required>
+                                <label class="form-check-label" for="Yes3">Yes</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="Stroke" id="No3" value="No"required>
+                                <label class="form-check-label" for="No3">No</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid-item" id="grid-item5">
+                        <div>HeartDisease or Attack</div>
+                        <div class="radio-buttons">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="HeartDiseaseorAttack" id="Yes4" value="Yes" required>
+                                <label class="form-check-label" for="Yes4">Yes</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="HeartDiseaseorAttack" id="No4" value="No" required>
+                                <label class="form-check-label" for="No4">No</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid-item" id="grid-item6">
+                        <div>GenHlth</div>
+                        <select name="GenHlth" id="" class="dropdown" >
+                            <option value="1">Best</option>
+                            <option value="2">Mediocre</option>
+                            <option value="3">Average</option>
+                            <option value="4">Below Average</option>
+                            <option value="5">Poor</option>
+                        </select>
+                    </div>
+                    <div class="grid-item" id="grid-item7">
+                        <div>Age</div><input type="number" class="input2" name="Age" id="" required maxlength="4">
                     </div>
                 </div>
+
+
+                <!-------------------------- Prediction and Reset ----------------------- -->
+
+
+                <div class="predictandreset">
+                    <button  type="submit" class="predict button1">Predict</button>
+                    <button  type="reset"  class="reset button1">Reset</button>
+                </div>
+
             </div>
-
-            <!-- ------------------------------ Get Report ----------------------------->
-
-
-            <div class="GetReport_Prescription_Submit">
-                <div class="Param">
-                    <div class="BlueDot"></div>
-                    <div class="Parameters">Get Report</div>
-                </div>
-                <div class="Box2">
-                    <div class="text">
-                        <div class="WhiteDot"></div>
-                        <div class="t">Doctor's Verdict</div>
-                    </div>
-                    <div class="whitebox"></div>
-                </div>
-                <br><br>
-                <div class="Box2">
-                    <div class="text">
-                        <div class="WhiteDot"></div>
-                        <div class="t">Prescription</div>
-                    </div>
-                    <div class="whitebox"></div>
-                </div>
-
-                <button class="submit_report">Submit Report</button>
-
-            </div>
-
-
-
-
-            
-            
         </div>
-    </div>
+        </div>
+    </form>
 
-    <script src="./js/index.js"></script>
+    <!-- <script src="../static/js/form_diab.js"></script> -->
 </body>
+
 </html>
