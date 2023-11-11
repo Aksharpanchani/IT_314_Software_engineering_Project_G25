@@ -108,7 +108,6 @@ body{
   display: flex;
   position: relative;
   align-items: center;
-  width: 87.5vw;
   height: 7vw;
   border-radius: 20px;
   background-color: #0067FF;
@@ -123,26 +122,23 @@ body{
   font-weight: 200;
   padding-left: 7vw;
 }
-.rectangle6 .heart{
-  position: absolute;
-  width: 22vw;
-  right: 26%;
-  top: -140px;
-  border-radius: 45px;
-  z-index: 2;
-}
 .rectangle6 img{
-  width: 100%;
-  height: auto;
+   position: absolute;
+  width: 22vw;
+  height: 22vw;
+  right: 26%;
+  top: -9.3vw;
+  z-index: 2; 
+  color: black;
 }
 .rectangle6 .background{
   position: absolute;
   right: 26%;
-  top: -140px;
+  top: -9.3vw;
   width: 22vw;
   height: 22vw;
   border-radius: 395px;
-  background: #C75050;
+  background: #c04343;
   filter: blur(94px);
   z-index: 0;
 }
@@ -160,7 +156,7 @@ body{
   display: flex;
   flex-direction: column;
   margin: auto;
-  margin-top: 96px;
+  margin-top: 6.4vw;
   width: 72.2vw;
   height: 50vw;
 }
@@ -189,7 +185,7 @@ body{
   height: 11vw;
 }
 .rect20and21{
-  margin-top: 96px;
+  margin-top: 6.4vw;
   margin-bottom: 10px;
   display: flex;
   width: 100%;
@@ -295,6 +291,9 @@ body{
     justify-content: center;
     align-items: center;
   }
+  .enteremail .head{
+    font-size: 1.3vw;
+  }
   .enteremail form{
     display: flex;
     flex-direction: column;
@@ -328,7 +327,7 @@ body{
   }
   .typequery textarea{
     /* position: absolute; */
-    font-size: 20px;
+    font-size: 2.2vw;
     width: 32vw;
     height: 10vw;
     border-radius: 10px;
@@ -340,6 +339,9 @@ body{
     position:absolute;
     top: 0.6vw;
     left: 0.6vw;
+  }
+  .typequery textarea:focus::placeholder{
+    color: transparent;
   }
   .emailandnumber{
     /* position: absolute; */
@@ -385,9 +387,12 @@ body{
   margin-bottom: 10px;
   margin-right: 2px;
 }
+.atr-icon svg{
+  width: 1.3vw;
+}
 .icons{
   position: absolute;
-  right: 2vw;
+  right: 4vw;
   margin-left: 30vw;
   display: flex;
   gap: 2.2vw;
@@ -396,4 +401,33 @@ body{
 }
 .icons svg{
   width: 4.2vw;
+}
+
+@media screen and (max-width:1024px){
+  .emailandnumber{
+    gap: 1vw;
+  }
+}
+@media screen and (max-width:768px){
+  .emailandnumber{
+    gap: 0px;
+  }
+  .enteremail{
+    justify-content:center;
+  }
+  .enteremail .head{
+    margin-top: 1vw;
+  }
+  .form input[type=email]{
+    margin-top: 1.4vw;
+    margin-bottom: 1.4vw;
+  }
+}
+@media screen and (max-width:600px){
+  .phone,.email{
+    height: 3vw;
+  }
+  .emailandnumber{
+    margin-left: 5px;
+  }
 }
