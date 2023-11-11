@@ -13,18 +13,17 @@
 <body>
     
     <div class="navbar">
-        <a href="./homepage.html" class="logo">
+        <a href="./homepage" class="logo">
             <img src="./public/logo.svg" alt="">
             <div class="logoname">
                 MED.AI
             </div>
         </a>
-        
         <div class="nav">
-            <a href="./homepage.html" class="logsign">Home</a>
-            <a href="./homepage.html#contact" class="contact">Contact us</a>
-            <a href="./homepage.html#line1" class="about">About us</a>
-            <a href="./login.html" class="logsign">Login</a>
+            <a href="./homepage" class="logsign">Home</a>
+            <a href="./homepage#contact" class="contact">Contact us</a>
+            <a href="./homepage#line1" class="about">About us</a>
+            <a href="./login" class="logsign">Login</a>
         </div>
     </div>
     <div class="welcome">
@@ -35,7 +34,7 @@
         <p>Please enter your details here</p>
     </div>
 
-        <form action="" method="POST">
+        <form onsubmit="return validateForm()" action=""   method="POST" name="form1">
         {% for message in messages %}
         <h5>{{ message }}</h5>
         {% endfor %}
@@ -71,6 +70,18 @@
                     <div class="weight" id="row">
                         <element id="fields"> Weight in Kg</element> <element id="apostrophe">*</element>
                     </div>
+                    <div class="gender" id="row">
+                        <element id="fields"> Gender</element> <element id="apostrophe">*</element>
+                    </div>
+                    <div class="Contact_Number" id="row">
+                        <element id="fields"> Phone Number</element> <element id="apostrophe">*</element>
+                    </div>
+                    <div class="bloodgroup" id="row">
+                        <element id="fields"> Blood Group</element> <element id="apostrophe">*</element>
+                    </div>
+                    <div class="dob" id="row">
+                        <element id="fields"> Date of birth</element> <element id="apostrophe">*</element>
+                    </div>
                 </div>
 
                 <div class="input">
@@ -80,10 +91,31 @@
                     <input type="email" id="textbox" required name="email" placeholder="Email Address">
                     <input type="password" id="textbox" required name="pass1" placeholder="Password">
                     <input type="password" id="textbox" required name="pass2" placeholder="Confirm Password">
-                    {{ form }}
-                    <!--  -->
+
                     <input type="number" id="textbox" required name="height" placeholder="Height in Centimeters">
                     <input type="number" id="textbox" required name="weight" placeholder="Weight in Kilogram">
+
+                    <select name="gender" id="textbox">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+
+                    <!-- Male <input type="radio" id="Male" name="gender" value="gender" required> 
+                    Female <input type="radio" id="Female" name="gender" value="gender" required>  -->
+                    <input type="number" id="textbox" required name="number" placeholder="Number">
+                    <select name="bloodgroup" id="textbox">
+                        <option value="AP">A+</option>
+                        <option value="AN">A-</option>
+                        <option value="BP">B+</option>
+                        <option value="BN">B-</option>
+                        <option value="ABP">AB+</option>
+                        <option value="ABN">AB-</option>
+                        <option value="OP">O+</option>
+                        <option value="ON">O-</option>
+                      </select>
+
+                    <input type="date" id="textbox" name="birthdate">
+                    
                 </div>
             </div>
 
@@ -96,16 +128,16 @@
             <button type="submit" class="signup">Create account</button>
         </div>
 
-        <!-- <div class="log">
-            <h4 class="small">Already a member? <a href="login" class="small">Login</a></h4>
-        </div> -->
+
 
     </form>
 
-    <div class="background"></div>
-    <div class="back2">
-        <img src="./public/Ellipse_13.svg">
+    <div class="background">
+
     </div>
-    
+    <div class="back2">
+        <!-- <img src="../static/public/Ellipse_13.svg"> -->
+    </div>
+    <script src="../static/js/psignup.js"></script>
 </body>
 </html>
