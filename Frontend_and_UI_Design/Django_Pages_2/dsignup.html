@@ -107,7 +107,11 @@
                 <input type="date" id="textbox" name="birthdate" required maxlength="30">
                 <input type="text" id="textbox" required name="speciality" placeholder="Speciality" maxlength="30" >
                 <input type="text" id="textbox" required name="work_address" placeholder="Work Address" maxlength="30" >
-                <input type="file" id="textbox file" name="certificate" maxlength="30"  > <!--accept="application/pdf"-->
+
+                <label for="textbox_file" class="custom-file-input" id="file-label">Choose File</label>
+                <input type="file" id="textbox_file" name="certificate" maxlength="30" onchange="updateFileName(this)">
+                <!--accept="application/pdf"-->
+                
 
                 <button type="submit" class="signup">Create account</button>
                 </div>
@@ -129,6 +133,6 @@
         <!-- <img src="../static/public/Ellipse_13.svg"> -->
     </div>
 
-    <script src="../static/js/dsignup.js"></script>
+    <script src="./js/dsignup.js"></script>
 </body>
 </html>

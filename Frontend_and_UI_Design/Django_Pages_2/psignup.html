@@ -38,12 +38,14 @@
         <p>Please enter your details here</p>
     </div>
 
+    <div class="error">
     <form onsubmit="return validateForm()" action="" method="POST" name="form1">
         {% for message in messages %}
         <h5>{{ message }}</h5>
         {% endfor %}
         {% csrf_token %}
-
+    </div>
+    
         <div class="main">
             <div class="form">
                 <div class="names">
