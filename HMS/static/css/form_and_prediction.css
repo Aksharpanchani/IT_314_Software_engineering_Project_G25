@@ -276,75 +276,75 @@ body{
 
 .Prediction{
     position: relative;
-    margin-top: 80px;
+    margin-top: 5vw;
 }
 .Prediction2{
     display: flex;
-    gap:15px;
+    gap:1vw;
     align-items: center;
+    margin-top: 1.33vw;
 }
-.GIF img{
+.GIF1 img{
     background-color: #FFF;
-    border-radius: 20px;
-    /* width: 10.8vw; */
+    border-radius: 1.33vw;
+    width:9vw;
+    height:7.5vw;
+}
+.GIF2{
+    position: relative;
+    background-color: #FFF;
+    border-radius: 1.33vw;
     width:10vw;
-    height:132px;
+    height:7.5vw;
 }
-
-.predict_result{
-    width: 16.8vw;
-    height:132px ;
-    flex-shrink: 0;
-    border-radius: 20px;
-    background: #FFF;
-    border:none;
-    font-family: "Montserrat Alternates";
-    font-size: 21px;
-    font-weight: 500;
-    text-align: center;
-    display: flex;
-    font-size: 20px;
-    font-weight: 600;
-    display: flex;
-    
+.GIF2 img{
+    position: absolute;
+    bottom: -1.3vw;
+    left: 0.3vw;
+    width: 10vw;
+    height: 15vw;
 }
-
-.resulttext {
-    margin-top: 30px;
-    /* vertical-align: middle; */
-}
-
 .Box1{
-    margin-left: 20px;
-    margin-top:21px;
+    margin-left: 1.33vw;
     display:flex;
     width:30vw;
-    height:170px;
-    border-radius: 35px;
+    height:11.3vw;
+    border-radius: 2.34vw;
     background: #D9D9D9;
     justify-content: center;
     align-items: center;
-    gap:10px;
+    gap:0.668vw;
 }
-.statisfied_or_not{
-    padding: 0;
-    margin: 21px 0 0 20px;
+.Box1 .resulttext{
+    width: 16.1vw;
+    height: 7.7vw;
+    border-radius: 1.4vw;
+    color: #000;
+    background-color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2vw;
+    padding: 1.1vw;
+}
+.satisfied_or_not{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
-    position: relative;
+    align-items: center;
     width: 17vw;
-    height: 168px;
-    border-radius: 25px;
+    height: 11.23vw;
+    border-radius: 1.67vw;
     background: #D9D9D9;
+    font-size: 1.5vw;
     font-family: "Montserrat Alternates";
-    font-size: 21px;
-    font-weight: 500
-    
+    font-weight: 500;
+}
+.satisfied_or_not .radio-buttons2{
+    width: 100%;
 }
 .satis{
-   margin: 15px 50px;
+   margin: 1.3vw 3.3vw;
    text-wrap: nowrap; 
 }
 
@@ -353,17 +353,17 @@ body{
 
 
 .GetReport_Prescription_Submit{
-    margin-top: 80px;
+    margin-top: 5vw;
 }
 .GetReport_Prescription_Submit .Param{
-    margin-bottom: 20px;
+    margin-bottom: 1.33vw;
 }
 .Box2{
     width: 49.5vw;
-    height: 254px;
+    height: 17vw;
     background-color: #D9D9D9;
-    border-radius: 35px;
-    margin-left: 20px;
+    border-radius: 2.34vw;
+    margin-left: 1.33vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -371,13 +371,11 @@ body{
     position: relative;
 }
 .GetReport_Prescription_Submit .whitebox{
-    margin-top: 20px;
+    margin-top: 1.33vw;
     width: 36.7vw;
-    height: 124px;
+    height: 8.3vw;
     background: #FFF;
-    border-radius: 10px;
-    /* word-wrap: break-word;
-    word-break: break-all; */
+    border-radius: 1.4vw;
     resize: none;
 }
 .WhiteDot{
@@ -388,8 +386,8 @@ body{
 }
 .GetReport_Prescription_Submit .text{
     position: absolute;
-    left: 56px;
-    top: 34px;
+    left: 3.75vw;
+    top: 2.27vw;
     display: flex;
     align-items: center;
     gap: 1.33vw;
@@ -397,22 +395,22 @@ body{
 }
 .GetReport_Prescription_Submit .t{
     font-family: Montserrat Alternates;
-    font-size: 24px;
+    font-size: 1.6vw;
 }
 .submit_report{
     display: flex;
     align-items: center;
     justify-content: center;
     margin: auto;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    width: 24vw;
-    height: 70px;
-    border-radius: 24px;
+    margin-top: 2.5vw;
+    margin-bottom: 2.5vw;
+    width: 20vw;
+    height: 4vw;
+    border-radius: 1.6vw;
     background: #407BFF;
     color: #EFEFEF;
     font-family: Montserrat Alternates;
-    font-size: 30px;
+    font-size: 2vw;
     font-weight: 600;
     border: none;
 }
