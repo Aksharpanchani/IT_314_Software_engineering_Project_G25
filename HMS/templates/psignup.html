@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/css/psignup.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat Alternates:wght@400;500;600&display=swap" />
-    <link href="https://db.onlinewebfonts.com/c/1938c6d3ea712f9bdcf348aa789f5d68?family=MADEEvolveSansEVO" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Montserrat Alternates:wght@400;500;600&display=swap" />
+    <link href="https://db.onlinewebfonts.com/c/1938c6d3ea712f9bdcf348aa789f5d68?family=MADEEvolveSansEVO"
+        rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
     <link rel="icon" href="../static/public/favicon.ico">
     <title>Patient signup</title>
 </head>
+
 <body>
-    
+
     <div class="navbar">
         <a href="./homepage" class="logo">
             <img src="../static/public/logo.svg" alt="">
@@ -20,7 +23,6 @@
             </div>
         </a>
         <div class="nav">
-            <a href="./homepage" class="logsign">Home</a>
             <a href="./homepage#contact" class="contact">Contact us</a>
             <a href="./homepage#line1" class="about">About us</a>
             <a href="./login" class="logsign">Login</a>
@@ -34,66 +36,79 @@
         <p>Please enter your details here</p>
     </div>
 
-        <form onsubmit="return validateForm()" action=""   method="POST" name="form1">
+    <div class="error">
+    <form onsubmit="return validateForm()" action="" method="POST" name="form1">
         {% for message in messages %}
         <h5>{{ message }}</h5>
         {% endfor %}
         {% csrf_token %}
-
+    </div>
+    
         <div class="main">
             <div class="form">
                 <div class="names">
                     <div class="fname" id="row">
-                        <element id="fields"> First Name</element> <element id="apostrophe">*</element>
+                        <element id="fields"> First Name</element>
+                        <element id="apostrophe">*</element>
                     </div>
 
                     <div class="lname" id="row">
-                        <element id="fields"> Last Name</element> <element id="apostrophe">*</element>
+                        <element id="fields"> Last Name</element>
+                        <element id="apostrophe">*</element>
                     </div>
 
                     <div class="email" id="row">
-                        <element id="fields"> Email</element> <element id="apostrophe">*</element>
+                        <element id="fields"> Email</element>
+                        <element id="apostrophe">*</element>
                     </div>
 
                     <div class="pass" id="row">
-                        <element id="fields"> Password</element> <element id="apostrophe">*</element>
+                        <element id="fields"> Password</element>
+                        <element id="apostrophe">*</element>
                     </div>
 
                     <div class="confpass" id="row">
-                        <element id="fields"> Confirm Password</element> <element id="apostrophe">*</element>
+                        <element id="fields"> Confirm Password</element>
+                        <element id="apostrophe">*</element>
                     </div>
 
                     <div class="height" id="row">
-                        <element id="fields"> Height in cm</element> <element id="apostrophe">*</element>
+                        <element id="fields"> Height in cm</element>
+                        <element id="apostrophe">*</element>
                     </div>
 
                     <div class="weight" id="row">
-                        <element id="fields"> Weight in Kg</element> <element id="apostrophe">*</element>
+                        <element id="fields"> Weight in Kg</element>
+                        <element id="apostrophe">*</element>
                     </div>
                     <div class="gender" id="row">
-                        <element id="fields"> Gender</element> <element id="apostrophe">*</element>
+                        <element id="fields"> Gender</element>
+                        <element id="apostrophe">*</element>
                     </div>
                     <div class="Contact_Number" id="row">
-                        <element id="fields"> Phone Number</element> <element id="apostrophe">*</element>
+                        <element id="fields"> Phone Number</element>
+                        <element id="apostrophe">*</element>
                     </div>
                     <div class="bloodgroup" id="row">
-                        <element id="fields"> Blood Group</element> <element id="apostrophe">*</element>
+                        <element id="fields"> Blood Group</element>
+                        <element id="apostrophe">*</element>
                     </div>
                     <div class="dob" id="row">
-                        <element id="fields"> Date of birth</element> <element id="apostrophe">*</element>
+                        <element id="fields"> Date of birth</element>
+                        <element id="apostrophe">*</element>
                     </div>
                 </div>
 
                 <div class="input">
-                    <input type="text" id="textbox" required name="first_name" placeholder="First Name">
-                    <input type="text" id="textbox" required name="last_name" placeholder="Last Name">
-            <!--        <input type="text" required name="username" placeholder="Username">-->
-                    <input type="email" id="textbox" required name="email" placeholder="Email Address">
-                    <input type="password" id="textbox" required name="pass1" placeholder="Password">
-                    <input type="password" id="textbox" required name="pass2" placeholder="Confirm Password">
+                    <input type="text" id="textbox" required name="first_name" placeholder="First Name" maxlength="30">
+                    <input type="text" id="textbox" required name="last_name" placeholder="Last Name" maxlength="30">
+                    <!--        <input type="text" required name="username" placeholder="Username">-->
+                    <input type="email" id="textbox" required name="email" placeholder="Email Address" maxlength="30">
+                    <input type="password" id="textbox" required name="pass1" placeholder="Password" maxlength="30">
+                    <input type="password" id="textbox" required name="pass2" placeholder="Confirm Password" maxlength="30">
 
-                    <input type="number" id="textbox" required name="height" placeholder="Height in Centimeters">
-                    <input type="number" id="textbox" required name="weight" placeholder="Weight in Kilogram">
+                    <input type="number" id="textbox" required name="height" placeholder="Height in Centimeters" maxlength="4">
+                    <input type="number" id="textbox" required name="weight" placeholder="Weight in Kilogram" maxlength="4">
 
                     <select name="gender" id="textbox">
                         <option value="Male">Male</option>
@@ -112,10 +127,11 @@
                         <option value="ABN">AB-</option>
                         <option value="OP">O+</option>
                         <option value="ON">O-</option>
-                      </select>
-
-                    <input type="date" id="textbox" name="birthdate">
+                    </select>
                     
+                    <input type="date" id="textbox" name="birthdate">
+
+                    <button type="submit" class="signup">Create account</button>
                 </div>
             </div>
 
@@ -124,24 +140,11 @@
             </div>
         </div>
 
-        <div class="align">
-            <button type="submit" class="signup">Create account</button>
-        </div>
-
-
 
     </form>
 
-    <div class="background">
-
-    </div>
-    <div class="back2">
-        <!-- <img src="../static/public/Ellipse_13.svg"> -->
-    </div>
+    <div class="background"></div>
     <script src="../static/js/psignup.js"></script>
 </body>
-</html>
 
-<!-- bloodgroup = forms.ChoiceField(choices=BLOODGROUP_CHOICES, widget=forms.Select())
-birthdate = forms.DateField(widget=forms.widgets.DateInput(attrs={'type': 'date'}))
-phone_number = forms.IntegerField(label=mark_safe('<br />Phone Number')) -->
+</html>

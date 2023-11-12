@@ -6,7 +6,9 @@
     margin: 0;
     line-height: normal;
 }
-
+body{
+    position: relative;
+}
 .navbar{
     position: relative;
     z-index: 1;
@@ -63,10 +65,23 @@
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    padding-left: 5rem;
-    padding-top: 3rem;
+    margin-top:5.3vh;
+    margin-left: 5rem;
+    width:375px;
+    height:29px;
 }
 
+.error{
+    padding-top:20px;
+    padding-bottom:20px;
+    margin-left: 10rem;
+    color: red;
+    font-family: 'Montserrat Alternates';
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
 .main{
     display: flex;
     margin-left: 5rem;
@@ -74,7 +89,6 @@
 
 .form{
     display: flex;
-    height: 1145px;
 }
 
 .names {
@@ -82,24 +96,24 @@
     display: flex;
     flex-direction: column;
     z-index: 1;
-    padding-right: 10px;
-    padding-top: 25px;
+    gap:4.2vh;
 }
 
 .input {
-    height: 100%;
+    position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 4%;
+    align-items: center;
+    gap: 3.99vh;
     z-index: 1;
 }
 
 #row{
     display: flex;
     width: 100%;
-    height: 38rem;
-    padding: 9.3% 0 10.5% 0;
+    height: 3.2rem;
+    align-items: center;
+   
 }
 
 #fields{
@@ -109,6 +123,7 @@
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+    
 }
 
 #apostrophe{
@@ -121,19 +136,18 @@
 }
 
 #textbox{
-    width: 19.5625rem;
+    width:21vw;
     height: 3.2rem;
     flex-shrink: 0;
     border-radius: 17px;
     background: #D9D9D9;
     display: flex;
-    justify-self: right;
+    border:none;
+    justify-content: center;
+    text-align: center;
+    font-size:18px;
 }
 
-#textbox\ file {
-    margin-top: 7.5%;
-    height: 2rem;
-}
 
 .image{
     justify-self: center;
@@ -144,6 +158,47 @@
     margin-left: 8rem;
     z-index: 1;
 }
+
+.custom-file-input {
+    font-family: 'Montserrat Alternates';
+    margin-top: 1vw;
+    width:10vw;
+    height: 2vw;
+    flex-shrink: 0;
+    border-radius: 17px;
+    background: #D9D9D9;
+    display: flex;
+    border:none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size:1.4vw;
+    cursor: pointer;
+  }
+.custom-file-input:hover{
+    background: black;
+    color: white;
+  }
+
+
+  /* Hide the actual file input */
+  #textbox_file {
+    display: none;
+  }
+
+
+.small{
+    width:44vw;
+    margin-top:20px;
+    padding-bottom:20px;
+    margin-left: 5rem;
+    font-family: 'Montserrat Alternates';
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
 
 .background{
     display: flex;
@@ -157,54 +212,23 @@
     background: rgba(121, 162, 255, 0.60); 
     filter: blur(120px);
 }
-.back2{
-    z-index: 0;
-    display: flex;
+.input .signup{
     position: absolute;
-    bottom: -57rem;
-    right: 0rem;
-    width: 20rem;
-    height: 28rem;
-    flex-shrink: 0;
-    border-radius: 602px;
-    background: rgba(121, 162, 255, 0.60);
-    filter: blur(120px);
-}
-/* .back2 img{ 
-    position: relative;
-    right: 0px;
-    bottom: 0px;
-} */
-
-.align{
-    white-space: nowrap;
-    padding: 0 0 2rem 25.3rem;
-    justify-content: center;
+    display: flex;
     align-items: center;
-    
-}
-.signup{
+    justify-content: center;
+    bottom: -8vw;
+    width: 11.3vw;
+    height: 3.2vw;
     display: inline-flex;
-    padding: 13px 11px 13px 10px;
-    justify-content: center;
-    align-items: center;
     border-radius: 20px;
     background: #79A2FF;
     color: #000;
     font-family: 'Montserrat Alternates';
-    font-size: 18px;
+    font-size: 1.2vw;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    border:none;
+    cursor: pointer;
 }
-
-/* .log{
-    color: #000;
-    font-family: 'Montserrat Alternates';
-    font-size: 1.5rem;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-    padding: 5rem;
-    padding-top: 2rem;
-} */

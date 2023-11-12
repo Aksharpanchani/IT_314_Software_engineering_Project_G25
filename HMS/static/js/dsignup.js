@@ -1,3 +1,12 @@
+function updateFileName(input) {
+    var file = input.files[0]; /* if uploaded multiple files will only take first file*/
+    var fileName = file.name;
+    if(file.size/(1024**2) > 10){
+        alert("File too big!!");
+        return;
+    }
+    document.getElementById('file-label').innerText = fileName;
+  }
 function validateForm(){
     var form1=document.forms["form1"]
     var firstName = form1["first_name"];
@@ -8,7 +17,7 @@ function validateForm(){
     var number = form1["number"];
     var year = form1["birthdate"];  
     var birthyear = new Date(year.value).getFullYear();  
-
+    var file = form1["certificate"];
 
     // Trim the input values to remove leading and trailing spaces
     if (firstName.value.trim().indexOf(" ") !== -1 || lastName.value.trim().indexOf(" ") !== -1) {
@@ -29,19 +38,19 @@ function validateForm(){
         cpassword.value = "";
         return false;
     }
-
     if(number.value.length!=10){
         alert("Invalid Number.");
         number.value = "";
         return false;
     }
-
-    // console.log(year.value);
-    //console.log(birthyear);
     if(birthyear>2010)
     {
         alert("Invalid Date of birthdate");
         year.value="";
+        return false;
+    }
+    if(file.files[0].size/(1024**2)>10){
+        alert("File too big!!");
         return false;
     }
 

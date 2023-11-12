@@ -20,10 +20,9 @@
             </div>
         </a>
         <div class="nav">
-            <a href="./homepage" class="logsign">Home</a>
             <a href="./homepage#contact" class="contact">Contact us</a>
             <a href="./homepage#line1" class="about">About us</a>
-            <a href="./login.html" class="logsign">Login</a>
+            <a href="./login" class="logsign">Login</a>
         </div>
     </div>
     <div class="welcome">
@@ -34,11 +33,13 @@
         <p>Please enter your details here</p>
     </div>
         <!-- <h2 class="title">Doctor Registration</h2> -->
+        <div class="error">
         <form onsubmit="return validateForm()" method="POST" enctype="multipart/form-data" name="form1">
         {% for message in messages %}
         <h5>{{ message }}</h5>
         {% endfor %}
         {% csrf_token %}
+        </div>
 
     <div class="main">
         <div class="form">
@@ -103,10 +104,15 @@
                 <input type="number" id="textbox" required name="number" placeholder="Number" maxlength="30" >
                     
                 <input type="date" id="textbox" name="birthdate" required maxlength="30">
-                <input type="text" id="textbox" required name="speciality" placeholder="Speciality" maxlength="30" >
-                <input type="text" id="textbox" required name="work_address" placeholder="Work Address" maxlength="30" >
-                <input type="file" id="textbox file" name="certificate" maxlength="30"  > <!--accept="application/pdf"-->
+                <input type="text" id="textbox" required name="speciality" placeholder="Speciality" maxlength="100" >
+                <input type="text" id="textbox" required name="work_address" placeholder="Work Address" maxlength="100" >
 
+                <label for="textbox_file" class="custom-file-input" id="file-label">Choose File</label>
+                <input type="file" id="textbox_file" name="certificate" maxlength="30" onchange="updateFileName(this)" required>
+                <!--accept="application/pdf"-->
+                
+
+                <button type="submit" class="signup">Create account</button>
                 </div>
             </div>
 
@@ -115,9 +121,6 @@
             </div>
         </div>
 
-        <div class="align">
-            <button type="submit" class="signup">Create account</button>
-        </div>
 
         <h4 class="small">Already a member? <a href="login" class="small">Login</a></h4>
 
@@ -125,10 +128,6 @@
     <div class="background">
 
     </div>
-    <div class="back2">
-        <!-- <img src="../static/public/Ellipse_13.svg"> -->
-    </div>
-
     <script src="../static/js/dsignup.js"></script>
 </body>
 </html>
