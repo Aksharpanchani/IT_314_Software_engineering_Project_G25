@@ -6,7 +6,9 @@
     margin: 0;
     line-height: normal;
 }
-
+body{
+    position: relative;
+}
 .navbar{
     position: relative;
     z-index: 1;
@@ -90,10 +92,10 @@
 }
 
 .input {
-    height: 100%;
+    position: relative;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
+    align-items: center;
     gap: 3.99vh;
     z-index: 1;
     
@@ -103,7 +105,6 @@
     display: flex;
     width: 100%;
     height: 3.2rem;
-    /* margin-top: 9px; */
     align-items: center;
    
 }
@@ -168,42 +169,19 @@
     background: rgba(121, 162, 255, 0.60); 
     filter: blur(120px);
 }
-.back2{
-    z-index: 0;
-    display: flex;
+.input .signup{
     position: absolute;
-    bottom: -57rem;
-    right: 0rem;
-    width: 20rem;
-    height: 28rem;
-    flex-shrink: 0;
-    border-radius: 602px;
-    background: rgba(121, 162, 255, 0.60);
-    filter: blur(120px);
-}
-/* .back2 img{ 
-    position: relative;
-    right: 0px;
-    bottom: 0px;
-} */
-
-.align{
-    white-space: nowrap;
-    padding: 0 0 2rem 25.3rem;
-    justify-content: center;
+    display: flex;
     align-items: center;
-    
-}
-.signup{
+    bottom: -6vw;
+    width: 11.3vw;
+    height: 3.2vw;
     display: inline-flex;
-    padding: 13px 11px 13px 10px;
-    justify-content: center;
-    align-items: center;
     border-radius: 20px;
     background: #79A2FF;
     color: #000;
     font-family: 'Montserrat Alternates';
-    font-size: 18px;
+    font-size: 1.2vw;
     font-style: normal;
     font-weight: 500;
     line-height: normal;

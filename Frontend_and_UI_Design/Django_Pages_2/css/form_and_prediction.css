@@ -204,7 +204,7 @@ body{
     text-align: center;
     display: flex;
     position: absolute;
-    top: 6.8vw;
+    bottom: 2.5vw;
     font-size: 1.5vw;
     font-weight: 600;
     width: 8.8vw;
@@ -230,9 +230,11 @@ body{
 }
 .radio-buttons{
     position: absolute;
-    bottom: 1.2vw;
-    margin-top: 2vw;
+    bottom: 2.5vw;
     margin-left: 2vw;
+}
+.formcheck{
+    height: 2vw;
 }
 .form-check{
     width: 7vw;
@@ -416,7 +418,6 @@ body{
 
 @media only screen and (max-width: 1100px) {
     .Container{
-        display: flex;
         flex-direction: column;
         width: 10vw;
     }
@@ -434,21 +435,17 @@ body{
     }
     .RightPart{
         width: 96vw;
-        height: 400px;
         margin-left: 2.2vw;
         margin-top: -20vw;
     }
     .grid-container{
-        grid-template-columns: 11.36vw 11.36vw 11.36vw 11.36vw;
-        grid-template-rows: 96px 96px;
-        height: 200px;
         column-gap: 12vw;
         row-gap: 4vw;
         margin-left: -9vw;
     }
     .grid-item{
         width: 22vw;
-        height: 96px;
+        height: 11.2vw;
     }
     .grid-item div{
         font-size: 1.5vw;
