@@ -144,7 +144,7 @@ body{
 /* Our Models */
 
 .line{
-  margin-top: 2vw;
+  margin-top: 10vw;
   background-color: black;
   height: 1px;
   width: 100vw;
@@ -176,10 +176,15 @@ body{
   justify-content: center;
   font-size: 3vw;
   border-radius: 16px;
-  color: #F9F9F9;
-  background-color: #0067FF;
+  color: black;
+  background: #E7E7E7;
   width: 49%;
   height: 11vw;
+  text-decoration: none;
+}
+.rect:hover{
+  color: #F9F9F9;
+  background-color: #0067FF;
 }
 .rect20and21{
   margin-top: 6.4vw;

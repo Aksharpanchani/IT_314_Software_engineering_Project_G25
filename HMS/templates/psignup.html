@@ -110,7 +110,8 @@
                     <input type="number" id="textbox" required name="height" placeholder="Height in Centimeters" maxlength="4">
                     <input type="number" id="textbox" required name="weight" placeholder="Weight in Kilogram" maxlength="4">
 
-                    <select name="gender" id="textbox">
+                    <select name="gender" id="textbox" required>
+                        <option value="" disabled selected>Select</option>
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
                     </select>
@@ -118,7 +119,8 @@
                     <!-- Male <input type="radio" id="Male" name="gender" value="gender" required> 
                     Female <input type="radio" id="Female" name="gender" value="gender" required>  -->
                     <input type="number" id="textbox" required name="number" placeholder="Number">
-                    <select name="bloodgroup" id="textbox">
+                    <select name="bloodgroup" id="textbox" required>
+                        <option value="" disabled selected>Select</option>
                         <option value="AP">A+</option>
                         <option value="AN">A-</option>
                         <option value="BP">B+</option>
