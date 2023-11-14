@@ -79,15 +79,15 @@ body{
   font-family: "Montserrat Alternates";
   font-size: 1.33vw;
   font-weight: 400;
-  width:14vw;
+  width:18vw;
   height:2vw;
   margin-left:1.8vw;
 }
 .Doctor_Name img{
   position: absolute;
-  right: 0;
+  right: 0.1vw;
   background-color: #EFEFEF;
-  border-radius: 40%;
+  border-radius: 50%;
   width: 3vw;
 }
 
