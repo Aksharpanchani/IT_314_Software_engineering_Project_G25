@@ -5,7 +5,6 @@ from django.contrib.auth import views as auth_views
 urlpatterns = [
     path('login', views.login, name='login'),
     path('homepage', views.homepage, name='homepage'),
-    path('predictdiabetes/result/homepage2', views.homepage2, name='homepage2'),
     path('dsignup', views.dsignup, name='dsignup'),
     path('psignup', views.psignup, name='psignup'),
     path('login', views.login, name='login'),
@@ -15,6 +14,7 @@ urlpatterns = [
     path('', views.homepage, name='homepage'),
     path('signup', views.signup, name='signup'),
     path('doctorreport', views.doctorreport, name='doctorreport'),
+    path('report', views.downloadreport, name='downloadreport'),
 
     #ML Model urls
     path('predictdiabetes/', views.predictor_diab, name='predictdiabetes'),
@@ -25,7 +25,10 @@ urlpatterns = [
     path('predictheart/result/heartreport_pdf', views.heartreport_pdf, name='heartreport_pdf'),
 
     #Jugaad 
-    path('predictdiabetes/homepage2', views.homepage2, name='homepage2'),
+    path('predictdiabetes/result/homepage2', views.homepage2, name='homepage2'),
+    path('predictdiabetes/homepage', views.homepage2, name='homepage2'),
+    path('predictheart/homepage2', views.homepage2, name='homepage2'),
+    path('predictheart/result/homepage', views.homepage2, name='homepage2'),
 
 ]
 

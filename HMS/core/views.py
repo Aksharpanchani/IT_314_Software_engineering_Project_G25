@@ -368,6 +368,53 @@ def doctorreport(request):
     reports = Report.objects.filter(doctor=docprof)
     return render(request, 'doctorreport.html', {'doctorprofile': docprof, 'reports': reports})
 
+def downloadreport(request):
+    report_id = request.GET.get('report_id')
+    report_data = Report.objects.get(id=report_id)
+
+    buf = io.BytesIO()
+    c = canvas.Canvas(buf, pagesize=letter, bottomup=0)
+    textob = c.beginText()
+    textob.setTextOrigin(inch, inch)
+    textob.setFont("Helvetica", 14)
+
+    # List of lines
+    conclusion = ""
+    if report_data.DoctorConclusion == 1:
+        conclusion="Positive"
+    else:
+        conclusion="Negative"
+
+
+
+    lines = [
+        "Doctor : " + report_data.doctor.first_name + " " + report_data.doctor.first_name,
+        "Disease : " + report_data.disease,
+        "Patient : " + report_data.patient.first_name + " " + report_data.patient.last_name,
+        "Age :" + str(report_data.Age),
+        "Blood Pressure Level: " + str(report_data.HighBP),
+        "Cholestrol Level : " + str(report_data.HighChol),
+        "BMI (Body Mass Index) : " + str(report_data.BMI),
+        "Stroke : " + str(report_data.Stroke),
+        "Symptoms of Heart Attack : " + str(report_data.HeartDiseaseAttack),
+        "General Health (Out of 5) : " + str(report_data.GenHlth),
+        "Diabetes : " + conclusion,
+        "Prescription : " + report_data.DoctorPrescription,
+        "General Advice : " + report_data.DoctorGeneralAdvice
+    ]
+
+    # Loop
+
+    for line in lines:
+        textob.textLine(line)
+
+    c.drawText(textob)
+    c.showPage()
+    c.save()
+    buf.seek(0)
+
+    reportName = report_data.patient.first_name + " " + report_data.disease + " " + "Report.pdf"
+    return FileResponse(buf, as_attachment=True, filename=reportName)
 
 def venue_pdf(request):
 
