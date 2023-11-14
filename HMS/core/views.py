@@ -244,7 +244,7 @@ def formInfo_diab(request):
 
     GenHlth = request.GET['GenHlth']
     switcher = {
-        "1": 1,
+        "1":1,
         "2":2,
         "3":3,
         "4":4,
@@ -276,7 +276,7 @@ def formInfo_diab(request):
         AgeML=10
     elif Age<=74:
         AgeML=11
-    elif Age<=79 :
+    elif Age<=79:
         AgeML=12
     else:
         AgeML=13
@@ -292,9 +292,9 @@ def formInfo_diab(request):
     y_out= round(y_pred[0][1],2)
 
     #Save model here
-    new_report = Report.objects.create(doctor=doctor_profile, patient=patient_profile, disease=DiseaseName, HighBP=HighBPML,
-                                       HighChol=HighCholML, BMI=BMI, Stroke=StrokeML, HeartDiseaseAttack=HeartDiseaseorAttackML,
-                                       GenHlth=GenHlthML, Age=AgeML, Result=y_out)
+    new_report = Report.objects.create(doctor=doctor_profile, patient=patient_profile, disease=DiseaseName, HighBP=HighBP,
+                                       HighChol=HighChol, BMI=BMI, Stroke=Stroke, HeartDiseaseAttack=HeartDiseaseorAttack,
+                                       GenHlth=GenHlthML, Age=Age, Result=y_out)
     report_id = new_report.id
 
     #df_report = [[HighBP,HighChol,BMI,Stroke,HeartDiseaseorAttack,GenHlth,Age]]
@@ -314,7 +314,14 @@ def formInfo_heart(request):
 
     doctor_profile=DoctorProfile.objects.get(user=request.user)
     PatientID = request.GET['PatientID']
-    DiseaseName = "Cardio Vascular Disease"
+
+    patientcheck = User.objects.filter(username=PatientID).count()
+    if patientcheck == 0:
+        messages.info(request, 'No such patient exists')
+        return redirect('predictheart')
+    patient_profile = PatientProfile.objects.get(user=User.objects.get(username=PatientID))
+
+    DiseaseName = "Cardio"
     Age = request.GET['Age']
     Age= int(Age)
     Height = request.GET['Height']
@@ -345,7 +352,14 @@ def formInfo_heart(request):
     y_pred = heart_model.predict_proba([[Age,Height,Weight,SystolicBP,DiastolicBP,CholestrolLevel,GlucoseLevel,SmokingML,PhysicalActivityML]])
     #y_pred = heart_model.predict_proba([[2,168,62,110,80,1,1,1,1]])
     y_pred = y_pred*100
-    y_out= round(y_pred[0][1],2)
+    y_out = round(y_pred[0][1], 2)
+
+    new_report = Report.objects.create(doctor=doctor_profile, patient=patient_profile, disease=DiseaseName,
+                                       Height=Height, Weight=Weight, SystolicBP=SystolicBP,
+                                       DiastolicBP=DiastolicBP, CholestrolLevel=CholestrolLevel, GlucoseLevel=GlucoseLevel,
+                                       Smoking=Smoking, PhysicalActivity=PhysicalActivity,
+                                       Age=Age, Result=y_out)
+
     return render(request,'result_heart.html',{'data':y_out,'PhysicalActivity': PhysicalActivity,'Smoking': Smoking ,'GlucoseLevel': GlucoseLevel ,
                                                'CholestrolLevel': CholestrolLevel ,'DiastolicBP':DiastolicBP ,'SystolicBP': SystolicBP,'Weight':Weight ,'Height':Height
                                                  , 'Age':Age ,'DiseaseName': DiseaseName ,'PatientID': PatientID,'DoctorProfile':doctor_profile})
@@ -381,27 +395,47 @@ def downloadreport(request):
     # List of lines
     conclusion = ""
     if report_data.DoctorConclusion == 1:
-        conclusion="Positive"
+        conclusion = "Positive"
     else:
-        conclusion="Negative"
+        conclusion = "Negative"
 
+    if report_data.disease == "Diabetes":
 
+        lines = [
+            "Doctor : " + report_data.doctor.first_name + " " + report_data.doctor.first_name,
+            "Disease : " + report_data.disease,
+            "Patient : " + report_data.patient.first_name + " " + report_data.patient.last_name,
+            "Age :" + str(report_data.Age),
+            "Blood Pressure Level: " + str(report_data.HighBP),
+            "Cholestrol Level : " + str(report_data.HighChol),
+            "BMI (Body Mass Index) : " + str(report_data.BMI),
+            "Stroke : " + str(report_data.Stroke),
+            "Symptoms of Heart Attack : " + str(report_data.HeartDiseaseAttack),
+            "General Health (Out of 5) : " + str(report_data.GenHlth),
+            "Diabetes : " + conclusion,
+            "Prescription : " + report_data.DoctorPrescription,
+            "General Advice : " + report_data.DoctorGeneralAdvice
+        ]
 
-    lines = [
-        "Doctor : " + report_data.doctor.first_name + " " + report_data.doctor.first_name,
-        "Disease : " + report_data.disease,
-        "Patient : " + report_data.patient.first_name + " " + report_data.patient.last_name,
-        "Age :" + str(report_data.Age),
-        "Blood Pressure Level: " + str(report_data.HighBP),
-        "Cholestrol Level : " + str(report_data.HighChol),
-        "BMI (Body Mass Index) : " + str(report_data.BMI),
-        "Stroke : " + str(report_data.Stroke),
-        "Symptoms of Heart Attack : " + str(report_data.HeartDiseaseAttack),
-        "General Health (Out of 5) : " + str(report_data.GenHlth),
-        "Diabetes : " + conclusion,
-        "Prescription : " + report_data.DoctorPrescription,
-        "General Advice : " + report_data.DoctorGeneralAdvice
-    ]
+    else:
+
+        lines = [
+            "Doctor : " + report_data.doctor.first_name + " " + report_data.doctor.first_name,
+            "Disease : " + report_data.disease,
+            "Patient : " + report_data.patient.first_name + " " + report_data.patient.last_name,
+            "Age :" + str(report_data.Age),
+            "PhysicalActivity :" + report_data.PhysicalActivity,
+            "Smoking: " + report_data.Smoking,
+            "GlucoseLevel :" + str(report_data.GlucoseLevel),
+            "CholestrolLevel :" + str(report_data.CholestrolLevel),
+            "DiastolicBP :" + str(report_data.DiastolicBP),
+            "SystolicBP :" + str(report_data.SystolicBP),
+            "Weight :" + str(report_data.Weight),
+            "Height :" + str(report_data.Height),
+            "HeartDisease : " + conclusion,
+            "Prescription : " + report_data.DoctorPrescription,
+            "General Advice : " + report_data.DoctorGeneralAdvice
+        ]
 
     # Loop
 
@@ -475,7 +509,7 @@ def venue_pdf(request):
         "Stroke : " + Stroke,
         "Symptoms of Heart Attack : " + HeartDiseaseorAttack,
         "General Health (Out of 5) : " + GenHlth,
-        "Diabetes : "+Conclusion,   
+        "Diabetes : "+Conclusion,
         "Prescription : " + Prescription,
         "General Advice : " + Verdict
     ]
@@ -499,7 +533,7 @@ def heartreport_pdf(request):
     #Fetching data from form
     DoctorName = request.POST['DoctorName']
     PatientID = request.POST['PatientID']
-    DiseaseName = request.POST['DiseaseName']
+    Disease = request.POST['DiseaseName']
     PhysicalActivity = request.POST['PhysicalActivity']
     Smoking = request.POST['Smoking']
     GlucoseLevel = request.POST['GlucoseLevel']
@@ -516,6 +550,18 @@ def heartreport_pdf(request):
     Verdict = request.POST['DoctorVerdict']
 
     Patient = PatientProfile.objects.get(user=User.objects.get(username=PatientID))
+
+    Doctor = DoctorProfile.objects.get(user=request.user)
+    report = Report.objects.filter(doctor=Doctor, patient=Patient, disease=Disease).latest('date')
+
+    report.DoctorPrescription = Prescription
+    report.DoctorGeneralAdvice = Verdict
+    if TrueResult == "Satisfied":
+        report.DoctorConclusion = 1
+    else:
+        report.DoctorConclusion = 0
+
+    report.save()
 
     #Generating PDF
 
@@ -534,9 +580,17 @@ def heartreport_pdf(request):
 
     lines=[
         "Doctor : " + DoctorName,
-        "Disease : " + DiseaseName,
+        "Disease : " + Disease,
         "Patient : " + Patient.first_name + " " + Patient.last_name,
         "Age :" + Age,
+        "PhysicalActivity :" + PhysicalActivity,
+        "Smoking: " + Smoking,
+        "GlucoseLevel :" + GlucoseLevel,
+        "CholestrolLevel :" + CholestrolLevel,
+        "DiastolicBP :" + DiastolicBP,
+        "SystolicBP :" + SystolicBP,
+        "Weight :" + Weight,
+        "Height :" + Height,
         "HeartDisease : "+Conclusion,   
         "Prescription : " + Prescription,
         "General Advice : " + Verdict
@@ -552,5 +606,5 @@ def heartreport_pdf(request):
     c.save()
     buf.seek(0)
 
-    reportName = Patient.first_name + " " + DiseaseName + " " + "Report.pdf"
+    reportName = Patient.first_name + " " + Disease + " " + "Report.pdf"
     return FileResponse(buf,as_attachment=True, filename=reportName)

@@ -28,7 +28,7 @@ urlpatterns = [
     path('predictdiabetes/result/homepage2', views.homepage2, name='homepage2'),
     path('predictdiabetes/homepage', views.homepage2, name='homepage2'),
     path('predictheart/homepage2', views.homepage2, name='homepage2'),
-    path('predictheart/result/homepage', views.homepage2, name='homepage2'),
+    path('predictheart/result/homepage2', views.homepage2, name='homepage2'),
 
 ]
 

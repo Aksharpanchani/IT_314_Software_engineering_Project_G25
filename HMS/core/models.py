@@ -51,12 +51,22 @@ class Report(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4)
     disease = models.CharField(max_length=60)
 
-    HighBP = models.IntegerField(default=-1)
-    HighChol = models.IntegerField(default=-1)
+    HighBP = models.CharField(default="-1",max_length=60)
+    HighChol = models.CharField(default="-1",max_length=60)
     BMI = models.IntegerField(default=-1)
-    Stroke = models.IntegerField(default=-1)
-    HeartDiseaseAttack = models.IntegerField(default=-1)
+    Stroke = models.CharField(default="-1",max_length=60)
+    HeartDiseaseAttack = models.CharField(default="-1",max_length=60)
     GenHlth = models.IntegerField(default=-1)
+
+    Height = models.IntegerField(default=-1)
+    Weight = models.IntegerField(default=-1)
+    SystolicBP = models.IntegerField(default=-1)
+    DiastolicBP = models.IntegerField(default=-1)
+    CholestrolLevel = models.IntegerField(default=-1)
+    GlucoseLevel = models.IntegerField(default=-1)
+    Smoking = models.CharField(default="-1",max_length=60)
+    PhysicalActivity = models.CharField(default="-1",max_length=60)
+
     Age = models.IntegerField(default=-1)
     Result = models.IntegerField(default=-1)
 
