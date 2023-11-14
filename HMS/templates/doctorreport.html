@@ -9,7 +9,10 @@
 
 {% for report in reports %}
     <div style="border:solid; margin:2px">
-
+        <h4>Patient ID: {{report.patient.user.username}}</h4>
+        <h4>Patient Name: {{report.patient.first_name}} {{report.patient.last_name}}</h4>
+        <h4>Disease Name: {{report.disease}}</h4>
+        <h4>Date: {{report.date}}</h4>
     </div>
 {% endfor %}
 

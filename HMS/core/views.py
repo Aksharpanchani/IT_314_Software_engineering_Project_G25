@@ -164,7 +164,9 @@ def homepage(request):
 
 @login_required(login_url='login')
 def patienthome(request):
-    return render(request, 'patienthome.html')
+    patprof = PatientProfile.objects.get(user=request.user)
+    reports = Report.objects.filter(patient=patprof)
+    return render(request, 'patientreport.html', {'patientprofile': patprof, 'reports': reports})
 
 @login_required(login_url='login')
 def logout(request):
@@ -365,6 +367,7 @@ def doctorreport(request):
     docprof = DoctorProfile.objects.get(user=request.user)
     reports = Report.objects.filter(doctor=docprof)
     return render(request, 'doctorreport.html', {'doctorprofile': docprof, 'reports': reports})
+
 
 def venue_pdf(request):
 
