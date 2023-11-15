@@ -26,10 +26,16 @@ urlpatterns = [
 
     #Jugaad 
     path('predictdiabetes/result/homepage2', views.homepage2, name='homepage2'),
-    path('predictdiabetes/homepage', views.homepage2, name='homepage2'),
+    path('predictdiabetes/homepage2', views.homepage2, name='homepage2'),
     path('predictheart/homepage2', views.homepage2, name='homepage2'),
     path('predictheart/result/homepage2', views.homepage2, name='homepage2'),
 
+    #Forgot Password
+    path('reset_password', auth_views.PasswordResetView.as_view(), name="reset_password"),
+    path('reset_password_sent', auth_views.PasswordResetDoneView.as_view(), name="password_reset_done"),
+    path('reset/<uidb64>/<token>', auth_views.PasswordResetConfirmView.as_view(), name="password_reset_confirm"),
+    path('reset_password_complete', auth_views.PasswordResetCompleteView.as_view(), name="password_reset_complete"),
+    path('accounts/login/', views.alt_way, name="alt_way"),
 ]
 
 

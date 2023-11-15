@@ -23,7 +23,7 @@ def psignup(request):
         password2 = request.POST['pass2']
         fname = request.POST['first_name']
         lname = request.POST['last_name']
-        w = request.POST['weight']
+        # w = request.POST['weight']
         h = request.POST['height']
         g = request.POST['gender']
         b = request.POST['bloodgroup']
@@ -122,6 +122,10 @@ def dsignup(request):
     else:
         return render(request, 'dsignup.html')
 
+
+@login_required(login_url='login')
+def alt_way(request):
+    return redirect('homepage')
 
 # Create your views here.
 def login(request):
