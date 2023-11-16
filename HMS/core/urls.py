@@ -3,18 +3,23 @@ from . import views
 from django.contrib.auth import views as auth_views
 
 urlpatterns = [
-    path('login', views.login, name='login'),
     path('homepage', views.homepage, name='homepage'),
-    path('dsignup', views.dsignup, name='dsignup'),
-    path('psignup', views.psignup, name='psignup'),
+    #Navbar
     path('login', views.login, name='login'),
-    path('patienthome', views.patienthome, name='patienthome'),
-    path('doctorhome', views.doctorhome, name='doctorhome'),
+    path('diabetesinfo',views.diabetesinfo,name='diabetesinfo'),
+    path('heartinfo',views.heartinfo,name = 'heartinfo'),
     path('logout', views.logout, name='logout'),
     path('', views.homepage, name='homepage'),
     path('signup', views.signup, name='signup'),
-    path('doctorreport', views.doctorreport, name='doctorreport'),
-    path('report', views.downloadreport, name='downloadreport'),
+    
+
+    #Signup page
+    path('dsignup', views.dsignup, name='dsignup'),
+    path('psignup', views.psignup, name='psignup'),
+
+    #Profile URLs
+    path('patienthome', views.patienthome, name='patienthome'),
+    path('doctorhome', views.doctorhome, name='doctorhome'),
 
     #ML Model urls
     path('predictdiabetes/', views.predictor_diab, name='predictdiabetes'),
@@ -23,6 +28,10 @@ urlpatterns = [
     path('predictheart/', views.predictor_heart, name = 'predictheart'),
     path('predictheart/result/', views.formInfo_heart, name='resultheart'),
     path('predictheart/result/heartreport_pdf', views.heartreport_pdf, name='heartreport_pdf'),
+
+    #Report download
+    path('doctorreport', views.doctorreport, name='doctorreport'),
+    path('report', views.downloadreport, name='downloadreport'),
 
     #Jugaad 
     path('predictdiabetes/result/homepage2', views.homepage2, name='homepage2'),

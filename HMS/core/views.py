@@ -66,8 +66,6 @@ def psignup(request):
 
     else:
         return render(request, 'psignup.html')
-
-
 def dsignup(request):
     # gnbg = dsup()
     # data = {'form': gnbg}
@@ -152,6 +150,12 @@ def login(request):
     else:
         return render(request, 'login.html')
 
+
+def diabetesinfo(request):
+    return render(request,'diabetesinfo.html')
+
+def heartinfo(request):
+    return render(request,'heartinfo.html')
 
 # @login_required(login_url='login')
 def homepage(request):
