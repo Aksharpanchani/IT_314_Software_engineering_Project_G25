@@ -178,28 +178,30 @@
 .Report_Box{
     display: flex;
     flex-direction: column;
-    width: 49.5vw;
-    height: 11.23vw;
+    width: 51vw;
     margin: auto;
     margin-top: 1.4vw;
-    padding-left: 5vw;
+    padding-left: 4vw;
     border-radius: 2.34vw;
     background: #d0cece;
     color: #0D0C0C;
     font-family: Montserrat Alternates;
-    font-size: 1.6vw;
+    font-size: 1.2vw;
     font-weight: 500;
 }
 .Report_Box .report_name{
+  font-size: 1.6vw;
     margin-top: 1.2vw;
 }
 .Report_Box .date_time_doctor{
     margin-top: 1vw;
 }
 .Report_Box button{
+  margin: auto;
     width: 36.8vw;
     height: 2.8vw;
     margin-top: 1vw;
+    margin-bottom: 1vw;
     border-radius: 1vw;
     background: #FFF;
     border: none;

@@ -42,13 +42,15 @@
                 <div class="Parameters">Previous Reports</div>
             </div>
             <div class="Scrollable_Content">
+                {% for report in reports %}
                 <div class="Report_Box">
                     <div class="report_name">Report 1</div>
-                    <div class="date_time_doctor">
-                        Date: xx/xx/xx &nbsp;&nbsp;&nbsp;&nbsp;Time: xx:xx:xx &nbsp;&nbsp;&nbsp;&nbsp;Doctor: Doctor1
+                    <div class="date_time_doctor" style="margin-bottom: 0.5vw;">
+                        Date: {{report.date}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Disease Name: {{report.disease}} <br> <br>Doctor: {{report.doctor.first_name}} {{report.doctor.last_name}}
                     </div>
                     <button>Get Report</button>
                 </div>
+                {% endfor %}
             </div>
         </div>
     </div>
