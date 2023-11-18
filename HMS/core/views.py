@@ -65,7 +65,7 @@ def psignup(request):
 
 
     else:
-        return render(request, 'psignup.html')
+        return render(request, 'users/patient/psignup.html')
 def dsignup(request):
     # gnbg = dsup()
     # data = {'form': gnbg}
@@ -118,7 +118,7 @@ def dsignup(request):
             return redirect('dsignup')
 
     else:
-        return render(request, 'dsignup.html')
+        return render(request, 'users/doctor/dsignup.html')
 
 
 @login_required(login_url='login')
@@ -152,10 +152,10 @@ def login(request):
 
 
 def diabetesinfo(request):
-    return render(request,'diabetesinfo.html')
+    return render(request,'disease/diabetes/diabetesinfo.html')
 
 def heartinfo(request):
-    return render(request,'heartinfo.html')
+    return render(request,'disease/heart/heartinfo.html')
 
 # @login_required(login_url='login')
 def homepage(request):
@@ -174,7 +174,7 @@ def homepage(request):
 def patienthome(request):
     patprof = PatientProfile.objects.get(user=request.user)
     reports = Report.objects.filter(patient=patprof)
-    return render(request, 'patientreport.html', {'patientprofile': patprof, 'reports': reports})
+    return render(request, 'users/patient/patientreport.html', {'patientprofile': patprof, 'reports': reports})
 
 @login_required(login_url='login')
 def logout(request):
@@ -184,7 +184,7 @@ def logout(request):
 @login_required(login_url='login')
 def doctorhome(request):
     doctor_profile = DoctorProfile.objects.get(user=request.user)
-    return render(request, 'doctorhome.html', {'DoctorProfile': doctor_profile})
+    return render(request, 'users/doctor/doctorhome.html', {'DoctorProfile': doctor_profile})
 
 def signup(request):
     return render(request, 'signup.html')
@@ -206,7 +206,7 @@ from joblib import load
 def predictor_diab(request):
     doctor_profile=DoctorProfile.objects.get(user=request.user)
 
-    return render(request, 'form_diab.html', {'DoctorProfile':doctor_profile})
+    return render(request, 'disease/diabetes/form_diab.html', {'DoctorProfile':doctor_profile})
 
 def formInfo_diab(request):
     diab_model = load('./SavedModels/diabetes_model.joblib')
@@ -308,14 +308,14 @@ def formInfo_diab(request):
     #df_report = [[HighBP,HighChol,BMI,Stroke,HeartDiseaseorAttack,GenHlth,Age]]
 
     
-    return render(request,'result_diab.html',{'data':y_out, 'DoctorProfile':doctor_profile,'PatientID':PatientID ,'DiseaseName':DiseaseName,'HighBP':HighBP,'HighChol':HighChol ,'BMI':BMI ,
+    return render(request,'disease/diabates/result_diab.html',{'data':y_out, 'DoctorProfile':doctor_profile,'PatientID':PatientID ,'DiseaseName':DiseaseName,'HighBP':HighBP,'HighChol':HighChol ,'BMI':BMI ,
                                               'Stroke':Stroke,'HeartDiseaseorAttack':HeartDiseaseorAttack,'GenHlth': GenHlth,'Age':Age, 'report_id':report_id})
 
 
 #Views of Heart Disease
 def predictor_heart(request):
     doctor_profile=DoctorProfile.objects.get(user=request.user)
-    return render(request,'form_heart.html',{'DoctorProfile':doctor_profile})
+    return render(request,'disease/heart/form_heart.html',{'DoctorProfile':doctor_profile})
 
 def formInfo_heart(request):
     heart_model = load('./SavedModels/heart_model.joblib')
@@ -388,7 +388,7 @@ def homepage2(request):
 def doctorreport(request):
     docprof = DoctorProfile.objects.get(user=request.user)
     reports = Report.objects.filter(doctor=docprof)
-    return render(request, 'doctorreport.html', {'doctorprofile': docprof, 'reports': reports})
+    return render(request, 'users/doctor/doctorreport.html', {'doctorprofile': docprof, 'reports': reports})
 
 def downloadreport(request):
     report_id = request.GET.get('report_id')
