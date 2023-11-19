@@ -1,6 +1,6 @@
 import datetime
 import email
-
+import csv
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth.models import User, auth
@@ -13,6 +13,14 @@ from core.models import PatientProfile, DoctorProfile, Report
 # from .forms import psup, dsup
 
 
+
+
+def homepage(request):
+    return render(request, 'homepage.html')
+
+#Signup
+def signup(request):
+    return render(request, 'signup.html')
 def psignup(request):
     # gnbg = psup()
     # data = {'form': gnbg}
@@ -157,17 +165,8 @@ def diabetesinfo(request):
 def heartinfo(request):
     return render(request,'disease/heart/heartinfo.html')
 
-# @login_required(login_url='login')
-def homepage(request):
-    # user_profile = Profile.objects.get(user=request.user)
-    # posts = Post.objects.all()
-    # liked_posts = LikePost.objects.filter(username=request.user).values()
-    # if len(posts) != 0:
-    #     return render(request, 'home.html',
-    #                   {'user_profile': user_profile, 'posts': posts, 'liked_posts': liked_posts})
-    # else:
-    #     return render(request, 'nopost.html')
-    return render(request, 'homepage.html')
+
+
 
 
 @login_required(login_url='login')
@@ -186,8 +185,7 @@ def doctorhome(request):
     doctor_profile = DoctorProfile.objects.get(user=request.user)
     return render(request, 'users/doctor/doctorhome.html', {'DoctorProfile': doctor_profile})
 
-def signup(request):
-    return render(request, 'signup.html')
+
 
 
 
@@ -368,9 +366,14 @@ def formInfo_heart(request):
                                        Smoking=Smoking, PhysicalActivity=PhysicalActivity,
                                        Age=Age, Result=y_out)
 
-    return render(request,'result_heart.html',{'data':y_out,'PhysicalActivity': PhysicalActivity,'Smoking': Smoking ,'GlucoseLevel': GlucoseLevel ,
+    return render(request,'disease/heart/result_heart.html',{'data':y_out,'PhysicalActivity': PhysicalActivity,'Smoking': Smoking ,'GlucoseLevel': GlucoseLevel ,
                                                'CholestrolLevel': CholestrolLevel ,'DiastolicBP':DiastolicBP ,'SystolicBP': SystolicBP,'Weight':Weight ,'Height':Height
                                                  , 'Age':Age ,'DiseaseName': DiseaseName ,'PatientID': PatientID,'DoctorProfile':doctor_profile})
+
+
+
+
+
 
 
 #Getting Report
@@ -458,7 +461,8 @@ def downloadreport(request):
     reportName = report_data.patient.first_name + " " + report_data.disease + " " + "Report.pdf"
     return FileResponse(buf, as_attachment=True, filename=reportName)
 
-def venue_pdf(request):
+
+def diabetes_pdf(request):
 
     #Fetching data from form
     DoctorName = request.POST['DoctorName']
@@ -535,8 +539,8 @@ def venue_pdf(request):
     reportName = Patient.first_name + " " + Disease + " " + "Report.pdf"
     return FileResponse(buf,as_attachment=True, filename=reportName)
 
-
 def heartreport_pdf(request):
+
 
     #Fetching data from form
     DoctorName = request.POST['DoctorName']
@@ -570,6 +574,23 @@ def heartreport_pdf(request):
         report.DoctorConclusion = 0
 
     report.save()
+
+
+    #Saving data in the CSV file
+
+    with open("./datasets/cardio_retrain.csv","a",newline="") as File:
+
+        writer = csv.writer(File)
+        
+        # writer.writerow(['age','height','weight','ap_hi','ap_lo','cholestrol',
+        #              'gluc','smoke','active','cardio'])
+        
+        writer.writerow([report.Age,report.Height,report.Weight,report.SystolicBP,report.DiastolicBP,
+                        report.CholestrolLevel,report.GlucoseLevel,report.Smoking,
+                        report.PhysicalActivity,report.DoctorConclusion])
+
+        File.close()
+
 
     #Generating PDF
 
@@ -616,3 +637,7 @@ def heartreport_pdf(request):
 
     reportName = Patient.first_name + " " + Disease + " " + "Report.pdf"
     return FileResponse(buf,as_attachment=True, filename=reportName)
+
+
+
+

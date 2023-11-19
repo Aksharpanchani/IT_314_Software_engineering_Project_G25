@@ -24,7 +24,7 @@ urlpatterns = [
     #ML Model urls
     path('predictdiabetes/', views.predictor_diab, name='predictdiabetes'),
     path('predictdiabetes/result/', views.formInfo_diab, name='resultdiabetes'),
-    path('predictdiabetes/result/venue_pdf', views.venue_pdf, name='venue_pdf'),
+    path('predictdiabetes/result/diabetes_pdf', views.diabetes_pdf, name='diabetes_pdf'),
     path('predictheart/', views.predictor_heart, name = 'predictheart'),
     path('predictheart/result/', views.formInfo_heart, name='resultheart'),
     path('predictheart/result/heartreport_pdf', views.heartreport_pdf, name='heartreport_pdf'),
@@ -45,6 +45,10 @@ urlpatterns = [
     path('reset/<uidb64>/<token>', auth_views.PasswordResetConfirmView.as_view(), name="password_reset_confirm"),
     path('reset_password_complete', auth_views.PasswordResetCompleteView.as_view(), name="password_reset_complete"),
     path('accounts/login/', views.alt_way, name="alt_way"),
+
+    #Download CSV of data
+    path('heartreport_csv', views.heartreport_csv, name='heartreport_csv'),
+
 ]
 
 
