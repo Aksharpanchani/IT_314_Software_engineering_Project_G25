@@ -584,10 +584,19 @@ def heartreport_pdf(request):
         
         # writer.writerow(['age','height','weight','ap_hi','ap_lo','cholestrol',
         #              'gluc','smoke','active','cardio'])
+        if report.Smoking=='Yes':
+            smoking=1
+        else:
+            smoking=0
+
+        if report.PhysicalActivity=='Yes':
+            active = 1
+        else:
+            active=0
         
         writer.writerow([report.Age,report.Height,report.Weight,report.SystolicBP,report.DiastolicBP,
-                        report.CholestrolLevel,report.GlucoseLevel,report.Smoking,
-                        report.PhysicalActivity,report.DoctorConclusion])
+                        report.CholestrolLevel,report.GlucoseLevel,smoking,
+                        active,report.DoctorConclusion])
 
         File.close()
 
