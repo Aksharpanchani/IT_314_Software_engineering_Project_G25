@@ -306,7 +306,7 @@ def formInfo_diab(request):
     #df_report = [[HighBP,HighChol,BMI,Stroke,HeartDiseaseorAttack,GenHlth,Age]]
 
     
-    return render(request,'disease/diabates/result_diab.html',{'data':y_out, 'DoctorProfile':doctor_profile,'PatientID':PatientID ,'DiseaseName':DiseaseName,'HighBP':HighBP,'HighChol':HighChol ,'BMI':BMI ,
+    return render(request,'disease/diabetes/result_diab.html',{'data':y_out, 'DoctorProfile':doctor_profile,'PatientID':PatientID ,'DiseaseName':DiseaseName,'HighBP':HighBP,'HighChol':HighChol ,'BMI':BMI ,
                                               'Stroke':Stroke,'HeartDiseaseorAttack':HeartDiseaseorAttack,'GenHlth': GenHlth,'Age':Age, 'report_id':report_id})
 
 
@@ -494,6 +494,24 @@ def diabetes_pdf(request):
         report.DoctorConclusion = 0
 
     report.save()
+
+
+
+    #Saving data in the CSV file
+
+    with open("./datasets/diabetes_retrain.csv","a",newline="") as File:
+
+        writer = csv.writer(File)
+        
+        # writer.writerow(['age','height','weight','ap_hi','ap_lo','cholestrol',
+        #              'gluc','smoke','active','cardio'])
+        
+        
+        writer.writerow([report.HighBP,report.HighChol,report.BMI,report.Stroke,report.HeartDiseaseAttack,
+                        report.GenHlth,report.Age,report.DoctorConclusion])
+
+        File.close()
+
 
     #Generating PDF
 

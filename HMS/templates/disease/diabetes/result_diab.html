@@ -35,10 +35,9 @@
 
     </h5> -->
 
-    <!-- <h3> <a href="{% url 'venue_pdf' %}">GetReport</a> -->
     
     <!-- <a href="homepage2">Home</a> -->
-    <form action="venue_pdf" method="POST">
+    <form action="diabetes_pdf" method="POST">
         {% csrf_token %}
 
         <input type="text" name="DiseaseName"  id="" value={{DiseaseName}}  style="display: none;">
