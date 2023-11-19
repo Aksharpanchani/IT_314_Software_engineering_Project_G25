@@ -46,8 +46,6 @@ urlpatterns = [
     path('reset_password_complete', auth_views.PasswordResetCompleteView.as_view(), name="password_reset_complete"),
     path('accounts/login/', views.alt_way, name="alt_way"),
 
-    #Download CSV of data
-    path('heartreport_csv', views.heartreport_csv, name='heartreport_csv'),
 
 ]
 
