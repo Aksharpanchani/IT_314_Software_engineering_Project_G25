@@ -173,7 +173,7 @@ def heartinfo(request):
 def patienthome(request):
     patprof = PatientProfile.objects.get(user=request.user)
     reports = Report.objects.filter(patient=patprof)
-    return render(request, 'users/patient/patientreport.html', {'patientprofile': patprof, 'reports': reports})
+    return render(request, 'users/patient/patienthome.html', {'patientprofile': patprof, 'reports': reports})
 
 @login_required(login_url='login')
 def logout(request):
