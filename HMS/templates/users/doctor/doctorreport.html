@@ -13,14 +13,14 @@
 </head>
 <body>
     <div class="header">
-        <a href="./homepage" class="logo">
+        <a href="doctorhome" class="logo">
             <img src="../../../static/public/logo.svg" alt="">
             <div class="logoname">MED.AI</div>
         </a>
         <a id="logout" href="logout"><button  type="button">Log Out</button></a>
 
         <div class="Doctor_Name">
-            <input type="text" class="doctorNameInput" placeholder="Name Of Patient" maxlength="30" readonly>
+            <input type="text" class="doctorNameInput" placeholder="{{ doctorprofile.first_name }} {{doctorprofile.last_name}}" maxlength="30" readonly>
             <img src="../../../static/public/user.svg" alt="User">
         </div>
     </div>
@@ -49,7 +49,9 @@
                     <div class="date_time_doctor" style="margin-bottom: 0.5vw;">
                         Patient ID: {{report.patient.user.username}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br><br>Patient Name: {{report.patient.first_name}} {{report.patient.last_name}} <br><br> Date: {{report.date}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Disease Name: {{report.disease}}
                     </div>
-                    <button>Download Report</button>
+                    <a href="report?report_id={{report.id}}" target="_blank">
+                        <button type="button">Download Report</button>
+                    </a>
                 </div>
                 {% endfor %}
             </div>
