@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
     <link rel="icon" href="../../../static/public/favicon.ico">
     <link rel="stylesheet" href="../../../static/css/patienthome.css">
-    <title>Patient Home</title>
+    <title>Reports</title>
 </head>
 <body>
     <div class="header">
@@ -49,7 +49,7 @@
                     <div class="date_time_doctor" style="margin-bottom: 0.5vw;">
                         Patient ID: {{report.patient.user.username}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br><br>Patient Name: {{report.patient.first_name}} {{report.patient.last_name}} <br><br> Date: {{report.date}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Disease Name: {{report.disease}}
                     </div>
-                    <button>Get Report</button>
+                    <button>Download Report</button>
                 </div>
                 {% endfor %}
             </div>
