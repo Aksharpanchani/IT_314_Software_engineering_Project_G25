@@ -165,6 +165,9 @@
     overflow-y: scroll;
     background: #ebdddd4c;
 }
+.Scrollable_Content button{
+    cursor: pointer;
+}
 .Scrollable_Content::-webkit-scrollbar{ 
     width: 0.66vw;
 }
@@ -200,8 +203,7 @@
   margin: auto;
     width: 36.8vw;
     height: 2.8vw;
-    margin-top: 1vw;
-    margin-bottom: 1vw;
+    
     border-radius: 1vw;
     background: #FFF;
     border: none;
@@ -209,4 +211,8 @@
     font-family: Montserrat Alternates;
     font-size: 1.6vw;
     font-weight: 500;
+}
+.Report_Box a{
+  margin-top: 1vw;
+  margin-bottom: 1vw;
 }

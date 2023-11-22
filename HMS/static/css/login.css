@@ -156,6 +156,23 @@ button{
     background: #79A2FF;
     filter: blur(200px);
 }
+.rightlogin a{
+    font-size: 1.2vw;
+    font-weight: 500;
+    color: black;
+    display: flex;
+    width: 12.5vw;
+    justify-content: center;
+    align-items: center;
+    height: 3vw;
+    text-decoration: none;
+    margin-top: 1.5vw;
+    border-radius: 15px;
+    background-color: #79a2ff;
+}
+.rightlogin a:hover{
+    background-color: #d2ddf7;
+}
 
 @media screen and (max-width: 1100px) {
     .rectangle-5 {
@@ -216,6 +233,7 @@ button{
         width: 100%; /* Make the submit button full-width */
     }
 }
+
 
 /* Responsive styles for phones */
 @media screen and (max-width: 800px) {
