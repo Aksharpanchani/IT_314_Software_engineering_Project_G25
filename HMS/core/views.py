@@ -513,9 +513,28 @@ def diabetes_pdf(request):
         
         # writer.writerow(['age','height','weight','ap_hi','ap_lo','cholestrol',
         #              'gluc','smoke','active','cardio'])
+        if report.HighBP=='No':
+            hibp=0
+        else:
+            hibp=1
+
+        if report.HighChol=='No':
+            hichol=0
+        else:  
+            hichol=1
+        
+        if report.Stroke=='No':
+            stroke=0
+        else:
+            stroke=1
+        
+        if report.HeartDiseaseAttack=='No':
+            heartattack=0
+        else:
+            heartattack=1
         
         
-        writer.writerow([report.HighBP,report.HighChol,report.BMI,report.Stroke,report.HeartDiseaseAttack,
+        writer.writerow([hibp,hichol,report.BMI,stroke,heartattack,
                         report.GenHlth,report.Age,report.DoctorConclusion])
 
         File.close()
