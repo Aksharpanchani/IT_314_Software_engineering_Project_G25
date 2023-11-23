@@ -18,6 +18,7 @@ function validateForm(){
     var year = form1["birthdate"];  
     var birthyear = new Date(year.value).getFullYear();  
     var file = form1["certificate"];
+    console.log(number);
 
     // Trim the input values to remove leading and trailing spaces
     if (firstName.value.trim().indexOf(" ") !== -1 || lastName.value.trim().indexOf(" ") !== -1) {
