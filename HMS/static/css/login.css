@@ -77,6 +77,16 @@
     width: 455px;
     height: 486px;
 }
+
+.error{
+    font-size:2vw;
+    color: red;
+    font-family:"Montserrat Alternates" ;
+    margin:auto;
+    font-weight: bolder;
+}
+
+
 .rightlogin form{
     display: flex;
     flex-direction: column;
