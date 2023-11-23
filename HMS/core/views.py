@@ -206,8 +206,9 @@ def predictor_diab(request):
 
     return render(request, 'disease/diabetes/form_diab.html', {'DoctorProfile':doctor_profile})
 
+diab_model = load('./SavedModels/diabetes_model.joblib')
 def formInfo_diab(request):
-    diab_model = load('./SavedModels/diabetes_model.joblib')
+    
     
     doctor_profile=DoctorProfile.objects.get(user=request.user)
     PatientID = request.GET['PatientID']
@@ -314,9 +315,9 @@ def formInfo_diab(request):
 def predictor_heart(request):
     doctor_profile=DoctorProfile.objects.get(user=request.user)
     return render(request,'disease/heart/form_heart.html',{'DoctorProfile':doctor_profile})
-
+heart_model = load('./SavedModels/heart_model.joblib')
 def formInfo_heart(request):
-    heart_model = load('./SavedModels/heart_model.joblib')
+    
 
     doctor_profile=DoctorProfile.objects.get(user=request.user)
     PatientID = request.GET['PatientID']
