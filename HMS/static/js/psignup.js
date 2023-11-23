@@ -7,6 +7,8 @@ function validateForm(){
     var cpassword = form1["pass2"];
     var height = form1["height"];
     var number = form1["number"];
+
+
     var year = form1["birthdate"];  
     var birthyear = new Date(year.value).getFullYear();
     // console.log(number.value);
@@ -19,7 +21,7 @@ function validateForm(){
         lastName.value = "";
         return false;
     }
-    const validRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    let validRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if(!email.value.match(validRegex)){
         alert("Invalid Email.");
         email.value = "";
@@ -31,14 +33,16 @@ function validateForm(){
         cpassword.value = "";
         return false;
     }
-    // let regex =  /^(?=.[a-z])(?=.[A-Z])(?=.\d)(?=.[@.#$!%?&])[A-Za-z\d@.#$!%?&]{8,15}$/;
-    const regex = /^(?=.\d)(?=.[a-z])(?=.*[A-Z]).{6,20}$/;
-    console.log(password.value.match(regex));
-    if(!password.value.match(regex)){
-        alert("Invalid Password");
+    let regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@.#$!*%?&])[A-Za-z\d@.#$*!%?&]{8,15}$/;
+    //console.log(password.value, regex.test(password.value));
+    if(!regex.test(password.value)){
+        alert("Your Password does not contain one of the following:- \n1.At least one lowercase alphabet \n2.At least one uppercase alphabet \n3.At least one Numeric digit \n4.At least one special character \n5.The total length must be in the range [8-15]");
         password.value = "";
         return false;
     }
+
+
+
     if(height.value<30 || height.value>300){
         alert("Invalid Height.");
         height.value = "";
@@ -49,7 +53,7 @@ function validateForm(){
         number.value = "";
         return false;
     }
-    if(birthyear>2010)
+    if(birthyear>2015)
     {
         alert("Invalid Date of birthdate");
         year.value="";
