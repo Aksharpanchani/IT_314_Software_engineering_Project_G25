@@ -32,13 +32,13 @@ function validateForm(){
         return false;
     }
     // let regex =  /^(?=.[a-z])(?=.[A-Z])(?=.\d)(?=.[@.#$!%?&])[A-Za-z\d@.#$!%?&]{8,15}$/;
-    const regex = /^(?=.\d)(?=.[a-z])(?=.*[A-Z]).{6,20}$/;
-    console.log(password.value.match(regex));
-    if(!password.value.match(regex)){
-        alert("Invalid Password");
-        password.value = "";
-        return false;
-    }
+    // const regex = /^(?=.\d)(?=.[a-z])(?=.*[A-Z]).{6,20}$/;
+    // console.log(password.value.match(regex));
+    // if(!password.value.match(regex)){
+    //     alert("Invalid Password");
+    //     password.value = "";
+    //     return false;
+    // }
     if(height.value<30 || height.value>300){
         alert("Invalid Height.");
         height.value = "";
