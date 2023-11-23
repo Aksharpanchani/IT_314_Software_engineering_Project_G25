@@ -59,6 +59,12 @@
             <!-- ----------------------- Scrollable Part --------------------------- -->
             <!-- RightPart -->
 
+            <div class="error_with_right_part">
+                
+                {% for message in messages %}
+                    <h5 class="error">{{ message }}</h5>
+                {% endfor %}
+
 
             <div class="RightPart">
                 <div class="Param">
@@ -142,6 +148,7 @@
                 </div>
 
             </div>
+        </div>
         </div>
         </div>
     </form>

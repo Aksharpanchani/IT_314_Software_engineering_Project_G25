@@ -99,10 +99,22 @@ body{
 
 /*   ---------------------Left Part----------------------       */
 
+.error{
+    font-size:2vw;
+    color: red;
+    font-family:"Montserrat Alternates" ;
+    margin:auto;
+    font-weight: bolder;
+}
+
+.error_with_right_part{
+    display:flex;
+    flex-direction: column;
+}
 
 .Container{
     display: flex;
-    margin-top: 3vw;
+    /* margin-top: 3vw; */
     margin-bottom: 3vw;
 }
 .LeftPart{
