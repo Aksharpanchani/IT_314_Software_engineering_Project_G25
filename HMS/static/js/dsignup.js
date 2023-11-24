@@ -7,6 +7,7 @@ function updateFileName(input) {
     }
     document.getElementById('file-label').innerText = fileName;
   }
+
 function validateForm(){
     var form1=document.forms["form1"]
     var firstName = form1["first_name"];
@@ -39,16 +40,12 @@ function validateForm(){
         cpassword.value = "";
         return false;
     }
-
-    let regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@.#$!*%?&])[A-Za-z\d@.#$*!%?&]{8,15}$/;
-    //console.log(password.value, regex.test(password.value));
-    if(!regex.test(password.value)){
+    const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@.#$!*%?&])[A-Za-z\d@.#$*!%?&]{8,15}$/;
+    if(!password.value.match(regex)){
         alert("Your Password does not contain one of the following:- \n1.At least one lowercase alphabet \n2.At least one uppercase alphabet \n3.At least one Numeric digit \n4.At least one special character \n5.The total length must be in the range [8-15]");
         password.value = "";
         return false;
     }
-
-
     if(number.value.length!=10){
         alert("Invalid Number.");
         number.value = "";
@@ -64,7 +61,5 @@ function validateForm(){
         alert("File too big!!");
         return false;
     }
-
-
     return true;
 }
