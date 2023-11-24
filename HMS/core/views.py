@@ -158,11 +158,9 @@ def login(request):
     else:
         return render(request, 'login.html')
 
-@login_required(login_url='login')
 def diabetesinfo(request):
     return render(request,'disease/diabetes/diabetesinfo.html')
 
-@login_required(login_url='login')
 def heartinfo(request):
     return render(request,'disease/heart/heartinfo.html')
 
@@ -172,9 +170,14 @@ def heartinfo(request):
 
 @login_required(login_url='login')
 def patienthome(request):
-    patprof = PatientProfile.objects.get(user=request.user)
-    reports = Report.objects.filter(patient=patprof)
-    return render(request, 'users/patient/patienthome.html', {'patientprofile': patprof, 'reports': reports})
+    try:
+        patprof = PatientProfile.objects.get(user=request.user)
+        reports = Report.objects.filter(patient=patprof)
+        return render(request, 'users/patient/patienthome.html', {'patientprofile': patprof, 'reports': reports})
+    except PatientProfile.DoesNotExist:
+        auth.logout(request)
+        return redirect('login')
+
 
 @login_required(login_url='login')
 def logout(request):
@@ -183,9 +186,12 @@ def logout(request):
 
 @login_required(login_url='login')
 def doctorhome(request):
-    doctor_profile = DoctorProfile.objects.get(user=request.user)
-    return render(request, 'users/doctor/doctorhome.html', {'DoctorProfile': doctor_profile})
-
+    try:
+        doctor_profile = DoctorProfile.objects.get(user=request.user)
+        return render(request, 'users/doctor/doctorhome.html', {'DoctorProfile': doctor_profile})
+    except DoctorProfile.DoesNotExist:
+        auth.logout(request)
+        return redirect('login')
 
 
 
@@ -204,179 +210,192 @@ from joblib import load
 #Views of Diabetes
 @login_required(login_url='login')
 def predictor_diab(request):
-    doctor_profile=DoctorProfile.objects.get(user=request.user)
+    try:
+        doctor_profile = DoctorProfile.objects.get(user=request.user)
+        return render(request, 'disease/diabetes/form_diab.html', {'DoctorProfile': doctor_profile})
+    except DoctorProfile.DoesNotExist:
+        auth.logout(request)
+        return redirect('login')
 
-    return render(request, 'disease/diabetes/form_diab.html', {'DoctorProfile':doctor_profile})
 
 diab_model = load('./SavedModels/diabetes_model.joblib')
 @login_required(login_url='login')
 def formInfo_diab(request):
     
-    
-    doctor_profile=DoctorProfile.objects.get(user=request.user)
-    PatientID = request.GET['PatientID']
-    patientcheck = User.objects.filter(username=PatientID).count()
-    if patientcheck == 0:
-        messages.info(request, 'No such patient exists')
-        return redirect('predictdiabetes')
-    patient_profile = PatientProfile.objects.get(user=User.objects.get(username=PatientID))
-    DiseaseName = 'Diabetes'
+    try:
+        doctor_profile=DoctorProfile.objects.get(user=request.user)
+        PatientID = request.GET['PatientID']
+        patientcheck = User.objects.filter(username=PatientID).count()
+        if patientcheck == 0:
+            messages.info(request, 'No such patient exists')
+            return redirect('predictdiabetes')
+        patient_profile = PatientProfile.objects.get(user=User.objects.get(username=PatientID))
+        DiseaseName = 'Diabetes'
 
-    HighBP = request.GET['HighBP']
-    if HighBP=='No':
-        HighBPML=0
-    else:
-        HighBPML=1
-    
-    HighChol = request.GET['HighChol']
+        HighBP = request.GET['HighBP']
+        if HighBP=='No':
+            HighBPML=0
+        else:
+            HighBPML=1
 
-
-    if HighChol=='No':
-        HighCholML=0
-    else:
-        HighCholML=1
-
-    BMI = request.GET['BMI']
-
-    Stroke = request.GET['Stroke']
-    if Stroke=='No':
-        StrokeML=0
-    else:
-        StrokeML=1
+        HighChol = request.GET['HighChol']
 
 
-    HeartDiseaseorAttack = request.GET['HeartDiseaseorAttack']
-    if HeartDiseaseorAttack=='No':
-        HeartDiseaseorAttackML=0
-    else:
-        HeartDiseaseorAttackML=1
+        if HighChol=='No':
+            HighCholML=0
+        else:
+            HighCholML=1
+
+        BMI = request.GET['BMI']
+
+        Stroke = request.GET['Stroke']
+        if Stroke=='No':
+            StrokeML=0
+        else:
+            StrokeML=1
 
 
-    GenHlth = request.GET['GenHlth']
-    switcher = {
-        "1":1,
-        "2":2,
-        "3":3,
-        "4":4,
-        "5":5,
-    }
-    GenHlthML = switcher.get(GenHlth)
-    Age = request.GET['Age']
-    Age= int(Age)
-
-    if Age<=24:
-        AgeML=1
-    elif Age<=29:
-        AgeML=2
-    elif Age<=34:
-        AgeML=3
-    elif Age<=39:
-        AgeML=4
-    elif Age<=44:
-        AgeML=5
-    elif Age<=49:
-        AgeML=6
-    elif Age<=54:
-        AgeML=7
-    elif Age<=59:
-        AgeML=8
-    elif Age<=64:
-        AgeML=9
-    elif Age<=69:
-        AgeML=10
-    elif Age<=74:
-        AgeML=11
-    elif Age<=79:
-        AgeML=12
-    else:
-        AgeML=13
-    
-    
-
-    #print(HighBP,HighChol, HeartDiseaseorAttack,GenHlth,Age,Stroke,BMI,PatientID,DiseaseName)
+        HeartDiseaseorAttack = request.GET['HeartDiseaseorAttack']
+        if HeartDiseaseorAttack=='No':
+            HeartDiseaseorAttackML=0
+        else:
+            HeartDiseaseorAttackML=1
 
 
-    y_pred = diab_model.predict_proba([[HighBPML,HighCholML,BMI,StrokeML,HeartDiseaseorAttackML,GenHlthML,AgeML]])
-    y_pred = y_pred*100
+        GenHlth = request.GET['GenHlth']
+        switcher = {
+            "1":1,
+            "2":2,
+            "3":3,
+            "4":4,
+            "5":5,
+        }
+        GenHlthML = switcher.get(GenHlth)
+        Age = request.GET['Age']
+        Age= int(Age)
 
-    y_out= round(y_pred[0][1],2)
+        if Age<=24:
+            AgeML=1
+        elif Age<=29:
+            AgeML=2
+        elif Age<=34:
+            AgeML=3
+        elif Age<=39:
+            AgeML=4
+        elif Age<=44:
+            AgeML=5
+        elif Age<=49:
+            AgeML=6
+        elif Age<=54:
+            AgeML=7
+        elif Age<=59:
+            AgeML=8
+        elif Age<=64:
+            AgeML=9
+        elif Age<=69:
+            AgeML=10
+        elif Age<=74:
+            AgeML=11
+        elif Age<=79:
+            AgeML=12
+        else:
+            AgeML=13
 
-    #Save model here
-    new_report = Report.objects.create(doctor=doctor_profile, patient=patient_profile, disease=DiseaseName, HighBP=HighBP,
-                                       HighChol=HighChol, BMI=BMI, Stroke=Stroke, HeartDiseaseAttack=HeartDiseaseorAttack,
-                                       GenHlth=GenHlthML, Age=Age, Result=y_out)
-    report_id = new_report.id
 
-    #df_report = [[HighBP,HighChol,BMI,Stroke,HeartDiseaseorAttack,GenHlth,Age]]
 
-    
-    return render(request,'disease/diabetes/result_diab.html',{'data':y_out, 'DoctorProfile':doctor_profile,'PatientID':PatientID ,'DiseaseName':DiseaseName,'HighBP':HighBP,'HighChol':HighChol ,'BMI':BMI ,
-                                              'Stroke':Stroke,'HeartDiseaseorAttack':HeartDiseaseorAttack,'GenHlth': GenHlth,'Age':Age, 'report_id':report_id})
+        #print(HighBP,HighChol, HeartDiseaseorAttack,GenHlth,Age,Stroke,BMI,PatientID,DiseaseName)
 
+
+        y_pred = diab_model.predict_proba([[HighBPML,HighCholML,BMI,StrokeML,HeartDiseaseorAttackML,GenHlthML,AgeML]])
+        y_pred = y_pred*100
+
+        y_out= round(y_pred[0][1],2)
+
+        #Save model here
+        new_report = Report.objects.create(doctor=doctor_profile, patient=patient_profile, disease=DiseaseName, HighBP=HighBP,
+                                           HighChol=HighChol, BMI=BMI, Stroke=Stroke, HeartDiseaseAttack=HeartDiseaseorAttack,
+                                           GenHlth=GenHlthML, Age=Age, Result=y_out)
+        report_id = new_report.id
+
+        #df_report = [[HighBP,HighChol,BMI,Stroke,HeartDiseaseorAttack,GenHlth,Age]]
+
+
+        return render(request,'disease/diabetes/result_diab.html',{'data':y_out, 'DoctorProfile':doctor_profile,'PatientID':PatientID ,'DiseaseName':DiseaseName,'HighBP':HighBP,'HighChol':HighChol ,'BMI':BMI ,
+                                                  'Stroke':Stroke,'HeartDiseaseorAttack':HeartDiseaseorAttack,'GenHlth': GenHlth,'Age':Age, 'report_id':report_id})
+    except DoctorProfile.DoesNotExist:
+        auth.logout(request)
+        return redirect('login')
 
 #Views of Heart Disease
 @login_required(login_url='login')
 def predictor_heart(request):
-    doctor_profile=DoctorProfile.objects.get(user=request.user)
-    return render(request,'disease/heart/form_heart.html',{'DoctorProfile':doctor_profile})
+    try:
+        doctor_profile = DoctorProfile.objects.get(user=request.user)
+        return render(request,'disease/heart/form_heart.html',{'DoctorProfile':doctor_profile})
+    except DoctorProfile.DoesNotExist:
+        auth.logout(request)
+        return redirect('login')
+
 heart_model = load('./SavedModels/heart_model.joblib')
 
 @login_required(login_url='login')
 def formInfo_heart(request):
     
+    try:
+        doctor_profile=DoctorProfile.objects.get(user=request.user)
+        PatientID = request.GET['PatientID']
 
-    doctor_profile=DoctorProfile.objects.get(user=request.user)
-    PatientID = request.GET['PatientID']
+        patientcheck = User.objects.filter(username=PatientID).count()
+        if patientcheck == 0:
+            messages.info(request, 'No such patient exists')
+            return redirect('predictheart')
+        patient_profile = PatientProfile.objects.get(user=User.objects.get(username=PatientID))
 
-    patientcheck = User.objects.filter(username=PatientID).count()
-    if patientcheck == 0:
-        messages.info(request, 'No such patient exists')
-        return redirect('predictheart')
-    patient_profile = PatientProfile.objects.get(user=User.objects.get(username=PatientID))
+        DiseaseName = "Cardio"
+        Age = request.GET['Age']
+        Age= int(Age)
+        Height = request.GET['Height']
+        Height= int(Height)
+        Weight = request.GET['Weight']
+        Weight = int(Weight)
+        SystolicBP = request.GET['SystolicBP']  #aka ap_hi in ML model
+        SystolicBP= int(SystolicBP)
+        DiastolicBP = request.GET['DiastolicBP'] #aka ap_lo in ML model
+        DiastolicBP= int(DiastolicBP)
+        CholestrolLevel = request.GET['CholestrolLevel']
+        CholestrolLevel= int(CholestrolLevel)
+        GlucoseLevel = request.GET['GlucoseLevel']
+        GlucoseLevel= int(GlucoseLevel)
+        Smoking = request.GET['Smoking']
+        PhysicalActivity = request.GET['PhysicalActivity'] #aka active in ML model
 
-    DiseaseName = "Cardio"
-    Age = request.GET['Age']
-    Age= int(Age)
-    Height = request.GET['Height']
-    Height= int(Height)
-    Weight = request.GET['Weight']
-    Weight = int(Weight)
-    SystolicBP = request.GET['SystolicBP']  #aka ap_hi in ML model
-    SystolicBP= int(SystolicBP)
-    DiastolicBP = request.GET['DiastolicBP'] #aka ap_lo in ML model
-    DiastolicBP= int(DiastolicBP)
-    CholestrolLevel = request.GET['CholestrolLevel']
-    CholestrolLevel= int(CholestrolLevel)
-    GlucoseLevel = request.GET['GlucoseLevel']
-    GlucoseLevel= int(GlucoseLevel)
-    Smoking = request.GET['Smoking']
-    PhysicalActivity = request.GET['PhysicalActivity'] #aka active in ML model
+        if Smoking=='Yes':
+            SmokingML = 1
+        else:
+            SmokingML=0
 
-    if Smoking=='Yes':
-        SmokingML = 1
-    else:
-        SmokingML=0
+        if PhysicalActivity=='Yes':
+            PhysicalActivityML = 1
+        else:
+            PhysicalActivityML=0
 
-    if PhysicalActivity=='Yes':
-        PhysicalActivityML = 1
-    else:
-        PhysicalActivityML=0
+        y_pred = heart_model.predict_proba([[Age,Height,Weight,SystolicBP,DiastolicBP,CholestrolLevel,GlucoseLevel,SmokingML,PhysicalActivityML]])
+        #y_pred = heart_model.predict_proba([[2,168,62,110,80,1,1,1,1]])
+        y_pred = y_pred*100
+        y_out = round(y_pred[0][1], 2)
 
-    y_pred = heart_model.predict_proba([[Age,Height,Weight,SystolicBP,DiastolicBP,CholestrolLevel,GlucoseLevel,SmokingML,PhysicalActivityML]])
-    #y_pred = heart_model.predict_proba([[2,168,62,110,80,1,1,1,1]])
-    y_pred = y_pred*100
-    y_out = round(y_pred[0][1], 2)
+        new_report = Report.objects.create(doctor=doctor_profile, patient=patient_profile, disease=DiseaseName,
+                                           Height=Height, Weight=Weight, SystolicBP=SystolicBP,
+                                           DiastolicBP=DiastolicBP, CholestrolLevel=CholestrolLevel, GlucoseLevel=GlucoseLevel,
+                                           Smoking=Smoking, PhysicalActivity=PhysicalActivity,
+                                           Age=Age, Result=y_out)
 
-    new_report = Report.objects.create(doctor=doctor_profile, patient=patient_profile, disease=DiseaseName,
-                                       Height=Height, Weight=Weight, SystolicBP=SystolicBP,
-                                       DiastolicBP=DiastolicBP, CholestrolLevel=CholestrolLevel, GlucoseLevel=GlucoseLevel,
-                                       Smoking=Smoking, PhysicalActivity=PhysicalActivity,
-                                       Age=Age, Result=y_out)
-
-    return render(request,'disease/heart/result_heart.html',{'data':y_out,'PhysicalActivity': PhysicalActivity,'Smoking': Smoking ,'GlucoseLevel': GlucoseLevel ,
-                                               'CholestrolLevel': CholestrolLevel ,'DiastolicBP':DiastolicBP ,'SystolicBP': SystolicBP,'Weight':Weight ,'Height':Height
-                                                 , 'Age':Age ,'DiseaseName': DiseaseName ,'PatientID': PatientID,'DoctorProfile':doctor_profile})
-
+        return render(request,'disease/heart/result_heart.html',{'data':y_out,'PhysicalActivity': PhysicalActivity,'Smoking': Smoking ,'GlucoseLevel': GlucoseLevel ,
+                                                   'CholestrolLevel': CholestrolLevel ,'DiastolicBP':DiastolicBP ,'SystolicBP': SystolicBP,'Weight':Weight ,'Height':Height
+                                                     , 'Age':Age ,'DiseaseName': DiseaseName ,'PatientID': PatientID,'DoctorProfile':doctor_profile})
+    except DoctorProfile.DoesNotExist:
+        auth.logout(request)
+        return redirect('login')
 
 
 
@@ -396,78 +415,85 @@ def homepage2(request):
 
 @login_required(login_url='login')
 def doctorreport(request):
-    docprof = DoctorProfile.objects.get(user=request.user)
-    reports = Report.objects.filter(doctor=docprof)
-    return render(request, 'users/doctor/doctorreport.html', {'doctorprofile': docprof, 'reports': reports})
-
+    try:
+        docprof = DoctorProfile.objects.get(user=request.user)
+        reports = Report.objects.filter(doctor=docprof)
+        return render(request, 'users/doctor/doctorreport.html', {'doctorprofile': docprof, 'reports': reports})
+    except DoctorProfile.DoesNotExist:
+        auth.logout(request)
+        return redirect('login')
 @login_required(login_url='login')
 def downloadreport(request):
-    report_id = request.GET.get('report_id')
-    report_data = Report.objects.get(id=report_id)
+    try:
+        report_id = request.GET.get('report_id')
+        report_data = Report.objects.get(id=report_id)
 
-    buf = io.BytesIO()
-    c = canvas.Canvas(buf, pagesize=letter, bottomup=0)
-    textob = c.beginText()
-    textob.setTextOrigin(inch, inch)
-    textob.setFont("Helvetica", 14)
+        buf = io.BytesIO()
+        c = canvas.Canvas(buf, pagesize=letter, bottomup=0)
+        textob = c.beginText()
+        textob.setTextOrigin(inch, inch)
+        textob.setFont("Helvetica", 14)
 
-    # List of lines
-    conclusion = ""
-    if report_data.DoctorConclusion == 1:
-        conclusion = "Positive"
-    else:
-        conclusion = "Negative"
+        # List of lines
+        conclusion = ""
+        if report_data.DoctorConclusion == 1:
+            conclusion = "Positive"
+        else:
+            conclusion = "Negative"
 
-    if report_data.disease == "Diabetes":
+        if report_data.disease == "Diabetes":
 
-        lines = [
-            "Doctor : " + report_data.doctor.first_name + " " + report_data.doctor.first_name,
-            "Disease : " + report_data.disease,
-            "Patient : " + report_data.patient.first_name + " " + report_data.patient.last_name,
-            "Age :" + str(report_data.Age),
-            "Blood Pressure Level: " + str(report_data.HighBP),
-            "Cholestrol Level : " + str(report_data.HighChol),
-            "BMI (Body Mass Index) : " + str(report_data.BMI),
-            "Stroke : " + str(report_data.Stroke),
-            "Symptoms of Heart Attack : " + str(report_data.HeartDiseaseAttack),
-            "General Health (Out of 5) : " + str(report_data.GenHlth),
-            "Diabetes : " + conclusion,
-            "Prescription : " + report_data.DoctorPrescription,
-            "General Advice : " + report_data.DoctorGeneralAdvice
-        ]
+            lines = [
+                "Doctor : " + report_data.doctor.first_name + " " + report_data.doctor.first_name,
+                "Disease : " + report_data.disease,
+                "Patient : " + report_data.patient.first_name + " " + report_data.patient.last_name,
+                "Age :" + str(report_data.Age),
+                "Blood Pressure Level: " + str(report_data.HighBP),
+                "Cholestrol Level : " + str(report_data.HighChol),
+                "BMI (Body Mass Index) : " + str(report_data.BMI),
+                "Stroke : " + str(report_data.Stroke),
+                "Symptoms of Heart Attack : " + str(report_data.HeartDiseaseAttack),
+                "General Health (Out of 5) : " + str(report_data.GenHlth),
+                "Diabetes : " + conclusion,
+                "Prescription : " + report_data.DoctorPrescription,
+                "General Advice : " + report_data.DoctorGeneralAdvice
+            ]
 
-    else:
+        else:
 
-        lines = [
-            "Doctor : " + report_data.doctor.first_name + " " + report_data.doctor.first_name,
-            "Disease : " + report_data.disease,
-            "Patient : " + report_data.patient.first_name + " " + report_data.patient.last_name,
-            "Age :" + str(report_data.Age),
-            "PhysicalActivity :" + report_data.PhysicalActivity,
-            "Smoking: " + report_data.Smoking,
-            "GlucoseLevel :" + str(report_data.GlucoseLevel),
-            "CholestrolLevel :" + str(report_data.CholestrolLevel),
-            "DiastolicBP :" + str(report_data.DiastolicBP),
-            "SystolicBP :" + str(report_data.SystolicBP),
-            "Weight :" + str(report_data.Weight),
-            "Height :" + str(report_data.Height),
-            "HeartDisease : " + conclusion,
-            "Prescription : " + report_data.DoctorPrescription,
-            "General Advice : " + report_data.DoctorGeneralAdvice
-        ]
+            lines = [
+                "Doctor : " + report_data.doctor.first_name + " " + report_data.doctor.first_name,
+                "Disease : " + report_data.disease,
+                "Patient : " + report_data.patient.first_name + " " + report_data.patient.last_name,
+                "Age :" + str(report_data.Age),
+                "PhysicalActivity :" + report_data.PhysicalActivity,
+                "Smoking: " + report_data.Smoking,
+                "GlucoseLevel :" + str(report_data.GlucoseLevel),
+                "CholestrolLevel :" + str(report_data.CholestrolLevel),
+                "DiastolicBP :" + str(report_data.DiastolicBP),
+                "SystolicBP :" + str(report_data.SystolicBP),
+                "Weight :" + str(report_data.Weight),
+                "Height :" + str(report_data.Height),
+                "HeartDisease : " + conclusion,
+                "Prescription : " + report_data.DoctorPrescription,
+                "General Advice : " + report_data.DoctorGeneralAdvice
+            ]
 
-    # Loop
+        # Loop
 
-    for line in lines:
-        textob.textLine(line)
+        for line in lines:
+            textob.textLine(line)
 
-    c.drawText(textob)
-    c.showPage()
-    c.save()
-    buf.seek(0)
+        c.drawText(textob)
+        c.showPage()
+        c.save()
+        buf.seek(0)
 
-    reportName = report_data.patient.first_name + " " + report_data.disease + " " + "Report.pdf"
-    return FileResponse(buf, as_attachment=True, filename=reportName)
+        reportName = report_data.patient.first_name + " " + report_data.disease + " " + "Report.pdf"
+        return FileResponse(buf, as_attachment=True, filename=reportName)
+    except Report.DoesNotExist:
+        auth.logout(request)
+        return redirect('login')
 
 @login_required(login_url='login')
 def diabetes_pdf(request):
