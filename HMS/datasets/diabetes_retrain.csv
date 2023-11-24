@@ -70691,7 +70691,4 @@ HighBP,HighChol,BMI,Stroke,HeartDiseaseorAttack,GenHlth,Age,Diabetes_binary
 1,1,25,0,1,5,13,1
 1,1,18,0,0,4,11,1
 1,1,25,0,1,2,9,1
-Yes,No,28,Yes,No,4,88,0
-Yes,Yes,21,No,No,2,45,0
-Yes,Yes,21,No,No,2,45,1
-No,Yes,25,Yes,No,3,69,1
+

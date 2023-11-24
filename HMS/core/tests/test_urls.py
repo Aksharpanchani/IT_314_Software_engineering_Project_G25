@@ -31,13 +31,13 @@
 #         response = self.client.get(reverse('login'))
 #         self.assertEqual(response.status_code, 200)
 
-#     def test_diabetesinfo_url(self):
-#         response = self.client.get(reverse('diabetesinfo'))
-#         self.assertEqual(response.status_code, 200)
+    def test_diabetesinfo_url(self):
+        response = self.client.get(reverse('diabetesinfo'))
+        self.assertEqual(response.status_code, 200)
 
-#     def test_heartinfo_url(self):
-#         response = self.client.get(reverse('heartinfo'))
-#         self.assertEqual(response.status_code, 200)
+    def test_heartinfo_url(self):
+        response = self.client.get(reverse('heartinfo'))
+        self.assertEqual(response.status_code, 200)
 
 #     def test_logout_url(self):
 #         response = self.client.get(reverse('logout'))
@@ -68,31 +68,31 @@
 #         response = self.client.get(reverse('predictdiabetes'))
 #         self.assertEqual(response.status_code, 302)  # Assuming a redirect for unauthenticated users
 
-#     # def test_formInfo_diab_url(self):
-#     #     response = self.client.get(reverse('resultdiabetes'))
-#     #     self.assertEqual(response.status_code, 302)  # Assuming a redirect for unauthenticated users
+    # def test_formInfo_diab_url(self):
+    #     response = self.client.get(reverse('resultdiabetes'))
+    #     self.assertEqual(response.status_code, 302)  # Assuming a redirect for unauthenticated users
 
-#     # def test_predictor_heart_url(self):
-#     #     response = self.client.get(reverse('predictheart'))
-#     #     self.assertEqual(response.status_code, 302)  # Assuming a redirect for unauthenticated users
+    # def test_predictor_heart_url(self):
+    #     response = self.client.get(reverse('predictheart'))
+    #     self.assertEqual(response.status_code, 302)  # Assuming a redirect for unauthenticated users
 
-#     # def test_formInfo_heart_url(self):
-#     #     response = self.client.get(reverse('resultheart'))
-#     #     self.assertEqual(response.status_code, 302)  # Assuming a redirect for unauthenticated users
+    # def test_formInfo_heart_url(self):
+    #     response = self.client.get(reverse('resultheart'))
+    #     self.assertEqual(response.status_code, 302)  # Assuming a redirect for unauthenticated users
 
 # # ------NOW OK---
 #     def test_doctorreport_url(self):
 #         response = self.client.get(reverse('doctorreport'))
 #         self.assertEqual(response.status_code, 302)  # Assuming a redirect for unauthenticated users
 
-# #-----eRROR
-#     # def test_downloadreport_url(self):
-#     #     response = self.client.get(reverse('downloadreport'))
-#     #     self.assertEqual(response.status_code, 302)  # Assuming a redirect for unauthenticated users
-# #--ERROR
-#     # def test_homepage2_url(self):
-#     #     response = self.client.get(reverse('homepage2'))
-#     #     self.assertEqual(response.status_code, 302)  # Assuming a redirect for unauthenticated users
+#-----eRROR
+    # def test_downloadreport_url(self):
+    #     response = self.client.get(reverse('downloadreport'))
+    #     self.assertEqual(response.status_code, 302)  # Assuming a redirect for unauthenticated users
+#--ERROR
+    # def test_homepage2_url(self):
+    #     response = self.client.get(reverse('homepage2'))
+    #     self.assertEqual(response.status_code, 302)  # Assuming a redirect for unauthenticated users
 
 #     # Add more test methods for other URLs as needed
 

@@ -64,6 +64,11 @@ body{
   padding-left: 5vw;
   font-weight: 600;
   color: #170808;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+.nav a:hover{
+  color:#0067FF;
+  font-size: 1.5vw;
 }
 .diagnostic{
   display: flex;

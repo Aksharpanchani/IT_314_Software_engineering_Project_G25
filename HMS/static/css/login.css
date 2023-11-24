@@ -39,7 +39,12 @@
     color: #170808;
     white-space: nowrap; 
     padding: 10px 15px; 
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
+.nav a:hover{
+    color:#0067FF;
+    font-size: 18px;
+  }
 .login{
     display: flex;
     position: relative;
@@ -72,6 +77,16 @@
     width: 455px;
     height: 486px;
 }
+
+.error{
+    font-size:2vw;
+    color: red;
+    font-family:"Montserrat Alternates" ;
+    margin:auto;
+    font-weight: bolder;
+}
+
+
 .rightlogin form{
     display: flex;
     flex-direction: column;

@@ -54,8 +54,12 @@ body {
     font-weight: 600;
     color: #170808;
     padding: 10px 15px;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
-
+.nav a:hover{
+    color:#0067FF;
+    font-size: 1.08rem;
+  }
 .ellipse14 {
     display: flex;
     width: 100vw;

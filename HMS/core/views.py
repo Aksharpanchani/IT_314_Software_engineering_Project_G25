@@ -158,10 +158,11 @@ def login(request):
     else:
         return render(request, 'login.html')
 
-
+@login_required(login_url='login')
 def diabetesinfo(request):
     return render(request,'disease/diabetes/diabetesinfo.html')
 
+@login_required(login_url='login')
 def heartinfo(request):
     return render(request,'disease/heart/heartinfo.html')
 
@@ -201,12 +202,14 @@ from joblib import load
 
 
 #Views of Diabetes
+@login_required(login_url='login')
 def predictor_diab(request):
     doctor_profile=DoctorProfile.objects.get(user=request.user)
 
     return render(request, 'disease/diabetes/form_diab.html', {'DoctorProfile':doctor_profile})
 
 diab_model = load('./SavedModels/diabetes_model.joblib')
+@login_required(login_url='login')
 def formInfo_diab(request):
     
     
@@ -312,10 +315,13 @@ def formInfo_diab(request):
 
 
 #Views of Heart Disease
+@login_required(login_url='login')
 def predictor_heart(request):
     doctor_profile=DoctorProfile.objects.get(user=request.user)
     return render(request,'disease/heart/form_heart.html',{'DoctorProfile':doctor_profile})
 heart_model = load('./SavedModels/heart_model.joblib')
+
+@login_required(login_url='login')
 def formInfo_heart(request):
     
 
@@ -394,6 +400,7 @@ def doctorreport(request):
     reports = Report.objects.filter(doctor=docprof)
     return render(request, 'users/doctor/doctorreport.html', {'doctorprofile': docprof, 'reports': reports})
 
+@login_required(login_url='login')
 def downloadreport(request):
     report_id = request.GET.get('report_id')
     report_data = Report.objects.get(id=report_id)
@@ -462,7 +469,7 @@ def downloadreport(request):
     reportName = report_data.patient.first_name + " " + report_data.disease + " " + "Report.pdf"
     return FileResponse(buf, as_attachment=True, filename=reportName)
 
-
+@login_required(login_url='login')
 def diabetes_pdf(request):
 
     #Fetching data from form
@@ -506,9 +513,28 @@ def diabetes_pdf(request):
         
         # writer.writerow(['age','height','weight','ap_hi','ap_lo','cholestrol',
         #              'gluc','smoke','active','cardio'])
+        if report.HighBP=='No':
+            hibp=0
+        else:
+            hibp=1
+
+        if report.HighChol=='No':
+            hichol=0
+        else:  
+            hichol=1
+        
+        if report.Stroke=='No':
+            stroke=0
+        else:
+            stroke=1
+        
+        if report.HeartDiseaseAttack=='No':
+            heartattack=0
+        else:
+            heartattack=1
         
         
-        writer.writerow([report.HighBP,report.HighChol,report.BMI,report.Stroke,report.HeartDiseaseAttack,
+        writer.writerow([hibp,hichol,report.BMI,stroke,heartattack,
                         report.GenHlth,report.Age,report.DoctorConclusion])
 
         File.close()
@@ -558,6 +584,7 @@ def diabetes_pdf(request):
     reportName = Patient.first_name + " " + Disease + " " + "Report.pdf"
     return FileResponse(buf,as_attachment=True, filename=reportName)
 
+@login_required(login_url='login')
 def heartreport_pdf(request):
 
 

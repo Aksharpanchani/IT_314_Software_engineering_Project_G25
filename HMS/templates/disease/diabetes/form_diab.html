@@ -32,9 +32,7 @@
         Age =<input type="number" name="Age" required>
         <input type="submit"> 
     </form> -->
-    {% for message in messages %}
-        <h5>{{ message }}</h5>
-    {% endfor %}
+    
     <form onsubmit="return validateForm()" action="result" name="form1"  >
 
         <div class="background1"></div>
@@ -61,11 +59,15 @@
                         <img src="../../../static/public/DiabetesFrame.svg" alt="">
                     </div>
             </div>
-
+            
+            <div class="error_with_right_part">
+                
+                {% for message in messages %}
+                    <h5 class="error">{{ message }}</h5>
+                {% endfor %}
 
             <!-- ----------------------- Scrollable Part --------------------------- -->
             <!-- RightPart -->
-
 
             <div class="RightPart">
                 <div class="Param">
@@ -171,7 +173,7 @@
                     <button  type="submit" class="predict button1">Predict</button>
                     <button  type="reset"  class="reset button1">Reset</button>
                 </div>
-
+            </div>
             </div>
         </div>
         </div>
