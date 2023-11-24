@@ -1,0 +1,13 @@
+
+
+body{
+    
+    background-image: url("../public/404Error.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.homebutton{
+    position: absolute;
+    margin: 30% 5% 5% 15%;
+}
