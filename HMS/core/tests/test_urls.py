@@ -1,5 +1,5 @@
-# from django.test import SimpleTestCase
-# from django.urls import reverse, resolve
+#from django.test import SimpleTestCase
+#from django.urls import reverse, resolve
 
 
 # # class TestUrls(SimpleTestCase):
@@ -11,8 +11,8 @@
 
 
 
-# from django.test import TestCase
-# from django.urls import reverse
+from django.test import TestCase
+from django.urls import reverse
 
 # from ..views import (
 #     homepage, login, diabetesinfo, heartinfo, logout, signup,
@@ -22,7 +22,7 @@
 # )
 
 
-# class UrlsTest(TestCase):
+class UrlsTest(TestCase):
 #     def test_homepage_url(self):
 #         response = self.client.get(reverse('homepage'))
 #         self.assertEqual(response.status_code, 200)
