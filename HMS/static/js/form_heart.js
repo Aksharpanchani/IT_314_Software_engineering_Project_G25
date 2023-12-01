@@ -18,42 +18,42 @@ function validateForm(){
         return false;
     }  
     
-    if(height.value<0 || height.value>300)
+    if(height.value<=0 || height.value>300)
     {
         alert("Invalid Height");
         height.value="";
         return false;
     }
 
-    if(weight.value<0 || weight.value>300)
+    if(weight.value<=0 || weight.value>300)
     {
         alert("Invalid weight");
         weight.value="";
         return false;
     }
 
-    if(systolicbp.value<0 || systolicbp.value>300)
+    if(systolicbp.value<=0 || systolicbp.value>300)
     {
         alert("Invalid Systolic Blood Pressure");
         systolicbp.value="";
         return false;
     }
 
-    if(diastolicbp.value<0 || diastolicbp.value>300)
+    if(diastolicbp.value<=0 || diastolicbp.value>300)
     {
         alert("Invalid Diastolic Blood Pressure");
         diastolicbp.value="";
         return false;
     }
 
-    if(cholestrol.value<0 || cholestrol.value>300)
+    if(cholestrol.value<=0 || cholestrol.value>300)
     {
         alert("Invalid Cholestrol Level");
         cholestrol.value="";
         return false;
     }
 
-    if(glucose.value<0 || glucose.value>200)
+    if(glucose.value<=0 || glucose.value>200)
     {
         alert("Invalid Glucose Level");
         glucose.value="";
