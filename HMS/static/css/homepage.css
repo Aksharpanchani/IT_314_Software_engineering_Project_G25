@@ -360,7 +360,6 @@ body{
     .maps>.location{
       font-family: Montserrat Alternates;
       font-size: 2vw;
-      font-family: 500;
       font-style: normal;
       
     }
@@ -371,24 +370,37 @@ body{
       width: 100%;
     }
     
-    .ourteam{
+    .queryright>.ourteam{
       color: #FFF;
-      font-family: Montserrat Alternates;
-      font-size: 2.5vw;
-      font-style: normal;
-      font-weight: 200;
+      font-family: volko;
+      font-size: 2.3vw;
+      font-style:normal;
       line-height: 100%;
       margin-top: 1vw;
       margin-bottom: 1vw;
-      /* text-align: center; */
+      margin-left: 6vw;
     }
 
     
     
     .imagecontainer{
+      height: 25vw;
       display: flex;
       justify-content: space-between;
+      overflow-y: scroll;
+      margin-left: 5vw;
+      margin-right: 2vw;
     }
+    .imagecontainer::-webkit-scrollbar{ 
+      width: 0.66vw;
+  }
+  .imagecontainer::-webkit-scrollbar-track{ 
+      background-color: #d7cbcb4c;
+  }
+  .imagecontainer::-webkit-scrollbar-thumb{ 
+      background-color: black;
+      border-radius: 0.46vw;
+  }
     
     .imagecontainer img{
         margin: 0 1vw 0.5vw 1vw;

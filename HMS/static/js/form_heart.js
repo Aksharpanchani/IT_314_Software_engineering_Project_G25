@@ -11,27 +11,6 @@ function validateForm(){
 
     console.log(glucose.value);
 
-    if(age.value<1 || age.value>120)
-    {
-        alert("Invalid Age");
-        age.value="";
-        return false;
-    }  
-    
-    if(height.value<=0 || height.value>300)
-    {
-        alert("Invalid Height");
-        height.value="";
-        return false;
-    }
-
-    if(weight.value<=0 || weight.value>300)
-    {
-        alert("Invalid weight");
-        weight.value="";
-        return false;
-    }
-
     if(systolicbp.value<=0 || systolicbp.value>300)
     {
         alert("Invalid Systolic Blood Pressure");
@@ -57,6 +36,27 @@ function validateForm(){
     {
         alert("Invalid Glucose Level");
         glucose.value="";
+        return false;
+    }
+
+    if(age.value<1 || age.value>120)
+    {
+        alert("Invalid Age");
+        age.value="";
+        return false;
+    }  
+    
+    if(height.value<=30 || height.value>300)
+    {
+        alert("Invalid Height");
+        height.value="";
+        return false;
+    }
+
+    if(weight.value<=10 || weight.value>300)
+    {
+        alert("Invalid weight");
+        weight.value="";
         return false;
     }
 

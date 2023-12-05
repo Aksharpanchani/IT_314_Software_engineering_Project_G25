@@ -10,7 +10,7 @@ function validateForm(){
         return false;
     }  
     
-    if(bmi.value<0 || bmi.value>100)
+    if(bmi.value<=0 || bmi.value>100)
     {
         alert("Invalid BMI");
         bmi.value="";
