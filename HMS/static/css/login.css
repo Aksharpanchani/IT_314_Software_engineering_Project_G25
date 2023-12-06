@@ -1,0 +1,286 @@
+*{
+    font-family: 'Montserrat Alternates';
+    margin: 0;
+    box-sizing: border-box;
+    line-height: normal;
+    
+}
+.rectangle-5 {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    padding: 2% 15%;
+    align-items: center;
+}
+.logoname{
+    text-align: center;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    font-family: "MADEEvolveSansEVO";
+}
+.rectangle-5 .company-icon{
+    color: black;
+    text-decoration: none;
+    margin-right: auto; 
+}
+.rectangle-5 .nav {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px; 
+}
+.nav a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #170808;
+    white-space: nowrap; 
+    padding: 10px 15px; 
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+.nav a:hover{
+    color:#0067FF;
+    font-size: 18px;
+  }
+.login{
+    display: flex;
+    position: relative;
+    margin: 1% 2%;
+    z-index: 0;
+}
+.vector-login{
+    margin-top: auto;
+    margin-bottom: auto;
+   padding-left: 93px;
+   padding-right: 79px;
+}
+.vector-login .background{
+    position: absolute;
+    z-index: -1;
+    width: 38vw;
+    height: 31vw;
+    background: #79A2FF;
+    filter: blur(200px);
+}
+.line-div{
+    border-right: 2px solid #000;
+    height: 512px;
+}
+.rightlogin{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    padding-left: 140px;
+    width: 455px;
+    height: 486px;
+}
+
+.error{
+    font-size:2vw;
+    color: red;
+    font-family:"Montserrat Alternates" ;
+    margin:auto;
+    font-weight: bolder;
+}
+
+
+.rightlogin form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.loginvector{
+    height: 133px;
+    opacity: 0.68;
+}
+.username{
+    display: flex;
+    align-items: center;
+    font-size: 32px;
+    margin-top: 23px;
+    width: 455px;
+    height: 72px;
+    border-radius: 15px;
+    background-color: #79a2ff;
+}
+.username input{
+    font-size: 32px;
+    border-width: 0;
+    width: 85%;
+    height: 72px;
+    background-color: #79a2ff;
+    text-align: center;
+    outline: none;
+    cursor: pointer;
+}
+.username svg{
+    margin-left: 20px;
+}
+.password{
+    display: flex;
+    align-items: center;
+    font-size: 32px;
+    margin-top: 23px;
+    width: 455px;
+    height: 72px;
+    border-radius: 15px;
+    background-color: #79a2ff;
+}
+.password img{
+    padding-left: 20px;
+}
+.password input{
+    font-size: 32px;
+    border-width: 0;
+    width: 85%;
+    height: 72px;
+    background-color: #79a2ff;
+    text-align: center;
+    outline: none;
+    cursor: pointer;
+}
+.username input::placeholder, .password input::placeholder{
+    color: black;
+}
+.username input:focus::placeholder, .password input:focus::placeholder{
+    color: transparent;
+}
+button{
+    border: none;
+    font-size: 24px;
+    margin-top: 23px;
+    font-weight: 500;
+    width: 192px;
+    height: 49px;
+    border-radius: 15px;
+    background-color: #79a2ff;
+    cursor: pointer;
+}
+.background2{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 38vw;
+    height: 40vw;
+    transform: translate(40%, 40%);
+    z-index: -1;
+    border-radius: 602px;
+    background: #79A2FF;
+    filter: blur(200px);
+}
+.rightlogin a{
+    font-size: 1.2vw;
+    font-weight: 500;
+    margin-top: 1.5vw;
+}
+.rightlogin a:hover{
+    background-color: #d2ddf7;
+}
+
+@media screen and (max-width: 1100px) {
+    .rectangle-5 {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center;
+        margin-left: 20px; /* Adjust the margin for smaller screens */
+        margin-right: 20px;
+    }   
+
+    .rectangle-5 .company-icon {
+        margin: 0; /* Reset margin for the company icon */
+    }
+
+    .rectangle-5 .nav {
+        width: 100%; /* Make navigation links take full width on smaller screens */
+        justify-content: center; /* Center navigation links horizontally */
+    }
+
+    .im2 {
+        max-width: 50%; /* Make images responsive, adapt to the container width */
+        height: auto; /* Allow images to scale proportionally */
+    }
+
+    .login {
+        flex-direction: column; /* Stack login elements vertically */
+    }
+
+    .vector-login {
+        padding: 0; /* Remove padding */
+        text-align: center; /* Center align the vector image */
+    }
+
+    .line-div {
+        display: none; /* Hide the dividing line */
+    }
+
+    .rightlogin {
+        padding-left: 20px; /* Adjust padding */
+        width: auto; /* Allow content to expand to the screen width */
+    }
+
+    .username,
+    .divtoinput,
+    .password {
+        width: auto; /* Allow input containers to expand */
+        margin-top: 10px; /* Adjust margin */
+    }
+
+    .username .user,
+    .username .image,
+    .password .passw,
+    .password .image {
+        padding-left: 10px; /* Adjust padding */
+    }
+
+    .button{
+        margin-top: 10px; /* Adjust margin */
+        width: 100%; /* Make the submit button full-width */
+    }
+}
+
+
+/* Responsive styles for phones */
+@media screen and (max-width: 800px) {
+    .rectangle-5 {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: center;
+        margin-left: 10px; /* Further reduce the margin for smaller screens */
+        margin-right: 10px;
+    }
+
+    
+
+    .rectangle-5 .company-icon {
+        margin: 0; /* Reset margin for the company icon */
+    }
+
+    .rectangle-5 .nav {
+        width: 100%; /* Make navigation links take full width on smaller screens */
+        justify-content: center; /* Center navigation links horizontally */
+    }
+
+    .im2 {
+        max-width: 50%; /* Make images responsive, adapt to the container width */
+        height: auto; /* Allow images to scale proportionally */
+    }
+
+    .rightlogin {
+        padding-left: 10px; /* Further reduce padding */
+    }
+
+    .username,
+    .divtoinput,
+    .password {
+        margin-top: 5px; /* Further reduce margin */
+    }
+
+    .username .user,
+    .username .image,
+    .password .passw,
+    .password .image {
+        padding-left: 5px; /* Further reduce padding */
+    }
+}
+

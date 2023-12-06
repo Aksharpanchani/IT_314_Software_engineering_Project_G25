@@ -1,0 +1,158 @@
+@font-face {
+    font-family: volko;
+    src: url(../../static/public/mudkty-wtvolkolakgrotesque-light.ttf);
+}
+* {
+    font-family: 'Montserrat Alternates', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    line-height: 1.6;
+}
+.homepage {
+    position: relative;
+    width: 100vw;
+}
+.rectangle-5 {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    padding: 2% 15%;
+    align-items: center;
+}
+.logoname{
+    text-align: center;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    font-family: "MADEEvolveSansEVO";
+}
+.rectangle-5 .company-icon{
+    color: black;
+    text-decoration: none;
+    margin-right: auto; 
+}
+.rectangle-5 .nav {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px; 
+}
+.nav a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #170808;
+    white-space: nowrap; 
+    padding: 10px 15px; 
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+.nav a:hover{
+    color:#0067FF;
+    font-size: 18px;
+  }
+.ellipse14 {
+    display: flex;
+    width: 100vw;
+    min-height: 65vh;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+/* CSS for the blur background */
+.blur-background {
+    display: flex;
+    position: absolute;
+    top: 10%;  /* Example position */
+    left: 7.5%;
+    width: 100%;
+    max-width: 400px;
+    height: 74.41%;
+    border-radius: 74.41%;
+    background: rgba(121, 162, 255, 0.70);
+    filter: blur(200px);
+    z-index: -1; /* Lower z-index to ensure it's below the image */
+}
+
+/* CSS for the login image */
+.login-image img {
+    width: 33vw;
+    height: 66vh;
+    /*max-width: 400px;*/
+    position: relative; /* This makes .login-image a positioned ancestor for any absolute children */
+    z-index: 1; /* Higher z-index to ensure it's above the background */
+}
+
+
+.vertical-line {
+    border-left: 1px solid black;
+    height: 60vh;
+}
+
+.you_are_a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 3.5vw;
+    text-align: center;
+}
+
+.UserType {
+    display: flex;
+    gap: 8vw;
+}
+
+.button {
+    border: none;
+    width: 15vw;
+    min-width: 150px;
+    height: 9vh;
+    min-height: 50px;
+    border-radius: 135px;
+    background-color: #AFC8FF;
+    color: #000;
+    font-size: 3vw;
+    cursor: pointer;
+    outline: none;
+}
+
+.doctor:hover,
+.patient:hover {
+    transform: scale(1.05);
+}
+
+@media only screen and (max-width: 720px) {
+    .you_are_a {
+        font-size: 4.5vw;
+    }
+    .rectangle-5 {
+        display: flex;
+        gap: 5vw;
+        justify-content: center;
+        padding: 7vh 5vw 1vh;
+        align-items: center;
+    }
+    .rectangle-5 .nav {
+        gap: 3px;
+    }
+    .button {
+        width: 30vw;
+        font-size: 4vw;
+    }
+    .blur-background {
+        left: 10%;
+        width: 50vw;
+    }
+    .vertical-line {
+        display: none;
+    }
+    .login-image img {
+        width: 50vw;
+        height: 45vh;
+    }
+}

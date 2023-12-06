@@ -1,0 +1,488 @@
+@font-face {
+  font-family: volko;
+  src: url(../public/mudkty-wtvolkolakgrotesque-light.ttf);
+}
+*{
+  font-family: Montserrat Alternates;
+  margin: 0;
+  box-sizing: border-box; 
+  /* Padding does not affect size of Div */
+  line-height: normal;
+}
+html{
+  scroll-behavior: smooth;
+}
+body{
+  overflow-x:hidden;     /* to remove horizontal scrollbar */
+}
+.rectangle-5{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 87.5vw;
+  height: 48vw;
+  border-radius: 75px;
+  margin:auto;
+  margin-top: 2.8vw;
+  background-color:#eaeaea;
+  z-index: 0;
+}
+.company-icon img{
+  width: 4.8vw;
+}
+.logoname{
+  text-align: center;
+  width:4.2vw;
+  color: #000;
+  font-weight: 600;
+  font-size: 1.4vw;
+  font-family: "MADEEvolveSansEVO";
+}
+.logoandname{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.navbar{
+  position: relative;
+  margin-top: 2vw;
+  display: flex;
+  height: 10vw;
+  width: 74vw;
+  margin-left: 7.5vw;
+  margin-right: 105px;
+  align-items: center;
+}
+.nav{
+  display: flex;
+  position: absolute;
+  right: 0px;
+}
+.nav a{
+  text-decoration: none;
+  font-size: 1.4vw;
+  padding-left: 5vw;
+  font-weight: 600;
+  color: #170808;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+.nav a:hover{
+  color:#0067FF;
+  font-size: 1.5vw;
+}
+.diagnostic{
+  display: flex;
+  margin-left: 7vw;
+  margin-top: 4vw;
+  width: 60vw;
+  height: 291px;
+  color: #141111;
+  font-family: volko;
+  font-size: 8vw;
+  font-weight: 200;
+  line-height: 100%;
+}
+.shapefuture{
+  position: absolute;
+  left: 7vw;
+  top: 40vw;
+  width: 30vw;
+  height: 101px;
+  font-size: 1.3vw;
+  font-weight: 400;
+}
+.est{
+  position: absolute;
+  color: #000;
+  right: 10vw;
+  top: 37vw;
+  width: 10vw;
+  font-size: 1.2vw;
+  font-weight: 400;
+}
+.rectangle6{
+  position: relative;
+  margin: auto;
+  margin-top: 0.8vw;
+  width: 87.5vw;
+}
+.rectangle6 .box{
+  display: flex;
+  position: relative;
+  align-items: center;
+  height: 7vw;
+  border-radius: 20px;
+  background-color: #0067FF;
+  color: #FFF;
+  font-size: 40px;
+  font-weight: 200;
+  z-index: 1;
+}
+.rectangle6 .text{
+  font-family: volko;
+  font-size: 2.8vw;
+  font-weight: 200;
+  padding-left: 7vw;
+}
+.rectangle6 img{
+   position: absolute;
+  width: 22vw;
+  height: 22vw;
+  right: 26%;
+  top: -9.3vw;
+  z-index: 2; 
+  color: black;
+}
+.rectangle6 .background{
+  position: absolute;
+  right: 26%;
+  top: -9.3vw;
+  width: 22vw;
+  height: 22vw;
+  border-radius: 395px;
+  background: #c04343;
+  filter: blur(94px);
+  z-index: 0;
+}
+
+
+/* Our Models */
+
+.line{
+  margin-top: 10vw;
+  background-color: black;
+  height: 1px;
+  width: 100vw;
+}
+.ourmodels{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 6.4vw;
+  width: 72.2vw;
+  /* height: 50vw; */
+}
+.ourmodels .head{
+  justify-content: center;
+  display: flex;
+  margin: auto;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  width: 100%;
+  height: 63px;
+  color: #000;
+  font-family: Montserrat Alternates;
+  font-size: 5vw;
+  font-weight: 500;
+}
+.rect{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3vw;
+  border-radius: 16px;
+  color: black;
+  background: #E7E7E7;
+  width: 49%;
+  height: 11vw;
+  text-decoration: none;
+}
+.rect:hover{
+  color: #F9F9F9;
+  background-color: #0067FF;
+}
+.rect20and21{
+  margin-top: 6.4vw;
+  margin-bottom: 10px;
+  display: flex;
+  width: 100%;
+  height: 14vw;
+  gap: 20px;
+}
+.rect22and23{
+  display: flex;
+  width: 100%;
+  height: 170px;
+  gap: 20px;
+}
+
+
+/* about us  */
+
+
+.aboutus{
+  width: 86.5vw;
+  /* height: 43vw; */
+  display: flex;
+  margin: auto;
+  margin-top: 5vw;
+  flex-direction: column;
+}
+.aboutus .head{
+  justify-content: center;
+  display: flex;
+  margin: auto;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  width: 42%;
+  height: 63px;
+  color: #000;
+  font-family: Montserrat Alternates;
+  font-size: 5vw;
+  font-weight: 500;
+}
+.rect24{
+  display: flex;
+  margin: auto;
+  margin-top: 3vw;
+  gap: 7.7vw;
+}
+.rect24 .text{
+  width: 43.7vw;
+  font-size: 2.05vw;
+}
+.rect24 .doctorpatient{
+  position: relative;
+}
+.rect24 .image{
+  display: flex;
+  position: relative;
+  width: 35vw;
+  z-index: 1;
+}
+.rect24 img{
+  width:100%;
+  height:100%;
+}
+.rect24 .background{
+  display: flex;
+  position: absolute;
+  top: -14px;
+  left: 60px;
+  width: 26.5vw;
+  height: 21vw;
+  background: #C75050;
+  filter: blur(94px);
+  z-index:0; 
+} 
+
+  /* Contact us */
+  .contactandlogo{
+    display: flex;
+    align-items: center;
+    margin-top: 4.1vw;
+    margin-left: 6.5vw;
+  }
+  
+  .queries{
+    position: relative;
+    color: #FFF;
+    width: 90vw;
+    height: 30vw;
+    margin: auto;
+    margin-top: 2.5vw;
+    display: flex;
+    border-radius: 45px;
+    background: #0067FF;
+    /* justify-content: space-between; */
+    align-items: center;
+  }
+  .enteremail{
+    margin-left: 3vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .head{
+    margin-left: 2.5vw;
+    font-family: Montserrat Alternates;
+    font-size: 3vw;
+    font-style: normal;
+    font-weight: 500;
+  }
+
+  .queryemail {
+    top: 2vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.25vw;
+    gap: 0.5vw;
+  }
+  
+  .queryemail svg{
+    width: 1.5vw;
+  }
+
+  .email a{
+    text-decoration: none; 
+    display: flex;
+    color: white;
+    border: solid;
+    border-radius: 25px;
+    border-color: #0067FF;
+    padding: 3px;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 1vw;
+  }
+
+  .text{
+    padding-top: 0.3vw;
+  }
+
+  .email a:hover{
+    color: #0067FF;
+    border-color: black;
+    background-color: white;
+
+  }
+
+  .elementmap {
+    width: 22vw;
+    height: 16vw;
+    border-radius: 2vw;
+    cursor: url("https://maps.gstatic.com/mapfiles/openhand_8_8.cur"), default;
+    touch-action: pan-x pan-y;
+    }
+
+    .querieleft
+    {
+      margin-left: 2vw;  
+    }
+    .maps{
+      text-align: center;
+      justify-content: center;
+    }
+
+
+    .maps>.location{
+      font-family: Montserrat Alternates;
+      font-size: 2vw;
+      font-style: normal;
+      
+    }
+
+    .queryright{
+      margin-left: 2vw; 
+      flex-direction: row;
+      width: 100%;
+    }
+    
+    .queryright>.ourteam{
+      color: #FFF;
+      font-family: volko;
+      font-size: 2.3vw;
+      font-style:normal;
+      line-height: 100%;
+      margin-top: 1vw;
+      margin-bottom: 1vw;
+      margin-left: 6vw;
+    }
+
+    
+    
+    .imagecontainer{
+      height: 25vw;
+      display: flex;
+      justify-content: space-between;
+      overflow-y: scroll;
+      margin-left: 5vw;
+      margin-right: 2vw;
+    }
+    .imagecontainer::-webkit-scrollbar{ 
+      width: 0.66vw;
+  }
+  .imagecontainer::-webkit-scrollbar-track{ 
+      background-color: #d7cbcb4c;
+  }
+  .imagecontainer::-webkit-scrollbar-thumb{ 
+      background-color: black;
+      border-radius: 0.46vw;
+  }
+    
+    .imagecontainer img{
+        margin: 0 1vw 0.5vw 1vw;
+        width: 10vw;
+        height: 12vw;
+        flex-shrink: 0;
+        border-radius: 1vw;
+    }
+
+    .imagecontainer img:hover{
+      
+      -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      transform: scale(1.1);
+      transition: 1s ease;
+      
+    }
+    
+    
+    
+
+  /* footer */
+
+.footer{
+  position: relative;
+  display: flex;
+  width: 100vw;
+  height: 3.5vw;
+  background: #0067FF;
+  margin-top: 3.8vw;
+  align-items: center;
+}
+
+.copyright{
+  display: flex;
+  color: #FFF;
+  align-items: center;
+  font-size: 1.3vw;
+  margin-left: 10vw;
+}
+.atr-icon{
+  margin-bottom: 10px;
+  margin-right: 2px;
+}
+
+.icons{
+  position: absolute;
+  right: 4vw;
+  margin-left: 30vw;
+  display: flex;
+  gap: 2.2vw;
+  justify-content: center;
+  align-items: center;
+}
+.icons svg{
+  width: 3vw;
+}
+@media screen and (max-width:1024px){
+  .queryemail{
+    gap: 1vw;
+  }
+}
+@media screen and (max-width:768px){
+  .queryemail{
+    gap: 0px;
+  }
+  .enteremail{
+    justify-content:center;
+  }
+  .queryemail .head{
+    margin-top: 1vw;
+  }
+  .form input[type=email]{
+    margin-top: 1.4vw;
+    margin-bottom: 1.4vw;
+  }
+}
+@media screen and (max-width:600px){
+  .phone,.email{
+    height: 3vw;
+  }
+  .queryemail{
+    margin-left: 5px;
+  }
+}

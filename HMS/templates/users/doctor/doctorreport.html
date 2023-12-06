@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Montserrat Alternates:wght@400;500;600&display=swap" />
+    <link href="https://db.onlinewebfonts.com/c/1938c6d3ea712f9bdcf348aa789f5d68?family=MADEEvolveSansEVO"rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+    <link rel="icon" href="../../../static/public/favicon.ico">
+    <link rel="stylesheet" href="../../../static/css/reports.css">
+    <title>Reports</title>
+</head>
+<body>
+    <div class="header">
+        <a href="doctorhome" class="logo">
+            <img src="../../../static/public/logo.svg" alt="">
+            <div class="logoname">MED.AI</div>
+        </a>
+        <a id="logout" href="logout"><button  type="button">Log Out</button></a>
+
+        <div class="Doctor_Name">
+            <input type="text" class="doctorNameInput" placeholder="{{ doctorprofile.first_name }} {{doctorprofile.last_name}}" maxlength="30" readonly>
+            <img src="../../../static/public/user.svg" alt="User">
+        </div>
+    </div>
+
+    <!-- LeftPart -->
+
+    <div class="Container">
+        <div class="LeftPart">
+            <div class="Heart_Disease">My Dashboard</div>
+                    <div class="HDisease_Prediction"><img
+                            src="../../../static/public/My_Dashboard_Frame.svg" alt=""></div>
+        </div>
+
+
+        <!-- ----------------------- Scrollable Part --------------------------- -->
+        <!-- RightPart -->
+        <div class="RightPart">
+            <div class="Param">
+                <div class="BlueDot"></div>
+                <div class="Parameters">Previous Reports</div>
+            </div>
+            <div class="Scrollable_Content">
+                {% for report in reports %}
+                <div class="Report_Box">
+                    <div class="report_name">Report 1</div><br>
+                    <div class="date_time_doctor" style="margin-bottom: 0.5vw;">
+                        Patient ID: {{report.patient.user.username}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br><br>Patient Name: {{report.patient.first_name}} {{report.patient.last_name}} <br><br> Date: {{report.date}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Disease Name: {{report.disease}}
+                    </div>
+                    <a href="report?report_id={{report.id}}" target="_blank">
+                        <button type="button">Download Report</button>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</form>
+
+<script src="../../../static/js/patienthome.js"></script>
+
+</body>
+</html>

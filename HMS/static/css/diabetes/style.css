@@ -1,0 +1,2000 @@
+body{
+  overflow-x: hidden;
+}
+body::-webkit-scrollbar{ 
+  width: 0.8vw;
+}
+body::-webkit-scrollbar-track{ 
+  background-color: #b3abab4c;
+}
+body::-webkit-scrollbar-thumb{ 
+  background-color: #574f4f4c;
+  border-radius: 0.46vw;
+}
+.diabetes-static-page,
+.diabetes-static-page * {
+  box-sizing: border-box;
+}
+.diabetes-static-page {
+  background: #efefef;
+  width: 100vw;
+  height: 3836px;
+  position: relative;
+  overflow: hidden;
+}
+
+.vector-1 {
+  position: absolute;
+  left: calc(50% - 533.02px);
+  top: 51px;
+  overflow: visible;
+}
+.vector-12 {
+  position: absolute;
+  left: calc(50% - 483px);
+  top: 75.48px;
+  transform: translate(-41.98px, 0px);
+  overflow: visible;
+}
+.vector-13 {
+  position: absolute;
+  left: calc(50% - 510.1px);
+  top: 125.55px;
+  transform: translate(-22.92px, -40.7px);
+  overflow: visible;
+}
+.vector-14 {
+  position: absolute;
+  left: calc(50% - 560px);
+  top: 97.93px;
+  transform: translate(0px, -22.22px);
+  overflow: visible;
+}
+.home{
+  color: #170808;
+  text-align: center;
+  font: 600 24px "Montserrat Alternates", sans-serif;
+  position: absolute;
+  left: calc(50% - -30px);
+  top: 72px;
+  width: 141.88px;
+  height: 31.88px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-us {
+  position: relative;
+  color: #170808;
+  text-align: center;
+  font: 600 24px "Montserrat Alternates", sans-serif;
+  position: absolute;
+  left: calc(50% - -196px);
+  top: 72px;
+  width: 141.88px;
+  height: 31.88px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+.about-us {
+  position: relative;
+  color: #170808;
+  text-align: center;
+  font: 600 24px "Montserrat Alternates", sans-serif;
+  position: absolute;
+  left: calc(50% - -386px);
+  top: 74px;
+  width: 119.56px;
+  height: 31.88px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+.med-ai {
+  color: #000000;
+  text-align: center;
+  font: 600 22px "MADEEvolveSansEVO";
+  position: absolute;
+  left: 215px;
+  top: 134px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.diabetes-ml-model {
+  color: #000000;
+  text-align: left;
+  font: 300 64px/100% "MUDKTY+WTVolkolakGrotesque-Light", sans-serif;
+  position: absolute;
+  left: 409px;
+  top: 191px;
+}
+.dataset-overview {
+  color: #000000;
+  text-align: left;
+  font: 300 32px/100% "MUDKTY+WTVolkolakGrotesque-Light", sans-serif;
+  position: absolute;
+  left: -1401px;
+  top: 3473px;
+  width: 308.86px;
+  height: 58px;
+}
+.our-dataset-dating-back-to-1988-is-comprised-of-four-main-databases-cleveland-hungary-switzerland-and-long-beach-v-these-databases-collectively-contain-76-attributes-each-serving-a-specific-purpose-in-the-diagnosis-of-heart-diseases-the-most-crucial-attribute-the-target-field-indicates-the-presence-of-heart-disease-in-the-patient-denoted-as-an-integer-value-where-0-signifies-no-disease-and-1-represents-the-presence-of-disease {
+  color: #0e0d0d;
+  text-align: left;
+  font: 500 24px/116.5% "Montserrat Alternates", sans-serif;
+  position: absolute;
+  left: -1398.43px;
+  top: 3531px;
+  width: 619.43px;
+}
+.frame-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 950px;
+  height: 618px;
+  position: absolute;
+  left: -1971px;
+  top: 3870px;
+}
+.key-attributes {
+  color: #040404;
+  text-align: left;
+  font: 300 32px/100% "MUDKTY+WTVolkolakGrotesque-Light", sans-serif;
+  position: relative;
+}
+.to-make-precise-predictions-our-system-employs-a-subset-of-14-essential-attributes-from-the-extensive-dataset-these-key-attributes-include {
+  color: #ecc7c7;
+  text-align: left;
+  font: 500 24px/100% "Montserrat Alternates", sans-serif;
+  position: relative;
+  width: 930px;
+}
+.age-the-age-of-the-patient-in-years {
+  color: #ecc7c7;
+  text-align: left;
+  font: 500 24px/100% "Montserrat Alternates", sans-serif;
+  position: relative;
+}
+.sex-the-gender-of-the-patient-1-for-male-0-for-female {
+  color: #ecc7c7;
+  text-align: left;
+  font: 500 24px/100% "Montserrat Alternates", sans-serif;
+  position: relative;
+}
+.chest-pain-type-a-categorical-attribute-reflecting-the-type-of-chest-pain-experienced-by-the-patient-values-1-4 {
+  color: #ecc7c7;
+  text-align: left;
+  font: 500 24px/100% "Montserrat Alternates", sans-serif;
+  position: relative;
+  width: 941px;
+}
+.resting-blood-pressure-the-patient-s-resting-blood-pressure-in-mm-hg {
+  color: #ecc7c7;
+  text-align: left;
+  font: 500 24px/100% "Montserrat Alternates", sans-serif;
+  position: relative;
+  width: 943px;
+}
+.serum-cholestoral-the-serum-cholesterol-level-in-mg-dl {
+  color: #ecc7c7;
+  text-align: left;
+  font: 500 24px/100% "Montserrat Alternates", sans-serif;
+  position: relative;
+  width: 943px;
+}
+.fasting-blood-sugar-indicates-whether-fasting-blood-sugar-is-greater-than-120-mg-dl-1-for-true-0-for-false {
+  color: #ecc7c7;
+  text-align: left;
+  font: 500 24px/100% "Montserrat Alternates", sans-serif;
+  position: relative;
+  width: 935px;
+}
+.resting-electrocardiographic-results-results-of-resting-electrocardiogram-values-0-1-2 {
+  color: #ecc7c7;
+  text-align: left;
+  font: 500 24px/100% "Montserrat Alternates", sans-serif;
+  position: relative;
+  width: 941px;
+}
+.maximum-heart-rate-achieved-the-highest-heart-r-ate-achieved-during-testing {
+  color: #ecc7c7;
+  text-align: left;
+  font: 500 24px/100% "Montserrat Alternates", sans-serif;
+  position: relative;
+  width: 941px;
+}
+.exercise-induced-angina-whether-the-patient-experienced-angina-due-to-exercise-1-for-yes-0-for-no {
+  color: #ecc7c7;
+  text-align: left;
+  font: 500 24px/100% "Montserrat Alternates", sans-serif;
+  position: relative;
+  width: 935px;
+}
+.number-of-major-vessels-indicates-the-number-of-major-vessels-colored-by-flouroscopy-0-3 {
+  color: #ecc7c7;
+  text-align: left;
+  font: 500 24px/100% "Montserrat Alternates", sans-serif;
+  position: relative;
+  width: 928px;
+}
+._25553239-79-z-2203-w-009-n-001-124-c-p-6-124-1 {
+  border-radius: 32px;
+  width: 451px;
+  height: 288px;
+  position: absolute;
+  left: -1971px;
+  top: 3531px;
+}
+.ellipse-19 {
+  background: #fc8f93;
+  border-radius: 50%;
+  width: 574px;
+  height: 862px;
+  position: absolute;
+  left: 1043px;
+  top: 3004px;
+  filter: blur(239.5px);
+}
+.https-lottiefiles-com-animations-data-scanning-9-p-3-as-kkz-59 {
+  width: 494px;
+  height: 474px;
+  position: absolute;
+  left: -1964px;
+  top: 3606px;
+}
+.ellipse-13 {
+  background: #79a2ff;
+  border-radius: 50%;
+  width: 602px;
+  height: 605px;
+  position: absolute;
+  left: -964px;
+  top: 3947px;
+  filter: blur(200px);
+}
+.ellipse-14 {
+  position: absolute;
+  left: 310px;
+  top: -397.5px;
+  overflow: visible;
+}
+.ellipse-16 {
+  position: absolute;
+  left: -224px;
+  top: 2049px;
+  overflow: visible;
+}
+.ellipse-20 {
+  position: absolute;
+  left: -224px;
+  top: 3573px;
+  overflow: visible;
+}
+.ellipse-18 {
+  position: absolute;
+  left: -145px;
+  top: 868px;
+  overflow: visible;
+}
+.frame-5 {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  left: 188px;
+  top: 319px;
+}
+.about-diabetes {
+  color: #050505;
+  text-align: left;
+  font: 300 32px/100% "MUDKTY+WTVolkolakGrotesque-Light", sans-serif;
+  position: relative;
+}
+.diabetes-is-a-chronic-medical-condition-characterized-by-elevated-blood-sugar-levels-also-known-as-hyperglycemia-it-occurs-when-the-body-either-cannot-produce-enough-insulin-or-cannot-effectively-use-the-insulin-it-produces-insulin-is-a-hormone-that-regulates-blood-sugar-and-allows-cells-to-utilize-glucose-for-energy-there-are-two-main-types-of-diabetes-type-1-diabetes-which-is-usually-diagnosed-in-childhood-or-adolescence-and-results-from-the-body-s-inability-to-produce-insulin-and-type-2-diabetes-which-is-more-common-and-typically-develops-in-adults-often-due-to-lifestyle-factors-such-as-poor-diet-lack-of-exercise-and-obesity {
+  color: #010101;
+  text-align: left;
+  font: 500 24px/154% "Montserrat Alternates", sans-serif;
+  position: relative;
+  width: 835px;
+}
+.frame-4 {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  left: 663px;
+  top: 827px;
+}
+.about-our-ai-model {
+  color: #050505;
+  text-align: left;
+  font: 300 32px/100% "MUDKTY+WTVolkolakGrotesque-Light", sans-serif;
+  position: relative;
+}
+.the-decision-tree-classifier-is-a-supervised-machine-learning-algorithm-used-for-both-classification-and-regression-tasks-in-the-context-of-diabetes-risk-detection-the-algorithm-is-trained-on-a-dataset-comprising-various-features-associated-with-diabetes-such-as-age-bmi-family-history-blood-pressure-and-glucose-levels-through-a-process-of-recursive-partitioning-the-algorithm-creates-a-decision-tree-by-identifying-the-most-significant-features-and-their-respective-thresholds-enabling-accurate-classification-of-individuals-into-risk-categories {
+  color: #000000;
+  text-align: left;
+  font: 500 24px/153% "Montserrat Alternates", sans-serif;
+  position: relative;
+  width: 739px;
+}
+.frame-3 {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  left: 188px;
+  top: 1320px;
+}
+.model-accuracy {
+  color: #050505;
+  text-align: left;
+  font: 300 32px/100% "MUDKTY+WTVolkolakGrotesque-Light", sans-serif;
+  position: relative;
+}
+.precision-and-recall-are-essential-metrics-in-evaluating-the-performance-of-classification-models-including-the-decision-tree-classifier-for-diabetes-risk-detection-our-model-s-impressive-precision-and-recall-signify-its-accuracy-in-identifying-individuals-at-risk-of-diabetes-ensuring-that-healthcare-providers-can-make-confident-targeted-interventions-based-on-the-model-s-predictions-this-high-level-of-accuracy-is-instrumental-in-improving-the-effectiveness-of-preventive-healthcare-strategies-and-ultimately-enhancing-patient-outcomes {
+  color: #000000;
+  text-align: left;
+  font: 500 24px/153% "Montserrat Alternates", sans-serif;
+  position: relative;
+  width: 739px;
+}
+.confusion-matrix {
+  color: #000000;
+  text-align: left;
+  font: 500 24px/153% "Montserrat Alternates", sans-serif;
+  position: absolute;
+  left: 948px;
+  top: 1320px;
+}
+.classification-report {
+  color: #000000;
+  text-align: left;
+  font: 500 24px/153% "Montserrat Alternates", sans-serif;
+  position: absolute;
+  left: 188px;
+  top: 1798px;
+}
+.ellipse-132 {
+  background: #fc8f93;
+  border-radius: 50%;
+  width: 574px;
+  height: 862px;
+  position: absolute;
+  left: 1019px;
+  top: 1204px;
+  filter: blur(239.5px);
+}
+.ellipse-17 {
+  background: #fc8f93;
+  border-radius: 50%;
+  width: 574px;
+  height: 862px;
+  position: absolute;
+  left: 1137px;
+  top: -111px;
+  filter: blur(239.5px);
+}
+.frame-6 {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  left: 663px;
+  top: 3171px;
+}
+.working-of-the-diagnostic-expert-system {
+  color: #000000;
+  text-align: left;
+  font: 300 32px/154% "MUDKTY+WTVolkolakGrotesque-Light", sans-serif;
+  position: relative;
+}
+.in-the-ongoing-quest-for-innovative-healthcare-solutions-the-integration-of-artificial-intelligence-ai-technology-has-paved-the-way-for-groundbreaking-advancements-one-such-significant-development-is-the-creation-of-an-ai-algorithm-designed-to-detect-the-risk-of-diabetes-diabetes-a-prevalent-chronic-disease-affecting-millions-worldwide-requires-early-detection-and-management-to-prevent-complications-this-report-explores-the-features-benefits-and-implications-of-this-cutting-edge-ai-algorithm-which-promises-to-revolutionize-diabetes-risk-assessment {
+  color: #000000;
+  text-align: left;
+  font: 500 24px/154% "Montserrat Alternates", sans-serif;
+  position: relative;
+  width: 740px;
+}
+.frame-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  height: 893px;
+  position: absolute;
+  left: 188px;
+  top: 2243px;
+}
+.about-our-dataset {
+  color: #050505;
+  text-align: left;
+  font: 300 32px/100% "MUDKTY+WTVolkolakGrotesque-Light", sans-serif;
+  position: relative;
+}
+.the-behavioral-risk-factor-surveillance-system-brfss-is-a-health-related-telephone-survey-that-is-collected-annually-by-the-cdc-each-year-the-survey-collects-responses-from-over-400-000-americans-on-health-related-risk-behaviors-chronic-health-conditions-and-the-use-of-preventative-services-it-has-been-conducted-every-year-since-1984-for-this-project-a-csv-of-the-dataset-available-on-kaggle-for-the-year-2015-was-used-this-original-dataset-contains-responses-from-441-455-individuals-and-has-330-features-these-features-are-either-questions-directly-asked-of-participants-or-calculated-variables-based-on-individual-participant-responses {
+  color: #000000;
+  text-align: left;
+  font: 500 24px/154% "Montserrat Alternates", sans-serif;
+  position: relative;
+  width: 818px;
+}
+.high-bp-high-cholesterol-cholesterol-check-bmi-stroke-heart-disease-or-attack-heavy-alcohol-consumption-general-health-mental-health-age {
+  color: #000000;
+  text-align: left;
+  font: 500 24px/154% "Montserrat Alternates", sans-serif;
+  position: relative;
+  width: 418px;
+  height: 454px;
+}
+.high-bp-high-cholesterol-cholesterol-check-bmi-stroke-heart-disease-or-attack-heavy-alcohol-consumption-general-health-mental-health-age-span {
+  color: #000000;
+  font: 500 24px/154% "Montserrat Alternates", sans-serif;
+}
+.high-bp-high-cholesterol-cholesterol-check-bmi-stroke-heart-disease-or-attack-heavy-alcohol-consumption-general-health-mental-health-age-span2 {
+  color: #000000;
+  font: 500 24px/154% "Montserrat Alternates", sans-serif;
+}
+.untitled-3 {
+  width: 725px;
+  height: 271px;
+  position: absolute;
+  left: 188px;
+  top: 1862px;
+}
+._2206-i-105-037-s-m-005-c-13-1 {
+  width: 487px;
+  height: 413px;
+  position: absolute;
+  left: 156px;
+  top: 3218px;
+}
+.frame {
+  width: 316px;
+  height: 366px;
+  position: absolute;
+  left: 1087px;
+  top: 391px;
+  overflow: hidden;
+}
+.group {
+  position: absolute;
+  inset: 0;
+}
+.layer-1 {
+  width: 321.18px;
+  height: 366.01px;
+  position: static;
+}
+.vector {
+  position: absolute;
+  left: 206.88px;
+  top: 151.46px;
+  overflow: visible;
+}
+.vector2 {
+  opacity: 0.3199999928474426;
+  position: absolute;
+  left: 207.31px;
+  top: 154.7px;
+  overflow: visible;
+}
+.vector3 {
+  position: absolute;
+  left: 285.48px;
+  top: 194.38px;
+  overflow: visible;
+}
+.vector4 {
+  position: absolute;
+  left: 290.36px;
+  top: 197.71px;
+  overflow: visible;
+}
+.vector5 {
+  position: absolute;
+  left: 285.99px;
+  top: 194.83px;
+  overflow: visible;
+}
+.vector6 {
+  position: absolute;
+  left: 271.72px;
+  top: 209.77px;
+  overflow: visible;
+}
+.vector7 {
+  position: absolute;
+  left: 281.44px;
+  top: 209.77px;
+  overflow: visible;
+}
+.vector8 {
+  position: absolute;
+  left: 272.17px;
+  top: 212.69px;
+  overflow: visible;
+}
+.vector9 {
+  position: absolute;
+  left: 180.08px;
+  top: 206.37px;
+  overflow: visible;
+}
+.vector10 {
+  position: absolute;
+  left: 70.03px;
+  top: 192.74px;
+  overflow: visible;
+}
+.vector11 {
+  position: absolute;
+  left: 177.24px;
+  top: 46.75px;
+  overflow: visible;
+}
+.vector12 {
+  position: absolute;
+  left: 129.16px;
+  top: 101.48px;
+  overflow: visible;
+}
+.vector13 {
+  position: absolute;
+  left: 5.76px;
+  top: 208.24px;
+  overflow: visible;
+}
+.vector14 {
+  position: absolute;
+  left: 289.22px;
+  top: 134.3px;
+  overflow: visible;
+}
+.vector15 {
+  position: absolute;
+  left: 233.8px;
+  top: 239.12px;
+  overflow: visible;
+}
+.vector16 {
+  position: absolute;
+  left: 34.44px;
+  top: 64.08px;
+  overflow: visible;
+}
+.vector17 {
+  position: absolute;
+  left: 305.53px;
+  top: 184.85px;
+  overflow: visible;
+}
+.vector18 {
+  position: absolute;
+  left: 1.44px;
+  top: 107.54px;
+  overflow: visible;
+}
+.vector19 {
+  position: absolute;
+  left: 111.08px;
+  top: 53.57px;
+  overflow: visible;
+}
+.vector20 {
+  position: absolute;
+  left: 90.32px;
+  top: 120.42px;
+  overflow: visible;
+}
+.vector21 {
+  position: absolute;
+  left: 236.18px;
+  top: 64.42px;
+  overflow: visible;
+}
+.vector22 {
+  position: absolute;
+  left: 59.23px;
+  top: 264.96px;
+  overflow: visible;
+}
+.vector23 {
+  position: absolute;
+  left: 196.61px;
+  top: 142.51px;
+  transform: translate(1.91px, -3.93px);
+  overflow: visible;
+}
+.vector24 {
+  position: absolute;
+  left: 203.28px;
+  top: 139.27px;
+  overflow: visible;
+}
+.vector25 {
+  opacity: 0.550000011920929;
+  position: absolute;
+  left: 198.56px;
+  top: 140.95px;
+  overflow: visible;
+}
+.vector26 {
+  position: absolute;
+  left: 69.4px;
+  top: 0.27px;
+  overflow: visible;
+}
+.vector27 {
+  position: absolute;
+  left: 96.3px;
+  top: 0.27px;
+  overflow: visible;
+}
+.vector28 {
+  position: absolute;
+  left: 104.88px;
+  top: 0.27px;
+  overflow: visible;
+}
+.vector29 {
+  position: absolute;
+  left: 134.53px;
+  top: 0.27px;
+  overflow: visible;
+}
+.vector30 {
+  position: absolute;
+  left: 159.62px;
+  top: 0.27px;
+  overflow: visible;
+}
+.vector31 {
+  position: absolute;
+  left: 181.12px;
+  top: 0.27px;
+  overflow: visible;
+}
+.vector32 {
+  position: absolute;
+  left: 204.81px;
+  top: 0.27px;
+  overflow: visible;
+}
+.vector33 {
+  position: absolute;
+  left: 226.61px;
+  top: 0px;
+  overflow: visible;
+}
+.vector34 {
+  position: absolute;
+  left: 110.41px;
+  top: 345.44px;
+  overflow: visible;
+}
+.vector35 {
+  position: absolute;
+  left: 122.48px;
+  top: 200.65px;
+  overflow: visible;
+}
+.vector36 {
+  position: absolute;
+  left: 139.79px;
+  top: 195.72px;
+  overflow: visible;
+}
+.vector37 {
+  position: absolute;
+  left: 110.51px;
+  top: 165.57px;
+  overflow: visible;
+}
+.vector38 {
+  position: absolute;
+  left: 174.06px;
+  top: 165.57px;
+  overflow: visible;
+}
+.vector39 {
+  position: absolute;
+  left: 117.8px;
+  top: 136.07px;
+  overflow: visible;
+}
+.vector40 {
+  position: absolute;
+  left: 130.97px;
+  top: 166.86px;
+  overflow: visible;
+}
+.vector41 {
+  position: absolute;
+  left: 166.73px;
+  top: 166.86px;
+  overflow: visible;
+}
+.vector42 {
+  position: absolute;
+  left: 114.24px;
+  top: 139.77px;
+  overflow: visible;
+}
+.vector43 {
+  position: absolute;
+  left: 166.31px;
+  top: 127.77px;
+  overflow: visible;
+}
+.vector44 {
+  position: absolute;
+  left: 110.5px;
+  top: 112.31px;
+  overflow: visible;
+}
+.vector45 {
+  position: absolute;
+  left: 148.02px;
+  top: 180.89px;
+  overflow: visible;
+}
+.vector46 {
+  position: absolute;
+  left: 126.25px;
+  top: 177.84px;
+  overflow: visible;
+}
+.vector47 {
+  position: absolute;
+  left: 168.45px;
+  top: 177.84px;
+  overflow: visible;
+}
+.vector48 {
+  position: absolute;
+  left: 96.91px;
+  top: 223.71px;
+  overflow: visible;
+}
+.vector49 {
+  position: absolute;
+  left: 128.18px;
+  top: 160.53px;
+  overflow: visible;
+}
+.vector50 {
+  position: absolute;
+  left: 163.65px;
+  top: 160.56px;
+  overflow: visible;
+}
+.vector51 {
+  position: absolute;
+  left: 70.69px;
+  top: 231.43px;
+  overflow: visible;
+}
+.vector52 {
+  position: absolute;
+  left: 195.45px;
+  top: 231.48px;
+  overflow: visible;
+}
+.vector53 {
+  position: absolute;
+  left: 145px;
+  top: 192.53px;
+  overflow: visible;
+}
+.vector54 {
+  position: absolute;
+  left: 259.74px;
+  top: 236.97px;
+  overflow: visible;
+}
+.vector55 {
+  position: absolute;
+  left: 199.77px;
+  top: 254.29px;
+  overflow: visible;
+}
+.vector56 {
+  position: absolute;
+  left: 276.39px;
+  top: 266.82px;
+  transform: translate(0px, -8.93px);
+  overflow: visible;
+}
+.vector57 {
+  position: absolute;
+  left: 276.58px;
+  top: 263.94px;
+  transform: translate(0px, -6.04px);
+  overflow: visible;
+}
+.vector58 {
+  position: absolute;
+  left: 269.53px;
+  top: 232.31px;
+  overflow: visible;
+}
+.vector59 {
+  position: absolute;
+  left: 271.27px;
+  top: 234.82px;
+  overflow: visible;
+}
+.vector60 {
+  position: absolute;
+  left: 273.25px;
+  top: 256.68px;
+  transform: translate(0px, -10.47px);
+  overflow: visible;
+}
+.vector61 {
+  position: absolute;
+  left: 274.25px;
+  top: 255.89px;
+  transform: translate(0px, -8.78px);
+  overflow: visible;
+}
+.vector62 {
+  position: absolute;
+  left: 281.8px;
+  top: 241.41px;
+  overflow: visible;
+}
+.vector63 {
+  position: absolute;
+  left: 274.1px;
+  top: 240.95px;
+  overflow: visible;
+}
+.vector64 {
+  position: absolute;
+  left: 276.84px;
+  top: 248.75px;
+  overflow: visible;
+}
+.vector65 {
+  position: absolute;
+  left: 280.27px;
+  top: 248.97px;
+  overflow: visible;
+}
+.vector66 {
+  position: absolute;
+  left: 276.67px;
+  top: 251.24px;
+  overflow: visible;
+}
+.vector67 {
+  position: absolute;
+  left: 276.09px;
+  top: 249.33px;
+  overflow: visible;
+}
+.vector68 {
+  position: absolute;
+  left: 279.63px;
+  top: 249.54px;
+  overflow: visible;
+}
+.vector69 {
+  position: absolute;
+  left: 281.81px;
+  top: 249.71px;
+  overflow: visible;
+}
+.vector70 {
+  position: absolute;
+  left: 279.42px;
+  top: 252.06px;
+  overflow: visible;
+}
+.vector71 {
+  position: absolute;
+  left: 281.63px;
+  top: 252.22px;
+  overflow: visible;
+}
+.vector72 {
+  position: absolute;
+  left: 278.34px;
+  top: 252.01px;
+  overflow: visible;
+}
+.vector73 {
+  position: absolute;
+  left: 276.5px;
+  top: 253.72px;
+  overflow: visible;
+}
+.vector74 {
+  position: absolute;
+  left: 279.9px;
+  top: 253.93px;
+  overflow: visible;
+}
+.vector75 {
+  position: absolute;
+  left: 280.23px;
+  top: 251.47px;
+  overflow: visible;
+}
+.vector76 {
+  position: absolute;
+  left: 279.03px;
+  top: 254.62px;
+  transform: translate(0px, -0.43px);
+  overflow: visible;
+}
+.vector77 {
+  position: absolute;
+  left: 285.06px;
+  top: 234.13px;
+  overflow: visible;
+}
+.vector78 {
+  position: absolute;
+  left: 286.88px;
+  top: 240.07px;
+  overflow: visible;
+}
+.vector79 {
+  position: absolute;
+  left: 287.19px;
+  top: 246.66px;
+  overflow: visible;
+}
+.vector80 {
+  position: absolute;
+  left: 286.51px;
+  top: 253.01px;
+  overflow: visible;
+}
+.vector81 {
+  position: absolute;
+  left: 192.62px;
+  top: 317.59px;
+  overflow: visible;
+}
+.vector82 {
+  position: absolute;
+  left: 149.91px;
+  top: 315.55px;
+  overflow: visible;
+}
+.vector83 {
+  position: absolute;
+  left: 70.7px;
+  top: 298.6px;
+  overflow: visible;
+}
+.vector84 {
+  position: absolute;
+  left: 30.19px;
+  top: 86.85px;
+  overflow: visible;
+}
+.vector85 {
+  position: absolute;
+  left: 39.94px;
+  top: 96.51px;
+  overflow: visible;
+}
+.vector86 {
+  position: absolute;
+  left: 40.1px;
+  top: 96.51px;
+  overflow: visible;
+}
+.vector87 {
+  opacity: 0.3199999928474426;
+  position: absolute;
+  left: 42.42px;
+  top: 96.66px;
+  overflow: visible;
+}
+.vector88 {
+  opacity: 0.3199999928474426;
+  position: absolute;
+  left: 48.26px;
+  top: 96.76px;
+  overflow: visible;
+}
+.vector89 {
+  position: absolute;
+  left: 44.11px;
+  top: 94.37px;
+  overflow: visible;
+}
+.vector90 {
+  opacity: 0.3199999928474426;
+  position: absolute;
+  left: 45.02px;
+  top: 94.43px;
+  overflow: visible;
+}
+.vector91 {
+  position: absolute;
+  left: 43.26px;
+  top: 91.97px;
+  overflow: visible;
+}
+.vector92 {
+  opacity: 0.3199999928474426;
+  position: absolute;
+  left: 49.16px;
+  top: 92.35px;
+  overflow: visible;
+}
+.vector93 {
+  opacity: 0.3199999928474426;
+  position: absolute;
+  left: 44.37px;
+  top: 92.29px;
+  overflow: visible;
+}
+.vector94 {
+  position: absolute;
+  left: 43.28px;
+  top: 91.1px;
+  overflow: visible;
+}
+.vector95 {
+  position: absolute;
+  left: 43.28px;
+  top: 91.95px;
+  overflow: visible;
+}
+.vector96 {
+  position: absolute;
+  left: 39.92px;
+  top: 101.72px;
+  overflow: visible;
+}
+.vector97 {
+  position: absolute;
+  left: 41px;
+  top: 104.75px;
+  overflow: visible;
+}
+.vector98 {
+  position: absolute;
+  left: 41.31px;
+  top: 105.49px;
+  overflow: visible;
+}
+.vector99 {
+  opacity: 0.550000011920929;
+  position: absolute;
+  left: 40.36px;
+  top: 104.49px;
+  overflow: visible;
+}
+.vector100 {
+  opacity: 0.3199999928474426;
+  position: absolute;
+  left: 42.37px;
+  top: 99.83px;
+  overflow: visible;
+}
+.vector101 {
+  position: absolute;
+  left: 40.04px;
+  top: 99.27px;
+  overflow: visible;
+}
+.group2 {
+  opacity: 0.550000011920929;
+  position: absolute;
+  left: 48.72px;
+  top: 99.83px;
+  overflow: visible;
+}
+.vector103 {
+  position: absolute;
+  left: 59px;
+  top: 116.05px;
+  overflow: visible;
+}
+.vector104 {
+  opacity: 0.550000011920929;
+  position: absolute;
+  left: 61.76px;
+  top: 116.64px;
+  overflow: visible;
+}
+.vector105 {
+  opacity: 0.550000011920929;
+  position: absolute;
+  left: 58.99px;
+  top: 116.83px;
+  overflow: visible;
+}
+.vector106 {
+  position: absolute;
+  left: 52.72px;
+  top: 118.68px;
+  overflow: visible;
+}
+.vector107 {
+  opacity: 0.550000011920929;
+  position: absolute;
+  left: 55.49px;
+  top: 119.19px;
+  overflow: visible;
+}
+.vector108 {
+  opacity: 0.550000011920929;
+  position: absolute;
+  left: 52.72px;
+  top: 119.45px;
+  overflow: visible;
+}
+.vector109 {
+  position: absolute;
+  left: -5.18px;
+  top: 170.69px;
+  transform: translate(6.37px, -9.07px);
+  overflow: visible;
+}
+.vector110 {
+  position: absolute;
+  left: 22.06px;
+  top: 168.12px;
+  overflow: visible;
+}
+.vector111 {
+  position: absolute;
+  left: 22.78px;
+  top: 183.37px;
+  overflow: visible;
+}
+.vector112 {
+  position: absolute;
+  left: 25.95px;
+  top: 178.65px;
+  overflow: visible;
+}
+.vector113 {
+  position: absolute;
+  left: 30.14px;
+  top: 174.15px;
+  overflow: visible;
+}
+.vector114 {
+  position: absolute;
+  left: 33.74px;
+  top: 182.37px;
+  overflow: visible;
+}
+.vector115 {
+  position: absolute;
+  left: 22.69px;
+  top: 169.61px;
+  overflow: visible;
+}
+.vector116 {
+  position: absolute;
+  left: 23.23px;
+  top: 172.27px;
+  overflow: visible;
+}
+.vector117 {
+  position: absolute;
+  left: 23.01px;
+  top: 184.69px;
+  overflow: visible;
+}
+.vector118 {
+  position: absolute;
+  left: 25.12px;
+  top: 173.31px;
+  overflow: visible;
+}
+.vector119 {
+  position: absolute;
+  left: 23.17px;
+  top: 180.4px;
+  overflow: visible;
+}
+.vector120 {
+  position: absolute;
+  left: 26.38px;
+  top: 187.85px;
+  overflow: visible;
+}
+.vector121 {
+  position: absolute;
+  left: 7.78px;
+  top: 168.1px;
+  overflow: visible;
+}
+.vector122 {
+  position: absolute;
+  left: 16.56px;
+  top: 183.37px;
+  overflow: visible;
+}
+.vector123 {
+  position: absolute;
+  left: 10.92px;
+  top: 178.65px;
+  overflow: visible;
+}
+.vector124 {
+  position: absolute;
+  left: 10.35px;
+  top: 174.15px;
+  overflow: visible;
+}
+.vector125 {
+  position: absolute;
+  left: 8.96px;
+  top: 182.37px;
+  overflow: visible;
+}
+.vector126 {
+  position: absolute;
+  left: 17.81px;
+  top: 169.61px;
+  overflow: visible;
+}
+.vector127 {
+  position: absolute;
+  left: 14.19px;
+  top: 172.27px;
+  overflow: visible;
+}
+.vector128 {
+  position: absolute;
+  left: 19.53px;
+  top: 184.69px;
+  overflow: visible;
+}
+.vector129 {
+  position: absolute;
+  left: 17.16px;
+  top: 173.33px;
+  overflow: visible;
+}
+.vector130 {
+  position: absolute;
+  left: 16.68px;
+  top: 180.4px;
+  overflow: visible;
+}
+.vector131 {
+  position: absolute;
+  left: 10.77px;
+  top: 187.85px;
+  overflow: visible;
+}
+.vector132 {
+  position: absolute;
+  left: 171.19px;
+  top: 97.79px;
+  transform: translate(4.83px, -6.9px);
+  overflow: visible;
+}
+.vector133 {
+  position: absolute;
+  left: 180.05px;
+  top: 100.69px;
+  overflow: visible;
+}
+.vector134 {
+  position: absolute;
+  left: 180.37px;
+  top: 100.69px;
+  overflow: visible;
+}
+.clip-path-group {
+  width: 15.64px;
+  height: 9.3px;
+  position: static;
+}
+.clip-path {
+  position: absolute;
+  left: 184.12px;
+  top: 101.4px;
+  overflow: visible;
+}
+.group3 {
+  position: absolute;
+  left: 184.12px;
+  top: 101.4px;
+  overflow: visible;
+}
+.vector141 {
+  position: absolute;
+  left: 180.1px;
+  top: 100.24px;
+  overflow: visible;
+}
+.vector142 {
+  position: absolute;
+  left: 187.13px;
+  top: 100.69px;
+  overflow: visible;
+}
+.vector143 {
+  position: absolute;
+  left: 183.24px;
+  top: 103.5px;
+  overflow: visible;
+}
+.vector144 {
+  position: absolute;
+  left: 184.44px;
+  top: 102.14px;
+  overflow: visible;
+}
+.vector145 {
+  position: absolute;
+  left: 70.74px;
+  top: 112.3px;
+  transform: translate(3.71px, -43.38px);
+  overflow: visible;
+}
+.vector146 {
+  position: absolute;
+  left: 90.38px;
+  top: 80.6px;
+  overflow: visible;
+}
+.vector147 {
+  opacity: 0.550000011920929;
+  position: absolute;
+  left: 93.46px;
+  top: 90.48px;
+  overflow: visible;
+}
+.vector148 {
+  position: absolute;
+  left: 88.84px;
+  top: 79.59px;
+  overflow: visible;
+}
+.clip-path-group2 {
+  width: 55.4px;
+  height: 52.64px;
+  position: static;
+}
+.clip-path-2 {
+  position: absolute;
+  left: 125.65px;
+  top: 53.31px;
+  overflow: visible;
+}
+.group4 {
+  position: absolute;
+  left: 125.65px;
+  top: 53.31px;
+  overflow: visible;
+}
+.vector162 {
+  position: absolute;
+  left: 41.56px;
+  top: 129.83px;
+  overflow: visible;
+}
+.vector163 {
+  position: absolute;
+  left: 50.43px;
+  top: 161.29px;
+  overflow: visible;
+}
+.vector164 {
+  position: absolute;
+  left: 56.69px;
+  top: 133.58px;
+  overflow: visible;
+}
+.vector165 {
+  position: absolute;
+  left: 52.97px;
+  top: 146.43px;
+  overflow: visible;
+}
+.vector166 {
+  position: absolute;
+  left: 51.24px;
+  top: 151.6px;
+  overflow: visible;
+}
+.vector167 {
+  position: absolute;
+  left: 50.68px;
+  top: 154.87px;
+  overflow: visible;
+}
+.vector168 {
+  position: absolute;
+  left: 55.93px;
+  top: 137.47px;
+  overflow: visible;
+}
+.vector169 {
+  position: absolute;
+  left: 64.69px;
+  top: 133.58px;
+  overflow: visible;
+}
+.vector170 {
+  position: absolute;
+  left: 55.96px;
+  top: 141.73px;
+  overflow: visible;
+}
+.vector171 {
+  position: absolute;
+  left: 67.06px;
+  top: 133.58px;
+  overflow: visible;
+}
+.vector172 {
+  position: absolute;
+  left: 60.61px;
+  top: 133.65px;
+  overflow: visible;
+}
+.vector173 {
+  position: absolute;
+  left: 68.09px;
+  top: 174.92px;
+  overflow: visible;
+}
+.vector174 {
+  position: absolute;
+  left: 58.42px;
+  top: 145.36px;
+  overflow: visible;
+}
+.vector175 {
+  position: absolute;
+  left: 67.03px;
+  top: 145.39px;
+  overflow: visible;
+}
+.vector176 {
+  position: absolute;
+  left: 71.07px;
+  top: 147.38px;
+  overflow: visible;
+}
+.vector177 {
+  position: absolute;
+  left: 73.32px;
+  top: 144.43px;
+  overflow: visible;
+}
+.vector178 {
+  position: absolute;
+  left: 80.08px;
+  top: 158.19px;
+  overflow: visible;
+}
+.vector179 {
+  position: absolute;
+  left: 81.54px;
+  top: 163.29px;
+  overflow: visible;
+}
+.vector180 {
+  position: absolute;
+  left: 64.72px;
+  top: 137.98px;
+  overflow: visible;
+}
+.clip-path-group3 {
+  width: 45.65px;
+  height: 43.37px;
+  position: static;
+}
+.clip-path-3 {
+  position: absolute;
+  left: 262.82px;
+  top: 147.88px;
+  overflow: visible;
+}
+.group5 {
+  position: absolute;
+  left: 262.82px;
+  top: 147.87px;
+  overflow: visible;
+}
+.vector188 {
+  position: absolute;
+  left: 10.11px;
+  top: 230.31px;
+  transform: translate(12.97px, -29.75px);
+  overflow: visible;
+}
+.vector189 {
+  position: absolute;
+  left: 38.81px;
+  top: 212.02px;
+  overflow: visible;
+}
+.vector190 {
+  position: absolute;
+  left: 41.43px;
+  top: 215.39px;
+  overflow: visible;
+}
+.vector191 {
+  position: absolute;
+  left: 42.8px;
+  top: 216.2px;
+  overflow: visible;
+}
+.vector192 {
+  position: absolute;
+  left: 43.7px;
+  top: 237.35px;
+  overflow: visible;
+}
+.vector193 {
+  position: absolute;
+  left: 43.7px;
+  top: 239.19px;
+  overflow: visible;
+}
+.vector194 {
+  position: absolute;
+  left: 43.7px;
+  top: 241.04px;
+  overflow: visible;
+}
+.vector195 {
+  position: absolute;
+  left: 43.7px;
+  top: 242.89px;
+  overflow: visible;
+}
+.vector196 {
+  position: absolute;
+  left: 43.7px;
+  top: 244.72px;
+  overflow: visible;
+}
+.vector197 {
+  position: absolute;
+  left: 48.07px;
+  top: 208.04px;
+  overflow: visible;
+}
+.vector198 {
+  position: absolute;
+  left: 43.64px;
+  top: 217.32px;
+  overflow: visible;
+}
+.vector199 {
+  position: absolute;
+  left: 61.08px;
+  top: 225.44px;
+  overflow: visible;
+}
+.vector200 {
+  position: absolute;
+  left: 62.58px;
+  top: 228.14px;
+  overflow: visible;
+}
+.vector201 {
+  position: absolute;
+  left: 43.01px;
+  top: 224.69px;
+  overflow: visible;
+}
+.vector202 {
+  position: absolute;
+  left: 46.19px;
+  top: 229.34px;
+  overflow: visible;
+}
+.vector203 {
+  position: absolute;
+  left: 49.02px;
+  top: 227.76px;
+  overflow: visible;
+}
+.vector204 {
+  position: absolute;
+  left: 51.84px;
+  top: 226.67px;
+  overflow: visible;
+}
+.vector205 {
+  position: absolute;
+  left: 54.65px;
+  top: 228.5px;
+  overflow: visible;
+}
+.vector206 {
+  position: absolute;
+  left: 57.48px;
+  top: 231.32px;
+  overflow: visible;
+}
+.clip-path-group4 {
+  width: 84.25px;
+  height: 80.05px;
+  position: static;
+}
+.clip-path-4 {
+  position: absolute;
+  left: 205.72px;
+  top: 79.32px;
+  overflow: visible;
+}
+.group6 {
+  position: absolute;
+  left: 205.72px;
+  top: 79.32px;
+  overflow: visible;
+}
+.clip-path-group5 {
+  width: 90.09px;
+  height: 85.59px;
+  position: static;
+}
+.clip-path-5 {
+  position: absolute;
+  left: 187.67px;
+  top: 155.35px;
+  overflow: visible;
+}
+.group7 {
+  position: absolute;
+  left: 187.67px;
+  top: 155.35px;
+  overflow: visible;
+}
+.vector241 {
+  position: absolute;
+  left: 85.28px;
+  top: 189.48px;
+  overflow: visible;
+}
+.vector242 {
+  position: absolute;
+  left: 91.79px;
+  top: 195.23px;
+  overflow: visible;
+}
+.vector243 {
+  position: absolute;
+  left: 95.22px;
+  top: 195.86px;
+  overflow: visible;
+}
+.vector244 {
+  opacity: 0.550000011920929;
+  position: absolute;
+  left: 91.77px;
+  top: 196.18px;
+  overflow: visible;
+}
+.vector245 {
+  position: absolute;
+  left: 100.9px;
+  top: 195.82px;
+  overflow: visible;
+}
+.vector246 {
+  position: absolute;
+  left: 104.33px;
+  top: 196.55px;
+  overflow: visible;
+}
+.vector247 {
+  opacity: 0.550000011920929;
+  position: absolute;
+  left: 100.87px;
+  top: 196.82px;
+  overflow: visible;
+}
+.vector248 {
+  position: absolute;
+  left: 90.02px;
+  top: 204.26px;
+  overflow: visible;
+}
+.vector249 {
+  position: absolute;
+  left: 94.41px;
+  top: 204.27px;
+  overflow: visible;
+}
+.vector250 {
+  position: absolute;
+  left: 90.24px;
+  top: 205.49px;
+  overflow: visible;
+}
+.vector251 {
+  position: absolute;
+  left: 95.56px;
+  top: 201.31px;
+  overflow: visible;
+}
+.vector252 {
+  position: absolute;
+  left: 99.43px;
+  top: 201.55px;
+  overflow: visible;
+}
+.vector253 {
+  position: absolute;
+  left: 95.77px;
+  top: 202.09px;
+  overflow: visible;
+}
+.vector254 {
+  position: absolute;
+  left: 106.38px;
+  top: 200.29px;
+  overflow: visible;
+}
+.vector255 {
+  position: absolute;
+  left: 110.05px;
+  top: 200.27px;
+  overflow: visible;
+}
+.vector256 {
+  position: absolute;
+  left: 106.56px;
+  top: 201.07px;
+  overflow: visible;
+}
+.vector257 {
+  position: absolute;
+  left: 103.86px;
+  top: 209.58px;
+  overflow: visible;
+}
+.vector258 {
+  position: absolute;
+  left: 103.9px;
+  top: 209.55px;
+  overflow: visible;
+}
+.vector259 {
+  opacity: 0.550000011920929;
+  position: absolute;
+  left: 104.02px;
+  top: 210.96px;
+  overflow: visible;
+}
+.vector260 {
+  position: absolute;
+  left: 93.7px;
+  top: 213.85px;
+  overflow: visible;
+}
+.vector261 {
+  position: absolute;
+  left: 93.71px;
+  top: 213.82px;
+  overflow: visible;
+}
+.vector262 {
+  opacity: 0.550000011920929;
+  position: absolute;
+  left: 93.87px;
+  top: 214.91px;
+  overflow: visible;
+}
+.vector263 {
+  position: absolute;
+  left: 95.33px;
+  top: 208.91px;
+  overflow: visible;
+}
+.vector264 {
+  position: absolute;
+  left: 95.33px;
+  top: 209.74px;
+  overflow: visible;
+}
+.vector265 {
+  opacity: 0.550000011920929;
+  position: absolute;
+  left: 95.53px;
+  top: 210.08px;
+  overflow: visible;
+}
+.vector266 {
+  position: absolute;
+  left: 67.75px;
+  top: 64.61px;
+  overflow: visible;
+}
+.vector267 {
+  position: absolute;
+  left: 74.01px;
+  top: 65.76px;
+  overflow: visible;
+}
+.vector268 {
+  opacity: 0.550000011920929;
+  position: absolute;
+  left: 67.76px;
+  top: 66.36px;
+  overflow: visible;
+}
+.vector269 {
+  position: absolute;
+  left: 55.06px;
+  top: 72.96px;
+  overflow: visible;
+}
+.vector270 {
+  position: absolute;
+  left: 61.31px;
+  top: 74.27px;
+  overflow: visible;
+}
+.vector271 {
+  opacity: 0.550000011920929;
+  position: absolute;
+  left: 54.99px;
+  top: 74.7px;
+  overflow: visible;
+}
+.vector272 {
+  position: absolute;
+  left: 10.51px;
+  top: 145.87px;
+  overflow: visible;
+}
+.vector273 {
+  position: absolute;
+  left: 19.73px;
+  top: 145.86px;
+  overflow: visible;
+}
+.vector274 {
+  position: absolute;
+  left: 10.94px;
+  top: 148.46px;
+  overflow: visible;
+}
+.vector275 {
+  position: absolute;
+  left: 0px;
+  top: 132.87px;
+  overflow: visible;
+}
+.vector276 {
+  position: absolute;
+  left: 8.1px;
+  top: 133.33px;
+  overflow: visible;
+}
+.vector277 {
+  position: absolute;
+  left: 0.43px;
+  top: 134.47px;
+  overflow: visible;
+}
+.vector278 {
+  position: absolute;
+  left: 22.94px;
+  top: 130.65px;
+  overflow: visible;
+}
+.vector279 {
+  position: absolute;
+  left: 30.79px;
+  top: 130.65px;
+  overflow: visible;
+}
+.vector280 {
+  position: absolute;
+  left: 23.37px;
+  top: 132.26px;
+  overflow: visible;
+}
+.vector281 {
+  position: absolute;
+  left: 206.8px;
+  top: 72.66px;
+  overflow: visible;
+}
+.vector282 {
+  position: absolute;
+  left: 206.8px;
+  top: 72.66px;
+  overflow: visible;
+}
+.vector283 {
+  opacity: 0.550000011920929;
+  position: absolute;
+  left: 207.11px;
+  top: 75.52px;
+  overflow: visible;
+}
+.vector284 {
+  position: absolute;
+  left: 187.8px;
+  top: 76.22px;
+  overflow: visible;
+}
+.vector285 {
+  position: absolute;
+  left: 187.83px;
+  top: 76.2px;
+  overflow: visible;
+}
+.vector286 {
+  opacity: 0.550000011920929;
+  position: absolute;
+  left: 188.16px;
+  top: 78.35px;
+  overflow: visible;
+}
+.vector287 {
+  position: absolute;
+  left: 192.73px;
+  top: 64.96px;
+  overflow: visible;
+}
+.vector288 {
+  position: absolute;
+  left: 192.72px;
+  top: 66.7px;
+  overflow: visible;
+}
+.vector289 {
+  opacity: 0.550000011920929;
+  position: absolute;
+  left: 193.06px;
+  top: 67.35px;
+  overflow: visible;
+}
+._5-e-0-c-09805-d-04718512864363-ab-3-f-0-d-78-1 {
+  border-radius: 41px;
+  width: 446px;
+  height: 352px;
+  position: absolute;
+  left: 188px;
+  top: 889px;
+}
+.big-data-1 {
+  width: 827px;
+  height: 551px;
+  position: absolute;
+  left: 604px;
+  top: 2616px;
+}
+.untitled-2 {
+  width: 473px;
+  height: 412px;
+  position: absolute;
+  left: 950px;
+  top: 1382px;
+}

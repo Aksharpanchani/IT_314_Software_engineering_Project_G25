@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Montserrat Alternates:wght@400;500;600&display=swap" />
+    <link href="https://db.onlinewebfonts.com/c/1938c6d3ea712f9bdcf348aa789f5d68?family=MADEEvolveSansEVO"
+        rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../static/css/form_and_prediction.css">
+    
+    <link rel="icon" href="../../../static/public/favicon.ico">
+    <title>Status</title>
+</head>
+<body>
+    <!-- <h2>There is a {{data}}% chance that your patient has heart diabetes!!!</h2><br> -->
+    
+    
+    <!-- <h2>Data</h2><br> -->
+    
+    
+    <!-- <a href="homepage2">Home</a> -->
+    
+    <form action="heartreport_pdf" method="POST">
+        {% csrf_token %}
+
+        <input type="text" name="DiseaseName"  id="" value={{DiseaseName}}  style="display: none;">
+        <input type="number" name="Prediction" id="" value={{data}} style="display: none;">
+
+        <!-- DoctorName<input type="text" name="DoctorName" id="" value="{{DoctorProfile.first_name}} {{DoctorProfile.last_name}}" readonly>
+        PID<input type="text" name="PatientID"  id="" value={{PatientID}}  readonly>
+        Disease<input type="text" name="DiseaseName"  id="" value={{DiseaseName}}  readonly>
+        Age<input type="number" name="Age" id="" value={{Age}} readonly>
+        Height<input type="text" name="Height" id="" value={{Height}} readonly>
+        Wt<input type="text" name="Weight" id="" value={{Weight}} readonly>
+        SystolicBP<input type="text" name="SystolicBP" id="" value={{SystolicBP}} readonly>
+        DiastolicBP<input type="text" name="DiastolicBP" id="" value={{DiastolicBP}} readonly>
+        Cholestrol<input type="number" name="CholestrolLevel" id="" value={{CholestrolLevel}} readonly>
+        Glucose<input type="text" name="GlucoseLevel" id="" value={{GlucoseLevel}} readonly>
+        Smoking<input type="text" name="Smoking" id="" value={{Smoking}} readonly>
+        PhysicalActivity<input type="text" name="PhysicalActivity" id="" value={{PhysicalActivity}} readonly>
+         -->
+
+        <!-- Make the radio button as mandatory field -->
+        <!-- Satisfied<input type="radio" name="TrueResult" id="" value="Satisfied">
+        Unsatisfied<input type="radio" name="TrueResult" id="" value="Unsatisfied">
+    
+        Prediction <input type="number" name="Prediction" id="" value={{data}} readonly>
+        <textarea name="Prescription" id="" cols="30" rows="10"></textarea>
+        <textarea name="DoctorVerdict" id="" cols="30" rows="10"></textarea>
+
+        <input type="submit" value="GetReport"> -->
+
+        <div class="background1"></div>
+        <div class="background2">
+            <!-- <img src="./public/Ellipse_13.svg"> -->
+        </div>
+        <div class="header">
+            <a href="homepage2" class="logo">
+                <img src="../../../static/public/logo.svg" alt="">
+                <div class="logoname">MED.AI</div>
+            </a>
+            <div class="Patient_ID">
+                <input class="patient_id_input" type="text" name="PatientID"  id="" value={{PatientID}}  readonly>
+                <!-- <input type="text" class="patient_id_input" placeholder="Patient Id" name="PatientID"> -->
+            </div>
+            <div class="Doctor_Name">
+                <!-- <input type="text" class="doctorNameInput"
+                    placeholder="{{ DoctorProfile.first_name }} {{DoctorProfile.last_name}}" readonly> -->
+                    <input class="doctorNameInput" type="text" name="DoctorName" id="" value="{{DoctorProfile.first_name}} {{DoctorProfile.last_name}}" readonly>
+                <img src="../../../static/public/user.svg" alt="User">
+            </div>
+        </div>
+
+        <!-- LeftPart -->
+
+        <div class="Container">
+            <div class="LeftPart">
+                <div class="Heart_Disease">Heart Disease</div>
+                <div class="HDisease_Prediction">
+                    <img src="../../../static/public/HeartDiseaseForm.svg" alt="">
+                </div>
+            </div>
+
+
+            <!-- ----------------------- Scrollable Part --------------------------- -->
+            <!-- RightPart -->
+
+
+            <div class="RightPart">
+                <div class="Param">
+                    <div class="BlueDot"></div>
+                    <div class="Parameters">Parameters</div>
+                </div>
+                <div class="grid-container">
+                    <div class="grid-item" id="grid-item1">
+                        <div>Systolic Blood Pressure</div>
+                        <!-- <input type="number" class="input2" name="Systolic BP" id="" -->
+                        <input class="input2" type="text" name="SystolicBP" id="" value={{SystolicBP}} readonly>
+                        
+                    </div>
+
+                    <div class="grid-item" id="grid-item2">
+                        <div>Diastolic Blood Pressure</div>
+                        <!-- <input type="number" class="input2" name="Diastolic BP" id="" -->
+                        <input class="input2" type="text" name="DiastolicBP" id="" value={{DiastolicBP}} readonly>
+                        
+                    </div>
+
+                    <div class="grid-item" id="grid-item3">
+                        <div>Cholestrol</div>
+                        <!-- <input type="number"  class="input2" name="CholestrolLevel" id="" readonly> -->
+                        <input class="input2" type="number" name="CholestrolLevel" id="" value={{CholestrolLevel}} readonly>
+                    </div>
+
+                    <div class="grid-item" id="grid-item4">
+                        <div>Glucose Level</div>
+                        <!-- <input type="number"  class="input2" name="GlucoseLevel" id="" readonly> -->
+                        <input class="input2" type="text" name="GlucoseLevel" id="" value={{GlucoseLevel}} readonly>
+                    </div>
+
+                    <div class="grid-item" id="grid-item5">
+                        <div>Smoking</div>
+                        <!-- <input type="number" class="input2" name="Smoking" id="" readonly> -->
+                        <input class="input2" type="text" name="Smoking" id="" value={{Smoking}} readonly>
+                    </div>
+
+                    <div class="grid-item" id="grid-item6">
+                        <div>Physical Activity</div>
+                        <!-- <input type="number" class="input2" name="PA" id="" readonly> -->
+                        <input class="input2" type="text" name="PhysicalActivity" id="" value={{PhysicalActivity}} readonly>
+                    </div>
+
+                    <div class="grid-item" id="grid-item7">
+                        <div>Age</div>
+                        <!-- <input type="number" class="input2" name="Age" id="" readonly> -->
+                        <input class="input2" type="number" name="Age" id="" value={{Age}} readonly>
+                    </div>
+
+                    <div class="grid-item" id="grid-item8">
+                        <div>Height</div>
+                        <!-- <input type="number"  class="input2" name="Height" id="" -->
+                        <input class="input2" type="text" name="Height" id="" value={{Height}} readonly>
+                       
+                    </div>
+
+                    <div class="grid-item" id="grid-item9">
+                        <div>Weight</div>
+                        <!-- <input type="number"  class="input2" name="Weight" id="" -->
+                        <input class="input2" type="text" name="Weight" id="" value={{Weight}} readonly>
+                       
+                    </div>
+                    <!-- </div> -->
+                </div>
+
+
+                <!-------------------------- Prediction and Reset ----------------------- -->
+
+
+                <!-- <div class="predictandreset">
+                    <button type="submit" class="predict button1">Predict</button>
+                    <button type="reset" class="reset button1">Reset</button>
+                </div> -->
+                <div class="Prediction">
+                    <div class="Param">
+                        <div class="BlueDot"></div>
+                        <div class="Parameters">Prediction</div>
+                    </div>
+                    <div class="Prediction2">
+                        <div class="Box1">
+                            <div class="GIF2">
+                                <img src="../../../static/public/heartgif.gif" alt="PredictionImage" >
+                            </div>
+                            <div class="predict_result">
+                                <div class="resulttext">
+                                    There is a {{data}}% chance that your patient has heart disease!!!
+                                </div>
+                            </div>
+                            
+                        </div>
+
+
+                        <div class="satisfied_or_not">
+                            <div class="radio-buttons2">
+                                <div class="formcheck2">
+                                    <div class="form-check satis">
+                                        <input class="form-check-input " type="radio" name="TrueResult" id="Satisfied"
+                                        value="Satisfied" required>
+                                        <label class="form-check-label " for="Satisfied">Satisfied</label>
+                                    </div>
+                                    <div class="form-check satis">
+                                        <input class="form-check-input" type="radio" name="TrueResult" id="NotSatisfied"
+                                        value="Unsatisfied" required>
+                                        <label class="form-check-label " for="NotSatisfied">Not Satisfied</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- ------------------------------ Get Report ----------------------------->
+
+
+                <div class="GetReport_Prescription_Submit">
+                    <div class="Param">
+                        <div class="BlueDot"></div>
+                        <div class="Parameters">Get Report</div>
+                    </div>
+                    <div class="Box2">
+                        <div class="text">
+                            <div class="WhiteDot"></div>
+                            <div class="t">Doctor's Verdict</div>
+                        </div>
+                        <div>
+                            <textarea class="whitebox" name="DoctorVerdict" id=""></textarea>
+                        </div>
+                    </div>
+                    <br><br>
+                    <div class="Box2">
+                        <div class="text">
+                            <div class="WhiteDot"></div>
+                            <div class="t">Prescription</div>
+                        </div>
+                        <div>
+                            <textarea class="whitebox" name="Prescription" id=""></textarea>
+                            <!-- <input type="text" class="whitebox"> -->
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit_report">GetReport</button>
+                </div>
+            </div>
+        </div>
+
+
+    </form>
+    
+        
+        
+</body>
+</html>

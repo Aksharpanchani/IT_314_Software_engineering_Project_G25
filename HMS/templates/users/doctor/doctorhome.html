@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Montserrat Alternates:wght@400;500;600&display=swap" />
+    <link href="https://db.onlinewebfonts.com/c/1938c6d3ea712f9bdcf348aa789f5d68?family=MADEEvolveSansEVO"rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+    <link rel="icon" href="../../../static/public/favicon.ico">
+    <link rel="stylesheet" href="../../../static/css/doctorhome.css">
+    <title>Doctor home</title>
+</head>
+<body>
+    <div class="header">
+        <a href="doctorhome" class="logo">
+            <img src="../../../static/public/logo.svg" alt="">
+            <div class="logoname">MED.AI</div>
+        </a>
+        <a id="logout" href="logout"><button  type="button">Log Out</button></a>
+        <div class="Doctor_Name">
+            <input type="text" class="doctorNameInput" placeholder="{{ DoctorProfile.first_name }} {{DoctorProfile.last_name}}" readonly>
+            <img src="../../../static/public/user.svg" alt="User">
+        </div>
+
+    </div>
+
+
+    <!-- Left Part  -->
+
+    <div class="Container">
+        <div class="LeftPart">
+            <div class="Heart_Disease">
+                Doctor's Dashboard
+            </div>
+            <div class="HDisease_Prediction">
+                <img src="../../../static/public/My_Dashboard_Frame.svg" alt="">
+            </div>
+            <a href="doctorreport" style="text-decoration: none;">
+                <button id="my_patients" type="button">My Reports</button>
+            </a>
+        </div>
+
+        <!-- Right Part -->
+        
+        <div class="ourmodels">
+            <div class="head">Choose a Model</div>
+            <div class="bigrect">
+                <a href="predictdiabetes/" class="rect">Diabetes</a>
+                <a href="predictheart/" class="rect">Heart</a>
+                <a href="" class="rect">Coming Soon</a>
+                <a href="" class="rect">Coming Soon</a>
+            </div>
+    </div>
+    
+</body>
+</html>
