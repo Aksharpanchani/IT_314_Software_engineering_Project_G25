@@ -29,7 +29,7 @@ These models are just the beginning. In our commitment to advancing healthcare, 
 - Frontend: HTML, CSS, Javascript 
 - Version Control: Git & GitHub
 - ML Opps: XGBoost, RandomForest by Scikit-learn
-- Testing: Selenium IDE, Blazemeter, SOS Lab, Uptime Robot, Django (In-built Framework)
+- Testing: Selenium IDE, Blazemeter, Sauce Lab, Uptime Robot, Django (In-built Framework)
 
 ## Getting Started 🚀
 
