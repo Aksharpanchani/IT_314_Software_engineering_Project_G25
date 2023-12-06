@@ -523,8 +523,15 @@ def diabetes_pdf(request):
     report.DoctorPrescription = Prescription
     report.DoctorGeneralAdvice = Verdict
     if TrueResult == "Satisfied":
-        report.DoctorConclusion = 1
+        if float(Prediction)>50:
+            report.DoctorConclusion = 1
+        else:
+            report.DoctorConclusion = 0
     else:
+        if float(Prediction)>50:
+            report.DoctorConclusion = 0
+        else:
+            report.DoctorConclusion = 1
         report.DoctorConclusion = 0
 
     report.save()
@@ -576,10 +583,12 @@ def diabetes_pdf(request):
 
     #List of lines
 
-    if TrueResult=="Satisfied":
+    if report.DoctorConclusion==1:
         Conclusion = "Positive"
     else:
         Conclusion = "Negative"
+
+    
 
     lines=[
         "Doctor : " + DoctorName,
@@ -641,10 +650,16 @@ def heartreport_pdf(request):
     report.DoctorPrescription = Prescription
     report.DoctorGeneralAdvice = Verdict
     if TrueResult == "Satisfied":
-        report.DoctorConclusion = 1
+        if float(Prediction)>50:
+            report.DoctorConclusion = 1
+        else:
+            report.DoctorConclusion = 0
     else:
+        if float(Prediction)>50:
+            report.DoctorConclusion = 0
+        else:
+            report.DoctorConclusion = 1
         report.DoctorConclusion = 0
-
     report.save()
 
 
@@ -683,7 +698,7 @@ def heartreport_pdf(request):
 
     #List of lines
 
-    if TrueResult=="Satisfied":
+    if report.DoctorConclusion==1:
         Conclusion = "Positive"
     else:
         Conclusion = "Negative"
