@@ -3,7 +3,9 @@
     "builds": [{
             "src": "HMS/wsgi.py",
             "use": "@vercel/python",
-            "config": { "maxLambdaSize": "15mb", "runtime": "python3.11.1" }
+            "config": {
+        "maxLambdaSize": "200mb"
+      }
     }],
     "routes": [{
             "src": "/(.*)",
